@@ -83,6 +83,8 @@ data that may or may not be appropriate for Supercloud, take a look at
 Drive
 here <http://kb.mit.edu/confluence/pages/viewpage.action?pageId=152598887>`__.
 
+.. _ssh_keys:
+
 Generating ssh Keys for Supercloud Authentication
 -------------------------------------------------
 
