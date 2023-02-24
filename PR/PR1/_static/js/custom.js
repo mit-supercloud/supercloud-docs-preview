@@ -1,13 +1,13 @@
 $( document ).ready(function() {
 
   // Create link and text for navigation back to the ORCD home page
-  var orcd_link = document.createElement("a");
-  var orcd_text = document.createTextNode("ORCD Home Page");
-  orcd_link.appendChild(orcd_text);
-  orcd_link.setAttribute("href", "https://orcd.mit.edu");
+  var supercloud_link = document.createElement("a");
+  var supercloud_text = document.createTextNode("SuperCloud Home Page");
+  supercloud_link.appendChild(supercloud_text);
+  supercloud_link.setAttribute("href", "https://supercloud.mit.edu");
 
   // Open ORCD home page in new tab when clicked
-  orcd_link.setAttribute("target","_blank");
+  supercloud_link.setAttribute("target","_blank");
 
   var separator = document.createTextNode(" | ");
 
@@ -16,13 +16,13 @@ $( document ).ready(function() {
 
   // Next to the default "Edit on GitHub", add a separator, then the ORCD link.
   aside.appendChild(separator);
-  aside.appendChild(orcd_link);
+  aside.appendChild(supercloud_link);
 
-  // Insert Project Name "ORCD User Documentation" below html_logo in sidebar navigation
+  // Insert Project Name "SuperCloud User Documentation" below html_logo in sidebar navigation
   var project_name_link = document.createElement("a");
-  var project_name_text = document.createTextNode(" ORCD User Documentation");
+  var project_name_text = document.createTextNode("SuperCloud Documentation");
   project_name_link.appendChild(project_name_text);
-  project_name_link.setAttribute("href", "https://mit-orcd.github.io/orcd-docs");
+  project_name_link.setAttribute("href", "https://mit-supercloud.github.io/supercloud-docs");
   project_name_link.classList.add("icon");
   project_name_link.classList.add("icon-home");
   wysidenavsearch = document.querySelector("body > div > nav > div > div.wy-side-nav-search > a");
