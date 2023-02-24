@@ -1,4 +1,4 @@
-Geting Started
+Getting Started
 ==============
 
 This page contains the most common steps for setting up and getting
