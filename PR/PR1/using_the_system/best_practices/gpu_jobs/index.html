@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optimizing your GPU Jobs &mdash; MIT SuperCloud Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://supercloud.mit.edu/using_the_system/best_practices/gpu_jobs/index.html"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/custom.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Web Portal" href="../../web_portal/index.html" />
+    <link rel="prev" title="Best Practices for Using the Filesystem" href="../filesystem/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            MIT SuperCloud Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../requesting_account/index.html">Requesting an Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#account-request-process">Account Request Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#why-do-we-ask-if-you-are-using-data-that-is-not-publicly-available">Why do we ask if you are using data that is not publicly available?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#generating-ssh-keys-for-supercloud-authentication">Generating ssh Keys for Supercloud Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../requesting_account/index.html#current-approver-list">Current Approver List</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Geting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#logging-in-via-ssh">Logging in Via ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#shared-hpc-clusters">Shared HPC Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#software-and-packages">Software and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#linux-command-line">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#transferring-files-to-mit-supercloud">Transferring Files to MIT SuperCloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#testing-your-code">Testing your Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#supercloud-downtimes">SuperCloud Downtimes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../systems_and_software/index.html">Systems and Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#software">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#modules">Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#middleware-software-stack">Middleware Software Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#lincoln-laboratory-developed-software">Lincoln Laboratory Developed Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#compilers">Compilers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Using the Systetm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../files_and_data/index.html">Files and Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../files_and_data/transferring_files/index.html">Transferring Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/transferring_files/index.html#mac-linux-and-most-windows">Mac/Linux and Most Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/transferring_files/index.html#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/transferring_files/index.html#downloading-files-through-the-web-portal">Downloading Files through the Web Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/transferring_files/index.html#uploading-and-downloading-files-using-jupyter">Uploading and Downloading Files Using Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../files_and_data/shared_groups/index.html">Shared Groups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/shared_groups/index.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/shared_groups/index.html#joining-or-creating-a-group">Joining or Creating a Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/shared_groups/index.html#using-shared-groups-effectively">Using Shared Groups Effectively</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../software_packages/index.html">Software and Package Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software_packages/index.html#modules">Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software_packages/index.html#installing-software-or-packages-in-your-home-directory">Installing Software or Packages in your Home Directory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../software_packages/index.html#julia-packages">Julia Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software_packages/index.html#python-packages">Python Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software_packages/index.html#r-libraries">R Libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html">Monitoring System Job Status</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#checking-system-status">Checking System Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#monitoring-jobs">Monitoring Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#stopping-jobs">Stopping Jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../submitting_jobs/index.html">Submitting Jobs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html">Submitting Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html#how-to-start-an-interactive-job-with-llsub">How to start an Interactive Job with LLsub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html#submitting-a-simple-serial-batch-job">Submitting a Simple Serial Batch Job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html#requesting-additional-resources-with-sbatch">Requesting Additional Resources with sbatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html#requesting-additional-resources-with-llsub">Requesting Additional Resources with LLsub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html#llmapreduce">LLMapReduce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html#matlab-octave-tools">Matlab/Octave Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html#triples-mode">Triples Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../submitting_jobs/job_array_triples/index.html">Job Arrays with LLsub Triples in 3 Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/job_array_triples/index.html#step-1-batch-up-your-array">Step 1: Batch Up your Array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/job_array_triples/index.html#step-2-changing-your-submission-script">Step 2: Changing Your Submission Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../submitting_jobs/job_array_triples/index.html#step-3-submit-your-job-with-llsub-triples">Step 3: Submit your Job with LLsub Triples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Best Practices</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../filesystem/index.html">Best Practices for Using the Filesystem</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../filesystem/index.html#installing-python-packages">Installing Python Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../filesystem/index.html#submitting-jobs">Submitting Jobs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../filesystem/index.html#file-organization">File Organization</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Optimizing your GPU Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#getting-more-out-of-the-gpus">Getting More out of the GPUs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requesting-more-gpus">Requesting More GPUs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../web_portal/index.html">Web Portal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../web_portal/index.html#portal-authentication">Portal Authentication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../web_portal/index.html#mit-touchstone-incommon-federation">MIT Touchstone/InCommon Federation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../web_portal/index.html#username-and-password">Username and Password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../web_portal/index.html#pki-certificate-smart-card">PKI Certificate/Smart Card</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../web_portal/index.html#adding-removing-ssh-keys">Adding/Removing SSH Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../web_portal/index.html#browsing-your-home-directory">Browsing your Home Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../databases/index.html">Databases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jupyter_notebooks/index.html">Jupyter Notebooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../jupyter_notebooks/index.html#starting-up-jupyter">Starting Up Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../jupyter_notebooks/index.html#the-jupyter-environment">The Jupyter Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../jupyter_notebooks/index.html#a-note-on-environment-variables-and-modules">A Note on Environment Variables and Modules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/index.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-do-i-get-an-account">How do I get an account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#i-would-like-to-log-in-from-a-new-computer-can-i-add-a-new-ssh-key">I would like to log in from a new computer. Can I add a new ssh key?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-much-storage-do-i-have-for-my-account">How much storage do I have for my account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-share-files-code-data-with-my-colleagues">How can I share files/code/data with my colleagues?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-do-i-set-change-my-password">How do I set/change my password?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#are-there-any-resource-limits">Are there any resource limits?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#what-do-i-do-if-my-job-won-t-be-deleted">What do I do if my job won’t be deleted?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#why-do-i-get-an-error-when-i-try-to-install-a-package">Why do I get an error when I try to install a package?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job">In an Interactive Job I get the error “bash: module: command not found” when I try to use a module command. How can I use modules in an interactive job?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">How can I set up VSCode to edit files remotely on Supercloud?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-use-tensorboard-on-supercloud">How can I use Tensorboard on Supercloud?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">I got an Out of Memory error. How can I figure out how much memory my job needs and request more?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#my-python-julia-job-is-running-but-i-don-t-see-any-output-in-the-log-files-what-is-going-on">My Python/Julia job is running, but I don’t see any output in the log files. What is going on?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#what-does-the-underutilizing-oversubscribing-the-node-warning-message-mean">What does the Underutilizing/Oversubscribing the node warning message mean?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-get-more-help">How can I get more help?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/index.html">Getting Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_help/index.html#additional-documentation">Additional Documentation:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_help/index.html#email">Email:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_help/index.html#office-hours">Office Hours:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../online_courses/index.html">Online Courses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../online_courses/index.html#some-available-online-courses">Some Available Online Courses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../online_courses/index.html#accessing-the-llx-online-course-site">Accessing the LLx Online Course Site</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../online_courses/index.html#creating-an-online-course-account">Creating an Online Course Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../online_courses/index.html#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../acknowledging_us/index.html">Acknowledging Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">MIT SuperCloud Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Using the Systetm</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Best Practices</a></li>
+      <li class="breadcrumb-item active">Optimizing your GPU Jobs</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/llsc-supercloud/supercloud-docs-edit/blob/main/using_the_system/best_practices/gpu_jobs/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="optimizing-your-gpu-jobs">
+<h1>Optimizing your GPU Jobs<a class="headerlink" href="#optimizing-your-gpu-jobs" title="Permalink to this heading"></a></h1>
+<p>The GPUs on Supercloud often are in very high demand. Before asking for
+more GPUs you’ll want to do what you can to optimize your code to get
+the most out of the resources you do have.</p>
+<p>The first thing you need to do is profile your code.&nbsp;Time your code both
+with and without the GPU. When you are running with a GPU, monitor the
+GPU Utilization and GPU Memory use. You can do this by going to the
+compute node where it is running (get the node name from LLstat, then
+ssh to the node with “<code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">nodename</span></code>”) and run the <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span> <span class="pre">-l</span></code>
+command (press <code class="docutils literal notranslate"><span class="pre">Ctrl+C</span></code> to exit <a href="#id1"><span class="problematic" id="id2">``</span></a>nvidia-smi -l&nbsp;<a href="#id3"><span class="problematic" id="id4">``</span></a>when you are
+done).</p>
+<p>If your GPU utilization and GPU memory use is low, that means you aren’t
+getting the full advantage out of the GPU. If this is the case, try out
+some of the suggestions below.</p>
+<p>If you are only getting a small speedup, say 2x or 4x, especially after
+trying the suggestions below, it may not be worthwhile using GPUs at
+all. In general, the CPU nodes on Supercloud are more available so we
+will likely be willing to increase your allocation of CPU nodes to make
+up for the small loss of speedup switching to CPUs.</p>
+<div class="section" id="getting-more-out-of-the-gpus">
+<h2>Getting More out of the GPUs<a class="headerlink" href="#getting-more-out-of-the-gpus" title="Permalink to this heading"></a></h2>
+<p>If your GPU utilization and memory use are low, usually this means you
+might be able to get some more performance out of the GPUs. There are a
+few things you can try if you are training machine learning models:</p>
+<ul class="simple">
+<li>Increase the batch size.</li>
+<li>Enable CUDA kernel tuning.<ul>
+<li>For Pytorch, add this before the training starts:
+<code class="docutils literal notranslate"><span class="pre">torch.backends.cudnn.benchmark</span> <span class="pre">=</span> <span class="pre">True</span></code></li>
+<li>For Tensorflow, set this environment variable in your submission
+script: <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">TF_CUDNN_USE_AUTOTUNE=1</span></code></li>
+</ul>
+</li>
+<li>If you are using Tensorflow you can also try mixed-precision training
+(we haven’t played with this in Pytorch, but it could be possible).<ul>
+<li>Tensorflow 2.4.1 and newer (anaconda/2021a)<ul>
+<li>Add the following to the beginning of your Python code:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">tensorflow.keras</span> <span class="pre">import</span> <span class="pre">mixed_precision</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">policy</span> <span class="pre">=</span> <span class="pre">mixed_precision.Policy('mixed_float16')</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">mixed_precision.set_global_policy(policy)</span></code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pre-Tensorflow 2.4.1 (anaconda/2020b and older)<ul>
+<li>To do so set the following environment variables in your
+submission script:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">TF_ENABLE_AUTO_MIXED_PRECISION_GRAPH_REWRITE=1</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">TF_ENABLE_AUTO_MIXED_PRECISION=1</span></code></li>
+</ul>
+</li>
+<li>And add this to your Python code, here <code class="docutils literal notranslate"><span class="pre">opt</span></code>&nbsp;is the optimizer
+object:<ul>
+<li><code class="docutils literal notranslate"><span class="pre">opt</span> <span class="pre">=</span> <span class="pre">tf.train.experimental.enable_mixed_precision_graph_rewrite(opt)</span></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If the number of filters in the model layers is a multiple of 64, you
+will see an additional speedup because the V100 tensor cores are
+optimized for matmul/conv ops of these sizes.</li>
+<li>If both GPU utilization and memory are below 50% you could try to
+train two models per GPU. This isn’t too hard to do with <a class="reference external" href="https://supercloud.mit.edu/job-arrays-llsub-triples-3-steps" target="_blank">Triples
+Mode</a>,
+simply set the number of processes per node to 4.</li>
+</ul>
+</div>
+<div class="section" id="requesting-more-gpus">
+<h2>Requesting More GPUs<a class="headerlink" href="#requesting-more-gpus" title="Permalink to this heading"></a></h2>
+<p>If you have tried the above suggestions and you still find you need more
+GPUs you can put in a request. Send an email to
+<a class="reference external" href="mailto:supercolud&#37;&#52;&#48;mit&#46;edu" target="_blank">supercloud<span>&#64;</span>mit<span>&#46;</span>edu</a> and tell us what you
+need, what you need it for, and how long you need the allocation
+increase. Are you trying to run a large distributed training run, or are
+you doing hyperparameter searches? Justify your request with numbers:
+show us that you have compared CPU and GPU run times, that you have good
+GPU utilization, and that you have tried the above suggestions. Explain
+how you got to the number of GPUs you are requesting. If the system is
+not too busy we may grant your request. Keep in mind that others are
+likely to have the same paper deadlines as you and we may not be able to
+grant requests during these busy periods, so plan ahead.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../filesystem/index.html" class="btn btn-neutral float-left" title="Best Practices for Using the Filesystem" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../web_portal/index.html" class="btn btn-neutral float-right" title="Web Portal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, MIT SuperCloud Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

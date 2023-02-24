@@ -1,0 +1,189 @@
+Systems and Software
+--------------------
+
+This page lists information about the system and available
+`software <#software>`__, `languages <#languages>`__,
+`compilers <#compilers>`__, `modules <#modules>`__, etc. This is only a
+partial list, so if there is anything you are interested in that isn't
+listed here, please `contact us <https://supercloud.mit.edu/contact>`__.
+
+MGHPCC TX-E1 Specifications
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Summary
+
+Number of Nodes
+
+704
+
+Total CPU Cores
+
+32000
+
+Total GPUs
+
+448
+
+Distributed Storage
+
+873 TB
+
+Individual Nodes
+
+Processor
+
+Nodes
+
+CPU Cores
+
+Node RAM
+
+RAM per core
+
+GPU Type
+
+| GPUs
+| (per Node)
+
+GPU RAM
+
+Local Disk
+
+| Intel Xeon
+| Gold 6248
+
+224
+
+2 x 20
+
+384 GB
+
+9 GB
+
+Nvidia Volta V100
+
+2
+
+32 GB
+
+3.8 TB
+
+| Intel Xeon
+| Platinum 8260
+
+480
+
+2 x 24
+
+192 GB
+
+4 GB
+
+NA
+
+NA
+
+NA
+
+4.4 TB
+
+Resource Allocations
+
+Processor
+
+Partition
+
+Starting
+
+Standard
+
+| Intel Xeon
+| Gold 6248
+
+xeon-g6-volta
+
+| 1 Nodes
+| 40 Cores
+| 2 GPUs
+
+| 6 Nodes
+| 240 Cores
+| 12 GPUs
+
+| Intel Xeon
+| Platinum 8260
+
+xeon-p8
+
+| 2 Nodes
+| 96 Cores
+
+| 16 Nodes
+| 768 Cores
+
+Available Languages
+^^^^^^^^^^^^^^^^^^^
+
+-  Julia
+-  Python (Anaconda available through modules)
+-  Matlab(R)/Octave
+-  R
+-  C/C++
+-  Fortran
+-  Java
+-  Perl 5
+-  Ruby
+
+Software
+^^^^^^^^
+
+Modules
+~~~~~~~
+
+To see the most up-to-date list of currently available modules, run the
+command ``module avail``. For more information about modules, see the
+`module
+section <https://supercloud.mit.edu/software-and-package-management#modules>`__
+on the Software and Package Management page
+
+Machine Learning Tools
+~~~~~~~~~~~~~~~~~~~~~~
+
+-  Tensorflow
+-  Pytorch
+
+Big Data Software Stack
+~~~~~~~~~~~~~~~~~~~~~~~
+
+-  Hadoop
+-  Zookeeper
+-  Accumulo
+
+Middleware Software Stack
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  ARPACK
+-  ATLAS
+-  Boost
+-  BLAS
+-  FFTW
+-  LAPAC
+-  OpenMPI
+-  OpenBLAS
+
+Lincoln Laboratory Developed Software
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+-  `pMatlab <https://www.ll.mit.edu/research-and-development/cyber-security-and-information-sciences/pmatlab>`__
+-  `D4M <http://www.mit.edu/~kepner/D4M/>`__
+-  `Graphulo <http://graphulo.mit.edu/>`__
+-  LLMapReduce
+
+Compilers
+~~~~~~~~~
+
+-  gcc
+-  g++
+-  gfortran
+-  icc
+
