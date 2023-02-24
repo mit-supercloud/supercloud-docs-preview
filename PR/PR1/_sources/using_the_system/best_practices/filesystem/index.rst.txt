@@ -1,3 +1,5 @@
+.. _filesystem_best_practices:
+
 Best Practices for Using the Filesystem
 =======================================
 

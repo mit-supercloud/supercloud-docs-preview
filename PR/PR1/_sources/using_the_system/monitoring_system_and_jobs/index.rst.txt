@@ -1,5 +1,7 @@
-Monitoring System Job Status
-============================
+.. _monitoring_system_and_jobs:
+
+Monitoring System and Job Status
+================================
 
 The four actions you may take the most are checking system status and
 starting, monitoring, and stopping jobs. Since scheduling jobs is a

@@ -1,3 +1,5 @@
+.. _submitting_jobs:
+
 Submitting Jobs
 ===============
 

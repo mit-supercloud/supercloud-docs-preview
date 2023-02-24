@@ -1,3 +1,5 @@
+.. _web_portal:
+
 Web Portal
 ==========
 

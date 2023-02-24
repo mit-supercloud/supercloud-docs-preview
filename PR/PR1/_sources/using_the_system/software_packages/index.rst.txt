@@ -1,3 +1,5 @@
+.. _software_and_packages:
+
 Software and Package Management
 ===============================
 

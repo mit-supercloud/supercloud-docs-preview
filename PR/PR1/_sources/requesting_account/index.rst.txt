@@ -1,3 +1,5 @@
+.. _requesting_account:
+
 Requesting an Account
 =====================
 

@@ -1,3 +1,5 @@
+.. _shared_groups:
+
 Shared Groups
 =============
 

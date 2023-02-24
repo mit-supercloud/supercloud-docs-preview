@@ -1,3 +1,5 @@
+.. _gpu_jobs:
+
 Optimizing your GPU Jobs
 ========================
 

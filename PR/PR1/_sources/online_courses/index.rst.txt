@@ -1,3 +1,5 @@
+.. _online_courses:
+
 Online Courses
 --------------
 

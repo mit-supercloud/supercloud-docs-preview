@@ -106,7 +106,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html">Monitoring System Job Status</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html">Monitoring System and Job Status</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#checking-system-status">Checking System Status</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#monitoring-jobs">Monitoring Jobs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#stopping-jobs">Stopping Jobs</a></li>
@@ -229,7 +229,7 @@
            <div itemprop="articleBody">
              
   <div class="section" id="submitting-jobs">
-<h1>Submitting Jobs<a class="headerlink" href="#submitting-jobs" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1>Submitting Jobs<a class="headerlink" href="#submitting-jobs" title="Permalink to this heading"></a></h1>
 <p>For most job types, there are two ways to start the job: using the
 commands provided by the scheduler, Slurm, or using wrapper command,
 LLsub, that we have provided. LLsub creates a scheduler command based on
@@ -682,7 +682,7 @@ arguments you give it and only use those you specify in your script. You
 can still submit this script with LLsub, but it won’t add any extra
 command line arguments you pass it.</p>
 <div class="section" id="additional-cores-on-the-same-node-1">
-<span id="id1"></span><h3>Additional Cores on the Same Node<a class="headerlink" href="#additional-cores-on-the-same-node-1" title="Permalink to this heading"></a></h3>
+<span id="id2"></span><h3>Additional Cores on the Same Node<a class="headerlink" href="#additional-cores-on-the-same-node-1" title="Permalink to this heading"></a></h3>
 <p>Libraries that use shared memory or threading to handle parallelism
 require that all cores be on the same node. In this case you are
 constrained to the number of cores on a single machine. Check the
@@ -959,7 +959,7 @@ Triples in 3
 Steps</a>.</p>
 </div>
 <div class="section" id="llmapreduce-1">
-<span id="id2"></span><h3>LLMapReduce<a class="headerlink" href="#llmapreduce-1" title="Permalink to this heading"></a></h3>
+<span id="id3"></span><h3>LLMapReduce<a class="headerlink" href="#llmapreduce-1" title="Permalink to this heading"></a></h3>
 <p>A brief introduction to LLMapReduce is provided
 <a class="reference external" href="#llmapreduce" target="_blank">above</a>. To use triples mode to launch your LLMapReduce
 job on Supercloud, use the –np option with the triple as its parameter,
@@ -968,7 +968,7 @@ as follows:</p>
 <div><code class="docutils literal notranslate"><span class="pre">‑‑np=[Nodes,NPPN,NThreads]</span></code></div></blockquote>
 </div>
 <div class="section" id="pmatlab-1">
-<span id="id3"></span><h3>pMatlab<a class="headerlink" href="#pmatlab-1" title="Permalink to this heading"></a></h3>
+<span id="id4"></span><h3>pMatlab<a class="headerlink" href="#pmatlab-1" title="Permalink to this heading"></a></h3>
 <p>A brief introduction to pMatlab is provided&nbsp;<a class="reference external" href="#matlab" target="_blank">above</a>. To use
 triples mode to launch your pMatlab job on Supercloud, you use the
 pRUN() function. Its usage, in Matlab, is as follows:</p>
