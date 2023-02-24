@@ -9,8 +9,7 @@ course <https://learn.llx.edly.io/course/practical-hpc/>`__, which
 contains the material below and more. The course will walk you through
 these steps in more detail and often with videos to see how it is done.
 The course is self paced, can be accessed anytime, and is kept up to
-date. More reference material is available in the `How to
-Use <https://supercloud.mit.edu/how-use>`__ section of this site (some
+date. More reference material is available throughout site (some
 of this material links to those pages).
 
 When your account is first created you will have a small startup
@@ -18,8 +17,7 @@ allocation. Once you complete the `Practical HPC
 course <https://learn.llx.edly.io/course/practical-hpc/>`__ you can
 request your account be updated to the standard allocation by sending
 email to supercloud@mit.edu. Resource allocations are listed on the
-`Systems and
-Software <http://supercloud.mit.edu/systems-and-software>`__ page.
+:ref:`systems_and_software` page.
 
 Logging in Via ssh
 ------------------
