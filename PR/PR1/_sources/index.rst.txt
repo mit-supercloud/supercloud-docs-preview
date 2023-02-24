@@ -26,3 +26,12 @@ Welcome to SuperCloud's documentation!
    online_courses/index
    glossary/index
    acknowledging_us/index
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
