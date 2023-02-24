@@ -92,8 +92,7 @@ Software and Packages
 The first thing you may want to do is make sure the system has the
 software and packages you need. We have installed a lot of software and
 packages on the system already, even though it may not be immediately
-obvious that it is there. Review our page on `Software and Package
-Management <https://supercloud.mit.edu/software-and-package-management>`__,
+obvious that it is there. Review our page on :ref:`software_and_packages`,
 paying particular attention to the section on modules and installing
 packages for the language that you use. If you are ever unsure if we
 have a particular software, and you cannot find it, please send us an
@@ -206,8 +205,7 @@ you need into your home directory on the system. If your code is in
 github you can use git commands on the system to clone your repository
 to your home directory. You can also transfer your files to your home
 directory from your computer by using the commands scp or rsync. Read
-the page on `Accessing and Transferring Data and
-Files <https://supercloud.mit.edu/accessing-and-transferring-data-and-files>`__ to
+the page on :ref:`transferring_files` to
 learn how to use these commands and transfer what you need to your home
 directory.
 
