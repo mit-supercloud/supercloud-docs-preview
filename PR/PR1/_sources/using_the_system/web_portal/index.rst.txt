@@ -16,8 +16,6 @@ include
    system <databases>`
 -  :ref:`Jupyter Notebook
    portal <jupyter>`
--  :ref:`Online Course
-   Platform <online_courses>`
 
 Portal Authentication
 ---------------------
@@ -46,8 +44,7 @@ principal you presented is not associated with an account on this
 system. Please sign up at:
 https://supercloud.mit.edu/requesting-account.**" and you already have
 an account `contact us <http://supercloud.mit.edu/contact>`__ and let us
-know. Northeastern and Harvard uses will have to try to log in once so
-we can get the information we need to add your account to the portal.
+know.
 
 Username and Password
 ~~~~~~~~~~~~~~~~~~~~~

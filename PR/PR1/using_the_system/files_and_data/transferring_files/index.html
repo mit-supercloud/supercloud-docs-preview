@@ -47,10 +47,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#account-request-process">Account Request Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#why-do-we-ask-if-you-are-using-data-that-is-not-publicly-available">Why do we ask if you are using data that is not publicly available?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#generating-ssh-keys-for-supercloud-authentication">Generating ssh Keys for Supercloud Authentication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../requesting_account/index.html#current-approver-list">Current Approver List</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#current-approver-list">Current Approver List</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
@@ -65,10 +63,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#modules">Modules</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#modules">Modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
@@ -233,10 +229,10 @@
 <span id="id1"></span><h1>Transferring Files<a class="headerlink" href="#transferring-files" title="Permalink to this heading"></a></h1>
 <p>There are number of ways to access and transfer data and files between
 your computer and the MIT Supercloud System depending on your OS
-(<a href="#id2"><span class="problematic" id="id3">:ref:`Mac/Linux &lt;#MacLinux&gt;`__</span></a> or <a href="#id4"><span class="problematic" id="id5">:ref:`Windows &lt;#Windows&gt;`__</span></a>) and your comfort
+(<a class="reference internal" href="#maclinux"><span class="std std-ref">Mac/Linux</span></a> or <a class="reference internal" href="#windows"><span class="std std-ref">Windows</span></a>) and your comfort
 with Linux/Unix commands. Regardless of OS, files can be downloaded, but
-not uploaded, through the <a href="#id6"><span class="problematic" id="id7">:ref:`web portal &lt;#transferring-portal&gt;`__</span></a> and both uploaded and
-downloaded through the <a href="#id8"><span class="problematic" id="id9">:ref:`Jupyter &lt;#transferring-jupyter&gt;`__</span></a> web interface. For
+not uploaded, through the <a class="reference internal" href="#transferring-portal"><span class="std std-ref">web portal</span></a> and both uploaded and
+downloaded through the <a class="reference internal" href="#transferring-jupyter"><span class="std std-ref">Jupyter</span></a> web interface. For
 Mac/Linux or Windows with Cygwin, you have the additional options of
 using <code class="docutils literal notranslate"><span class="pre">scp</span></code> and <code class="docutils literal notranslate"><span class="pre">rsync</span></code> from a terminal window. If you are using
 PuTTY on Windows, there is a way to transfer through that program as
@@ -304,11 +300,11 @@ swap the “from” and “to”:</p>
 </div>
 </div>
 <div class="section" id="windows">
-<span id="id10"></span><h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h2>
+<span id="id2"></span><h2>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h2>
 <p>Depending on which ssh client you use you will transfer data
 differently. If you use Bash on Windows 10, Mobaxterm, Cygwin, or other
 Linux-like command line environment, you can use scp or rsync directly
-and should follow the instructions above for <a class="reference external" href="#MacLinux" target="_blank">Mac/Linux</a>.
+and should follow the instructions above for <a class="reference internal" href="#maclinux"><span class="std std-ref">Mac/Linux</span></a>.
 If you use PuTTY, you can follow the directions below to use pscp. You
 run these commands from your own computer, not from the MIT SuperCloud
 login node (if you have aready ssh’d in, you’ve gone too far).</p>

@@ -7,7 +7,7 @@ Additional Documentation:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you haven't found your answer elsewhere in this wiki, you may find it
-here. We provide a list of :ref:`FAQs <faq>`__
+here. We provide a list of :ref:`FAQs <faq>`
 and external `Resources <https://supercloud.mit.edu/resources>`__.
 
 Email:

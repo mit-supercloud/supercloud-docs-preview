@@ -28,7 +28,7 @@ To see what modules are available, type the command:
    ``module avail``
 
 See a list currently the modules available
-:ref:`here <#avail-modules>`__.
+:ref:`here <#avail-modules>`.
 
 To load a module, use the command:
 

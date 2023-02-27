@@ -8,7 +8,7 @@ Overview
 
 This page summarizes Shared Groups, including how to request to :ref:`join or
 create a group <#request-group>`, some :ref:`best practices for working with
-shared groups <#using-groups>`, and how to `:ref:inspect and change file
+shared groups <#using-groups>`, and how to :ref:`inspect and change file
 permissions and group ownership <#permissions>`.
 
 Supercloud users are welcome to either join an existing group and
@@ -41,7 +41,7 @@ If you would like to create a group, please email
 `supercloud@mit.edu <mailto:supercloud@mit.edu?subject=New%20Group%20Request&body=I%20would%20like%20to%20request%20a%20shared%20group.%0A%0AGroup%20name%3A%20%0AGroup%20owner%2Fapprover%3A%0AGroup%20members%3A%0ADo%20you%20plan%20to%20store%20any%20non-public%20data%20in%20the%20group%3F%20Yes%20or%20no%3A%20%0AIf%20yes%2C%20please%20list%20any%20requirements%2C%20restrictions%2C%20or%20agreements%20associated%20with%20the%20data%3A>`__
 with the following info.
 
--  What should the group be called?    
+-  What should the group be called?
 -  Who should the group owner/approver be? We will ask this person for
    approval if anyone asks to be added.
 -  Who should be in the group, listing usernames is most helpful to us,

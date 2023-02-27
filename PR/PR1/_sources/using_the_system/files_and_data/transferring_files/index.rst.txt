@@ -5,10 +5,10 @@ Transferring Files
 
 There are number of ways to access and transfer data and files between
 your computer and the MIT Supercloud System depending on your OS
-(:ref:`Mac/Linux <#MacLinux>`__ or :ref:`Windows <#Windows>`__) and your comfort
+(:ref:`Mac/Linux <#MacLinux>` or :ref:`Windows <#Windows>`) and your comfort
 with Linux/Unix commands. Regardless of OS, files can be downloaded, but
-not uploaded, through the :ref:`web portal <#transferring-portal>`__ and both uploaded and
-downloaded through the :ref:`Jupyter <#transferring-jupyter>`__ web interface. For
+not uploaded, through the :ref:`web portal <#transferring-portal>` and both uploaded and
+downloaded through the :ref:`Jupyter <#transferring-jupyter>` web interface. For
 Mac/Linux or Windows with Cygwin, you have the additional options of
 using ``scp`` and ``rsync`` from a terminal window. If you are using
 PuTTY on Windows, there is a way to transfer through that program as
@@ -90,7 +90,7 @@ Windows
 Depending on which ssh client you use you will transfer data
 differently. If you use Bash on Windows 10, Mobaxterm, Cygwin, or other
 Linux-like command line environment, you can use scp or rsync directly
-and should follow the instructions above for `Mac/Linux <#MacLinux>`__.
+and should follow the instructions above for :ref:`Mac/Linux <#MacLinux>`.
 If you use PuTTY, you can follow the directions below to use pscp. You
 run these commands from your own computer, not from the MIT SuperCloud
 login node (if you have aready ssh'd in, you've gone too far).

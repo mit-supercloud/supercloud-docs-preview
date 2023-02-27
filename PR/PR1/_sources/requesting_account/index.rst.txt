@@ -20,7 +20,7 @@ The account request, approval, and creation process is:
    a. Fill out **all fields** of our `Account Request
       Form <https://txe1-portal.mit.edu/login/request.php>`__. In this
       form we ask if you are using non-public data, see why
-      `below <#data>`__. If you are not part of an MGHPCC institution,
+      :ref:`below <#data>`. If you are not part of an MGHPCC institution,
       list your MIT or Lincoln Laboratory collaborator. Do not submit
       this form without answering these question, it will cause
       significant delay in the process. If you have any questions about
@@ -47,8 +47,8 @@ The account request, approval, and creation process is:
    When your account is first created you will have a small startup
    allocation. Once you complete steps 5 and 6 you can request your
    account be updated to the standard allocation.
-#. Set up your account: `Create an ssh key <#ssh-keys>`__ and `add it to
-   your account <#adding-keys>`__, then make sure you can log in through
+#. Set up your account: :ref:`Create an ssh key <ssh_keys>` and :ref:`add it to
+   your account <#adding-keys>`, then make sure you can log in through
    ssh. The `Practical
    HPC <https://learn.llx.edly.io/course/practical-hpc/>`__ course also
    has a section with videos that walks you through this process.
@@ -109,7 +109,7 @@ command prompt. If the command prompt does not recognize the ssh-keygen
 command, you can install OpenSSH by `following the instructions on this
 page <https://linoxide.com/how-use-ssh-commands-windows-10-command-prompt/>`__.
 If your Windows operating system is older than Windows 10, see the note
-`below <#pre-windows10>`__.
+:ref:`below <#pre-windows10>`.
 
 If you already have ssh keys then you can use those. You will need your
 public key, ``id_rsa.pub.``
@@ -145,6 +145,8 @@ command line.
 
 Copy the entire output, including the ssh-rsa at the beginning.
 
+.. _#adding-keys:
+
 Adding your SSH Keys to your Account
 ------------------------------------
 
@@ -169,11 +171,13 @@ add your key to your account using the Web Portal:
    in the terminal where you created your ssh keys, where ``USERNAME``
    is the username we sent you in your new account email.
 
+.. _#pre-windows10:
+
 **NOTE:** For other Windows users there are a number of ssh clients you
 can use. Some ssh clients like Moba Xterm and Cygwin give you a
 Linux-like environment, and so once you start the program (which should
 look include a command line window), you can follow the instructions for
-creating an ssh key in `above <#ssh-keys>`__ once you install the
+creating an ssh key in :ref:`above <#ssh-keys>` once you install the
 client.
 
 To install Moba Xterm, follow the instructions
@@ -181,7 +185,7 @@ To install Moba Xterm, follow the instructions
 through the section "Create Local Shell". Anytime you are instructed to
 open a terminal window, you can follow the instructions to create a
 local shell. Once you have installed, follow the instructions
-`above <#ssh-keys>`__ for creating an ssh key.
+:ref:`above <#ssh-keys>` for creating an ssh key.
 
 Instructions for installing PuTTY
 are `here <http://www.chiark.greenend.org.uk/~sgtatham/putty/>`__. (Please
@@ -196,7 +200,7 @@ manually generate your ssh-keys, only follow the instructions in the
 
 
 Current Approver List
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 -  Boston University: Wayne Gilmore
 -  Harvard: Scott Yockel

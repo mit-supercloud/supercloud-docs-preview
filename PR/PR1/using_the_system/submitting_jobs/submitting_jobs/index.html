@@ -47,10 +47,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#account-request-process">Account Request Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#why-do-we-ask-if-you-are-using-data-that-is-not-publicly-available">Why do we ask if you are using data that is not publicly available?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#generating-ssh-keys-for-supercloud-authentication">Generating ssh Keys for Supercloud Authentication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../requesting_account/index.html#current-approver-list">Current Approver List</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#current-approver-list">Current Approver List</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
@@ -65,10 +63,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#modules">Modules</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#modules">Modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
@@ -425,7 +421,7 @@ say you are running the same code over a number of files or parameters,
 this is referred to as Throughput and can be run in parallel using a Job
 Array. (If you are iterating over files like this, and have some
 reduction step at the end, take a look at
-<cite>LLMapReduce &lt;#llmapreduce&gt;</cite>). Finally, you may want to think about
+<a class="reference internal" href="#llmapreduce"><span class="std std-ref">LLMapReduce</span></a>). Finally, you may want to think about
 whether your job could use more than the default amount of memory, or
 RAM, and whether it can make use of a GPU.</p>
 <div class="section" id="additional-cores-on-multiple-nodes">
@@ -446,8 +442,8 @@ the number of nodes like this does not ensure that you have exclusive
 access to those nodes. It will by default allocate one core for each
 task, so in this case you’d get a total of four cores, two on each node.
 If you need more than one core for each task, take a look at the
-<cite>cpus-per-task &lt;#slurm-memcores&gt;</cite> option, and if you need exclusive
-access to those nodes see the <cite>exclusive &lt;#slurm-exclusive&gt;</cite> option.</p>
+<a class="reference internal" href="#slurm-memcores"><span class="std std-ref">cpus-per-task</span></a> option, and if you need exclusive
+access to those nodes see the <a class="reference internal" href="#slurm-exclusive"><span class="std std-ref">exclusive</span></a> option.</p>
 </div>
 <div class="section" id="additional-cores-on-the-same-node">
 <span id="slurm-shared"></span><h3>Additional Cores on the Same Node<a class="headerlink" href="#additional-cores-on-the-same-node" title="Permalink to this heading"></a></h3>
@@ -526,8 +522,8 @@ the <code class="docutils literal notranslate"><span class="pre">%a</span></code
 which file goes with which task.</p>
 <p>By default you will get one core for each task in the array. If you need
 more than one core for each task, take a look at the
-<cite>cpus-per-task &lt;#slurm-memcores&gt;</cite> option, and if you need to add a GPU
-to each task, check out the the <cite>GPUs &lt;#slurm-gpus&gt;</cite> section.</p>
+<a class="reference internal" href="#slurm-memcores"><span class="std std-ref">cpus-per-task</span></a> option, and if you need to add a GPU
+to each task, check out the the <a class="reference internal" href="#slurm-gpus"><span class="std std-ref">GPUs</span></a> section.</p>
 </div>
 <div class="section" id="exclusive-nodes">
 <span id="slurm-exclusive"></span><h3>Exclusive Nodes<a class="headerlink" href="#exclusive-nodes" title="Permalink to this heading"></a></h3>
@@ -641,7 +637,6 @@ you may want:</p>
 threading)</span></a></li>
 <li><a class="reference internal" href="#llsub-jobarray"><span class="std std-ref">Multiple independent tasks (job
 array/throughput)</span></a></li>
-<li><span class="xref std std-ref">Exclusive node(s)</span></li>
 <li><a class="reference internal" href="#llsub-memcores"><span class="std std-ref">More memory or cores per process/task/worker</span></a></li>
 <li><a class="reference internal" href="#llsub-gpus"><span class="std std-ref">GPUs</span></a></li>
 </ul>
@@ -665,7 +660,7 @@ say you are running the same code over a number of files or parameters,
 this is referred to as Throughput and can be run in parallel using a Job
 Array. (If you are iterating over files like this, and have some
 reduction step at the end, take a look at
-<cite>LLMapReduce &lt;#llmapreduce&gt;</cite>). Finally, you may want to think about
+<a class="reference internal" href="#llmapreduce"><span class="std std-ref">LLMapReduce</span></a>). Finally, you may want to think about
 whether your job could use more than the default amount of memory, or
 RAM, and whether it can make use of a GPU.</p>
 <p>If you are submitting your job with LLsub, you should be aware of its
@@ -689,8 +684,8 @@ am running a job and I’d like to allocate 4 cores to it, I would run:</p>
 </div>
 <div class="section" id="job-array">
 <span id="llsub-jobarray"></span><h3>Job Array<a class="headerlink" href="#job-array" title="Permalink to this heading"></a></h3>
-<p>Take a look at the <cite>Slurm instructions above for how to set up a Job
-Array &lt;#slurm-jobarray&gt;</cite>. You’ll still set up your code the same, and
+<p>Take a look at the <a class="reference internal" href="#slurm-jobarray"><span class="std std-ref">Slurm instructions above for how to set up a Job
+Array</span></a>. You’ll still set up your code the same, and
 pass the two environment variables <code class="docutils literal notranslate"><span class="pre">#SLURM_ARRAY_TASK_ID</span></code> and
 <code class="docutils literal notranslate"><span class="pre">$SLURM_ARRAY_TASK_COUNT</span></code> into your script. When you submit, rather
 than adding <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> lines to your submission script, you would use
@@ -698,7 +693,7 @@ the <code class="docutils literal notranslate"><span class="pre">-t</span></code
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-t</span> <span class="pre">1-4</span></code></div></blockquote>
 <p>If you need more cores or memory for each task, you can add the <code class="docutils literal notranslate"><span class="pre">-s</span></code>
-option as described <cite>below &lt;#llsub-memcores&gt;</cite>.</p>
+option as described <a class="reference internal" href="#llsub-memcores"><span class="std std-ref">below</span></a>.</p>
 </div>
 <div class="section" id="adding-more-memory-or-cores">
 <span id="llsub-memcores"></span><h3>Adding More Memory or Cores<a class="headerlink" href="#adding-more-memory-or-cores" title="Permalink to this heading"></a></h3>
@@ -916,7 +911,7 @@ the following line to your run script, before you use the
 </div>
 <div class="section" id="triples-mode">
 <span id="triples"></span><h2>Triples Mode<a class="headerlink" href="#triples-mode" title="Permalink to this heading"></a></h2>
-<p>Triples mode is a way to launch pMatlab, <a class="reference internal" href="../job_array_triples/index.html#job-array-triples"><span class="std std-ref">Job Arrays with LLsub Triples in 3 Steps</span></a>,
+<p>Triples mode is a way to launch pMatlab, <a class="reference internal" href="../job_array_triples/index.html#job-array-triples"><span class="std std-ref">LLsub Job Array</span></a>, and
 LLMapReduce jobs that gives you better performance and more flexibility
 to manage memory and threads. Unless you are requesting a small number
 of cores for your job, we highly encourage you to migrate to this model.</p>
@@ -937,7 +932,7 @@ that you request, so the total number of cores consumed against your
 allocation will be Nodes * 40.</p>
 <div class="section" id="id4">
 <h3>LLsub<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
-<p>A brief introduction to LLsub is provided <cite>above &lt;#llsub-jobarray&gt;</cite>.
+<p>A brief introduction to LLsub is provided <a class="reference internal" href="#llsub-jobarray"><span class="std std-ref">above</span></a>.
 To use triples mode to launch LLsub job on Supercloud, run as follows:</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">./submit.sh</span> <span class="pre">[Nodes,NPPN,NThreads]</span></code></div></blockquote>
@@ -946,7 +941,7 @@ LLsub Triples submission is provided on the page <a class="reference internal" h
 </div>
 <div class="section" id="id5">
 <h3>LLMapReduce<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
-<p>A brief introduction to LLMapReduce is provided <cite>above &lt;#llmapreduce&gt;</cite>. To use triples mode to launch your LLMapReduce
+<p>A brief introduction to LLMapReduce is provided <a class="reference internal" href="#llmapreduce"><span class="std std-ref">above</span></a>. To use triples mode to launch your LLMapReduce
 job on Supercloud, use the –np option with the triple as its parameter,
 as follows:</p>
 <blockquote>
@@ -954,7 +949,7 @@ as follows:</p>
 </div>
 <div class="section" id="id6">
 <h3>pMatlab<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
-<p>A brief introduction to pMatlab is provided <cite>above &lt;#matlab&gt;</cite>. To use
+<p>A brief introduction to pMatlab is provided <a class="reference internal" href="#matlab"><span class="std std-ref">above</span></a>. To use
 triples mode to launch your pMatlab job on Supercloud, you use the
 pRUN() function. Its usage, in Matlab, is as follows:</p>
 <blockquote>

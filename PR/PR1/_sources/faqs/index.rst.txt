@@ -178,8 +178,8 @@ clean up any files that are yours in /tmp, that would be really helpful.
 How can I use Tensorboard on Supercloud?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Take a look at this page on `how to run Tensorboard in an interactive
-job :ref:`tensorboard`.
+Take a look at this page on :ref:`how to run Tensorboard in an interactive
+job <tensorboard>`.
 
 I got an Out of Memory error. How can I figure out how much memory my job needs and request more?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -215,7 +215,7 @@ What does the Underutilizing/Oversubscribing the node warning message mean?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When you launch a job in :ref:`triples
-mode<triples>`, the second
+mode <#triples>`, the second
 and third numbers you provide are the number of processes per node
 (NPPN) and the number of threads per process (NT). You can multiply
 these two numbers to get the total number of threads you will have
@@ -239,7 +239,7 @@ the number of threads per process, while avoiding oversubscribing, to
 see if you get improved performance.
 
 For more information on how to pick the best triple for your job, take a
-look at the :ref:`<triples_tuning>` process and recommendations.
+look at the :ref:`#tuning` process and recommendations.
 
 How can I get more help?
 ~~~~~~~~~~~~~~~~~~~~~~~~

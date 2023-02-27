@@ -47,10 +47,8 @@
 <li class="toctree-l2"><a class="reference internal" href="#account-request-process">Account Request Process</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-do-we-ask-if-you-are-using-data-that-is-not-publicly-available">Why do we ask if you are using data that is not publicly available?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#generating-ssh-keys-for-supercloud-authentication">Generating ssh Keys for Supercloud Authentication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#current-approver-list">Current Approver List</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#current-approver-list">Current Approver List</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/index.html">Getting Started</a><ul>
@@ -65,10 +63,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#available-languages">Available Languages</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../systems_and_software/index.html#modules">Modules</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#available-languages">Available Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#modules">Modules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
@@ -241,7 +237,7 @@ from within the United States.</p>
 <li>Fill out <strong>all fields</strong> of our <a class="reference external" href="https://txe1-portal.mit.edu/login/request.php" target="_blank">Account Request
 Form</a>. In this
 form we ask if you are using non-public data, see why
-<a class="reference external" href="#data" target="_blank">below</a>. If you are not part of an MGHPCC institution,
+<span class="xref std std-ref">below</span>. If you are not part of an MGHPCC institution,
 list your MIT or Lincoln Laboratory collaborator. Do not submit
 this form without answering these question, it will cause
 significant delay in the process. If you have any questions about
@@ -269,8 +265,8 @@ with your username and further instructions to set up your account.
 When your account is first created you will have a small startup
 allocation. Once you complete steps 5 and 6 you can request your
 account be updated to the standard allocation.</li>
-<li>Set up your account: <a class="reference external" href="#ssh-keys" target="_blank">Create an ssh key</a> and <a class="reference external" href="#adding-keys" target="_blank">add it to
-your account</a>, then make sure you can log in through
+<li>Set up your account: <a class="reference internal" href="#ssh-keys"><span class="std std-ref">Create an ssh key</span></a> and <a class="reference internal" href="#adding-keys"><span class="std std-ref">add it to
+your account</span></a>, then make sure you can log in through
 ssh. The <a class="reference external" href="https://learn.llx.edly.io/course/practical-hpc/" target="_blank">Practical
 HPC</a>&nbsp;course also
 has a section with videos that walks you through this process.</li>
@@ -324,7 +320,7 @@ command prompt. If the command prompt does not recognize the ssh-keygen
 command, you can install OpenSSH by <a class="reference external" href="https://linoxide.com/how-use-ssh-commands-windows-10-command-prompt/" target="_blank">following the instructions on this
 page</a>.
 If your Windows operating system is older than Windows 10, see the note
-<a class="reference external" href="#pre-windows10" target="_blank">below</a>.</p>
+<a class="reference internal" href="#pre-windows10"><span class="std std-ref">below</span></a>.</p>
 <p>If you already have ssh keys then you can use those. You will need your
 public key, <code class="docutils literal notranslate"><span class="pre">id_rsa.pub.</span></code></p>
 <p><code class="docutils literal notranslate"><span class="pre">[user1234&#64;yourMachine]$</span> <span class="pre">ssh-keygen</span> <span class="pre">-t</span> <span class="pre">rsa</span></code></p>
@@ -348,7 +344,7 @@ command line.</p>
 <p>Copy the entire output, including the ssh-rsa at the beginning.</p>
 </div>
 <div class="section" id="adding-your-ssh-keys-to-your-account">
-<h2>Adding your SSH Keys to your Account<a class="headerlink" href="#adding-your-ssh-keys-to-your-account" title="Permalink to this heading"></a></h2>
+<span id="adding-keys"></span><h2>Adding your SSH Keys to your Account<a class="headerlink" href="#adding-your-ssh-keys-to-your-account" title="Permalink to this heading"></a></h2>
 <p>Once you have created your ssh keys and copied your public key, you can
 add your key to your account using the Web Portal:</p>
 <ol class="arabic simple">
@@ -370,18 +366,18 @@ as Massachusetts Institute of Technology, for example).</li>
 in the terminal where you created your ssh keys, where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code>
 is the username we sent you in your new account email.</li>
 </ol>
-<p><strong>NOTE:</strong>&nbsp;For other Windows users there are a number of ssh clients you
+<p id="pre-windows10"><strong>NOTE:</strong>&nbsp;For other Windows users there are a number of ssh clients you
 can use. Some ssh clients like Moba Xterm and Cygwin give you a
 Linux-like environment, and so once you start the program (which should
 look include a command line window), you can follow the instructions for
-creating an ssh key in <a class="reference external" href="#ssh-keys" target="_blank">above</a> once you install the
+creating an ssh key in <span class="xref std std-ref">above</span> once you install the
 client.</p>
 <p>To install Moba Xterm, follow the instructions
 <a class="reference external" href="https://www.poftut.com/mobaxterm-installation-and-usage-for-windows-personal-edition/" target="_blank">here</a>
 through the section “Create Local Shell”. Anytime you are instructed to
 open a terminal window, you can follow the instructions to create a
 local shell. Once you have installed, follow the instructions
-<a class="reference external" href="#ssh-keys" target="_blank">above</a> for creating an ssh key.</p>
+<span class="xref std std-ref">above</span> for creating an ssh key.</p>
 <p>Instructions for installing PuTTY
 are&nbsp;<a class="reference external" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/" target="_blank">here</a>.&nbsp;(Please
 note, the link will open in a new window.) Once PuTTY is installed
@@ -389,8 +385,9 @@ please follow the instructions at
 this&nbsp;<a class="reference external" href="https://docs.joyent.com/public-cloud/getting-started/ssh-keys/generating-an-ssh-key-manually/manually-generating-your-ssh-key-in-windows" target="_blank">link</a>&nbsp;to
 manually generate your ssh-keys, only follow the instructions in the
 “Generating an SSH Key” section.</p>
+</div>
 <div class="section" id="current-approver-list">
-<h3>Current Approver List<a class="headerlink" href="#current-approver-list" title="Permalink to this heading"></a></h3>
+<h2>Current Approver List<a class="headerlink" href="#current-approver-list" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li>Boston University: Wayne Gilmore</li>
 <li>Harvard: Scott Yockel</li>
@@ -403,7 +400,6 @@ manually generate your ssh-keys, only follow the instructions in the
 <li>UMass Medical: Paul Langlois</li>
 <li>University of Rhode Island:&nbsp;Gaurav Khanna</li>
 </ul>
-</div>
 </div>
 </div>
 

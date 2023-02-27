@@ -4,8 +4,8 @@ Systems and Software
 --------------------
 
 This page lists information about the system and available
-`software <#software>`__, `languages <#languages>`__,
-`compilers <#compilers>`__, `modules <#avail-modules>`__, etc. This is only a
+:ref:`software <#software>`, :ref:`languages <#languages>`,
+:ref:`compilers <#compilers>`, :ref:`modules <#avail-modules>`, etc. This is only a
 partial list, so if there is anything you are interested in that isn't
 listed here, please `contact us <https://supercloud.mit.edu/contact>`__.
 
@@ -141,11 +141,11 @@ Available Languages
 .. _#avail-modules:
 
 Modules
-~~~~~~~
+^^^^^^^
 
 To see the most up-to-date list of currently available modules, run the
 command ``module avail``. For more information about modules, see the
-`module section <#modules>` on the Software and Package Management page.
+:ref:`module section <#modules>` on the Software and Package Management page.
 
 .. _#software:
 

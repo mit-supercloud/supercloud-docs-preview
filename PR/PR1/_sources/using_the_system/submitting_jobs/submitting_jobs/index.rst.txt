@@ -241,7 +241,7 @@ say you are running the same code over a number of files or parameters,
 this is referred to as Throughput and can be run in parallel using a Job
 Array. (If you are iterating over files like this, and have some
 reduction step at the end, take a look at
-`LLMapReduce <#llmapreduce>`). Finally, you may want to think about
+:ref:`LLMapReduce <#llmapreduce>`). Finally, you may want to think about
 whether your job could use more than the default amount of memory, or
 RAM, and whether it can make use of a GPU.
 
@@ -268,8 +268,8 @@ the number of nodes like this does not ensure that you have exclusive
 access to those nodes. It will by default allocate one core for each
 task, so in this case you'd get a total of four cores, two on each node.
 If you need more than one core for each task, take a look at the
-`cpus-per-task <#slurm-memcores>` option, and if you need exclusive
-access to those nodes see the `exclusive <#slurm-exclusive>` option.
+:ref:`cpus-per-task <#slurm-memcores>` option, and if you need exclusive
+access to those nodes see the :ref:`exclusive <#slurm-exclusive>` option.
 
 .. _#slurm-shared:
 
@@ -373,8 +373,8 @@ which file goes with which task.
 
 By default you will get one core for each task in the array. If you need
 more than one core for each task, take a look at the
-`cpus-per-task <#slurm-memcores>` option, and if you need to add a GPU
-to each task, check out the the `GPUs <#slurm-gpus>` section.
+:ref:`cpus-per-task <#slurm-memcores>` option, and if you need to add a GPU
+to each task, check out the the :ref:`GPUs <#slurm-gpus>` section.
 
 .. _#slurm-exclusive:
 
@@ -509,7 +509,6 @@ you may want:
    threading) <#llsub-shared>`
 -  :ref:`Multiple independent tasks (job
    array/throughput) <#llsub-jobarray>`
--  :ref:`Exclusive node(s) <#llsub-exclusive>`
 -  :ref:`More memory or cores per process/task/worker <#llsub-memcores>`
 -  :ref:`GPUs <#llsub-gpus>`
 
@@ -534,7 +533,7 @@ say you are running the same code over a number of files or parameters,
 this is referred to as Throughput and can be run in parallel using a Job
 Array. (If you are iterating over files like this, and have some
 reduction step at the end, take a look at
-`LLMapReduce <#llmapreduce>`). Finally, you may want to think about
+:ref:`LLMapReduce <#llmapreduce>`). Finally, you may want to think about
 whether your job could use more than the default amount of memory, or
 RAM, and whether it can make use of a GPU.
 
@@ -569,7 +568,7 @@ am running a job and I'd like to allocate 4 cores to it, I would run:
 Job Array
 ^^^^^^^^^
 
-Take a look at the `Slurm instructions above for how to set up a Job
+Take a look at the :ref:`Slurm instructions above for how to set up a Job
 Array <#slurm-jobarray>`. You'll still set up your code the same, and
 pass the two environment variables ``#SLURM_ARRAY_TASK_ID`` and
 ``$SLURM_ARRAY_TASK_COUNT`` into your script. When you submit, rather
@@ -579,7 +578,7 @@ the ``-t`` option:
    ``LLsub myScript.sh -t 1-4``
 
 If you need more cores or memory for each task, you can add the ``-s``
-option as described `below <#llsub-memcores>`.
+option as described :ref:`below <#llsub-memcores>`.
 
 .. _#llsub-memcores:
 
@@ -836,7 +835,7 @@ the following line to your run script, before you use the
 Triples Mode
 ------------
 
-Triples mode is a way to launch pMatlab, :ref:`job_array_triples`,
+Triples mode is a way to launch pMatlab, :ref:`LLsub Job Array <job_array_triples>`, and
 LLMapReduce jobs that gives you better performance and more flexibility
 to manage memory and threads. Unless you are requesting a small number
 of cores for your job, we highly encourage you to migrate to this model.
@@ -859,7 +858,7 @@ allocation will be Nodes \* 40.
 LLsub
 ^^^^^
 
-A brief introduction to LLsub is provided `above <#llsub-jobarray>`.
+A brief introduction to LLsub is provided :ref:`above <#llsub-jobarray>`.
 To use triples mode to launch LLsub job on Supercloud, run as follows:
 
    ``LLsub ./submit.sh [Nodes,NPPN,NThreads]``
@@ -871,7 +870,7 @@ LLsub Triples submission is provided on the page :ref:`job_array_triples`.
 LLMapReduce
 ^^^^^^^^^^^
 
-A brief introduction to LLMapReduce is provided `above <#llmapreduce>`. To use triples mode to launch your LLMapReduce
+A brief introduction to LLMapReduce is provided :ref:`above <#llmapreduce>`. To use triples mode to launch your LLMapReduce
 job on Supercloud, use the --np option with the triple as its parameter,
 as follows:
 
@@ -881,7 +880,7 @@ as follows:
 pMatlab
 ^^^^^^^
 
-A brief introduction to pMatlab is provided `above <#matlab>`. To use
+A brief introduction to pMatlab is provided :ref:`above <#matlab>`. To use
 triples mode to launch your pMatlab job on Supercloud, you use the
 pRUN() function. Its usage, in Matlab, is as follows:
 
