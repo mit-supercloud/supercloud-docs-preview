@@ -12,116 +12,45 @@ listed here, please `contact us <https://supercloud.mit.edu/contact>`__.
 MGHPCC TX-E1 Specifications
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Summary
 
-Number of Nodes
++---------------------+---------+
+| Summary                       |
++=====================+=========+
+| Number of Nodes     | 704     |
++---------------------+---------+
+| Total CPU Cores     | 32000   |
++---------------------+---------+
+| Total GPUs	      | 448     |
++---------------------+---------+
+| Distributed Storage | 873 TB  |
++---------------------+---------+
 
-704
++---------------+-------+-----------+----------+----------+--------------+---------+-----------+------------+
+| Individual Nodes                                                                                          |
++===============+=======+===========+==========+==========+==============+=========+===========+============+
+| Processor     | Nodes | CPU Cores | Node RAM | RAM/core | GPU Type     | GPU RAM | GPUs/node | Local Disk |
++---------------+-------+-----------+----------+----------+--------------+---------+-----------+------------+
+| Intel Xeon    | 480   | 48        | 192 GB   | 4 GB     | NA           | NA      | NA        | 4.4 TB     |
+| Platinum 8260 |       |           |          |          |              |         |           |            |
++---------------+-------+-----------+----------+----------+--------------+---------+-----------+------------+
+| Intel Xeon    | 224   | 40        | 384 GB   | 9 GB     | NVidia Volta | 32 GB   | 2         | 3.8 TB     |
+| Gold 6248     |       |           |          |          | V100         |         |           |            |
++---------------+-------+-----------+----------+----------+--------------+---------+-----------+------------+
 
-Total CPU Cores
++---------------+---------------+----------+-----------+
+| Resource Allocations                                 |
++===============+===============+==========+===========+
+| Processor     | Partition     | Starting | Standard  |
++---------------+---------------+----------+-----------+
+| Intel Xeon    | xeon-p8       | 2 Nodes  | 16 Nodes  |
+| Platinum 8260 |               | 96 Cores | 768 Cores |
++---------------+---------------+----------+-----------+
+| Intel Xeon    | xeon-g6-volta | 1 Node   | 6 Nodes   |
+| Gold 6248     |               | 40 Cores | 240 Cores |
+|               |               | 2 GPUs   | 12 GPUs   |
++---------------+---------------+----------+-----------+
 
-32000
 
-Total GPUs
-
-448
-
-Distributed Storage
-
-873 TB
-
-Individual Nodes
-
-Processor
-
-Nodes
-
-CPU Cores
-
-Node RAM
-
-RAM per core
-
-GPU Type
-
-| GPUs
-| (per Node)
-
-GPU RAM
-
-Local Disk
-
-| Intel Xeon
-| Gold 6248
-
-224
-
-2 x 20
-
-384 GB
-
-9 GB
-
-Nvidia Volta V100
-
-2
-
-32 GB
-
-3.8 TB
-
-| Intel Xeon
-| Platinum 8260
-
-480
-
-2 x 24
-
-192 GB
-
-4 GB
-
-NA
-
-NA
-
-NA
-
-4.4 TB
-
-Resource Allocations
-
-Processor
-
-Partition
-
-Starting
-
-Standard
-
-| Intel Xeon
-| Gold 6248
-
-xeon-g6-volta
-
-| 1 Nodes
-| 40 Cores
-| 2 GPUs
-
-| 6 Nodes
-| 240 Cores
-| 12 GPUs
-
-| Intel Xeon
-| Platinum 8260
-
-xeon-p8
-
-| 2 Nodes
-| 96 Cores
-
-| 16 Nodes
-| 768 Cores
 
 .. _#languages:
 

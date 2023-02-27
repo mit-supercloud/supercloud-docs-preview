@@ -232,85 +232,119 @@ partial list, so if there is anything you are interested in that isn’t
 listed here, please <a class="reference external" href="https://supercloud.mit.edu/contact" target="_blank">contact us</a>.</p>
 <div class="section" id="mghpcc-tx-e1-specifications">
 <h2>MGHPCC TX-E1 Specifications<a class="headerlink" href="#mghpcc-tx-e1-specifications" title="Permalink to this heading"></a></h2>
-<p>Summary</p>
-<p>Number of Nodes</p>
-<p>704</p>
-<p>Total CPU Cores</p>
-<p>32000</p>
-<p>Total GPUs</p>
-<p>448</p>
-<p>Distributed Storage</p>
-<p>873 TB</p>
-<p>Individual Nodes</p>
-<p>Processor</p>
-<p>Nodes</p>
-<p>CPU Cores</p>
-<p>Node RAM</p>
-<p>RAM per core</p>
-<p>GPU Type</p>
-<div class="line-block">
-<div class="line">GPUs</div>
-<div class="line">(per Node)</div>
-</div>
-<p>GPU RAM</p>
-<p>Local Disk</p>
-<div class="line-block">
-<div class="line">Intel Xeon</div>
-<div class="line">Gold 6248</div>
-</div>
-<p>224</p>
-<p>2 x 20</p>
-<p>384 GB</p>
-<p>9 GB</p>
-<p>Nvidia Volta V100</p>
-<p>2</p>
-<p>32 GB</p>
-<p>3.8 TB</p>
-<div class="line-block">
-<div class="line">Intel Xeon</div>
-<div class="line">Platinum 8260</div>
-</div>
-<p>480</p>
-<p>2 x 24</p>
-<p>192 GB</p>
-<p>4 GB</p>
-<p>NA</p>
-<p>NA</p>
-<p>NA</p>
-<p>4.4 TB</p>
-<p>Resource Allocations</p>
-<p>Processor</p>
-<p>Partition</p>
-<p>Starting</p>
-<p>Standard</p>
-<div class="line-block">
-<div class="line">Intel Xeon</div>
-<div class="line">Gold 6248</div>
-</div>
-<p>xeon-g6-volta</p>
-<div class="line-block">
-<div class="line">1 Nodes</div>
-<div class="line">40 Cores</div>
-<div class="line">2 GPUs</div>
-</div>
-<div class="line-block">
-<div class="line">6 Nodes</div>
-<div class="line">240 Cores</div>
-<div class="line">12 GPUs</div>
-</div>
-<div class="line-block">
-<div class="line">Intel Xeon</div>
-<div class="line">Platinum 8260</div>
-</div>
-<p>xeon-p8</p>
-<div class="line-block">
-<div class="line">2 Nodes</div>
-<div class="line">96 Cores</div>
-</div>
-<div class="line-block">
-<div class="line">16 Nodes</div>
-<div class="line">768 Cores</div>
-</div>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="70%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="2">Summary</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Number of Nodes</td>
+<td>704</td>
+</tr>
+<tr class="row-odd"><td>Total CPU Cores</td>
+<td>32000</td>
+</tr>
+<tr class="row-even"><td>Total GPUs</td>
+<td>448</td>
+</tr>
+<tr class="row-odd"><td>Distributed Storage</td>
+<td>873 TB</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="15%" />
+<col width="7%" />
+<col width="11%" />
+<col width="10%" />
+<col width="10%" />
+<col width="14%" />
+<col width="9%" />
+<col width="11%" />
+<col width="12%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="9">Individual Nodes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Processor</td>
+<td>Nodes</td>
+<td>CPU Cores</td>
+<td>Node RAM</td>
+<td>RAM/core</td>
+<td>GPU Type</td>
+<td>GPU RAM</td>
+<td>GPUs/node</td>
+<td>Local Disk</td>
+</tr>
+<tr class="row-odd"><td>Intel Xeon
+Platinum 8260</td>
+<td>480</td>
+<td>48</td>
+<td>192 GB</td>
+<td>4 GB</td>
+<td>NA</td>
+<td>NA</td>
+<td>NA</td>
+<td>4.4 TB</td>
+</tr>
+<tr class="row-even"><td>Intel Xeon
+Gold 6248</td>
+<td>224</td>
+<td>40</td>
+<td>384 GB</td>
+<td>9 GB</td>
+<td>NVidia Volta
+V100</td>
+<td>32 GB</td>
+<td>2</td>
+<td>3.8 TB</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils align-default">
+<colgroup>
+<col width="29%" />
+<col width="29%" />
+<col width="20%" />
+<col width="22%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="4">Resource Allocations</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Processor</td>
+<td>Partition</td>
+<td>Starting</td>
+<td>Standard</td>
+</tr>
+<tr class="row-odd"><td>Intel Xeon
+Platinum 8260</td>
+<td>xeon-p8</td>
+<td>2 Nodes
+96 Cores</td>
+<td>16 Nodes
+768 Cores</td>
+</tr>
+<tr class="row-even"><td>Intel Xeon
+Gold 6248</td>
+<td>xeon-g6-volta</td>
+<td>1 Node
+40 Cores
+2 GPUs</td>
+<td>6 Nodes
+240 Cores
+12 GPUs</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="available-languages">
 <span id="languages"></span><h2>Available Languages<a class="headerlink" href="#available-languages" title="Permalink to this heading"></a></h2>
