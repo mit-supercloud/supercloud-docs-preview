@@ -71,6 +71,8 @@ for your account you can get a head start learning how to use the
 account by reviewing the `Practical
 HPC <https://learn.llx.edly.io/course/practical-hpc/>`__ course.
 
+.. _nonpublic_data:
+
 Why do we ask if you are using data that is not publicly available?
 -------------------------------------------------------------------
 

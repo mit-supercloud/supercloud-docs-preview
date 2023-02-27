@@ -6,10 +6,10 @@ Shared Groups
 Overview
 --------
 
-This page summarizes Shared Groups, including how to request to `join or
-create a group <#request>`__, some `best practices for working with
-shared groups <#using-groups>`__, and how to `inspect and change file
-permissions and group ownership <#permissions>`__.
+This page summarizes Shared Groups, including how to request to :ref:`join or
+create a group <#request-group>`, some :ref:`best practices for working with
+shared groups <#using-groups>`, and how to `:ref:inspect and change file
+permissions and group ownership <#permissions>`.
 
 Supercloud users are welcome to either join an existing group and
 receive the benefit of access to a shared file directory, or propose the
@@ -25,6 +25,8 @@ You can see what groups you are currently in by running the “groups”
 command:
 
    ``studentx@login-3:~$ groups``
+
+.. _#request-group:
 
 Joining or Creating a Group
 ---------------------------
@@ -48,6 +50,8 @@ with the following info.
    please list any requirements, restrictions, or agreements associated
    with the data. The more information you give us, the better.
 
+.. _#using-groups:
+
 Using Shared Groups Effectively
 -------------------------------
 
@@ -64,14 +68,16 @@ does not include your home directory, otherwise your team members will
 get a permission denied error when they try to run your code. Instead,
 it is best to use the absolute path through ``/home/gridsan/groups``.
 
-All of our `Best Practices for using the
-Filesystem <https://supercloud.mit.edu/best-practices-and-performance-tips>`__ apply
+All of our :ref:`Best Practices for using the
+Filesystem <_filesystem_best_practices>` apply
 to the group directories. Additionally, NEVER use a GUI to drag and drop
 files into a group directory. Doing so can alter the permissions in the
 group directory, preventing others in your group from accessing the
 files you've moved into the shared group directory. When using ``rsync``
 to transfer files into a group directory, be sure to use the ``-g``
 flag, which will also help keep the group ownership set properly.
+
+.. _#permissions:
 
 Linux File Permissions
 ~~~~~~~~~~~~~~~~~~~~~~

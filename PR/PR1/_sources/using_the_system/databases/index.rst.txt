@@ -8,8 +8,8 @@ the database portal. The portal is located at:
 
 https://txe1-portal.mit.edu/db/dbstatus.php
 
-This page requires you to `authenticate into the
-portal <https://supercloud.mit.edu/supercloud-web-portal>`__. From here
+This page requires you to :ref:`authenticate into the
+portal <web_portal>`. From here
 you will see all the databases you have access to. There are Accumulo
 and Postgress databases available.
 

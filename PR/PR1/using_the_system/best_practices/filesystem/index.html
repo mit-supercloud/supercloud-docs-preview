@@ -65,9 +65,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#software">Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#middleware-software-stack">Middleware Software Stack</a></li>
@@ -176,7 +178,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#are-there-any-resource-limits">Are there any resource limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#what-do-i-do-if-my-job-won-t-be-deleted">What do I do if my job won’t be deleted?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#why-do-i-get-an-error-when-i-try-to-install-a-package">Why do I get an error when I try to install a package?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job">In an Interactive Job I get the error “bash: module: command not found” when I try to use a module command. How can I use modules in an interactive job?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">How can I set up VSCode to edit files remotely on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-use-tensorboard-on-supercloud">How can I use Tensorboard on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">I got an Out of Memory error. How can I figure out how much memory my job needs and request more?</a></li>
@@ -238,8 +239,8 @@ module should have the most up to date versions. Our anaconda modules
 are on the local disk of all the nodes and so does not affect the
 shared filesystem.</li>
 <li>If you need to install additional Python packages, install with pip
-using the –user flag as described in <a class="reference external" href="https://supercloud.mit.edu/software-and-package-management#home-install" target="_blank">our
-documentation</a>.
+using the –user flag as described in <a class="reference internal" href="../../software_packages/index.html#home-install"><span class="std std-ref">our
+documentation</span></a>.
 Python will then only go to your home directory for these installed
 packages, and so should be less load on the shared filesystem. Only
 use conda environments as a last resort, as this puts ALL packages
@@ -256,10 +257,8 @@ now.</li>
 <div class="section" id="submitting-jobs">
 <h2>Submitting Jobs<a class="headerlink" href="#submitting-jobs" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li>Use <a class="reference external" href="https://supercloud.mit.edu/submitting-jobs#triples" target="_blank">Triples
-Mode</a> for
-submitting <a class="reference external" href="https://supercloud.mit.edu/job-arrays-llsub-triples-3-steps" target="_blank">Job
-Arrays</a>&nbsp;and
+<li>Use <a class="reference internal" href="../../submitting_jobs/submitting_jobs/index.html#triples"><span class="std std-ref">Triples Mode</span></a> for submitting <a class="reference internal" href="../../submitting_jobs/job_array_triples/index.html#job-array-triples"><span class="std std-ref">Job
+Arrays</span></a> and
 LLMapReduce jobs. These create fewer log files and group them by
 node, reducing the number of files per directory. It is also lighter
 weight on the scheduler, as it creates fewer tasks/jobs that the
@@ -288,7 +287,7 @@ removed at the end of your job. If your job requires a lot of I/O you
 may see significant performance improvement by copying the files you
 need to $TMPDIR at the start of your job and copy any new files you
 need to your home directory at the end of your job.</li>
-<li>Use <a class="reference external" href="http://supercloud.mit.edu/faq#groups" target="_blank">shared directories</a> to
+<li>Use <a class="reference internal" href="../../files_and_data/shared_groups/index.html#shared-groups"><span class="std std-ref">shared directories</span></a> to
 share data among team members rather than having a separate copy in
 everyone’s home directory.</li>
 <li>Check /home/gridsan/groups/datasets before downloading large public

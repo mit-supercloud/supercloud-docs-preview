@@ -7,7 +7,7 @@ Additional Documentation:
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you haven't found your answer elsewhere in this wiki, you may find it
-here. We provide a list of `FAQ's <https://supercloud.mit.edu/faq>`__
+here. We provide a list of :ref:`FAQs <faq>`__
 and external `Resources <https://supercloud.mit.edu/resources>`__.
 
 Email:
@@ -33,8 +33,8 @@ hours and don't think you are getting these reminder emails, please
 email `supercloud@mit.edu <mailto:supercloud@mit.edu?subject=Office%20Hours%3F>`__.
 
 SuperCloud Office hours are also listed on the ORCD webpage:
-https://orcd.mit.edu/orcd-public-calendar/.  The office hours are listed
-under 
+https://orcd.mit.edu/orcd-public-calendar/. The office hours are listed
+under:
 
 -  HPC Help Office Hours
 -  HPC Help Virtual Office Hours

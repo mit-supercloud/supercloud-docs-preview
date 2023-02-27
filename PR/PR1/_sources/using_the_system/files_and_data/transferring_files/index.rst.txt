@@ -5,14 +5,16 @@ Transferring Files
 
 There are number of ways to access and transfer data and files between
 your computer and the MIT Supercloud System depending on your OS
-(`Mac/Linux <#MacLinux>`__ or `Windows <#Windows>`__) and your comfort
+(:ref:`Mac/Linux <#MacLinux>`__ or :ref:`Windows <#Windows>`__) and your comfort
 with Linux/Unix commands. Regardless of OS, files can be downloaded, but
-not uploaded, through the `web portal <#portal>`__ and both uploaded and
-downloaded through the `Jupyter <#jupyter>`__ web interface. For
+not uploaded, through the :ref:`web portal <#transferring-portal>`__ and both uploaded and
+downloaded through the :ref:`Jupyter <#transferring-jupyter>`__ web interface. For
 Mac/Linux or Windows with Cygwin, you have the additional options of
 using ``scp`` and ``rsync`` from a terminal window. If you are using
 PuTTY on Windows, there is a way to transfer through that program as
 well. All of these are described below.
+
+.. _#MacLinux:
 
 Mac/Linux and Most Windows
 --------------------------
@@ -79,6 +81,8 @@ swap the "from" and "to":
    ``rsync -rlug <username>@txe1-login.mit.edu:/home/gridsan/<username>/results myDir ``
    CaseB:
    ``rsync -rlug <username>@txe1-login.mit.edu:/home/gridsan/<username>/results/ myDir``
+
+.. _#Windows:
 
 Windows
 -------
@@ -190,6 +194,8 @@ using:
 Note that in Windows you can use '\' or '/' but Linux only understands
 '/'
 
+.. _#transferring-portal:
+
 Downloading Files through the Web Portal
 ----------------------------------------
 
@@ -202,13 +208,15 @@ you will be prompted for your username and password. Through the portal,
 you can navigate through your directories and download files. You cannot
 upload files this way.
 
+.. _#transferring-jupyter:
+
 Uploading and Downloading Files Using Jupyter
 ---------------------------------------------
 
 You can both upload and download files using the Jupyter interface
 through your browser. If you do not already have a Jupyter instance
-running, `start one
-up <https://supercloud.mit.edu/jupyter-notebooks>`__. The Jupyter portal
+running, :ref:`start one
+up <jupyter>`. The Jupyter portal
 is located at:
 
    https://txe1-portal.mit.edu/jupyter/jupyter_notebook.php

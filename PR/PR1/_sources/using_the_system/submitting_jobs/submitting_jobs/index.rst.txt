@@ -887,7 +887,7 @@ pRUN() function. Its usage, in Matlab, is as follows:
 
    ``eval(pRUN('mfile', [Nodes NPPN OMP_NUM_THREADS], 'grid'))``
 
-.. _triples_tuning:
+.. _#tuning:
 
 Triples Mode Tuning
 ^^^^^^^^^^^^^^^^^^^

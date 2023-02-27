@@ -65,9 +65,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#software">Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#middleware-software-stack">Middleware Software Stack</a></li>
@@ -176,7 +178,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#are-there-any-resource-limits">Are there any resource limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#what-do-i-do-if-my-job-won-t-be-deleted">What do I do if my job won’t be deleted?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#why-do-i-get-an-error-when-i-try-to-install-a-package">Why do I get an error when I try to install a package?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job">In an Interactive Job I get the error “bash: module: command not found” when I try to use a module command. How can I use modules in an interactive job?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">How can I set up VSCode to edit files remotely on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-use-tensorboard-on-supercloud">How can I use Tensorboard on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">I got an Out of Memory error. How can I figure out how much memory my job needs and request more?</a></li>
@@ -232,10 +233,10 @@
 <span id="id1"></span><h1>Shared Groups<a class="headerlink" href="#shared-groups" title="Permalink to this heading"></a></h1>
 <div class="section" id="overview">
 <h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h2>
-<p>This page summarizes Shared Groups, including how to request to <a class="reference external" href="#request" target="_blank">join or
-create a group</a>, some <a class="reference external" href="#using-groups" target="_blank">best practices for working with
-shared groups</a>, and how to <a class="reference external" href="#permissions" target="_blank">inspect and change file
-permissions and group ownership</a>.</p>
+<p>This page summarizes Shared Groups, including how to request to <a class="reference internal" href="#request-group"><span class="std std-ref">join or
+create a group</span></a>, some <a class="reference internal" href="#using-groups"><span class="std std-ref">best practices for working with
+shared groups</span></a>, and how to <cite>:ref:inspect and change file
+permissions and group ownership &lt;#permissions&gt;</cite>.</p>
 <p>Supercloud users are welcome to either join an existing group and
 receive the benefit of access to a shared file directory, or propose the
 creation of a group if there is some common interest amongst certain
@@ -250,7 +251,7 @@ command:</p>
 <div><code class="docutils literal notranslate"><span class="pre">studentx&#64;login-3:~$</span> <span class="pre">groups</span></code></div></blockquote>
 </div>
 <div class="section" id="joining-or-creating-a-group">
-<h2>Joining or Creating a Group<a class="headerlink" href="#joining-or-creating-a-group" title="Permalink to this heading"></a></h2>
+<span id="request-group"></span><h2>Joining or Creating a Group<a class="headerlink" href="#joining-or-creating-a-group" title="Permalink to this heading"></a></h2>
 <p>If you would like to join a group, send an e-mail to <a class="reference external" href="mailto:supercloud&#37;&#52;&#48;mit&#46;edu" target="_blank">supercloud<span>&#64;</span>mit<span>&#46;</span>edu</a>
 with that request and CC the group owner for approval. The group owner
 must give approval before we can add you to the group. If you are not
@@ -271,7 +272,7 @@ with the data. The more information you give us, the better.</li>
 </ul>
 </div>
 <div class="section" id="using-shared-groups-effectively">
-<h2>Using Shared Groups Effectively<a class="headerlink" href="#using-shared-groups-effectively" title="Permalink to this heading"></a></h2>
+<span id="using-groups"></span><h2>Using Shared Groups Effectively<a class="headerlink" href="#using-shared-groups-effectively" title="Permalink to this heading"></a></h2>
 <p>Once you have been added to a group you will be able to access that
 group’s shared directory. All group directories are located in the
 <code class="docutils literal notranslate"><span class="pre">/home/gridsan/groups</span></code> directory on the filesystem. Since this is part
@@ -284,8 +285,8 @@ includes paths to a shared group, it is good practice to use a path that
 does not include your home directory, otherwise your team members will
 get a permission denied error when they try to run your code. Instead,
 it is best to use the absolute path through <code class="docutils literal notranslate"><span class="pre">/home/gridsan/groups</span></code>.</p>
-<p>All of our <a class="reference external" href="https://supercloud.mit.edu/best-practices-and-performance-tips" target="_blank">Best Practices for using the
-Filesystem</a>&nbsp;apply
+<p>All of our <span class="xref std std-ref">Best Practices for using the
+Filesystem</span> apply
 to the group directories. Additionally, NEVER use a GUI to drag and drop
 files into a group directory. Doing so can alter the permissions in the
 group directory, preventing others in your group from accessing the
@@ -293,7 +294,7 @@ files you’ve moved into the shared group directory. When using <code class="do
 to transfer files into a group directory, be sure to use the <code class="docutils literal notranslate"><span class="pre">-g</span></code>
 flag, which will also help keep the group ownership set properly.</p>
 <div class="section" id="linux-file-permissions">
-<h3>Linux File Permissions<a class="headerlink" href="#linux-file-permissions" title="Permalink to this heading"></a></h3>
+<span id="permissions"></span><h3>Linux File Permissions<a class="headerlink" href="#linux-file-permissions" title="Permalink to this heading"></a></h3>
 <p>Sometimes, despite your best efforts, the permissions on a group can be
 altered such that you or others in your group can’t interact with a file
 the way they need to. If that happens, you can always contact us at

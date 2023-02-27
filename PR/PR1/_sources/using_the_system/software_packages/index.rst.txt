@@ -5,14 +5,16 @@ Software and Package Management
 
 The standard environment on the MIT Supercloud System is sufficient for
 most. If it is not, first check to see if the tool you need is included
-in a module. `Modules <#modules>`__ contain environment variables that
+in a module. :ref:`#modules` contain environment variables that
 set you up to use other software, packages, or compilers not included in
 the standard stack. If there is no module with what you need, you can
-often `install your package or software in your home
-directory <#home-install>`__. Below we have instructions on how to
-install `Julia <#julia>`__, `Python <#python>`__, and `R <#R>`__
+often :ref:`install your package or software in your home
+directory <#home-install>`. Below we have instructions on how to
+install :ref:`Julia <#julia>`, :ref:`Python <#python>`, and :ref:`R <#R>`
 packages. If you have explored both these options or are having trouble,
 `contact us <https://supercloud.mit.edu/contact>`__.
+
+.. _#modules:
 
 Modules
 -------
@@ -26,7 +28,7 @@ To see what modules are available, type the command:
    ``module avail``
 
 See a list currently the modules available
-`here <https://supercloud.mit.edu/systems-and-software#modules>`__.
+:ref:`here <#avail-modules>`__.
 
 To load a module, use the command:
 
@@ -68,6 +70,8 @@ The following shows a Bourne shell script example:
    ``# Then use the module command to load the module needed for your work``
    ``module load anaconda/2020a``
 
+.. _#home-install:
+
 Installing Software or Packages in your Home Directory
 ------------------------------------------------------
 
@@ -84,6 +88,8 @@ out to us for
 help <mailto:supercolud@mit.edu?subject=Help%20Installing%20Software>`__.
 Let us know what you have tried so far and we can often point you in the
 right direction.
+
+.. _#julia:
 
 Julia Packages
 ^^^^^^^^^^^^^^
@@ -130,6 +136,8 @@ The first part "Julia MyKernel" is what you want to call your kernel, so
 feel free to change this. The second part makes sure both our packages
 and any you've installed in your home directory show up on the load path
 when you use a Jupyter Notebook with this kernel.
+
+.. _#python:
 
 Python Packages
 ^^^^^^^^^^^^^^^
@@ -225,8 +233,10 @@ before those that may be installed in your home directory. If you are
 using Jupyter, you will need to add this line to
 the ``.jupyter/llsc_notebook_bashrc`` file. See the section on the
 bottom of
-the `Jupyter <https://supercloud.mit.edu/jupyter-notebooks>`__ page for
+the :ref:`Jupyter <jupyter>` page for
 more information.
+
+.. _#R:
 
 R Libraries
 ^^^^^^^^^^^

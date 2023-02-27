@@ -10,14 +10,14 @@ https://txe1-portal.mit.edu
 On this page you will find links to a number of useful tools. These
 include
 
--  `Page to add or remove ssh keys <#ssh>`__
--  `Home directory file browser <#home>`__
--  `Dynamic databse launching
-   system <https://supercloud.mit.edu/databases>`__
--  `Jupyter Notebook
-   portal <https://supercloud.mit.edu/jupyter-notebooks>`__
--  `Online Course
-   Platform <https://supercloud.mit.edu/online-courses>`__
+-  :ref:`Page to add or remove ssh keys <#ssh>`
+-  :ref:`Home directory file browser <#home>`
+-  :ref:`Dynamic databse launching
+   system <databases>`
+-  :ref:`Jupyter Notebook
+   portal <jupyter>`
+-  :ref:`Online Course
+   Platform <online_courses>`
 
 Portal Authentication
 ---------------------
@@ -54,32 +54,7 @@ Username and Password
 
 If you do not have an active login for an educational institution you
 may need to log into the portal using your username and password. Let us
-know and we will set a temporary password for you and place it in your
-home directory. To set up your new password, first open up a terminal
-window and enter the command:
-
-``ssh USERNAME@txe1.mit.edu``
-
-Note that you are not going to ``txe1-login``, as you would normally do,
-and that you cannot submit jobs from this machine.
-
-In order to change your password, you need to know the current password.
-The default password is kept in the hidden ``.tmp_passwd`` file in your
-home directory. Either open up this file in your favorite editor to view
-the current password, or simply enter the command:
-
-``less .tmp_passwd``
-
-Note the current password, you will not be able to use "paste" when
-changing it, so write it down or paste it into another window. Now run
-the command:
-
-``passwd``
-
-Follow the prompts. It will ask you for your current password and your
-new password. Once your password is set you will be able to log into the
-portal using the "Username and Password" link by entering your
-Supercloud username and the password you have just set.
+know and we will let you know how to do this.
 
 PKI Certificate/Smart Card
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -88,6 +63,8 @@ Those who have a Smart Card or PKI Certificate can log in using the
 first link on the page. If you would like to log in using your PKI
 Certificate or Smart Card, please `let us
 know <http://supercloud.mit.edu/contact>`__.
+
+.. _#ssh:
 
 Adding/Removing SSH Keys
 ------------------------
@@ -99,8 +76,10 @@ click "Update Keys". You should see your new key populated in the table
 and display similarly to the other keys listed. To remove an old key,
 click the check box next to the key you would like to remove and click
 "Update Keys" at the bottom. Instructions for generating a new key are
-on our `account request
-page <https://supercloud.mit.edu/requesting-account#ssh-keys>`__.
+on our :ref:`account request
+page <ssh_keys>`.
+
+.. _#home:
 
 Browsing your Home Directory
 ----------------------------

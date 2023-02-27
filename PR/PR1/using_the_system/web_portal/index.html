@@ -65,9 +65,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#available-languages">Available Languages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#software">Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#available-languages">Available Languages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#middleware-software-stack">Middleware Software Stack</a></li>
@@ -176,7 +178,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#are-there-any-resource-limits">Are there any resource limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#what-do-i-do-if-my-job-won-t-be-deleted">What do I do if my job won’t be deleted?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#why-do-i-get-an-error-when-i-try-to-install-a-package">Why do I get an error when I try to install a package?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job">In an Interactive Job I get the error “bash: module: command not found” when I try to use a module command. How can I use modules in an interactive job?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">How can I set up VSCode to edit files remotely on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#how-can-i-use-tensorboard-on-supercloud">How can I use Tensorboard on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">I got an Out of Memory error. How can I figure out how much memory my job needs and request more?</a></li>
@@ -234,14 +235,14 @@
 <p>On this page you will find links to a number of useful tools. These
 include</p>
 <ul class="simple">
-<li><a class="reference external" href="#ssh" target="_blank">Page to add or remove ssh keys</a></li>
-<li><a class="reference external" href="#home" target="_blank">Home directory file browser</a></li>
-<li><a class="reference external" href="https://supercloud.mit.edu/databases" target="_blank">Dynamic databse launching
-system</a></li>
-<li><a class="reference external" href="https://supercloud.mit.edu/jupyter-notebooks" target="_blank">Jupyter Notebook
-portal</a></li>
-<li><a class="reference external" href="https://supercloud.mit.edu/online-courses" target="_blank">Online Course
-Platform</a></li>
+<li><a class="reference internal" href="#ssh"><span class="std std-ref">Page to add or remove ssh keys</span></a></li>
+<li><a class="reference internal" href="#home"><span class="std std-ref">Home directory file browser</span></a></li>
+<li><a class="reference internal" href="../databases/index.html#databases"><span class="std std-ref">Dynamic databse launching
+system</span></a></li>
+<li><a class="reference internal" href="../jupyter_notebooks/index.html#jupyter"><span class="std std-ref">Jupyter Notebook
+portal</span></a></li>
+<li><a class="reference internal" href="../../online_courses/index.html#online-courses"><span class="std std-ref">Online Course
+Platform</span></a></li>
 </ul>
 <div class="section" id="portal-authentication">
 <h2>Portal Authentication<a class="headerlink" href="#portal-authentication" title="Permalink to this heading"></a></h2>
@@ -273,25 +274,7 @@ we can get the information we need to add your account to the portal.</p>
 <h3>Username and Password<a class="headerlink" href="#username-and-password" title="Permalink to this heading"></a></h3>
 <p>If you do not have an active login for an educational institution you
 may need to log into the portal using your username and password. Let us
-know and we will set a temporary password for you and place it in your
-home directory. To set up your new password, first open up a terminal
-window and enter the command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">USERNAME&#64;txe1.mit.edu</span></code></p>
-<p>Note that you are not going to <code class="docutils literal notranslate"><span class="pre">txe1-login</span></code>, as you would normally do,
-and that you cannot submit jobs from this machine.</p>
-<p>In order to change your password, you need to know the current password.
-The default password is kept in the hidden <code class="docutils literal notranslate"><span class="pre">.tmp_passwd</span></code> file in your
-home directory. Either open up this file in your favorite editor to view
-the current password, or simply enter the command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">.tmp_passwd</span></code></p>
-<p>Note the current password, you will not be able to use “paste” when
-changing it, so write it down or paste it into another window. Now run
-the command:</p>
-<p><code class="docutils literal notranslate"><span class="pre">passwd</span></code></p>
-<p>Follow the prompts. It will ask you for your current password and your
-new password. Once your password is set you will be able to log into the
-portal using the “Username and Password” link by entering your
-Supercloud username and the password you have just set.</p>
+know and we will let you know how to do this.</p>
 </div>
 <div class="section" id="pki-certificate-smart-card">
 <h3>PKI Certificate/Smart Card<a class="headerlink" href="#pki-certificate-smart-card" title="Permalink to this heading"></a></h3>
@@ -302,7 +285,7 @@ know</a>.</p>
 </div>
 </div>
 <div class="section" id="adding-removing-ssh-keys">
-<h2>Adding/Removing SSH Keys<a class="headerlink" href="#adding-removing-ssh-keys" title="Permalink to this heading"></a></h2>
+<span id="ssh"></span><h2>Adding/Removing SSH Keys<a class="headerlink" href="#adding-removing-ssh-keys" title="Permalink to this heading"></a></h2>
 <p>The first link on the Portal Home page is “/sshkeys/”. Clicking on this
 link takes you to a page where you can add new keys or remove old ones.
 To add a new key, paste the key in the box at the bottom of the page and
@@ -310,11 +293,11 @@ click “Update Keys”. You should see your new key populated in the table
 and display similarly to the other keys listed. To remove an old key,
 click the check box next to the key you would like to remove and click
 “Update Keys” at the bottom. Instructions for generating a new key are
-on our <a class="reference external" href="https://supercloud.mit.edu/requesting-account#ssh-keys" target="_blank">account request
-page</a>.</p>
+on our <a class="reference internal" href="../../requesting_account/index.html#ssh-keys"><span class="std std-ref">account request
+page</span></a>.</p>
 </div>
 <div class="section" id="browsing-your-home-directory">
-<h2>Browsing your Home Directory<a class="headerlink" href="#browsing-your-home-directory" title="Permalink to this heading"></a></h2>
+<span id="home"></span><h2>Browsing your Home Directory<a class="headerlink" href="#browsing-your-home-directory" title="Permalink to this heading"></a></h2>
 <p>The second link on the Portal Home page is “/gridsan/”. Click this link
 and then select your username to see the files in your home directory.
 You can click on a file to download it or click on a directory to

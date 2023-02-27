@@ -5,7 +5,7 @@ Systems and Software
 
 This page lists information about the system and available
 `software <#software>`__, `languages <#languages>`__,
-`compilers <#compilers>`__, `modules <#modules>`__, etc. This is only a
+`compilers <#compilers>`__, `modules <#avail-modules>`__, etc. This is only a
 partial list, so if there is anything you are interested in that isn't
 listed here, please `contact us <https://supercloud.mit.edu/contact>`__.
 
@@ -123,6 +123,8 @@ xeon-p8
 | 16 Nodes
 | 768 Cores
 
+.. _#languages:
+
 Available Languages
 ^^^^^^^^^^^^^^^^^^^
 
@@ -136,17 +138,19 @@ Available Languages
 -  Perl 5
 -  Ruby
 
-Software
-^^^^^^^^
+.. _#avail-modules:
 
 Modules
 ~~~~~~~
 
 To see the most up-to-date list of currently available modules, run the
 command ``module avail``. For more information about modules, see the
-`module
-section <https://supercloud.mit.edu/software-and-package-management#modules>`__
-on the Software and Package Management page
+`module section <#modules>` on the Software and Package Management page.
+
+.. _#software:
+
+Software
+^^^^^^^^
 
 Machine Learning Tools
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -180,6 +184,8 @@ Lincoln Laboratory Developed Software
 -  `D4M <http://www.mit.edu/~kepner/D4M/>`__
 -  `Graphulo <http://graphulo.mit.edu/>`__
 -  LLMapReduce
+
+.. _#compilers:
 
 Compilers
 ~~~~~~~~~

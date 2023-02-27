@@ -6,21 +6,23 @@ Monitoring System and Job Status
 The four actions you may take the most are checking system status and
 starting, monitoring, and stopping jobs. Since scheduling jobs is a
 longer topic, see this
-`page <https://supercloud.mit.edu/submitting-jobs>`__ for an in-depth
+:ref:`page <submitting_jobs>` for an in-depth
 description of how to start your job. Here we describe how to check the
-`status of the system <#system-status>`__ for available resources,
-`monitor a currently running job <#monitoring-jobs>`__, and `stop a
-running job <#stopping-jobs>`__.
+:ref:`status of the system <#system-status>` for available resources,
+:ref:`monitor a currently running job <#monitoring-jobs>`, and :ref:`stop a
+running job <#stopping-jobs>`.
 
 Each of these tasks is done through the scheduler, which is Slurm on the
-MIT Supercloud system. On this page and the `job submission
-page <https://supercloud.mit.edu/submitting-jobs>`__ we describe some of
+MIT Supercloud system. On this page and the :ref:`job submission
+page <submitting_jobs>` we describe some of
 the basic options for submitting, monitoring, and stopping jobs. More
 advanced options are described in Slurm's
 `documentation <https://slurm.schedmd.com/man_index.html>`__, and this
 handy `two-page
 guide <https://slurm.schedmd.com/pdfs/summary.pdf>`__ gives a breif
 description of the commands and their options.
+
+.. _#system-status:
 
 Checking System Status
 ----------------------
@@ -44,6 +46,8 @@ This command will list the nodes that are down (unavailable), fully
 allocated, partially allocated, and idle. Note that the same node can
 appear in multiple partitions.
 
+.. _#monitoring-jobs:
+
 Monitoring Jobs
 ---------------
 
@@ -55,6 +59,8 @@ The output of the LLstat command lists the job IDs of the jobs running,
 their names, the start time, the number of cpus per task, its status,
 and the node that it is running on. If it is in error state, it lists
 that as well.
+
+.. _#stopping-jobs:
 
 Stopping Jobs
 -------------

@@ -1,4 +1,6 @@
-| You can run Tensorboard as a job, this is the preferred method of
+| .. _tensorboard:
+
+You can run Tensorboard as a job, this is the preferred method of
   doing this.
 |  
 | First start an interactive session with a reserved port:

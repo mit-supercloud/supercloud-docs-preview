@@ -65,9 +65,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#available-languages">Available Languages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#software">Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#available-languages">Available Languages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#middleware-software-stack">Middleware Software Stack</a></li>
@@ -176,7 +178,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#are-there-any-resource-limits">Are there any resource limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#what-do-i-do-if-my-job-won-t-be-deleted">What do I do if my job won’t be deleted?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#why-do-i-get-an-error-when-i-try-to-install-a-package">Why do I get an error when I try to install a package?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job">In an Interactive Job I get the error “bash: module: command not found” when I try to use a module command. How can I use modules in an interactive job?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">How can I set up VSCode to edit files remotely on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#how-can-i-use-tensorboard-on-supercloud">How can I use Tensorboard on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">I got an Out of Memory error. How can I figure out how much memory my job needs and request more?</a></li>
@@ -232,14 +233,14 @@
 <p>The four actions you may take the most are checking system status and
 starting, monitoring, and stopping jobs. Since scheduling jobs is a
 longer topic, see this
-<a class="reference external" href="https://supercloud.mit.edu/submitting-jobs" target="_blank">page</a> for an in-depth
+<a class="reference internal" href="../submitting_jobs/submitting_jobs/index.html#submitting-jobs"><span class="std std-ref">page</span></a> for an in-depth
 description of how to start your job. Here we describe how to check the
-<a class="reference external" href="#system-status" target="_blank">status of the system</a> for available resources,
-<a class="reference external" href="#monitoring-jobs" target="_blank">monitor a currently running job</a>, and <a class="reference external" href="#stopping-jobs" target="_blank">stop a
-running job</a>.</p>
+<a class="reference internal" href="#system-status"><span class="std std-ref">status of the system</span></a> for available resources,
+<a class="reference internal" href="#monitoring-jobs"><span class="std std-ref">monitor a currently running job</span></a>, and <a class="reference internal" href="#stopping-jobs"><span class="std std-ref">stop a
+running job</span></a>.</p>
 <p>Each of these tasks is done through the scheduler, which is Slurm on the
-MIT Supercloud system. On this page and the <a class="reference external" href="https://supercloud.mit.edu/submitting-jobs" target="_blank">job submission
-page</a> we describe some of
+MIT Supercloud system. On this page and the <a class="reference internal" href="../submitting_jobs/submitting_jobs/index.html#submitting-jobs"><span class="std std-ref">job submission
+page</span></a> we describe some of
 the basic options for submitting, monitoring, and stopping jobs. More
 advanced options are described in Slurm’s
 <a class="reference external" href="https://slurm.schedmd.com/man_index.html" target="_blank">documentation</a>, and this
@@ -247,7 +248,7 @@ handy <a class="reference external" href="https://slurm.schedmd.com/pdfs/summary
 guide</a>&nbsp;gives a breif
 description of the commands and their options.</p>
 <div class="section" id="checking-system-status">
-<h2>Checking System Status<a class="headerlink" href="#checking-system-status" title="Permalink to this heading"></a></h2>
+<span id="system-status"></span><h2>Checking System Status<a class="headerlink" href="#checking-system-status" title="Permalink to this heading"></a></h2>
 <p>Our wrapper command, <code class="docutils literal notranslate"><span class="pre">LLGrid_status</span></code>, has a nicely formatted and easy
 to read output for checking system status:</p>
 <blockquote>
@@ -268,7 +269,7 @@ allocated, partially allocated, and idle. Note that the same node can
 appear in multiple partitions.</p>
 </div>
 <div class="section" id="monitoring-jobs">
-<h2>Monitoring Jobs<a class="headerlink" href="#monitoring-jobs" title="Permalink to this heading"></a></h2>
+<span id="id1"></span><h2>Monitoring Jobs<a class="headerlink" href="#monitoring-jobs" title="Permalink to this heading"></a></h2>
 <p>You can monitor your jobs using the <code class="docutils literal notranslate"><span class="pre">LLstat</span></code> command:</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">[StudentX&#64;login-0</span> <span class="pre">~]$</span> <span class="pre">LLstat</span>&#160;&#160; <span class="pre">LLGrid:</span> <span class="pre">txe1</span> <span class="pre">(running</span> <span class="pre">slurm</span> <span class="pre">16.05.8)</span>&#160;&#160; <span class="pre">JOBID&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">ARRAY_J&nbsp;&nbsp;&nbsp;</span> <span class="pre">NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">USER&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">START_TIME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">PARTITION&nbsp;</span> <span class="pre">CPUS&nbsp;</span> <span class="pre">FEATURES&nbsp;</span> <span class="pre">MIN_MEMORY&nbsp;</span> <span class="pre">ST&nbsp;</span> <span class="pre">NODELIST(REASON)</span>&#160;&#160; <span class="pre">40986&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">40986&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">myJob&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">Student&nbsp;</span> <span class="pre">2017-10-19T15:35:46</span> <span class="pre">normal&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">1&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">xeon-e5&nbsp;&nbsp;</span> <span class="pre">5G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">R&nbsp;&nbsp;</span> <span class="pre">gpu-2</span>&#160;&#160; <span class="pre">40980_100</span> <span class="pre">40980&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">myArrayJob&nbsp;</span> <span class="pre">Student&nbsp;</span> <span class="pre">2017-10-19T15:35:37</span> <span class="pre">normal&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">1&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">xeon-e5&nbsp;&nbsp;</span> <span class="pre">5G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">R&nbsp;&nbsp;</span> <span class="pre">gpu-2</span>&#160;&#160; <span class="pre">40980_101</span> <span class="pre">40980&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">myArrayJob&nbsp;</span> <span class="pre">Student&nbsp;</span> <span class="pre">2017-10-19T15:35:37</span> <span class="pre">normal&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">1&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">xeon-e5&nbsp;&nbsp;</span> <span class="pre">5G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">R&nbsp;&nbsp;</span> <span class="pre">gpu-2</span>&#160;&#160; <span class="pre">40980_102</span> <span class="pre">40980&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">myArrayJob&nbsp;</span> <span class="pre">Student&nbsp;</span> <span class="pre">2017-10-19T15:35:37</span> <span class="pre">normal&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">1&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">xeon-e5&nbsp;&nbsp;</span> <span class="pre">5G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span class="pre">R&nbsp;&nbsp;</span> <span class="pre">gpu-2</span></code></div></blockquote>
@@ -278,7 +279,7 @@ and the node that it is running on. If it is in error state, it lists
 that as well.</p>
 </div>
 <div class="section" id="stopping-jobs">
-<h2>Stopping Jobs<a class="headerlink" href="#stopping-jobs" title="Permalink to this heading"></a></h2>
+<span id="id2"></span><h2>Stopping Jobs<a class="headerlink" href="#stopping-jobs" title="Permalink to this heading"></a></h2>
 <p>Jobs can be stopped using the <code class="docutils literal notranslate"><span class="pre">LLkill</span></code> command. You specify the list
 of job ID’s, separated by commas that you would like to stop, for
 example:</p>

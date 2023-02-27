@@ -7,9 +7,11 @@ Jupyter notebooks are an interactive IDE environment. The environment
 allows you to start up notebooks in a variety of languages (Python,
 Matlab, Octave, Julia), terminal windows, and a simple text editor. You
 can also download and upload files to your home directory through this
-interface. This page will describe how to `start up <#starting>`__ and
-`use <#about-jupyter>`__ your own Jupyter instance and how to set
-`environment variables for Jupyter <#jupyter-env>`__.
+interface. This page will describe how to :ref:`start up <#starting-jupyter>` and
+:ref:`use <#about-jupyter>` your own Jupyter instance and how to set
+:ref:`environment variables for Jupyter <#jupyter-env>`.
+
+.. _#starting-jupyter:
 
 Starting Up Jupyter
 -------------------
@@ -66,6 +68,8 @@ launching your job. Stopping the job can be done by clicking on the
 by navigating back to the inital launch page and clicking the "Shutdown"
 button, or by using one of the scheduler commands (LLkill).
 
+.. _#about-jupyter:
+
 The Jupyter Environment
 -----------------------
 
@@ -83,6 +87,8 @@ edit, and go to the top of the page and click "Edit". This will bring
 you to a simple text editor. For a bit of an intro to the Jupyter
 interface, see this page on `Notebook
 Basics <http://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html>`__.
+
+.. _#jupyter-env:
 
 A Note on Environment Variables and Modules
 -------------------------------------------

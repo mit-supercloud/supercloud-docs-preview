@@ -65,9 +65,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#available-languages">Available Languages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#software">Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#available-languages">Available Languages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../systems_and_software/index.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../systems_and_software/index.html#middleware-software-stack">Middleware Software Stack</a></li>
@@ -176,7 +178,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#are-there-any-resource-limits">Are there any resource limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#what-do-i-do-if-my-job-won-t-be-deleted">What do I do if my job won’t be deleted?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#why-do-i-get-an-error-when-i-try-to-install-a-package">Why do I get an error when I try to install a package?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job">In an Interactive Job I get the error “bash: module: command not found” when I try to use a module command. How can I use modules in an interactive job?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">How can I set up VSCode to edit files remotely on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-can-i-use-tensorboard-on-supercloud">How can I use Tensorboard on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">I got an Out of Memory error. How can I figure out how much memory my job needs and request more?</a></li>
@@ -227,14 +228,13 @@
            <div itemprop="articleBody">
              
   <div class="section" id="frequently-asked-questions">
-<span id="faqs"></span><h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this heading"></a></h1>
+<span id="faq"></span><h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this heading"></a></h1>
 <p>This page contains the answers to a few questions that we receive often.
 As more questions are asked, this page may be updated.</p>
 <div class="section" id="how-do-i-get-an-account">
 <h2>How do I get an account?<a class="headerlink" href="#how-do-i-get-an-account" title="Permalink to this heading"></a></h2>
 <p>To request an account, follow the instructions and answer the questions
-on our <a class="reference external" href="https://supercloud.mit.edu/requesting-account" target="_blank">Requesting an Account
-Page</a>. We will reach
+on our <a class="reference internal" href="../requesting_account/index.html#requesting-account"><span class="std std-ref">Requesting an Account</span></a>. We will reach
 out to you once your account is created, or if we have any questions for
 you.</p>
 </div>
@@ -243,8 +243,7 @@ you.</p>
 <p>If you have a new computer, or want to add keys for additional computers
 that you use, you can add your own key on our web portal. Instructions
 on how to generate a new ssh key and add it to your account are on our
-<a class="reference external" href="https://supercloud.mit.edu/requesting-account#ssh-keys" target="_blank">Account Request
-Page</a>. In
+<span class="xref std std-ref">Account Request Page</span>. In
 summary, log in with your credentials (for MIT and other educational
 institutions this is the middle option when you go to
 <a class="reference external" href="https://txe1-portal.mit.edu" target="_blank">https://txe1-portal.mit.edu</a>) and then click on the “sshkeys” link.
@@ -275,12 +274,11 @@ person for approval whenever we receive a request to join a group.</li>
 required.</li>
 <li>Whether you plan to store any non-public data in the group. If you
 do, let us know what requirements, restrictions, or agreements are
-associated with the data. <a class="reference external" href="https://supercloud.mit.edu/requesting-account#data" target="_blank">See why we ask
-here</a>.</li>
+associated with the data. <a class="reference internal" href="../requesting_account/index.html#nonpublic-data"><span class="std std-ref">See why we ask
+here</span></a>.</li>
 </ol>
 <p>To learn more about Shared Groups and best practices using them, see the
-page on <a class="reference external" href="https://supercloud.mit.edu/shared-group-directories" target="_blank">Shared Group
-Directories</a>.</p>
+page on <a class="reference internal" href="../using_the_system/files_and_data/shared_groups/index.html#shared-groups"><span class="std std-ref">Shared Groups</span></a>.</p>
 </div>
 <div class="section" id="how-do-i-set-change-my-password">
 <h2>How do I set/change my password?<a class="headerlink" href="#how-do-i-set-change-my-password" title="Permalink to this heading"></a></h2>
@@ -291,12 +289,12 @@ page, select the middle option “MIT Touchstone/InCommon Federation”. You
 may have to select your institution from the dropdown list, which should
 take you to your institution’s login page. After you log in, you should
 see the Portal main page. If you have trouble logging in this way,
-please&nbsp;<a class="reference external" href="https://supercloud.mit.edu/contact" target="_blank">contact us</a>&nbsp;and we can
+please <a class="reference external" href="https://supercloud.mit.edu/contact" target="_blank">contact us</a> and we can
 help.</p>
 <p>If you cannot log in using “MIT Touchstone/InCommon Federation”, we may
 set you up with a password. If you have not yet reset your password, or
 remember your previous password, then follow the instructions on the
-<a class="reference external" href="https://supercloud.mit.edu/web-portal" target="_blank">Web Portal</a>&nbsp;page. If you have
+<a class="reference internal" href="../using_the_system/web_portal/index.html#web-portal"><span class="std std-ref">Web Portal</span></a> page. If you have
 previously set your password and cannot remember it, <a class="reference external" href="https://supercloud.mit.edu/contact" target="_blank">contact
 us</a> and we will help you reset
 your password.</p>
@@ -308,29 +306,25 @@ you have completed the <a class="reference external" href="https://learn.llx.edl
 course</a> you can send
 an email to <a class="reference external" href="mailto:supercloud&#37;&#52;&#48;mit&#46;edu" target="_blank">supercloud<span>&#64;</span>mit<span>&#46;</span>edu</a> to request to be moved to the standard
 allocation. The starting and standard allocations are listed on the
-<a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page.</p>
+<a class="reference internal" href="../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page.</p>
 <p>If you have a deadline and need additional resources you can request
 more by <a class="reference external" href="https://supercloud.mit.edu/contact" target="_blank">contacting us</a>. If you
 looking to request more GPUs, please read through this page on
-<a class="reference external" href="https://supercloud.mit.edu/optimizing-your-gpu-jobs" target="_blank">Optimizing your GPU
-Usage</a> first.
+<a class="reference internal" href="../using_the_system/best_practices/gpu_jobs/index.html#gpu-jobs"><span class="std std-ref">Optimizing your GPU Jobs</span></a> first.
 Please state the number of additional processors you need, the length of
 time for which you need it, and tell us about the jobs you are running
 and how you are submitting them. If you plan to run many independent
-jobs we will ask you to convert your job to use <a class="reference external" href="https://supercloud.mit.edu/submitting-jobs#triples" target="_blank">Triples
-Mode</a> before
+jobs we will ask you to convert your job to use <span class="xref std std-ref">triples</span> before
 giving and increased allocation. Remember this is a shared system, so
 during busy times we may not be able to grant your request. We will also
 only grant increase requests if you have completed the <a class="reference external" href="https://learn.llx.edly.io/course/practical-hpc/" target="_blank">Practical HPC
 course</a>.</p>
 <p>It is also important to keep in mind what your fair share of memory is
-for each process and <a class="reference external" href="https://supercloud.mit.edu/submitting-jobs#llsub-memcores" target="_blank">request additional
-resources</a>
+for each process and <span class="xref std std-ref">request additional
+resources</span>
 if needed. For example, if there are 40 cores and 384GB of RAM on the
 machine you are using, each processor’s fair share would be about 9GB.
-Check the <a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page to see
+Check the <a class="reference internal" href="../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to see
 how many cores and how much memory each node type has. If you think your
 processes will go over this, request additional slots as needed. This
 ensures you have sufficient memory without killing your job or someone
@@ -348,8 +342,7 @@ delete the job and reboot the node if needed.</p>
 <p>There are two common reasons you get an error when you try to install a
 package. If you get a “Permission Denied” or similar error, it is
 because you are trying to install the package system-wide, rather than
-your own home directory. See the <a class="reference external" href="https://supercloud.mit.edu/software-and-package-management" target="_blank">Software and Package
-Management</a>
+your own home directory. See the <a class="reference internal" href="../using_the_system/software_packages/index.html#software-and-packages"><span class="std std-ref">Software and Package Management</span></a>
 page for more information on how to install packages.</p>
 <p>If you get a “Network Error”, or similar, this is because we don’t have
 internet/network connection on the compute nodes, this includes Jupyter
@@ -364,7 +357,7 @@ this is because it is filling up your quota in the <code class="docutils literal
 We have set quotas on this directory to prevent a single person from
 inadvertently filling it up, as when this happens it can cause issues
 for everyone using the node, including preventing anyone from installing
-packages.&nbsp;This can be fixed by setting the TMPIDR environment variable
+packages. This can be fixed by setting the TMPIDR environment variable
 like so:</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">/state/partition1/user/$USER</span> <span class="pre">export</span> <span class="pre">TMPDIR=/state/partition1/user/$USER</span></code></div></blockquote>
@@ -373,15 +366,9 @@ files by removing the temporary directory you have created:</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">/state/partition1/user/$USER</span></code></div></blockquote>
 </div>
-<div class="section" id="in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job">
-<h2>In an Interactive Job I get the error “bash: module: command not found” when I try to use a module command. How can I use modules in an interactive job?<a class="headerlink" href="#in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job" title="Permalink to this heading"></a></h2>
-<p>If a module command is not recognized in an interactive job you can run
-<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/etc/profile</span></code> at the command line as you would have in a
-submission script to use the module command.</p>
-</div>
 <div class="section" id="how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">
 <h2>How can I set up VSCode to edit files remotely on Supercloud?<a class="headerlink" href="#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud" title="Permalink to this heading"></a></h2>
-<p>You can use VSCode to remotely connect to Supercloud&nbsp; via the Remote-SSH
+<p>You can use VSCode to remotely connect to Supercloud via the Remote-SSH
 extension. The default settings in the VSCode Remote - SSH extension
 will fail to connect. This is due to it trying to lock files in your
 home directory, which is disabled for performance reasons.</p>
@@ -397,16 +384,16 @@ clean up any files that are yours in /tmp, that would be really helpful.</p>
 </div>
 <div class="section" id="how-can-i-use-tensorboard-on-supercloud">
 <h2>How can I use Tensorboard on Supercloud?<a class="headerlink" href="#how-can-i-use-tensorboard-on-supercloud" title="Permalink to this heading"></a></h2>
-<p>Take a look at this page on <a class="reference external" href="https://supercloud.mit.edu/tensorboard" target="_blank">how to run Tensorboard in an interactive
-job</a>.</p>
+<p>Take a look at this page on <cite>how to run Tensorboard in an interactive
+job :ref:`tensorboard</cite>.</p>
 </div>
 <div class="section" id="i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">
 <h2>I got an Out of Memory error. How can I figure out how much memory my job needs and request more?<a class="headerlink" href="#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more" title="Permalink to this heading"></a></h2>
 <p>This is described on the Submitting Jobs page. If you submit your jobs
-with <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>, check out <a class="reference external" href="https://supercloud.mit.edu/submitting-jobs#slurm-memcores" target="_blank">this
-section</a>,
-and if you use <code class="docutils literal notranslate"><span class="pre">LLsub</span></code> take a look at <a class="reference external" href="https://supercloud.mit.edu/submitting-jobs#llsub-memcores" target="_blank">this
-section</a>.
+with <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>, check out <span class="xref std std-ref">this
+section</span>,
+and if you use <code class="docutils literal notranslate"><span class="pre">LLsub</span></code> take a look at <span class="xref std std-ref">this
+section</span>.
 As described in those links, you can check how much memory your job used
 using the <code class="docutils literal notranslate"><span class="pre">sacct</span></code> command, then request enough additional cores for
 the memory you need. Keep in mind that if your job was killed due to
@@ -424,21 +411,20 @@ until the end of a loop or the end of the program. You can force both to
 print the output when it is produced. In Python you can do this by using
 the <code class="docutils literal notranslate"><span class="pre">-u</span></code> flag when you call Python in your submission script (ex:
 <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">-u</span> <span class="pre">myscript.py</span></code>). In Julia you can do this by adding
-<code class="docutils literal notranslate"><span class="pre">flush(stdout)</span></code>&nbsp;after the print statements in your Julia script that
+<code class="docutils literal notranslate"><span class="pre">flush(stdout)</span></code> after the print statements in your Julia script that
 you’d like to print immediately (ex:
 <code class="docutils literal notranslate"><span class="pre">println(&quot;Hello</span> <span class="pre">World!&quot;);</span> <span class="pre">flush(stdout)</span></code>).</p>
 </div>
 <div class="section" id="what-does-the-underutilizing-oversubscribing-the-node-warning-message-mean">
 <h2>What does the Underutilizing/Oversubscribing the node warning message mean?<a class="headerlink" href="#what-does-the-underutilizing-oversubscribing-the-node-warning-message-mean" title="Permalink to this heading"></a></h2>
-<p>When you launch a job in <a class="reference external" href="https://supercloud.mit.edu/submitting-jobs#triples" target="_blank">triples
-mode</a>, the second
+<p>When you launch a job in <span class="xref std std-ref">triples
+mode</span>, the second
 and third numbers you provide are the number of processes per node
 (NPPN) and the number of threads per process (NT). You can multiply
 these two numbers to get the total number of threads you will have
 running on the node. You will usually get the best performance if you
 have the same total number of threads as cores on the node. See the
-<a class="reference external" href="https://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page for a
+<a class="reference internal" href="../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page for a
 list of how many cores are on each node type.</p>
 <p><strong>Oversubscribing:</strong> When you have more threads than the number of cores
 on the node. Oversubscribing can overwhelm the node, which can slow your
@@ -453,9 +439,7 @@ libraries can take advantage of multithreading. You might try increasing
 the number of threads per process, while avoiding oversubscribing, to
 see if you get improved performance.</p>
 <p>For more information on how to pick the best triple for your job, take a
-look at the <a class="reference external" href="https://supercloud.mit.edu/submitting-jobs#tuning" target="_blank">Triples
-Tuning</a> process
-and recommendations.</p>
+look at the <span class="xref std std-ref">&lt;triples_tuning&gt;</span> process and recommendations.</p>
 </div>
 <div class="section" id="how-can-i-get-more-help">
 <h2>How can I get more help?<a class="headerlink" href="#how-can-i-get-more-help" title="Permalink to this heading"></a></h2>

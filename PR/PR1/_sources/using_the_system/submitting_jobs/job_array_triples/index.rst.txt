@@ -133,8 +133,7 @@ your application, if it is multithreaded it may be worth increasing
 ``NT`` and decreasing ``NPPN``. If your application consumes a lot of
 memory, you may need to decrease ``NPPN`` so each process has the memory
 it needs to proceed. The best way to determine what numbers to choose is
-to `tune your
-triples <https://supercloud.mit.edu/submitting-jobs#tuning>`__, which is
+to :ref:`tune your triples <#tuning>`, which is
 a relatively quick exercise and can improve your speedup in the long run
 by helping you select the ideal numbers for your triple.
 

@@ -64,6 +64,6 @@ Questions?
 ^^^^^^^^^^
 
 If you have any questions about our online courses or are having trouble
-with the platform, please contact us at llx-help@mit.edu. If you have
+with the platform, please contact us at llx-help@mit.edu. If you have
 any questions about the MIT SuperCloud System, contact us at
 supercloud@mit.edu.

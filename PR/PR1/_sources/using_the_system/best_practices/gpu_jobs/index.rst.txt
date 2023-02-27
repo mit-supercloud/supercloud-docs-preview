@@ -69,7 +69,7 @@ few things you can try if you are training machine learning models:
    optimized for matmul/conv ops of these sizes.
 -  If both GPU utilization and memory are below 50% you could try to
    train two models per GPU. This isn’t too hard to do with `Triples
-   Mode <https://supercloud.mit.edu/job-arrays-llsub-triples-3-steps>`__,
+   Mode <job_array_triples>`,
    simply set the number of processes per node to 4.
 
 Requesting More GPUs

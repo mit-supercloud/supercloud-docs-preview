@@ -65,9 +65,11 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#available-languages">Available Languages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#software">Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#available-languages">Available Languages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#modules">Modules</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../systems_and_software/index.html#software">Software</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../systems_and_software/index.html#middleware-software-stack">Middleware Software Stack</a></li>
@@ -176,7 +178,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#are-there-any-resource-limits">Are there any resource limits?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#what-do-i-do-if-my-job-won-t-be-deleted">What do I do if my job won’t be deleted?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#why-do-i-get-an-error-when-i-try-to-install-a-package">Why do I get an error when I try to install a package?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#in-an-interactive-job-i-get-the-error-bash-module-command-not-found-when-i-try-to-use-a-module-command-how-can-i-use-modules-in-an-interactive-job">In an Interactive Job I get the error “bash: module: command not found” when I try to use a module command. How can I use modules in an interactive job?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">How can I set up VSCode to edit files remotely on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#how-can-i-use-tensorboard-on-supercloud">How can I use Tensorboard on Supercloud?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../faqs/index.html#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">I got an Out of Memory error. How can I figure out how much memory my job needs and request more?</a></li>
@@ -233,11 +234,11 @@
 allows you to start up notebooks in a variety of languages (Python,
 Matlab, Octave, Julia), terminal windows, and a simple text editor. You
 can also download and upload files to your home directory through this
-interface. This page will describe how to <a class="reference external" href="#starting" target="_blank">start up</a> and
-<a class="reference external" href="#about-jupyter" target="_blank">use</a> your own Jupyter instance and how to set
-<a class="reference external" href="#jupyter-env" target="_blank">environment variables for Jupyter</a>.</p>
+interface. This page will describe how to <a class="reference internal" href="#starting-jupyter"><span class="std std-ref">start up</span></a> and
+<a class="reference internal" href="#about-jupyter"><span class="std std-ref">use</span></a> your own Jupyter instance and how to set
+<a class="reference internal" href="#jupyter-env"><span class="std std-ref">environment variables for Jupyter</span></a>.</p>
 <div class="section" id="starting-up-jupyter">
-<h2>Starting Up Jupyter<a class="headerlink" href="#starting-up-jupyter" title="Permalink to this heading"></a></h2>
+<span id="starting-jupyter"></span><h2>Starting Up Jupyter<a class="headerlink" href="#starting-up-jupyter" title="Permalink to this heading"></a></h2>
 <p>When you start up Jupyter, the Jupyter instance gets submitted through
 the scheduler as a job. To do this, navigate to the following page:</p>
 <p><a class="reference external" href="https://txe1-portal.mit.edu/jupyter/jupyter_notebook.php" target="_blank">https://txe1-portal.mit.edu/jupyter/jupyter_notebook.php</a></p>
@@ -287,7 +288,7 @@ by navigating back to the inital launch page and clicking the “Shutdown”
 button, or by using one of the scheduler commands (LLkill).</p>
 </div>
 <div class="section" id="the-jupyter-environment">
-<h2>The Jupyter Environment<a class="headerlink" href="#the-jupyter-environment" title="Permalink to this heading"></a></h2>
+<span id="about-jupyter"></span><h2>The Jupyter Environment<a class="headerlink" href="#the-jupyter-environment" title="Permalink to this heading"></a></h2>
 <p>When you first enter the Jupyter environment, you will see the files and
 directories in your home directory. You can navigate through these by
 clicking. By clicking the “New” button in the top right, you can:</p>
@@ -304,7 +305,7 @@ interface, see this page on <a class="reference external" href="http://jupyter-n
 Basics</a>.</p>
 </div>
 <div class="section" id="a-note-on-environment-variables-and-modules">
-<h2>A Note on Environment Variables and Modules<a class="headerlink" href="#a-note-on-environment-variables-and-modules" title="Permalink to this heading"></a></h2>
+<span id="jupyter-env"></span><h2>A Note on Environment Variables and Modules<a class="headerlink" href="#a-note-on-environment-variables-and-modules" title="Permalink to this heading"></a></h2>
 <p>Environment variables you have defined may not be set in the Jupyter
 environment, and modules you need may not be loaded. You can add these
 to the file <code class="docutils literal notranslate"><span class="pre">~/.jupyter/llsc_notebook_bashrc</span></code>, then shutdown and

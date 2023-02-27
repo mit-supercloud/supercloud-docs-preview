@@ -24,7 +24,7 @@ terminology we tend to use for each piece.
 | A specific shell and language used at the command line. This is the
   shell used on SuperCloud.
 
-| **Bash script/Shell script**
+| **Bash script/Shell script**
 | A script using bash command syntax.
 
 | **Batch job**
