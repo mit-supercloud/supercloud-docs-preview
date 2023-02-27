@@ -20,7 +20,7 @@ The account request, approval, and creation process is:
    a. Fill out **all fields** of our `Account Request
       Form <https://txe1-portal.mit.edu/login/request.php>`__. In this
       form we ask if you are using non-public data, see why
-      :ref:`below <#data>`. If you are not part of an MGHPCC institution,
+      :ref:`below <nonpublic_data>`. If you are not part of an MGHPCC institution,
       list your MIT or Lincoln Laboratory collaborator. Do not submit
       this form without answering these question, it will cause
       significant delay in the process. If you have any questions about
@@ -177,7 +177,7 @@ add your key to your account using the Web Portal:
 can use. Some ssh clients like Moba Xterm and Cygwin give you a
 Linux-like environment, and so once you start the program (which should
 look include a command line window), you can follow the instructions for
-creating an ssh key in :ref:`above <#ssh-keys>` once you install the
+creating an ssh key in :ref:`above <ssh_keys>` once you install the
 client.
 
 To install Moba Xterm, follow the instructions
