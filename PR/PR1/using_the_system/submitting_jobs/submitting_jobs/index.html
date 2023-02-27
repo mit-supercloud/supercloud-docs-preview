@@ -250,15 +250,15 @@ jobs you see on an HPC system and should be used when you want to run a
 script that doesn’t require that you interact with it.</p>
 <p>On this page we will go over:</p>
 <ul class="simple">
-<li><a class="reference external" href="#interactive" target="_blank">How to start an Interactive Job with LLsub</a></li>
-<li><a class="reference external" href="#serial" target="_blank">How to submit a Basic Serial job with LLsub and sbatch</a></li>
-<li><a class="reference external" href="#sbatch" target="_blank">How to request more resources with sbatch</a></li>
-<li><a class="reference external" href="#llsub" target="_blank">How to request more resources with LLsub</a></li>
-<li><a class="reference external" href="#llmapreduce" target="_blank">How to submit an LLMapReduce Job</a></li>
-<li><a class="reference external" href="#matlab" target="_blank">How to submit a job with pMatlab, sbatch, or
-LaunchFunctionOnGrid</a></li>
-<li><a class="reference external" href="#triples" target="_blank">How to get the most performance out of LLsub, LLMapReduce, and
-pMatlab using Triples Mode</a></li>
+<li><a class="reference internal" href="#interactive"><span class="std std-ref">How to start an Interactive Job with LLsub</span></a></li>
+<li><a class="reference internal" href="#serial"><span class="std std-ref">How to submit a Basic Serial job with LLsub and sbatch</span></a></li>
+<li><a class="reference internal" href="#sbatch"><span class="std std-ref">How to request more resources with sbatch</span></a></li>
+<li><a class="reference internal" href="#llsub"><span class="std std-ref">How to request more resources with LLsub</span></a></li>
+<li><a class="reference internal" href="#llmapreduce"><span class="std std-ref">How to submit an LLMapReduce Job</span></a></li>
+<li><a class="reference internal" href="#matlab"><span class="std std-ref">How to submit a job with pMatlab, sbatch, or
+LaunchFunctionOnGrid</span></a></li>
+<li><a class="reference internal" href="#triples"><span class="std std-ref">How to get the most performance out of LLsub, LLMapReduce, and
+pMatlab using Triples Mode</span></a></li>
 </ul>
 <p>You can find examples of several job types in the <a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples" target="_blank">Teaching
 Examples</a>
@@ -266,7 +266,7 @@ github repository. They are also in the <code class="docutils literal notranslat
 directory and anyone with a Supercloud account can copy them to their
 home directory and use them as a starting point.</p>
 <div class="section" id="how-to-start-an-interactive-job-with-llsub">
-<h2>How to start an Interactive Job with LLsub<a class="headerlink" href="#how-to-start-an-interactive-job-with-llsub" title="Permalink to this heading"></a></h2>
+<span id="interactive"></span><h2>How to start an Interactive Job with LLsub<a class="headerlink" href="#how-to-start-an-interactive-job-with-llsub" title="Permalink to this heading"></a></h2>
 <p>Interactive jobs allow you to run interactively on a compute node in a
 shell. Interactive jobs are mainly used for testing, debugging, and
 interactive data analysis.</p>
@@ -303,8 +303,7 @@ cores:</li>
 <ul class="simple">
 <li><strong>GPUs:</strong> Use the <code class="docutils literal notranslate"><span class="pre">-g</span></code> option to request a GPU. You need to specify
 the GPU type and the number of GPUs you want. You can request up to
-the number of GPUs on a single node. Refer to the <a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page to
+the number of GPUs on a single node. Refer to the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to
 see how many GPUs are available per node. Remember you may want to
 also allocate some number of CPUs in addition to your GPUs. To get 20
 CPUs and 1 Volta GPU (half the resources on our Xeon-G6 nodes), you
@@ -314,7 +313,7 @@ would run:</li>
 <div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">-i</span> <span class="pre">-s</span> <span class="pre">20</span> <span class="pre">-g</span> <span class="pre">volta:1</span></code></div></blockquote>
 </div>
 <div class="section" id="submitting-a-simple-serial-batch-job">
-<h2>Submitting a Simple Serial Batch Job<a class="headerlink" href="#submitting-a-simple-serial-batch-job" title="Permalink to this heading"></a></h2>
+<span id="serial"></span><h2>Submitting a Simple Serial Batch Job<a class="headerlink" href="#submitting-a-simple-serial-batch-job" title="Permalink to this heading"></a></h2>
 <p>Submitting a batch job to the scheduler is the same for most languages.
 This starts by writing a submission script. This script should be a bash
 script (it should start with <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>) and contain the command(s)
@@ -393,19 +392,17 @@ and use those described in the script.</p>
 </div>
 </div>
 <div class="section" id="requesting-additional-resources-with-sbatch">
-<h2>Requesting Additional Resources with sbatch<a class="headerlink" href="#requesting-additional-resources-with-sbatch" title="Permalink to this heading"></a></h2>
+<span id="sbatch"></span><h2>Requesting Additional Resources with sbatch<a class="headerlink" href="#requesting-additional-resources-with-sbatch" title="Permalink to this heading"></a></h2>
 <p>By default you will be allocated a single core for your job. This is
 fine for testing, but usually you’ll want more than that. For example
 you may want:</p>
 <ul class="simple">
-<li><a class="reference external" href="#slurm-dist" target="_blank">Additional cores on multiple nodes (distributed)</a></li>
-<li><a class="reference external" href="#slurm-shared" target="_blank">Additional cores on the same node (shared memory or
-threading)</a></li>
-<li><a class="reference external" href="#slurm-jobarray" target="_blank">Multiple independent tasks (job
-array/throughput)</a></li>
-<li><a class="reference external" href="#slurm-exclusive" target="_blank">Exclusive node(s)</a></li>
-<li><a class="reference external" href="#slurm-memcores" target="_blank">More memory or cores per process/task/worker</a></li>
-<li><a class="reference external" href="#slurm-gpus" target="_blank">GPUs</a></li>
+<li><a class="reference internal" href="#slurm-dist"><span class="std std-ref">Additional cores on multiple nodes (distributed)</span></a></li>
+<li><a class="reference internal" href="#slurm-shared"><span class="std std-ref">Additional cores on the same node (shared memory or threading)</span></a></li>
+<li><a class="reference internal" href="#slurm-jobarray"><span class="std std-ref">Multiple independent tasks (job array/throughput)</span></a></li>
+<li><a class="reference internal" href="#slurm-exclusive"><span class="std std-ref">Exclusive node(s)</span></a></li>
+<li><a class="reference internal" href="#slurm-memcores"><span class="std std-ref">More memory or cores per process/task/worker</span></a></li>
+<li><a class="reference internal" href="#slurm-gpus"><span class="std std-ref">GPUs</span></a></li>
 </ul>
 <p>Here we have listed and will go over some of the more common resource
 requests. Most of these you can combine to get what you want. We will
@@ -427,11 +424,11 @@ say you are running the same code over a number of files or parameters,
 this is referred to as Throughput and can be run in parallel using a Job
 Array. (If you are iterating over files like this, and have some
 reduction step at the end, take a look at
-<a class="reference external" href="#llmapreduce" target="_blank">LLMapReduce</a>). Finally, you may want to think about
+<cite>LLMapReduce &lt;#llmapreduce&gt;</cite>). Finally, you may want to think about
 whether your job could use more than the default amount of memory, or
 RAM, and whether it can make use of a GPU.</p>
 <div class="section" id="additional-cores-on-multiple-nodes">
-<h3>Additional Cores on Multiple Nodes<a class="headerlink" href="#additional-cores-on-multiple-nodes" title="Permalink to this heading"></a></h3>
+<span id="slurm-dist"></span><h3>Additional Cores on Multiple Nodes<a class="headerlink" href="#additional-cores-on-multiple-nodes" title="Permalink to this heading"></a></h3>
 <p>The flag to request a certain number of cores that can be on more than
 one node is <code class="docutils literal notranslate"><span class="pre">--ntasks</span></code>, or <code class="docutils literal notranslate"><span class="pre">-n</span></code> for short. A task is Slurm’s
 terminology for an individual process or worker. For example, to request
@@ -448,11 +445,11 @@ the number of nodes like this does not ensure that you have exclusive
 access to those nodes. It will by default allocate one core for each
 task, so in this case you’d get a total of four cores, two on each node.
 If you need more than one core for each task, take a look at the
-<a class="reference external" href="#slurm-memcores" target="_blank">cpus-per-task</a> option, and if you need exclusive
-access to those nodes see the <a class="reference external" href="#slurm-exclusive" target="_blank">exclusive</a> option.</p>
+<cite>cpus-per-task &lt;#slurm-memcores&gt;</cite> option, and if you need exclusive
+access to those nodes see the <cite>exclusive &lt;#slurm-exclusive&gt;</cite> option.</p>
 </div>
 <div class="section" id="additional-cores-on-the-same-node">
-<h3>Additional Cores on the Same Node<a class="headerlink" href="#additional-cores-on-the-same-node" title="Permalink to this heading"></a></h3>
+<span id="slurm-shared"></span><h3>Additional Cores on the Same Node<a class="headerlink" href="#additional-cores-on-the-same-node" title="Permalink to this heading"></a></h3>
 <p>There are technically two ways to do this. You can use the same options
 as requesting tasks on multiple nodes and setting the number of Nodes to
 1, say we want four cores:</p>
@@ -469,11 +466,9 @@ need to worry too much about this, choose whichever makes the most sense
 to you.</p>
 </div>
 <div class="section" id="job-arrays">
-<h3>Job Arrays<a class="headerlink" href="#job-arrays" title="Permalink to this heading"></a></h3>
+<span id="slurm-jobarray"></span><h3>Job Arrays<a class="headerlink" href="#job-arrays" title="Permalink to this heading"></a></h3>
 <p><strong>NOTE:</strong> We encourage everyone who runs a job array to use LLsub with
-Triples mode. See the page <a class="reference external" href="https://supercloud.mit.edu/job-arrays-llsub-triples-3-steps" target="_blank">Job Arrays with LLsub Triples in Three
-Steps</a>
-to see how to set this up.</p>
+Triples mode. See the page <a class="reference internal" href="../job_array_triples/index.html#job-array-triples"><span class="std std-ref">Job Arrays with LLsub Triples in 3 Steps</span></a> to see how to set this up.</p>
 <p>A simple way to run the same script or command with different parameters
 or on different files in parallel is by using a Job Array. With a Job
 Array, the parallelism happens at the Scheduler level and is completely
@@ -530,11 +525,11 @@ the <code class="docutils literal notranslate"><span class="pre">%a</span></code
 which file goes with which task.</p>
 <p>By default you will get one core for each task in the array. If you need
 more than one core for each task, take a look at the
-<a class="reference external" href="#slurm-memcores" target="_blank">cpus-per-task</a> option, and if you need to add a GPU
-to each task, check out the the <a class="reference external" href="#slurm-gpus" target="_blank">GPUs</a> section.</p>
+<cite>cpus-per-task &lt;#slurm-memcores&gt;</cite> option, and if you need to add a GPU
+to each task, check out the the <cite>GPUs &lt;#slurm-gpus&gt;</cite> section.</p>
 </div>
 <div class="section" id="exclusive-nodes">
-<h3>Exclusive Nodes<a class="headerlink" href="#exclusive-nodes" title="Permalink to this heading"></a></h3>
+<span id="slurm-exclusive"></span><h3>Exclusive Nodes<a class="headerlink" href="#exclusive-nodes" title="Permalink to this heading"></a></h3>
 <p>Requesting an exclusive node ensures that there will be no other users
 on the node with you. You might want to do this when you know you need
 to make use of the full node, when you are running performance tests, or
@@ -558,12 +553,11 @@ not force each task onto its own exclusive node without adding other
 options.</p>
 </div>
 <div class="section" id="adding-more-memory-or-cores-per-task">
-<h3>Adding More Memory or Cores per Task<a class="headerlink" href="#adding-more-memory-or-cores-per-task" title="Permalink to this heading"></a></h3>
+<span id="slurm-memcores"></span><h3>Adding More Memory or Cores per Task<a class="headerlink" href="#adding-more-memory-or-cores-per-task" title="Permalink to this heading"></a></h3>
 <p>You can ensure that each task has more than one core or the default
 amount of memory the same way. By default, each core gets its fair share
 of the RAM on the node, calculated by the total amount of memory on the
-node divided by the number of cores. See the <a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page for a
+node divided by the number of cores. See the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page for a
 list of the amount of RAM, number of cores, and RAM per core for each
 resource type. For example, with the Xeon-P8 nodes, they have 192 GB of
 RAM and 48 cores, so each core gets 4 GB of RAM. Therefore, the way to
@@ -585,7 +579,7 @@ RAM, I can request a total of 4*5 = 20 cores.</p>
 <p>How do you know how much memory your job needs? You can find out how
 much memory a job used after the job is completed. You can run your job
 long enough to get an idea of the memory requirement first in
-<a class="reference external" href="#slurm-exclusive" target="_blank">exclusive</a> mode so your job can have access to the
+<cite>exclusive &lt;#slurm-exclusive&gt;</cite> mode so your job can have access to the
 maximum amount of memory. Then you can use the <code class="docutils literal notranslate"><span class="pre">sacct</span></code> slurm command
 to get the memory used:</p>
 <blockquote>
@@ -600,8 +594,7 @@ other words, MaxVMSize is the high-watermark of memory that was
 allocated by the process, regardless of whether it was used or not. The
 MaxRSS size is the maximum physical memory that was actually used.</p>
 <p>If the MaxVMSize value is larger than the per-slot/core memory limit for
-the compute node (again, check the <a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page to get
+the compute node (again, check the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to get
 this for the resource type you are requesting), you will have to request
 additional memory for your job.</p>
 <p>This formatting for the accounting data prints out a number of memory
@@ -609,7 +602,7 @@ datapoints for the job. They are all described in the <a class="reference extern
 page</a>.</p>
 </div>
 <div class="section" id="reqesting-gpus">
-<h3>Reqesting GPUs<a class="headerlink" href="#reqesting-gpus" title="Permalink to this heading"></a></h3>
+<span id="slurm-gpus"></span><h3>Reqesting GPUs<a class="headerlink" href="#reqesting-gpus" title="Permalink to this heading"></a></h3>
 <p>Some code can be accelerated by adding a GPU, or Graphical Processing
 Unit. GPUs are specialized hardware originally developed for rendering
 the graphics you see on your computer screen, but have been found to be
@@ -634,23 +627,22 @@ will still most likely run best given a number of CPU cores as well. If
 you are not sure how many to request, if you request 1 GPU, ask for 20
 CPUs (half of the CPUs), if you request 2 GPUs, you can ask for all of
 the CPUs. You can check the current CPU and GPU counts for each node on
-our <a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page.</p>
+our <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page.</p>
 </div>
 </div>
 <div class="section" id="requesting-additional-resources-with-llsub">
-<h2>Requesting Additional Resources with LLsub<a class="headerlink" href="#requesting-additional-resources-with-llsub" title="Permalink to this heading"></a></h2>
+<span id="llsub"></span><h2>Requesting Additional Resources with LLsub<a class="headerlink" href="#requesting-additional-resources-with-llsub" title="Permalink to this heading"></a></h2>
 <p>By default you will be allocated a single core for your job. This is
 fine for testing, but usually you’ll want more than that. For example
 you may want:</p>
 <ul class="simple">
-<li><a class="reference external" href="#llsub-shared" target="_blank">Additional cores on the same node (shared memory or
-threading)</a></li>
-<li><a class="reference external" href="#llsub-jobarray" target="_blank">Multiple independent tasks (job
-array/throughput)</a></li>
-<li><a class="reference external" href="#llsub-exclusive" target="_blank">Exclusive node(s)</a></li>
-<li><a class="reference external" href="#llsub-memcores" target="_blank">More memory or cores per process/task/worker</a></li>
-<li><a class="reference external" href="#llsub-gpus" target="_blank">GPUs</a></li>
+<li><a class="reference internal" href="#llsub-shared"><span class="std std-ref">Additional cores on the same node (shared memory or
+threading)</span></a></li>
+<li><a class="reference internal" href="#llsub-jobarray"><span class="std std-ref">Multiple independent tasks (job
+array/throughput)</span></a></li>
+<li><span class="xref std std-ref">Exclusive node(s)</span></li>
+<li><a class="reference internal" href="#llsub-memcores"><span class="std std-ref">More memory or cores per process/task/worker</span></a></li>
+<li><a class="reference internal" href="#llsub-gpus"><span class="std std-ref">GPUs</span></a></li>
 </ul>
 <p>Here we have listed and will go over some of the more common resource
 requests. Most of these you can combine to get what you want. We will
@@ -672,7 +664,7 @@ say you are running the same code over a number of files or parameters,
 this is referred to as Throughput and can be run in parallel using a Job
 Array. (If you are iterating over files like this, and have some
 reduction step at the end, take a look at
-<a class="reference external" href="#llmapreduce" target="_blank">LLMapReduce</a>). Finally, you may want to think about
+<cite>LLMapReduce &lt;#llmapreduce&gt;</cite>). Finally, you may want to think about
 whether your job could use more than the default amount of memory, or
 RAM, and whether it can make use of a GPU.</p>
 <p>If you are submitting your job with LLsub, you should be aware of its
@@ -681,13 +673,12 @@ lines starting with <code class="docutils literal notranslate"><span class="pre"
 arguments you give it and only use those you specify in your script. You
 can still submit this script with LLsub, but it won’t add any extra
 command line arguments you pass it.</p>
-<div class="section" id="additional-cores-on-the-same-node-1">
-<span id="id2"></span><h3>Additional Cores on the Same Node<a class="headerlink" href="#additional-cores-on-the-same-node-1" title="Permalink to this heading"></a></h3>
+<div class="section" id="llsub-shared">
+<span id="additional-cores-on-the-same-node-1"></span><span id="id2"></span><h3>Additional Cores on the Same Node<a class="headerlink" href="#llsub-shared" title="Permalink to this heading"></a></h3>
 <p>Libraries that use shared memory or threading to handle parallelism
 require that all cores be on the same node. In this case you are
 constrained to the number of cores on a single machine. Check the
-<a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page to see
+<a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to see
 the number of cores available on the current hardware.</p>
 <p>To request multiple cores on the same node for your job you can use the
 <code class="docutils literal notranslate"><span class="pre">-s</span></code> option in <code class="docutils literal notranslate"><span class="pre">LLsub</span></code>. This stands for “slots”. For example, if I
@@ -696,9 +687,9 @@ am running a job and I’d like to allocate 4 cores to it, I would run:</p>
 <div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-s</span> <span class="pre">4</span></code></div></blockquote>
 </div>
 <div class="section" id="job-array">
-<h3>Job Array<a class="headerlink" href="#job-array" title="Permalink to this heading"></a></h3>
-<p>Take a look at the <a class="reference external" href="#slurm-jobarray" target="_blank">Slurm instructions above for how to set up a Job
-Array</a>. You’ll still set up your code the same, and
+<span id="llsub-jobarray"></span><h3>Job Array<a class="headerlink" href="#job-array" title="Permalink to this heading"></a></h3>
+<p>Take a look at the <cite>Slurm instructions above for how to set up a Job
+Array &lt;#slurm-jobarray&gt;</cite>. You’ll still set up your code the same, and
 pass the two environment variables <code class="docutils literal notranslate"><span class="pre">#SLURM_ARRAY_TASK_ID</span></code> and
 <code class="docutils literal notranslate"><span class="pre">$SLURM_ARRAY_TASK_COUNT</span></code> into your script. When you submit, rather
 than adding <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> lines to your submission script, you would use
@@ -706,17 +697,16 @@ the <code class="docutils literal notranslate"><span class="pre">-t</span></code
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-t</span> <span class="pre">1-4</span></code></div></blockquote>
 <p>If you need more cores or memory for each task, you can add the <code class="docutils literal notranslate"><span class="pre">-s</span></code>
-option as described <a class="reference external" href="#llsub-memcores" target="_blank">below</a>.</p>
+option as described <cite>below &lt;#llsub-memcores&gt;</cite>.</p>
 </div>
 <div class="section" id="adding-more-memory-or-cores">
-<h3>Adding More Memory or Cores<a class="headerlink" href="#adding-more-memory-or-cores" title="Permalink to this heading"></a></h3>
+<span id="llsub-memcores"></span><h3>Adding More Memory or Cores<a class="headerlink" href="#adding-more-memory-or-cores" title="Permalink to this heading"></a></h3>
 <p>If you anticipate that your job will use more than ~4 GB of RAM, you may
 need to allocate more resources for your job. You can be sure your job
 has enough memory to run by allocating more slots, or cores, to each
 task or process in your job. Each core gets its fair share of the RAM on
 the node, calculated by the total amount of memory on the node divided
-by the number of cores.&nbsp;See the <a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page for a
+by the number of cores. See the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page for a
 list of the amount of RAM, number of cores, and RAM per core for each
 resource type. For example, the Xeon-P8 nodes have 192 GB of RAM and 48
 cores, so each core gets 4 GB of RAM. Therefore, the way to request more
@@ -751,8 +741,7 @@ other words, MaxVMSize is the high-watermark of memory that was
 allocated by the process, regardless of whether it was used or not. The
 MaxRSS size is the maximum physical memory that was actually used.</p>
 <p>If the MaxVMSize value is larger than the per-slot/core memory limit for
-the compute node (again, check the <a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page to get
+the compute node (again, check the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to get
 this for the resource type you are requesting), you will have to request
 additional memory for your job.</p>
 <p>This formatting for the accounting data prints out a number of memory
@@ -760,7 +749,7 @@ data points for the job. They are all described in the <a class="reference exter
 page</a>.</p>
 </div>
 <div class="section" id="requesting-gpus">
-<h3>Requesting GPUs<a class="headerlink" href="#requesting-gpus" title="Permalink to this heading"></a></h3>
+<span id="llsub-gpus"></span><h3>Requesting GPUs<a class="headerlink" href="#requesting-gpus" title="Permalink to this heading"></a></h3>
 <p>Some code can be accelerated by adding a GPU, or Graphical Processing
 Unit. GPUs are specialized hardware originally developed for rendering
 the graphics you see on your computer screen, but have been found to be
@@ -785,15 +774,14 @@ will still most likely run best given a number of CPU cores as well. If
 you are not sure how many to request, if you request 1 GPU, ask for 20
 CPUs (half of the CPUs), if you request 2 GPUs, you can ask for all of
 the CPUs. You can check the current CPU and GPU counts for each node on
-our <a class="reference external" href="http://supercloud.mit.edu/systems-and-software" target="_blank">Systems and
-Software</a> page. To
+our <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page. To
 request 20 cores and 1 GPU, run:</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-s</span> <span class="pre">20</span> <span class="pre">-g</span> <span class="pre">volta:1</span></code></div></blockquote>
 </div>
 </div>
 <div class="section" id="llmapreduce">
-<h2>LLMapReduce<a class="headerlink" href="#llmapreduce" title="Permalink to this heading"></a></h2>
+<span id="id3"></span><h2>LLMapReduce<a class="headerlink" href="#llmapreduce" title="Permalink to this heading"></a></h2>
 <p>The LLMapReduce command scans the user-specified input directory and
 translates each individual file as a computing task for the
 user-specified application. Then, the computing tasks will be submitted
@@ -822,7 +810,7 @@ temporary directory, .MAPRED.PID. However, there is an option to keep
 current version also supports a nested LLMapReduce call.</p>
 </div>
 <div class="section" id="matlab-octave-tools">
-<h2>Matlab/Octave Tools<a class="headerlink" href="#matlab-octave-tools" title="Permalink to this heading"></a></h2>
+<span id="matlab"></span><h2>Matlab/Octave Tools<a class="headerlink" href="#matlab-octave-tools" title="Permalink to this heading"></a></h2>
 <div class="section" id="pmatlab">
 <h3>pMatlab<a class="headerlink" href="#pmatlab" title="Permalink to this heading"></a></h3>
 <p>pMatlab was created at MIT Lincoln Laboratory to provide easy access to
@@ -926,9 +914,8 @@ the following line to your run script, before you use the
 </div>
 </div>
 <div class="section" id="triples-mode">
-<h2>Triples Mode<a class="headerlink" href="#triples-mode" title="Permalink to this heading"></a></h2>
-<p>Triples mode is a way to launch pMatlab, <a class="reference external" href="https://supercloud.mit.edu/job-arrays-llsub-triples-3-steps" target="_blank">Job
-Array</a>,
+<span id="triples"></span><h2>Triples Mode<a class="headerlink" href="#triples-mode" title="Permalink to this heading"></a></h2>
+<p>Triples mode is a way to launch pMatlab, <a class="reference internal" href="../job_array_triples/index.html#job-array-triples"><span class="std std-ref">Job Arrays with LLsub Triples in 3 Steps</span></a>,
 LLMapReduce jobs that gives you better performance and more flexibility
 to manage memory and threads. Unless you are requesting a small number
 of cores for your job, we highly encourage you to migrate to this model.</p>
@@ -947,36 +934,33 @@ parameters:</p>
 <p>With triples mode your job will have exclusive use of each of the nodes
 that you request, so the total number of cores consumed against your
 allocation will be Nodes * 40.</p>
-<div class="section" id="llsub">
-<h3>LLsub<a class="headerlink" href="#llsub" title="Permalink to this heading"></a></h3>
-<p>A brief introduction to LLsub is provided <a class="reference external" href="#llsub-jobarray" target="_blank">above</a>.
+<div class="section" id="id4">
+<h3>LLsub<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>A brief introduction to LLsub is provided <cite>above &lt;#llsub-jobarray&gt;</cite>.
 To use triples mode to launch LLsub job on Supercloud, run as follows:</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">./submit.sh</span> <span class="pre">[Nodes,NPPN,NThreads]</span></code></div></blockquote>
 <p>A more in-depth guide on how to convert an existing Job Array to an
-LLsub Triples submission is provided on the page <a class="reference external" href="http://supercloud.mit.edu/job-arrays-llsub-triples-3-steps" target="_blank">Job Arrays with LLsub
-Triples in 3
-Steps</a>.</p>
+LLsub Triples submission is provided on the page <a class="reference internal" href="../job_array_triples/index.html#job-array-triples"><span class="std std-ref">Job Arrays with LLsub Triples in 3 Steps</span></a>.</p>
 </div>
-<div class="section" id="llmapreduce-1">
-<span id="id3"></span><h3>LLMapReduce<a class="headerlink" href="#llmapreduce-1" title="Permalink to this heading"></a></h3>
-<p>A brief introduction to LLMapReduce is provided
-<a class="reference external" href="#llmapreduce" target="_blank">above</a>. To use triples mode to launch your LLMapReduce
+<div class="section" id="id5">
+<h3>LLMapReduce<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>A brief introduction to LLMapReduce is provided <cite>above &lt;#llmapreduce&gt;</cite>. To use triples mode to launch your LLMapReduce
 job on Supercloud, use the –np option with the triple as its parameter,
 as follows:</p>
 <blockquote>
-<div><code class="docutils literal notranslate"><span class="pre">‑‑np=[Nodes,NPPN,NThreads]</span></code></div></blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">--np=[Nodes,NPPN,NThreads]</span></code></div></blockquote>
 </div>
-<div class="section" id="pmatlab-1">
-<span id="id4"></span><h3>pMatlab<a class="headerlink" href="#pmatlab-1" title="Permalink to this heading"></a></h3>
-<p>A brief introduction to pMatlab is provided&nbsp;<a class="reference external" href="#matlab" target="_blank">above</a>. To use
+<div class="section" id="id6">
+<h3>pMatlab<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>A brief introduction to pMatlab is provided <cite>above &lt;#matlab&gt;</cite>. To use
 triples mode to launch your pMatlab job on Supercloud, you use the
 pRUN() function. Its usage, in Matlab, is as follows:</p>
 <blockquote>
 <div><code class="docutils literal notranslate"><span class="pre">eval(pRUN('mfile',</span> <span class="pre">[Nodes</span> <span class="pre">NPPN</span> <span class="pre">OMP_NUM_THREADS],</span> <span class="pre">'grid'))</span></code></div></blockquote>
 </div>
 <div class="section" id="triples-mode-tuning">
-<h3>Triples Mode Tuning<a class="headerlink" href="#triples-mode-tuning" title="Permalink to this heading"></a></h3>
+<span id="triples-tuning"></span><h3>Triples Mode Tuning<a class="headerlink" href="#triples-mode-tuning" title="Permalink to this heading"></a></h3>
 <p>Triples mode tuning provides greater efficiency by allowing you to
 better tune your resource requests to your application. This one-time
 tuning process typically takes ~1 hour:</p>

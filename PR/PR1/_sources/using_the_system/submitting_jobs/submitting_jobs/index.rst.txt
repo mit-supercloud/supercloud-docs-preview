@@ -25,21 +25,23 @@ script that doesn't require that you interact with it.
 
 On this page we will go over:
 
--  `How to start an Interactive Job with LLsub <#interactive>`__
--  `How to submit a Basic Serial job with LLsub and sbatch <#serial>`__
--  `How to request more resources with sbatch <#sbatch>`__
--  `How to request more resources with LLsub <#llsub>`__
--  `How to submit an LLMapReduce Job <#llmapreduce>`__
--  `How to submit a job with pMatlab, sbatch, or
-   LaunchFunctionOnGrid <#matlab>`__
--  `How to get the most performance out of LLsub, LLMapReduce, and
-   pMatlab using Triples Mode <#triples>`__
+-  :ref:`How to start an Interactive Job with LLsub <#interactive>`
+-  :ref:`How to submit a Basic Serial job with LLsub and sbatch <#serial>`
+-  :ref:`How to request more resources with sbatch <#sbatch>`
+-  :ref:`How to request more resources with LLsub <#llsub>`
+-  :ref:`How to submit an LLMapReduce Job <#llmapreduce>`
+-  :ref:`How to submit a job with pMatlab, sbatch, or
+   LaunchFunctionOnGrid <#matlab>`
+-  :ref:`How to get the most performance out of LLsub, LLMapReduce, and
+   pMatlab using Triples Mode <#triples>`
 
 You can find examples of several job types in the `Teaching
 Examples <https://github.com/llsc-supercloud/teaching-examples>`__
 github repository. They are also in the ``bwedx``\ shared group
 directory and anyone with a Supercloud account can copy them to their
 home directory and use them as a starting point.
+
+.. _#interactive:
 
 How to start an Interactive Job with LLsub
 ------------------------------------------
@@ -86,8 +88,7 @@ of those here. Note that these can (and often should) be combined.
 
 -  **GPUs:** Use the ``-g`` option to request a GPU. You need to specify
    the GPU type and the number of GPUs you want. You can request up to
-   the number of GPUs on a single node. Refer to the `Systems and
-   Software <http://supercloud.mit.edu/systems-and-software>`__ page to
+   the number of GPUs on a single node. Refer to the :ref:`systems_and_software` page to
    see how many GPUs are available per node. Remember you may want to
    also allocate some number of CPUs in addition to your GPUs. To get 20
    CPUs and 1 Volta GPU (half the resources on our Xeon-G6 nodes), you
@@ -96,6 +97,8 @@ of those here. Note that these can (and often should) be combined.
 ..
 
    ``LLsub -i -s 20 -g volta:1``
+
+.. _#serial:
 
 Submitting a Simple Serial Batch Job
 ------------------------------------
@@ -201,6 +204,8 @@ options in your submission script and submit it with ``LLsub``,
 ``LLsub`` will ignore any additional command line arguments you give it
 and use those described in the script.
 
+.. _#sbatch:
+
 Requesting Additional Resources with sbatch
 -------------------------------------------
 
@@ -208,14 +213,12 @@ By default you will be allocated a single core for your job. This is
 fine for testing, but usually you'll want more than that. For example
 you may want:
 
--  `Additional cores on multiple nodes (distributed) <#slurm-dist>`__
--  `Additional cores on the same node (shared memory or
-   threading) <#slurm-shared>`__
--  `Multiple independent tasks (job
-   array/throughput) <#slurm-jobarray>`__
--  `Exclusive node(s) <#slurm-exclusive>`__
--  `More memory or cores per process/task/worker <#slurm-memcores>`__
--  `GPUs <#slurm-gpus>`__
+-  :ref:`Additional cores on multiple nodes (distributed) <#slurm-dist>`
+-  :ref:`Additional cores on the same node (shared memory or threading) <#slurm-shared>`
+-  :ref:`Multiple independent tasks (job array/throughput) <#slurm-jobarray>`
+-  :ref:`Exclusive node(s) <#slurm-exclusive>`
+-  :ref:`More memory or cores per process/task/worker <#slurm-memcores>`
+-  :ref:`GPUs <#slurm-gpus>`
 
 Here we have listed and will go over some of the more common resource
 requests. Most of these you can combine to get what you want. We will
@@ -238,9 +241,11 @@ say you are running the same code over a number of files or parameters,
 this is referred to as Throughput and can be run in parallel using a Job
 Array. (If you are iterating over files like this, and have some
 reduction step at the end, take a look at
-`LLMapReduce <#llmapreduce>`__). Finally, you may want to think about
+`LLMapReduce <#llmapreduce>`). Finally, you may want to think about
 whether your job could use more than the default amount of memory, or
 RAM, and whether it can make use of a GPU.
+
+.. _#slurm-dist:
 
 Additional Cores on Multiple Nodes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -263,8 +268,10 @@ the number of nodes like this does not ensure that you have exclusive
 access to those nodes. It will by default allocate one core for each
 task, so in this case you'd get a total of four cores, two on each node.
 If you need more than one core for each task, take a look at the
-`cpus-per-task <#slurm-memcores>`__ option, and if you need exclusive
-access to those nodes see the `exclusive <#slurm-exclusive>`__ option.
+`cpus-per-task <#slurm-memcores>` option, and if you need exclusive
+access to those nodes see the `exclusive <#slurm-exclusive>` option.
+
+.. _#slurm-shared:
 
 Additional Cores on the Same Node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -286,13 +293,13 @@ The second allocates a single task with four CPUs or cores. You don't
 need to worry too much about this, choose whichever makes the most sense
 to you.
 
+.. _#slurm-jobarray:
+
 Job Arrays
 ^^^^^^^^^^
 
 **NOTE:** We encourage everyone who runs a job array to use LLsub with
-Triples mode. See the page `Job Arrays with LLsub Triples in Three
-Steps <https://supercloud.mit.edu/job-arrays-llsub-triples-3-steps>`__
-to see how to set this up.
+Triples mode. See the page :ref:`job_array_triples` to see how to set this up.
 
 A simple way to run the same script or command with different parameters
 or on different files in parallel is by using a Job Array. With a Job
@@ -366,8 +373,10 @@ which file goes with which task.
 
 By default you will get one core for each task in the array. If you need
 more than one core for each task, take a look at the
-`cpus-per-task <#slurm-memcores>`__ option, and if you need to add a GPU
-to each task, check out the the `GPUs <#slurm-gpus>`__ section.
+`cpus-per-task <#slurm-memcores>` option, and if you need to add a GPU
+to each task, check out the the `GPUs <#slurm-gpus>` section.
+
+.. _#slurm-exclusive:
 
 Exclusive Nodes
 ^^^^^^^^^^^^^^^
@@ -396,14 +405,15 @@ fall on the same node, you will get that one node exclusively. It will
 not force each task onto its own exclusive node without adding other
 options.
 
+.. _#slurm-memcores:
+
 Adding More Memory or Cores per Task
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 You can ensure that each task has more than one core or the default
 amount of memory the same way. By default, each core gets its fair share
 of the RAM on the node, calculated by the total amount of memory on the
-node divided by the number of cores. See the `Systems and
-Software <http://supercloud.mit.edu/systems-and-software>`__ page for a
+node divided by the number of cores. See the :ref:`systems_and_software` page for a
 list of the amount of RAM, number of cores, and RAM per core for each
 resource type. For example, with the Xeon-P8 nodes, they have 192 GB of
 RAM and 48 cores, so each core gets 4 GB of RAM. Therefore, the way to
@@ -427,7 +437,7 @@ RAM, I can request a total of 4*5 = 20 cores.
 How do you know how much memory your job needs? You can find out how
 much memory a job used after the job is completed. You can run your job
 long enough to get an idea of the memory requirement first in
-`exclusive <#slurm-exclusive>`__ mode so your job can have access to the
+`exclusive <#slurm-exclusive>` mode so your job can have access to the
 maximum amount of memory. Then you can use the ``sacct`` slurm command
 to get the memory used:
 
@@ -444,14 +454,15 @@ allocated by the process, regardless of whether it was used or not. The
 MaxRSS size is the maximum physical memory that was actually used.
 
 If the MaxVMSize value is larger than the per-slot/core memory limit for
-the compute node (again, check the `Systems and
-Software <http://supercloud.mit.edu/systems-and-software>`__ page to get
+the compute node (again, check the :ref:`systems_and_software` page to get
 this for the resource type you are requesting), you will have to request
 additional memory for your job.
 
 This formatting for the accounting data prints out a number of memory
 datapoints for the job. They are all described in the `sacct man
 page <https://slurm.schedmd.com/sacct.html>`__.
+
+.. _#slurm-gpus:
 
 Reqesting GPUs
 ^^^^^^^^^^^^^^
@@ -483,8 +494,9 @@ will still most likely run best given a number of CPU cores as well. If
 you are not sure how many to request, if you request 1 GPU, ask for 20
 CPUs (half of the CPUs), if you request 2 GPUs, you can ask for all of
 the CPUs. You can check the current CPU and GPU counts for each node on
-our `Systems and
-Software <http://supercloud.mit.edu/systems-and-software>`__ page.
+our :ref:`systems_and_software` page.
+
+.. _#llsub:
 
 Requesting Additional Resources with LLsub
 ------------------------------------------
@@ -493,13 +505,13 @@ By default you will be allocated a single core for your job. This is
 fine for testing, but usually you'll want more than that. For example
 you may want:
 
--  `Additional cores on the same node (shared memory or
-   threading) <#llsub-shared>`__
--  `Multiple independent tasks (job
-   array/throughput) <#llsub-jobarray>`__
--  `Exclusive node(s) <#llsub-exclusive>`__
--  `More memory or cores per process/task/worker <#llsub-memcores>`__
--  `GPUs <#llsub-gpus>`__
+-  :ref:`Additional cores on the same node (shared memory or
+   threading) <#llsub-shared>`
+-  :ref:`Multiple independent tasks (job
+   array/throughput) <#llsub-jobarray>`
+-  :ref:`Exclusive node(s) <#llsub-exclusive>`
+-  :ref:`More memory or cores per process/task/worker <#llsub-memcores>`
+-  :ref:`GPUs <#llsub-gpus>`
 
 Here we have listed and will go over some of the more common resource
 requests. Most of these you can combine to get what you want. We will
@@ -522,7 +534,7 @@ say you are running the same code over a number of files or parameters,
 this is referred to as Throughput and can be run in parallel using a Job
 Array. (If you are iterating over files like this, and have some
 reduction step at the end, take a look at
-`LLMapReduce <#llmapreduce>`__). Finally, you may want to think about
+`LLMapReduce <#llmapreduce>`). Finally, you may want to think about
 whether your job could use more than the default amount of memory, or
 RAM, and whether it can make use of a GPU.
 
@@ -535,14 +547,15 @@ command line arguments you pass it.
 
 .. _additional-cores-on-the-same-node-1:
 
+.. _#llsub-shared:
+
 Additional Cores on the Same Node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Libraries that use shared memory or threading to handle parallelism
 require that all cores be on the same node. In this case you are
 constrained to the number of cores on a single machine. Check the
-`Systems and
-Software <http://supercloud.mit.edu/systems-and-software>`__ page to see
+:ref:`systems_and_software` page to see
 the number of cores available on the current hardware.
 
 To request multiple cores on the same node for your job you can use the
@@ -551,11 +564,13 @@ am running a job and I'd like to allocate 4 cores to it, I would run:
 
    ``LLsub myScript.sh -s 4``
 
+.. _#llsub-jobarray:
+
 Job Array
 ^^^^^^^^^
 
 Take a look at the `Slurm instructions above for how to set up a Job
-Array <#slurm-jobarray>`__. You'll still set up your code the same, and
+Array <#slurm-jobarray>`. You'll still set up your code the same, and
 pass the two environment variables ``#SLURM_ARRAY_TASK_ID`` and
 ``$SLURM_ARRAY_TASK_COUNT`` into your script. When you submit, rather
 than adding ``#SBATCH`` lines to your submission script, you would use
@@ -564,7 +579,9 @@ the ``-t`` option:
    ``LLsub myScript.sh -t 1-4``
 
 If you need more cores or memory for each task, you can add the ``-s``
-option as described `below <#llsub-memcores>`__.
+option as described `below <#llsub-memcores>`.
+
+.. _#llsub-memcores:
 
 Adding More Memory or Cores
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -574,8 +591,7 @@ need to allocate more resources for your job. You can be sure your job
 has enough memory to run by allocating more slots, or cores, to each
 task or process in your job. Each core gets its fair share of the RAM on
 the node, calculated by the total amount of memory on the node divided
-by the number of cores. See the `Systems and
-Software <http://supercloud.mit.edu/systems-and-software>`__ page for a
+by the number of cores. See the :ref:`systems_and_software` page for a
 list of the amount of RAM, number of cores, and RAM per core for each
 resource type. For example, the Xeon-P8 nodes have 192 GB of RAM and 48
 cores, so each core gets 4 GB of RAM. Therefore, the way to request more
@@ -614,14 +630,15 @@ allocated by the process, regardless of whether it was used or not. The
 MaxRSS size is the maximum physical memory that was actually used.
 
 If the MaxVMSize value is larger than the per-slot/core memory limit for
-the compute node (again, check the `Systems and
-Software <http://supercloud.mit.edu/systems-and-software>`__ page to get
+the compute node (again, check the :ref:`systems_and_software` page to get
 this for the resource type you are requesting), you will have to request
 additional memory for your job.
 
 This formatting for the accounting data prints out a number of memory
 data points for the job. They are all described in the `sacct man
 page <https://slurm.schedmd.com/sacct.html>`__.
+
+.. _#llsub-gpus:
 
 Requesting GPUs
 ^^^^^^^^^^^^^^^
@@ -653,11 +670,12 @@ will still most likely run best given a number of CPU cores as well. If
 you are not sure how many to request, if you request 1 GPU, ask for 20
 CPUs (half of the CPUs), if you request 2 GPUs, you can ask for all of
 the CPUs. You can check the current CPU and GPU counts for each node on
-our `Systems and
-Software <http://supercloud.mit.edu/systems-and-software>`__ page. To
+our :ref:`systems_and_software` page. To
 request 20 cores and 1 GPU, run:
 
    ``LLsub myScript.sh -s 20 -g volta:1``
+
+.. _#llmapreduce:
 
 LLMapReduce
 -----------
@@ -690,6 +708,8 @@ for Java, Matlab, Julia, and Python. By default, it cleans up the
 temporary directory, .MAPRED.PID. However, there is an option to keep
 (--keep true) the temporary directory if you want it for debugging. The
 current version also supports a nested LLMapReduce call.
+
+.. _#matlab:
 
 Matlab/Octave Tools
 -------------------
@@ -811,11 +831,12 @@ the following line to your run script, before you use the
 
    ``setenv('GRIDMATLAB_MT_SLOTS','2')``
 
+.. _#triples:
+
 Triples Mode
 ------------
 
-Triples mode is a way to launch pMatlab, `Job
-Array <https://supercloud.mit.edu/job-arrays-llsub-triples-3-steps>`__,
+Triples mode is a way to launch pMatlab, :ref:`job_array_triples`,
 LLMapReduce jobs that gives you better performance and more flexibility
 to manage memory and threads. Unless you are requesting a small number
 of cores for your job, we highly encourage you to migrate to this model.
@@ -838,38 +859,35 @@ allocation will be Nodes \* 40.
 LLsub
 ^^^^^
 
-A brief introduction to LLsub is provided `above <#llsub-jobarray>`__.
+A brief introduction to LLsub is provided `above <#llsub-jobarray>`.
 To use triples mode to launch LLsub job on Supercloud, run as follows:
 
    ``LLsub ./submit.sh [Nodes,NPPN,NThreads]``
 
 A more in-depth guide on how to convert an existing Job Array to an
-LLsub Triples submission is provided on the page `Job Arrays with LLsub
-Triples in 3
-Steps <http://supercloud.mit.edu/job-arrays-llsub-triples-3-steps>`__.
+LLsub Triples submission is provided on the page :ref:`job_array_triples`.
 
-.. _llmapreduce-1:
 
 LLMapReduce
 ^^^^^^^^^^^
 
-A brief introduction to LLMapReduce is provided
-`above <#llmapreduce>`__. To use triples mode to launch your LLMapReduce
+A brief introduction to LLMapReduce is provided `above <#llmapreduce>`. To use triples mode to launch your LLMapReduce
 job on Supercloud, use the --np option with the triple as its parameter,
 as follows:
 
-   ``‑‑np=[Nodes,NPPN,NThreads]``
+   ``--np=[Nodes,NPPN,NThreads]``
 
-.. _pmatlab-1:
 
 pMatlab
 ^^^^^^^
 
-A brief introduction to pMatlab is provided `above <#matlab>`__. To use
+A brief introduction to pMatlab is provided `above <#matlab>`. To use
 triples mode to launch your pMatlab job on Supercloud, you use the
 pRUN() function. Its usage, in Matlab, is as follows:
 
    ``eval(pRUN('mfile', [Nodes NPPN OMP_NUM_THREADS], 'grid'))``
+
+.. _triples_tuning:
 
 Triples Mode Tuning
 ^^^^^^^^^^^^^^^^^^^
