@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Submitting Jobs &mdash; MIT SuperCloud Documentation  documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+    <link rel="canonical" href="https://supercloud.mit.edu/using_the_system/submitting_jobs/submitting_jobs/index.html"/>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/custom.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Job Arrays with LLsub Triples in 3 Steps" href="../job_array_triples/index.html" />
+    <link rel="prev" title="Submitting Jobs" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            MIT SuperCloud Documentation
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../requesting_account/index.html">Requesting an Account</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#account-request-process">Account Request Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#why-do-we-ask-if-you-are-using-data-that-is-not-publicly-available">Why do we ask if you are using data that is not publicly available?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#generating-ssh-keys-for-supercloud-authentication">Generating ssh Keys for Supercloud Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../requesting_account/index.html#current-approver-list">Current Approver List</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#logging-in-via-ssh">Logging in Via ssh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#shared-hpc-clusters">Shared HPC Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#software-and-packages">Software and Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#linux-command-line">Linux Command Line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#transferring-files-to-mit-supercloud">Transferring Files to MIT SuperCloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#testing-your-code">Testing your Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_started/index.html#supercloud-downtimes">SuperCloud Downtimes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../systems_and_software/index.html">Systems and Software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#available-languages">Available Languages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#modules">Modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../systems_and_software/index.html#software">Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#machine-learning-tools">Machine Learning Tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#big-data-software-stack">Big Data Software Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#middleware-software-stack">Middleware Software Stack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#lincoln-laboratory-developed-software">Lincoln Laboratory Developed Software</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../systems_and_software/index.html#compilers">Compilers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Using the Systetm</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../files_and_data/index.html">Files and Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../files_and_data/transferring_files/index.html">Transferring Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/transferring_files/index.html#mac-linux-and-most-windows">Mac/Linux and Most Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/transferring_files/index.html#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/transferring_files/index.html#downloading-files-through-the-web-portal">Downloading Files through the Web Portal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/transferring_files/index.html#uploading-and-downloading-files-using-jupyter">Uploading and Downloading Files Using Jupyter</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../files_and_data/shared_groups/index.html">Shared Groups</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/shared_groups/index.html#overview">Overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/shared_groups/index.html#joining-or-creating-a-group">Joining or Creating a Group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../files_and_data/shared_groups/index.html#using-shared-groups-effectively">Using Shared Groups Effectively</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../software_packages/index.html">Software and Package Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software_packages/index.html#modules">Modules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software_packages/index.html#installing-software-or-packages-in-your-home-directory">Installing Software or Packages in your Home Directory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../software_packages/index.html#julia-packages">Julia Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software_packages/index.html#python-packages">Python Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../software_packages/index.html#r-libraries">R Libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html">Monitoring System and Job Status</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#checking-system-status">Checking System Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#monitoring-jobs">Monitoring Jobs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../monitoring_system_and_jobs/index.html#stopping-jobs">Stopping Jobs</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Submitting Jobs</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Submitting Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#how-to-start-an-interactive-job-with-llsub">How to start an Interactive Job with LLsub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#submitting-a-simple-serial-batch-job">Submitting a Simple Serial Batch Job</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requesting-additional-resources-with-sbatch">Requesting Additional Resources with sbatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#requesting-additional-resources-with-llsub">Requesting Additional Resources with LLsub</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#llmapreduce">LLMapReduce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#matlab-octave-tools">Matlab/Octave Tools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#triples-mode">Triples Mode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../job_array_triples/index.html">Job Arrays with LLsub Triples in 3 Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../job_array_triples/index.html#step-1-batch-up-your-array">Step 1: Batch Up your Array</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../job_array_triples/index.html#step-2-changing-your-submission-script">Step 2: Changing Your Submission Script</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../job_array_triples/index.html#step-3-submit-your-job-with-llsub-triples">Step 3: Submit your Job with LLsub Triples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../best_practices/index.html">Best Practices</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../best_practices/filesystem/index.html">Best Practices for Using the Filesystem</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../best_practices/filesystem/index.html#installing-python-packages">Installing Python Packages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../best_practices/filesystem/index.html#submitting-jobs">Submitting Jobs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../best_practices/filesystem/index.html#file-organization">File Organization</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../best_practices/gpu_jobs/index.html">Optimizing your GPU Jobs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../best_practices/gpu_jobs/index.html#getting-more-out-of-the-gpus">Getting More out of the GPUs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../best_practices/gpu_jobs/index.html#requesting-more-gpus">Requesting More GPUs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../web_portal/index.html">Web Portal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../web_portal/index.html#portal-authentication">Portal Authentication</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../web_portal/index.html#mit-touchstone-incommon-federation">MIT Touchstone/InCommon Federation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../web_portal/index.html#username-and-password">Username and Password</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../web_portal/index.html#pki-certificate-smart-card">PKI Certificate/Smart Card</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../web_portal/index.html#adding-removing-ssh-keys">Adding/Removing SSH Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../web_portal/index.html#browsing-your-home-directory">Browsing your Home Directory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../databases/index.html">Databases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../jupyter_notebooks/index.html">Jupyter Notebooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../jupyter_notebooks/index.html#starting-up-jupyter">Starting Up Jupyter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../jupyter_notebooks/index.html#the-jupyter-environment">The Jupyter Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../jupyter_notebooks/index.html#a-note-on-environment-variables-and-modules">A Note on Environment Variables and Modules</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../faqs/index.html">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-do-i-get-an-account">How do I get an account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#i-would-like-to-log-in-from-a-new-computer-can-i-add-a-new-ssh-key">I would like to log in from a new computer. Can I add a new ssh key?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-much-storage-do-i-have-for-my-account">How much storage do I have for my account?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-share-files-code-data-with-my-colleagues">How can I share files/code/data with my colleagues?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-do-i-set-change-my-password">How do I set/change my password?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#are-there-any-resource-limits">Are there any resource limits?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#what-do-i-do-if-my-job-won-t-be-deleted">What do I do if my job won’t be deleted?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#why-do-i-get-an-error-when-i-try-to-install-a-package">Why do I get an error when I try to install a package?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-set-up-vscode-to-edit-files-remotely-on-supercloud">How can I set up VSCode to edit files remotely on Supercloud?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-use-tensorboard-on-supercloud">How can I use Tensorboard on Supercloud?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#i-got-an-out-of-memory-error-how-can-i-figure-out-how-much-memory-my-job-needs-and-request-more">I got an Out of Memory error. How can I figure out how much memory my job needs and request more?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#my-python-julia-job-is-running-but-i-don-t-see-any-output-in-the-log-files-what-is-going-on">My Python/Julia job is running, but I don’t see any output in the log files. What is going on?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#what-does-the-underutilizing-oversubscribing-the-node-warning-message-mean">What does the Underutilizing/Oversubscribing the node warning message mean?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../faqs/index.html#how-can-i-get-more-help">How can I get more help?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_help/index.html">Getting Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_help/index.html#additional-documentation">Additional Documentation:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_help/index.html#email">Email:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../getting_help/index.html#office-hours">Office Hours:</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../online_courses/index.html">Online Courses</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../online_courses/index.html#some-available-online-courses">Some Available Online Courses</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../online_courses/index.html#accessing-the-llx-online-course-site">Accessing the LLx Online Course Site</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../online_courses/index.html#creating-an-online-course-account">Creating an Online Course Account</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../online_courses/index.html#questions">Questions?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">Glossary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../acknowledging_us/index.html">Acknowledging Us</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">MIT SuperCloud Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">Using the Systetm</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Submitting Jobs</a></li>
+      <li class="breadcrumb-item active">Submitting Jobs</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/llsc-supercloud/supercloud-docs-edit/blob/main/using_the_system/submitting_jobs/submitting_jobs/index.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="submitting-jobs">
+<span id="id1"></span><h1>Submitting Jobs<a class="headerlink" href="#submitting-jobs" title="Permalink to this heading"></a></h1>
+<p>For most job types, there are two ways to start the job: using the
+commands provided by the scheduler, Slurm, or using wrapper command,
+LLsub, that we have provided. LLsub creates a scheduler command based on
+the arguments you feed it, and will output that command to show you what
+it is running. The scheduler commands may provide more flexibility, and
+the wrapper commands may be easier to use in some cases and are
+scheduler agnostic. We show some of the more commonly used options. More
+Slurm options can be seen on the Slurm
+<a class="reference external" href="http://slurm.schedmd.com/man_index.html" target="_blank">documentation</a> page, and
+more LLsub options can be seen by running <code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">-h</span></code> at the command
+line.</p>
+<p>There are two main types of jobs that you can run: interactive and batch
+jobs. Interactive jobs allow you to run interactively on a compute node
+in a shell. Batch jobs, on the other hand, are for running a pre-written
+script or executable. Interactive jobs are mainly used for testing,
+debugging, and interactive data analysis. Batch jobs are the traditional
+jobs you see on an HPC system and should be used when you want to run a
+script that doesn’t require that you interact with it.</p>
+<p>On this page we will go over:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#interactive"><span class="std std-ref">How to start an Interactive Job with LLsub</span></a></li>
+<li><a class="reference internal" href="#serial"><span class="std std-ref">How to submit a Basic Serial job with LLsub and sbatch</span></a></li>
+<li><a class="reference internal" href="#sbatch"><span class="std std-ref">How to request more resources with sbatch</span></a></li>
+<li><a class="reference internal" href="#llsub"><span class="std std-ref">How to request more resources with LLsub</span></a></li>
+<li><a class="reference internal" href="#llmapreduce"><span class="std std-ref">How to submit an LLMapReduce Job</span></a></li>
+<li><a class="reference internal" href="#matlab"><span class="std std-ref">How to submit a job with pMatlab, sbatch, or
+LaunchFunctionOnGrid</span></a></li>
+<li><a class="reference internal" href="#triples"><span class="std std-ref">How to get the most performance out of LLsub, LLMapReduce, and
+pMatlab using Triples Mode</span></a></li>
+</ul>
+<p>You can find examples of several job types in the <a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples" target="_blank">Teaching
+Examples</a>
+github repository. They are also in the <code class="docutils literal notranslate"><span class="pre">bwedx</span></code>shared group
+directory and anyone with a Supercloud account can copy them to their
+home directory and use them as a starting point.</p>
+<div class="section" id="how-to-start-an-interactive-job-with-llsub">
+<span id="interactive"></span><h2>How to start an Interactive Job with LLsub<a class="headerlink" href="#how-to-start-an-interactive-job-with-llsub" title="Permalink to this heading"></a></h2>
+<p>Interactive jobs allow you to run interactively on a compute node in a
+shell. Interactive jobs are mainly used for testing, debugging, and
+interactive data analysis.</p>
+<p>Starting an interactive job with LLsub is very simple. To request a
+single core, run at the command line:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">-i</span></code></div></blockquote>
+<p>As mentioned earlier on this page, when you run an LLsub command, you’ll
+see the Slurm command that is being run in the background when you
+submit the job. Once your interactive job has started, you’ll see the
+command line prompt has changed. It’ll say something like:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">USERNAME&#64;d-14-13-1:~$</span></code></div></blockquote>
+<p>Where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is your username, and <code class="docutils literal notranslate"><span class="pre">d-14-13-1</span></code> is the hostname
+of the machine you are on. This is how you know you are now on a compute
+node in an interactive job.</p>
+<p>By default you will be allocated a single CPU core. We have a number of
+options that allow you to request additional resources. You can always
+view these options and more by running <code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">-h</span></code>. We’ll go over a few
+of those here. Note that these can (and often should) be combined.</p>
+<ul class="simple">
+<li><strong>Full Exclusive Node:</strong> Add the word <code class="docutils literal notranslate"><span class="pre">full</span></code> to request an
+exclusive node. No one else will be on the machine with you:</li>
+</ul>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">-i</span> <span class="pre">full</span></code></div></blockquote>
+<ul class="simple">
+<li><strong>A number of cores:</strong> Use the <code class="docutils literal notranslate"><span class="pre">-s</span></code> option to request a certain
+number of CPU cores, or slots. Here, for example, we are requesting 4
+cores:</li>
+</ul>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">-i</span> <span class="pre">-s</span> <span class="pre">4</span></code></div></blockquote>
+<ul class="simple">
+<li><strong>GPUs:</strong> Use the <code class="docutils literal notranslate"><span class="pre">-g</span></code> option to request a GPU. You need to specify
+the GPU type and the number of GPUs you want. You can request up to
+the number of GPUs on a single node. Refer to the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to
+see how many GPUs are available per node. Remember you may want to
+also allocate some number of CPUs in addition to your GPUs. To get 20
+CPUs and 1 Volta GPU (half the resources on our Xeon-G6 nodes), you
+would run:</li>
+</ul>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">-i</span> <span class="pre">-s</span> <span class="pre">20</span> <span class="pre">-g</span> <span class="pre">volta:1</span></code></div></blockquote>
+</div>
+<div class="section" id="submitting-a-simple-serial-batch-job">
+<span id="serial"></span><h2>Submitting a Simple Serial Batch Job<a class="headerlink" href="#submitting-a-simple-serial-batch-job" title="Permalink to this heading"></a></h2>
+<p>Submitting a batch job to the scheduler is the same for most languages.
+This starts by writing a submission script. This script should be a bash
+script (it should start with <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>) and contain the command(s)
+you need to run your code from the command line. It can also contain
+scheduler flags at the beginning of the script, or load modules or set
+environment variables you need to run your code.</p>
+<p>A job submission script for a simple, serial, batch job (for example,
+running a python script) looks like this:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Loading</span> <span class="pre">the</span> <span class="pre">required</span> <span class="pre">module</span> <span class="pre">source</span> <span class="pre">/etc/profile</span> <span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda/2020a</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Run</span> <span class="pre">the</span> <span class="pre">script</span> <span class="pre">python</span> <span class="pre">myScript.py</span></code></p>
+</div></blockquote>
+<p>The first line is the <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code> mentioned earlier. It looks like a
+comment, but it isn’t. This tells the machine how to interpret the
+script, that it is a bash script. Lines 3 and 4 demonstrate how to load
+a module in a submission script. The final line of the script runs your
+code. This should be the command you use to run your code from the
+command line, including any input arguments. This example is running a
+python script, therefore we have <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">myScript.py</span></code>.</p>
+<div class="section" id="submitting-with-llsub">
+<h3>Submitting with LLsub<a class="headerlink" href="#submitting-with-llsub" title="Permalink to this heading"></a></h3>
+<p>To submit a simple batch job, you can use the LLsub command:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span></code></div></blockquote>
+<p>Here <code class="docutils literal notranslate"><span class="pre">myScript.sh</span></code> can be a job submission script, or could be
+replaced by a compiled executable. The <code class="docutils literal notranslate"><span class="pre">LLsub</span></code> command, with no
+arguments, creates a scheduler command with some default options. If
+your submission script is <code class="docutils literal notranslate"><span class="pre">myScript.sh</span></code>, your output file will be
+<code class="docutils literal notranslate"><span class="pre">myScript.sh.log-%j</span></code>, where <code class="docutils literal notranslate"><span class="pre">%j</span></code> is a unique numeric identifier, the
+JobID for your job. The output file is where all the output for your job
+gets written. Anything that normally is written to the screen when you
+run your code, including any errors or print statements, will be printed
+to this file.</p>
+<p>When you run this command, the scheduler will find available resources
+to launch your job to. Then <code class="docutils literal notranslate"><span class="pre">myScript.sh</span></code> will run to completion, and
+the job will finish when the script is complete.</p>
+</div>
+<div class="section" id="submitting-with-slurm-scheduler-commands">
+<h3>Submitting with Slurm Scheduler Commands<a class="headerlink" href="#submitting-with-slurm-scheduler-commands" title="Permalink to this heading"></a></h3>
+<p>To submit a simple batch job with the same default behavior as LLsub
+above, you would run:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">-o</span> <span class="pre">myScript.sh.log-%j</span> <span class="pre">myScript.sh</span></code></div></blockquote>
+<p>Here <code class="docutils literal notranslate"><span class="pre">myScript.sh</span></code> can be a job submission script, or could be
+replaced by a compiled executable. The <code class="docutils literal notranslate"><span class="pre">-o</span></code> flag states the name of
+the file where any output will be written, the <code class="docutils literal notranslate"><span class="pre">%j</span></code> portion indicates
+job ID. If you do not include this flag, any output will be written to
+<code class="docutils literal notranslate"><span class="pre">slurm-JOBID.out</span></code>, which may make it difficult differentiate between
+job outputs.</p>
+<p>You can also incorporate this flag into your job submission script by
+adding lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> followed by the flag right after
+the first <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code> line:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Slurm</span> <span class="pre">sbatch</span> <span class="pre">options</span> <span class="pre">#SBATCH</span> <span class="pre">-o</span> <span class="pre">myScript.sh.log-%j</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Loading</span> <span class="pre">the</span> <span class="pre">required</span> <span class="pre">module</span> <span class="pre">source</span> <span class="pre">/etc/profile</span> <span class="pre">module</span> <span class="pre">load</span> <span class="pre">anaconda/2020a</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Run</span> <span class="pre">the</span> <span class="pre">script</span> <span class="pre">python</span> <span class="pre">myScript.py</span></code></p>
+</div></blockquote>
+<p>Like <code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code>, these lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> look like
+comments, but they are not. As you add more flags to specify what
+resources your job needs, it becomes easier to specify them in your
+submission script, rather than having to type them out at the command
+line. If you incorporate Slurm flags in your script like this, you can
+submit it by running:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">myScript.sh</span></code></div></blockquote>
+<p>When you run these commands, the scheduler will find available resources
+to launch your job to. Then <code class="docutils literal notranslate"><span class="pre">myScript.sh</span></code> will run to completion, and
+the job will finish when the script is complete.</p>
+<p>Note that when you start adding additional resources you need to make a
+choice between using <code class="docutils literal notranslate"><span class="pre">LLsub</span></code> and <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>. If you have <code class="docutils literal notranslate"><span class="pre">sbatch</span></code>
+options in your submission script and submit it with <code class="docutils literal notranslate"><span class="pre">LLsub</span></code>,
+<code class="docutils literal notranslate"><span class="pre">LLsub</span></code> will ignore any additional command line arguments you give it
+and use those described in the script.</p>
+</div>
+</div>
+<div class="section" id="requesting-additional-resources-with-sbatch">
+<span id="sbatch"></span><h2>Requesting Additional Resources with sbatch<a class="headerlink" href="#requesting-additional-resources-with-sbatch" title="Permalink to this heading"></a></h2>
+<p>By default you will be allocated a single core for your job. This is
+fine for testing, but usually you’ll want more than that. For example
+you may want:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#slurm-dist"><span class="std std-ref">Additional cores on multiple nodes (distributed)</span></a></li>
+<li><a class="reference internal" href="#slurm-shared"><span class="std std-ref">Additional cores on the same node (shared memory or threading)</span></a></li>
+<li><a class="reference internal" href="#slurm-jobarray"><span class="std std-ref">Multiple independent tasks (job array/throughput)</span></a></li>
+<li><a class="reference internal" href="#slurm-exclusive"><span class="std std-ref">Exclusive node(s)</span></a></li>
+<li><a class="reference internal" href="#slurm-memcores"><span class="std std-ref">More memory or cores per process/task/worker</span></a></li>
+<li><a class="reference internal" href="#slurm-gpus"><span class="std std-ref">GPUs</span></a></li>
+</ul>
+<p>Here we have listed and will go over some of the more common resource
+requests. Most of these you can combine to get what you want. We will
+show the lines that you would add to your submission script, but note
+that you can also include these options at the command line if you want.</p>
+<p>How do you know what you should request? An in-depth discussion on this
+is outside the scope of this documentation, but we can provide some
+basic guidance. Generally, parallel programs are either implemented to
+be distributed or not. Distributed programs can communicate across
+different nodes, and so can scale beyond a single node. Programs written
+with MPI, for example, would be distributed. Non-Distributed programs
+you may see referred to as shared memory or multithreaded. Python’s
+multiprocessing package is a good example of a shared memory library.
+Whether your program is Distributed or Shared Memory dictates how you
+request additional cores: do they need to be all on the same node, or
+can they be on different nodes? You also want to think about what you
+are running: if you are running a series of identical independent tasks,
+say you are running the same code over a number of files or parameters,
+this is referred to as Throughput and can be run in parallel using a Job
+Array. (If you are iterating over files like this, and have some
+reduction step at the end, take a look at
+<a class="reference internal" href="#llmapreduce"><span class="std std-ref">LLMapReduce</span></a>). Finally, you may want to think about
+whether your job could use more than the default amount of memory, or
+RAM, and whether it can make use of a GPU.</p>
+<div class="section" id="additional-cores-on-multiple-nodes">
+<span id="slurm-dist"></span><h3>Additional Cores on Multiple Nodes<a class="headerlink" href="#additional-cores-on-multiple-nodes" title="Permalink to this heading"></a></h3>
+<p>The flag to request a certain number of cores that can be on more than
+one node is <code class="docutils literal notranslate"><span class="pre">--ntasks</span></code>, or <code class="docutils literal notranslate"><span class="pre">-n</span></code> for short. A task is Slurm’s
+terminology for an individual process or worker. For example, to request
+4 tasks you can add the following to your submission script:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-n</span> <span class="pre">4</span></code></div></blockquote>
+<p>You can control how many nodes these tasks are split onto using the
+<code class="docutils literal notranslate"><span class="pre">--nodes</span></code>, or <code class="docutils literal notranslate"><span class="pre">-N</span></code>. Your tasks will be split evenly across the nodes
+you request. For example, if I were to have the following in my script:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-n</span> <span class="pre">4</span> <span class="pre">#SBATCH</span> <span class="pre">-N</span> <span class="pre">2</span></code></div></blockquote>
+<p>I would have four tasks on two nodes, two tasks on each node. Specify
+the number of nodes like this does not ensure that you have exclusive
+access to those nodes. It will by default allocate one core for each
+task, so in this case you’d get a total of four cores, two on each node.
+If you need more than one core for each task, take a look at the
+<a class="reference internal" href="#slurm-memcores"><span class="std std-ref">cpus-per-task</span></a> option, and if you need exclusive
+access to those nodes see the <a class="reference internal" href="#slurm-exclusive"><span class="std std-ref">exclusive</span></a> option.</p>
+</div>
+<div class="section" id="additional-cores-on-the-same-node">
+<span id="slurm-shared"></span><h3>Additional Cores on the Same Node<a class="headerlink" href="#additional-cores-on-the-same-node" title="Permalink to this heading"></a></h3>
+<p>There are technically two ways to do this. You can use the same options
+as requesting tasks on multiple nodes and setting the number of Nodes to
+1, say we want four cores:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-n</span> <span class="pre">4</span> <span class="pre">#SBATCH</span> <span class="pre">-N</span> <span class="pre">1</span></code></div></blockquote>
+<p>Or you can use <code class="docutils literal notranslate"><span class="pre">-c</span></code>, or the <code class="docutils literal notranslate"><span class="pre">--cpus-per-task</span></code> option by itself:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-c</span> <span class="pre">4</span></code></div></blockquote>
+<p>As far as the number of cores you get, the result will be the same.
+You’ll get the four cores on a single node. There is a bit of a nuance
+on how Slurm sees it. The first allocates four tasks all on one node.
+The second allocates a single task with four CPUs or cores. You don’t
+need to worry too much about this, choose whichever makes the most sense
+to you.</p>
+</div>
+<div class="section" id="job-arrays">
+<span id="slurm-jobarray"></span><h3>Job Arrays<a class="headerlink" href="#job-arrays" title="Permalink to this heading"></a></h3>
+<p><strong>NOTE:</strong> We encourage everyone who runs a job array to use LLsub with
+Triples mode. See the page <a class="reference internal" href="../job_array_triples/index.html#job-array-triples"><span class="std std-ref">Job Arrays with LLsub Triples in 3 Steps</span></a> to see how to set this up.</p>
+<p>A simple way to run the same script or command with different parameters
+or on different files in parallel is by using a Job Array. With a Job
+Array, the parallelism happens at the Scheduler level and is completely
+language agnostic. The best way to use a Job Array is to batch up your
+parameters so you have a finite number of tasks each running a set of
+parameters, rather than one task for each parameter. In your submission
+script you specify numeric indices, corresponding to the number of tasks
+that you want running at once. Those indices, or Task IDs are captured
+in environment variables, along with the total number of tasks, and
+passed into your script. Your script then has the information it needs
+to split up the work among tasks. This process is described in the
+<a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples" target="_blank">Teaching
+Examples</a>
+github repository, with examples in
+<a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Julia/word_count/JobArray" target="_blank">Julia</a>
+and
+<a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Python/word_count/JobArray" target="_blank">Python</a>.</p>
+<p>First you want to take a look at your code. Code that can be submitted
+as a Job Array usually has one big for loop. If you are iterating over
+multiple parameters or files, and have nested for loops, you’ll first
+want to enumerate all the combinations of what you are iterating over so
+you have one big loop. Then you want to add a few lines to your code to
+take in two arguments, the Task ID and the number of tasks, use those
+numbers to split up the thing you are iterating over. For example, I
+might have a list of filenames, <code class="docutils literal notranslate"><span class="pre">fnames</span></code>. In python I would add:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Grab</span> <span class="pre">the</span> <span class="pre">arguments</span> <span class="pre">that</span> <span class="pre">are</span> <span class="pre">passed</span> <span class="pre">in</span> <span class="pre">my_task_id</span> <span class="pre">=</span> <span class="pre">int(sys.argv[1])</span> <span class="pre">num_tasks</span> <span class="pre">=</span> <span class="pre">int(sys.argv[2])</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Assign</span> <span class="pre">indices</span> <span class="pre">to</span> <span class="pre">this</span> <span class="pre">process/task</span> <span class="pre">my_fnames</span> <span class="pre">=</span> <span class="pre">fnames[my_task_id-1:len(fnames):num_tasks]</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">f</span> <span class="pre">in</span> <span class="pre">my_fnames:</span> <span class="pre">...</span></code></p>
+</div></blockquote>
+<p>Notice that I am iterating over <code class="docutils literal notranslate"><span class="pre">my_fnames</span></code>, which is a subset of the
+full list of filenames determined by the task ID and number of tasks.
+This subset will be different for each task in the array. Note that the
+third line of code will be different for languages with arrays that
+start at index 1 (see the <a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Julia/word_count/JobArray" target="_blank">Julia Job
+Array</a>
+code for an example of this).</p>
+<p>The submission script will look like this:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-o</span> <span class="pre">myScript.sh.log-%j-%a</span> <span class="pre">#SBATCH</span> <span class="pre">-a</span> <span class="pre">1-4</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">top5each.py</span> <span class="pre">$SLURM_ARRAY_TASK_ID</span> <span class="pre">$SLURM_ARRAY_TASK_COUNT</span></code></p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">-a</span></code> (or <code class="docutils literal notranslate"><span class="pre">--array</span></code>) option is where you specify your array
+indices, or task IDs. Here I am creating an array with four tasks by
+specifying 1 “through” 4. When the scheduler starts your job, it will
+start up four independent tasks, each will run this script, and each
+will have <code class="docutils literal notranslate"><span class="pre">#SLURM_ARRAY_TASK_ID</span></code> set to its task ID. Similarly,
+<code class="docutils literal notranslate"><span class="pre">$SLURM_ARRAY_TASK_COUNT</span></code> will be set to the total number of tasks, in
+this case 4.</p>
+<p>You may have noticed that there is an additional <code class="docutils literal notranslate"><span class="pre">%a</span></code> in the output
+file name. There will be one output file for each task in the array, and
+the <code class="docutils literal notranslate"><span class="pre">%a</span></code> puts the task ID on at the end of the filename, so you know
+which file goes with which task.</p>
+<p>By default you will get one core for each task in the array. If you need
+more than one core for each task, take a look at the
+<a class="reference internal" href="#slurm-memcores"><span class="std std-ref">cpus-per-task</span></a> option, and if you need to add a GPU
+to each task, check out the the <a class="reference internal" href="#slurm-gpus"><span class="std std-ref">GPUs</span></a> section.</p>
+</div>
+<div class="section" id="exclusive-nodes">
+<span id="slurm-exclusive"></span><h3>Exclusive Nodes<a class="headerlink" href="#exclusive-nodes" title="Permalink to this heading"></a></h3>
+<p>Requesting an exclusive node ensures that there will be no other users
+on the node with you. You might want to do this when you know you need
+to make use of the full node, when you are running performance tests, or
+when you think your program might affect other users. There is some
+software that have not been designed for a shared HPC environment, and
+so use all the cores on the node, whether you have allocated them or
+not. You can look through their documentation to see if there is a way
+to limit the number of cores it uses, or you can request an exclusive
+node. Another situation where you might affect other users is when you
+don’t yet know what resources your code requires. For these first few
+runs it makes sense to request an exclusive node, and then look at the
+resources that your job used, and request those resources in the future.</p>
+<p>To request an exclusive node or nodes, you can add the following option:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--exclusive</span></code></div></blockquote>
+<p>This will ensure that wherever the tasks in your job land, those nodes
+will be exclusive. If you have four tasks, for example, specified with
+either <code class="docutils literal notranslate"><span class="pre">-n</span></code> (<code class="docutils literal notranslate"><span class="pre">--ntasks</span></code>) or in a job array, and those four tasks
+fall on the same node, you will get that one node exclusively. It will
+not force each task onto its own exclusive node without adding other
+options.</p>
+</div>
+<div class="section" id="adding-more-memory-or-cores-per-task">
+<span id="slurm-memcores"></span><h3>Adding More Memory or Cores per Task<a class="headerlink" href="#adding-more-memory-or-cores-per-task" title="Permalink to this heading"></a></h3>
+<p>You can ensure that each task has more than one core or the default
+amount of memory the same way. By default, each core gets its fair share
+of the RAM on the node, calculated by the total amount of memory on the
+node divided by the number of cores. See the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page for a
+list of the amount of RAM, number of cores, and RAM per core for each
+resource type. For example, with the Xeon-P8 nodes, they have 192 GB of
+RAM and 48 cores, so each core gets 4 GB of RAM. Therefore, the way to
+request more memory is to request more cores. Even if you are not using
+the additional core(s), you are using their memory. The way to do this
+is using the <code class="docutils literal notranslate"><span class="pre">--cpus-per-task</span></code>, or <code class="docutils literal notranslate"><span class="pre">-c</span></code> option. Say I know each task
+in my job will use about 20 GB of memory, with the Xeon-P8 nodes above,
+I’d want to request five cores for each task:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">-c</span> <span class="pre">5</span></code></div></blockquote>
+<p>This works nicely with both the <code class="docutils literal notranslate"><span class="pre">-n</span></code> (<code class="docutils literal notranslate"><span class="pre">--ntasks</span></code>) and <code class="docutils literal notranslate"><span class="pre">-a</span></code>
+(<code class="docutils literal notranslate"><span class="pre">--array</span></code>) options. As the flag name implies, you will get 5 cpu
+cores for every task in your job. If you are already using the <code class="docutils literal notranslate"><span class="pre">-c</span></code>
+option for a shared memory or threaded job, you can either use the
+<code class="docutils literal notranslate"><span class="pre">-n</span></code> and <code class="docutils literal notranslate"><span class="pre">-N</span> <span class="pre">1</span></code> alternative and save <code class="docutils literal notranslate"><span class="pre">-c</span></code> for adding additional
+memory, or you can increase what you put for <code class="docutils literal notranslate"><span class="pre">-c</span></code>. For example, if I
+know I’m going to use 4 cores in my code, but each will need 20 GB of
+RAM, I can request a total of 4*5 = 20 cores.</p>
+<p>How do you know how much memory your job needs? You can find out how
+much memory a job used after the job is completed. You can run your job
+long enough to get an idea of the memory requirement first in
+<cite>exclusive &lt;#slurm-exclusive&gt;</cite> mode so your job can have access to the
+maximum amount of memory. Then you can use the <code class="docutils literal notranslate"><span class="pre">sacct</span></code> slurm command
+to get the memory used:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">sacct</span> <span class="pre">-j</span> <span class="pre">JOBID</span> <span class="pre">-o</span> <span class="pre">JobID,JobName,State,AllocCPUS,MaxRSS,MaxVMSize</span> <span class="pre">--units=G</span></code></div></blockquote>
+<p>where JOBID is your job ID. State shows the job status, keep in mind
+that the memory numbers are only accurate for jobs that are no longer
+running, and AllocCPUS is the number of CPU cores that were allocated to
+the job. MaxRSS is the maximum resident memory (maximum memory
+footprint) used by each job array job, while MaxVMSize is the maximum
+memory that was requested by the process (the peak memory usage). In
+other words, MaxVMSize is the high-watermark of memory that was
+allocated by the process, regardless of whether it was used or not. The
+MaxRSS size is the maximum physical memory that was actually used.</p>
+<p>If the MaxVMSize value is larger than the per-slot/core memory limit for
+the compute node (again, check the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to get
+this for the resource type you are requesting), you will have to request
+additional memory for your job.</p>
+<p>This formatting for the accounting data prints out a number of memory
+datapoints for the job. They are all described in the <a class="reference external" href="https://slurm.schedmd.com/sacct.html" target="_blank">sacct man
+page</a>.</p>
+</div>
+<div class="section" id="reqesting-gpus">
+<span id="slurm-gpus"></span><h3>Reqesting GPUs<a class="headerlink" href="#reqesting-gpus" title="Permalink to this heading"></a></h3>
+<p>Some code can be accelerated by adding a GPU, or Graphical Processing
+Unit. GPUs are specialized hardware originally developed for rendering
+the graphics you see on your computer screen, but have been found to be
+very fast at doing certain operations and have therefore been adopted as
+an accelerator. They are frequently used in Machine Learning libraries,
+but are increasingly used in other software. You can also write your own
+GPU code using CUDA.</p>
+<p>Before requesting a GPU, you should verify that the software, libraries,
+or code that you are using can make use of a GPU, or multiple GPUs. The
+Machine Learning packages available in our anaconda modules should all
+be able to take advantage of GPUs. To request a single GPU, add the
+following line to your submission script:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">#SBATCH</span> <span class="pre">--gres=gpu:volta:1</span></code></div></blockquote>
+<p>This flag will give you a single GPU. For multi-node jobs, it’ll give
+you a single GPU for every node you end up on, and will give you a
+single GPU for every task in a Job Array. If your code can make use of
+multiple GPUs, you can set this to 2 instead of 1, and that will give
+you 2 GPUs for each node or Job Array task.</p>
+<p>Note that only certain operations are being done on the GPU, your job
+will still most likely run best given a number of CPU cores as well. If
+you are not sure how many to request, if you request 1 GPU, ask for 20
+CPUs (half of the CPUs), if you request 2 GPUs, you can ask for all of
+the CPUs. You can check the current CPU and GPU counts for each node on
+our <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page.</p>
+</div>
+</div>
+<div class="section" id="requesting-additional-resources-with-llsub">
+<span id="llsub"></span><h2>Requesting Additional Resources with LLsub<a class="headerlink" href="#requesting-additional-resources-with-llsub" title="Permalink to this heading"></a></h2>
+<p>By default you will be allocated a single core for your job. This is
+fine for testing, but usually you’ll want more than that. For example
+you may want:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#llsub-shared"><span class="std std-ref">Additional cores on the same node (shared memory or
+threading)</span></a></li>
+<li><a class="reference internal" href="#llsub-jobarray"><span class="std std-ref">Multiple independent tasks (job
+array/throughput)</span></a></li>
+<li><a class="reference internal" href="#llsub-memcores"><span class="std std-ref">More memory or cores per process/task/worker</span></a></li>
+<li><a class="reference internal" href="#llsub-gpus"><span class="std std-ref">GPUs</span></a></li>
+</ul>
+<p>Here we have listed and will go over some of the more common resource
+requests. Most of these you can combine to get what you want. We will
+show the lines that you would add to your submission script, but note
+that you can also include these options at the command line if you want.</p>
+<p>How do you know what you should request? An in-depth discussion on this
+is outside the scope of this documentation, but we can provide some
+basic guidance. Generally, parallel programs are either implemented to
+be distributed or not. Distributed programs can communicate across
+different nodes, and so can scale beyond a single node. Programs written
+with MPI, for example, would be distributed. Non-Distributed programs
+you may see referred to as shared memory or multithreaded. Python’s
+multiprocessing package is a good example of a shared memory library.
+Whether your program is Distributed or Shared Memory dictates how you
+request additional cores: do they need to be all on the same node, or
+can they be on different nodes? You also want to think about what you
+are running: if you are running a series of identical independent tasks,
+say you are running the same code over a number of files or parameters,
+this is referred to as Throughput and can be run in parallel using a Job
+Array. (If you are iterating over files like this, and have some
+reduction step at the end, take a look at
+<a class="reference internal" href="#llmapreduce"><span class="std std-ref">LLMapReduce</span></a>). Finally, you may want to think about
+whether your job could use more than the default amount of memory, or
+RAM, and whether it can make use of a GPU.</p>
+<p>If you are submitting your job with LLsub, you should be aware of its
+behavior. If you have any Slurm options in your submission script (any
+lines starting with <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code>) LLsub will ingore any command line
+arguments you give it and only use those you specify in your script. You
+can still submit this script with LLsub, but it won’t add any extra
+command line arguments you pass it.</p>
+<div class="section" id="llsub-shared">
+<span id="additional-cores-on-the-same-node-1"></span><span id="id2"></span><h3>Additional Cores on the Same Node<a class="headerlink" href="#llsub-shared" title="Permalink to this heading"></a></h3>
+<p>Libraries that use shared memory or threading to handle parallelism
+require that all cores be on the same node. In this case you are
+constrained to the number of cores on a single machine. Check the
+<a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to see
+the number of cores available on the current hardware.</p>
+<p>To request multiple cores on the same node for your job you can use the
+<code class="docutils literal notranslate"><span class="pre">-s</span></code> option in <code class="docutils literal notranslate"><span class="pre">LLsub</span></code>. This stands for “slots”. For example, if I
+am running a job and I’d like to allocate 4 cores to it, I would run:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-s</span> <span class="pre">4</span></code></div></blockquote>
+</div>
+<div class="section" id="job-array">
+<span id="llsub-jobarray"></span><h3>Job Array<a class="headerlink" href="#job-array" title="Permalink to this heading"></a></h3>
+<p>Take a look at the <a class="reference internal" href="#slurm-jobarray"><span class="std std-ref">Slurm instructions above for how to set up a Job
+Array</span></a>. You’ll still set up your code the same, and
+pass the two environment variables <code class="docutils literal notranslate"><span class="pre">#SLURM_ARRAY_TASK_ID</span></code> and
+<code class="docutils literal notranslate"><span class="pre">$SLURM_ARRAY_TASK_COUNT</span></code> into your script. When you submit, rather
+than adding <code class="docutils literal notranslate"><span class="pre">#SBATCH</span></code> lines to your submission script, you would use
+the <code class="docutils literal notranslate"><span class="pre">-t</span></code> option:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-t</span> <span class="pre">1-4</span></code></div></blockquote>
+<p>If you need more cores or memory for each task, you can add the <code class="docutils literal notranslate"><span class="pre">-s</span></code>
+option as described <a class="reference internal" href="#llsub-memcores"><span class="std std-ref">below</span></a>.</p>
+</div>
+<div class="section" id="adding-more-memory-or-cores">
+<span id="llsub-memcores"></span><h3>Adding More Memory or Cores<a class="headerlink" href="#adding-more-memory-or-cores" title="Permalink to this heading"></a></h3>
+<p>If you anticipate that your job will use more than ~4 GB of RAM, you may
+need to allocate more resources for your job. You can be sure your job
+has enough memory to run by allocating more slots, or cores, to each
+task or process in your job. Each core gets its fair share of the RAM on
+the node, calculated by the total amount of memory on the node divided
+by the number of cores. See the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page for a
+list of the amount of RAM, number of cores, and RAM per core for each
+resource type. For example, the Xeon-P8 nodes have 192 GB of RAM and 48
+cores, so each core gets 4 GB of RAM. Therefore, the way to request more
+memory is to request more cores. Even if you are not using the
+additional core(s), you are using their memory. The way to do with LLsub
+is the <code class="docutils literal notranslate"><span class="pre">-s</span></code> (for slots) option. Say I know each task in my job will
+use about 20 GB of memory, with the Xeon-P8 nodes above, I’d want to
+request five cores for each task:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-s</span> <span class="pre">5</span></code></div></blockquote>
+<p>If you are already using the <code class="docutils literal notranslate"><span class="pre">-s</span></code> option for a shared memory or
+threaded job, you should increase what you put for <code class="docutils literal notranslate"><span class="pre">-s</span></code>. For example,
+if I know I’m going to use 4 cores in my code, but each will need 20 GB
+of RAM, I can reqest a total of 4*5 = 20 cores:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-s</span> <span class="pre">20</span></code></div></blockquote>
+<p>How do you know how much memory your job needs? You can find out how
+much memory a job used after the job is completed. You can run your job
+long enough to get an idea of the memory requirement first (you can
+request the maximum number of cores per node for this step). Then you
+can use the <code class="docutils literal notranslate"><span class="pre">sacct</span></code> slurm command to get the memory used:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">sacct</span> <span class="pre">-j</span> <span class="pre">JOBID</span> <span class="pre">-o</span></code>JobID,JobName,State,AllocCPUS,MaxRSS,MaxVMSize
+–units=G</div></blockquote>
+<p>where JOBID is your job ID. State shows the job status, keep in mind
+that the memory numbers are only accurate for jobs that are no longer
+running, and AllocCPUS is the number of CPU cores that were allocated to
+the job. MaxRSS is the maximum resident memory (maximum memory
+footprint) used by each job array job, while MaxVMSize is the maximum
+memory that was requested by the process (the peak memory usage). In
+other words, MaxVMSize is the high-watermark of memory that was
+allocated by the process, regardless of whether it was used or not. The
+MaxRSS size is the maximum physical memory that was actually used.</p>
+<p>If the MaxVMSize value is larger than the per-slot/core memory limit for
+the compute node (again, check the <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page to get
+this for the resource type you are requesting), you will have to request
+additional memory for your job.</p>
+<p>This formatting for the accounting data prints out a number of memory
+data points for the job. They are all described in the <a class="reference external" href="https://slurm.schedmd.com/sacct.html" target="_blank">sacct man
+page</a>.</p>
+</div>
+<div class="section" id="requesting-gpus">
+<span id="llsub-gpus"></span><h3>Requesting GPUs<a class="headerlink" href="#requesting-gpus" title="Permalink to this heading"></a></h3>
+<p>Some code can be accelerated by adding a GPU, or Graphical Processing
+Unit. GPUs are specialized hardware originally developed for rendering
+the graphics you see on your computer screen, but have been found to be
+very fast at doing certain operations and have therefore been adopted as
+an accelerator. They are frequently used in Machine Learning libraries,
+but are increasingly used in other software. You can also write your own
+GPU code using CUDA.</p>
+<p>Before requesting a GPU, you should verify that the software, libraries,
+or code that you are using can make use of a GPU, or multiple GPUs. The
+Machine Learning packages available in our anaconda modules should all
+be able to take advantage of GPUs. To request a single GPU, use the
+following command:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-g</span> <span class="pre">volta:1</span></code></div></blockquote>
+<p>This flag will give you a single GPU. For multi-node jobs, it’ll give
+you a single GPU for every node you end up on, and will give you a
+single GPU for every task in a Job Array. If your code can make use of
+multiple GPUs, you can set this to 2 instead of 1, and that will give
+you 2 GPUs for each node or Job Array task.</p>
+<p>Note that only certain operations are being done on the GPU, your job
+will still most likely run best given a number of CPU cores as well. If
+you are not sure how many to request, if you request 1 GPU, ask for 20
+CPUs (half of the CPUs), if you request 2 GPUs, you can ask for all of
+the CPUs. You can check the current CPU and GPU counts for each node on
+our <a class="reference internal" href="../../../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page. To
+request 20 cores and 1 GPU, run:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">myScript.sh</span> <span class="pre">-s</span> <span class="pre">20</span> <span class="pre">-g</span> <span class="pre">volta:1</span></code></div></blockquote>
+</div>
+</div>
+<div class="section" id="llmapreduce">
+<span id="id3"></span><h2>LLMapReduce<a class="headerlink" href="#llmapreduce" title="Permalink to this heading"></a></h2>
+<p>The LLMapReduce command scans the user-specified input directory and
+translates each individual file as a computing task for the
+user-specified application. Then, the computing tasks will be submitted
+to scheduler for processing. If needed, the results can be
+post-processed by setting up a user-specified reduce task, which is
+dependent on the mapping task results. The reduce task will wait until
+all the results become available.</p>
+<p>You can view the most up-to-date options for the LLMapReduce command by
+running the command LLMapReduce -h. You can see examples of how to use
+LLMapReduce jobs in /usr/local/examples directory on the Supercloud
+system nodes. Some of these may be in the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory in your
+home directory. You can copy any that are missing from
+<code class="docutils literal notranslate"><span class="pre">/usr/local/examples</span></code> to your home directory. We also have an example
+in the <a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples" target="_blank">Teaching
+Examples</a>
+github repository, with examples in
+<a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Julia/word_count/LLMapReduce" target="_blank">Julia</a>
+and
+<a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Python/word_count/LLMapReduce" target="_blank">Python</a>.
+These examples are also available in the bwedx shared group directory
+and can be copied to your home directory from there.</p>
+<p>LLMapReduce can work with any programs and we have a couple of examples
+for Java, Matlab, Julia, and Python. By default, it cleans up the
+temporary directory, .MAPRED.PID. However, there is an option to keep
+(–keep true) the temporary directory if you want it for debugging. The
+current version also supports a nested LLMapReduce call.</p>
+</div>
+<div class="section" id="matlab-octave-tools">
+<span id="matlab"></span><h2>Matlab/Octave Tools<a class="headerlink" href="#matlab-octave-tools" title="Permalink to this heading"></a></h2>
+<div class="section" id="pmatlab">
+<h3>pMatlab<a class="headerlink" href="#pmatlab" title="Permalink to this heading"></a></h3>
+<p>pMatlab was created at MIT Lincoln Laboratory to provide easy access to
+parallel computing for engineers and scientists using the MATLAB(R)
+language. pMatlab provides the interfaces to the communication libraries
+necessary for distributed computation. In addition to MATLAB(R), pMatlab
+works seamlessly with Octave, and open source Matlab toolkit.</p>
+<p>MATLAB(R) is the primary development language used by Laboratory staff,
+and thus the place to start when developing an infrastructure aimed at
+removing the traditional hurdles associated with parallel computing. In
+an effort to develop a tool that will enable the researcher to
+seamlessly move from desktop (serial) to parallel computing, pMatlab has
+adopted the use of Global Array Semantics. Global Array Semantics is a
+parallel programming model in which the programmer views an array as a
+single global array rather than multiple subarrays located on different
+processors. The ability to access and manipulate related data
+distributed across processors as a single array more closely matches the
+serial programming model than the traditional parallel approach, which
+requires keeping track of which data resides on any given individual
+processor.</p>
+<p>Along with global array semantics, pMatlab uses the message-passing
+capabilities of MatlabMPI to provide a global array interface to
+MATLAB(R)) programmers. The ultimate goal of pMatlab is to move beyond
+basic messaging (and its inherent programming complexity) towards higher
+level parallel data structures and functions, allowing MATLAB(R)) users
+to parallelize their existing programs by simply changing and adding a
+few lines.</p>
+<p>Any pMatlab code can be run on the MIT Supercloud using standard pMatlab
+submission commands. The Practical High Performance Computing course on
+our online course platform provides a very good introduction for how to
+use pMatlab. There is also an examples directory in your home directory
+that provides several examples. The Param_Sweep example is a good place
+to start. There is an in-depth explanation of this example in the
+<a class="reference external" href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Matlab-Octave/Param_Sweep" target="_blank">Teaching
+Examples</a>
+github repository.</p>
+<p>If you anticipate that your job will use more than ~10 GB of RAM, you
+need to allocated more resources for your job. You can be sure your job
+has enough memory to run by allocating more slots, or cores, to each
+task or process in your job. For example, our nodes have 40 cores and
+384 GB of RAM, therefore each core represents about 10 GB. So if your
+job needs ~20 GB, allocate two cores or slots per process. Doing so will
+ensure your job will not fail due running out of memory, and not
+interfere with someone else’s job.</p>
+<p>To do this with pMatlab, you can add the following line to your run
+script, before you the <code class="docutils literal notranslate"><span class="pre">eval(pRUN(...))</span></code> command:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">setenv('GRIDMATLAB_MT_SLOTS','2')</span></code></div></blockquote>
+</div>
+<div class="section" id="submitting-with-llsub-or-sbatch">
+<h3>Submitting with LLsub or Sbatch<a class="headerlink" href="#submitting-with-llsub-or-sbatch" title="Permalink to this heading"></a></h3>
+<p>You can always submit a Matlab(R) script with a submission script
+through sbatch or LLsub. The basic submission script looks like this:</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">#!/bin/bash</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">Run</span> <span class="pre">the</span> <span class="pre">script</span> <span class="pre">matlab</span> <span class="pre">-nodisplay</span> <span class="pre">-r</span> <span class="pre">&quot;myScript;</span> <span class="pre">exit&quot;</span></code></p>
+</div></blockquote>
+<p>Where <code class="docutils literal notranslate"><span class="pre">myScript</span></code> is the name of the Matlab script that you want to
+run. When running a Matlab script through a submission script, you do
+need to specify that Matlab should exit after it runs your code.
+Otherwise it will continue to run, waiting for you to give it the next
+command.</p>
+</div>
+<div class="section" id="launchfunctionongrid-and-launchparforongrid">
+<h3>LaunchFunctionOnGrid and LaunchParforOnGrid<a class="headerlink" href="#launchfunctionongrid-and-launchparforongrid" title="Permalink to this heading"></a></h3>
+<p>If you want to launch your serial MATLAB scripts or functions on LLSC
+systems, you can use the <code class="docutils literal notranslate"><span class="pre">LaunchFunctionOnGrid()</span></code> function. You can
+execute your code without any modification (if it is written for a Linux
+environment) as a batch job. Its usage, in Matlab, is as follows:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">launch_status</span> <span class="pre">=</span> <span class="pre">LaunchFunctionOnGrid(m_file)</span> <span class="pre">launch_status</span> <span class="pre">=</span> <span class="pre">LaunchFunctionOnGrid(m_file,variables)</span></code></div></blockquote>
+<p>Where m_file is a string that specifies the script or function to be
+run, and variables is the list of variables that are being passed in.
+Note that variables must be variables, not constants.</p>
+<p>If you want to launch your MATLAB scripts or functions that call the
+<code class="docutils literal notranslate"><span class="pre">parfor()</span></code> function on LLSC systems, you can use the
+<code class="docutils literal notranslate"><span class="pre">LaunchParforOnGrid()</span></code> function. You can execute your code without any
+modification (if it is written for a Linux environment) as a batch job.
+While <code class="docutils literal notranslate"><span class="pre">LaunchParforOnGrid()</span></code> will work functionally, it has
+significant limitations in performance, both at the node level and the
+cluster level; it might be better to use pMatlab instead. To use the
+<code class="docutils literal notranslate"><span class="pre">LaunchParforOnGrid()</span></code> function in MATLAB:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">launch_status</span> <span class="pre">=</span> <span class="pre">LaunchParforOnGrid(m_file)</span> <span class="pre">launch_status</span> <span class="pre">=</span> <span class="pre">LaunchParforOnGrid(m_file,variables)</span></code></div></blockquote>
+<p>Where m_file is a string that specifies the script or function to be
+run, and variables is the list of variables that are being passed in.
+Note that variables must be variables, not constants.</p>
+<p>If you anticipate that your job will use more than ~10 GB of RAM, you
+need to allocated more resources for your job. You can be sure your job
+has enough memory to run by allocating more slots, or cores, to each
+task or process in your job. For example, our nodes have 40 cores and
+384 GB of RAM, therefore each core represents about 10 GB. So if your
+job needs ~20 GB, allocate two cores or slots per process. Doing so will
+ensure your job will not fail due running out of memory, and not
+interfere with another person’s job.</p>
+<p>To do this with LaunchFunctionOnGrid or LaunchParforOnGrid, you can add
+the following line to your run script, before you use the
+<code class="docutils literal notranslate"><span class="pre">LaunchFunctionOnGrid()</span></code> or <code class="docutils literal notranslate"><span class="pre">LaunchParforOnGrid()</span></code> command:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">setenv('GRIDMATLAB_MT_SLOTS','2')</span></code></div></blockquote>
+</div>
+</div>
+<div class="section" id="triples-mode">
+<span id="triples"></span><h2>Triples Mode<a class="headerlink" href="#triples-mode" title="Permalink to this heading"></a></h2>
+<p>Triples mode is a way to launch pMatlab, <a class="reference internal" href="../job_array_triples/index.html#job-array-triples"><span class="std std-ref">LLsub Job Array</span></a>, and
+LLMapReduce jobs that gives you better performance and more flexibility
+to manage memory and threads. Unless you are requesting a small number
+of cores for your job, we highly encourage you to migrate to this model.</p>
+<p>With triples mode, you specify the resources for your job by providing 3
+parameters:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">[Nodes</span> <span class="pre">NPPN</span> <span class="pre">NThreads]</span></code></div></blockquote>
+<p>where</p>
+<blockquote>
+<div><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">Nodes</span></code>is number of compute nodes</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">NPPN</span></code>is number of processes per node</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">NThreads</span></code>is number of threads per process (default is 1)</div>
+</div>
+</div></blockquote>
+<p>With triples mode your job will have exclusive use of each of the nodes
+that you request, so the total number of cores consumed against your
+allocation will be Nodes * 40.</p>
+<div class="section" id="id4">
+<h3>LLsub<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>A brief introduction to LLsub is provided <a class="reference internal" href="#llsub-jobarray"><span class="std std-ref">above</span></a>.
+To use triples mode to launch LLsub job on Supercloud, run as follows:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">./submit.sh</span> <span class="pre">[Nodes,NPPN,NThreads]</span></code></div></blockquote>
+<p>A more in-depth guide on how to convert an existing Job Array to an
+LLsub Triples submission is provided on the page <a class="reference internal" href="../job_array_triples/index.html#job-array-triples"><span class="std std-ref">Job Arrays with LLsub Triples in 3 Steps</span></a>.</p>
+</div>
+<div class="section" id="id5">
+<h3>LLMapReduce<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>A brief introduction to LLMapReduce is provided <a class="reference internal" href="#llmapreduce"><span class="std std-ref">above</span></a>. To use triples mode to launch your LLMapReduce
+job on Supercloud, use the –np option with the triple as its parameter,
+as follows:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">--np=[Nodes,NPPN,NThreads]</span></code></div></blockquote>
+</div>
+<div class="section" id="id6">
+<h3>pMatlab<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<p>A brief introduction to pMatlab is provided <a class="reference internal" href="#matlab"><span class="std std-ref">above</span></a>. To use
+triples mode to launch your pMatlab job on Supercloud, you use the
+pRUN() function. Its usage, in Matlab, is as follows:</p>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">eval(pRUN('mfile',</span> <span class="pre">[Nodes</span> <span class="pre">NPPN</span> <span class="pre">OMP_NUM_THREADS],</span> <span class="pre">'grid'))</span></code></div></blockquote>
+</div>
+<div class="section" id="triples-mode-tuning">
+<span id="tuning"></span><h3>Triples Mode Tuning<a class="headerlink" href="#triples-mode-tuning" title="Permalink to this heading"></a></h3>
+<p>Triples mode tuning provides greater efficiency by allowing you to
+better tune your resource requests to your application. This one-time
+tuning process typically takes ~1 hour:</p>
+<ol class="arabic">
+<li><p class="first">Instrument your code to print a rate (work/time) giving a sense of
+the speed from a ~1 minute run.</p>
+</li>
+<li><p class="first">Determine best number of threads (<code class="docutils literal notranslate"><span class="pre">NThreadsBest</span></code>) by examining rate
+from runs with varying numbers of threads:
+&nbsp; &nbsp; <code class="docutils literal notranslate"><span class="pre">[1,1,1],</span> <span class="pre">[1,1,2],</span> <span class="pre">[1,1,4]</span></code>, …</p>
+</li>
+<li><p class="first">Determine best number of processes per node (<code class="docutils literal notranslate"><span class="pre">NPPNbest</span></code>) by
+examining rate from runs with varying numbers of processes:
+&nbsp; &nbsp; <code class="docutils literal notranslate"><span class="pre">[1,1,NThreadsBest],</span> <span class="pre">[1,2,NThreadsBest],</span> <span class="pre">[1,4,NThreadsBest]</span></code>,
+…</p>
+</li>
+<li><p class="first">Determine best number of nodes (<code class="docutils literal notranslate"><span class="pre">NodesBest</span></code>) by examining rate from
+runs of with varying numbers of nodes:</p>
+<p><code class="docutils literal notranslate"><span class="pre">[1,NPPNbest,NThreadsBest],</span> <span class="pre">[2,NPPNbest</span> <span class="pre">NThreadsBest],</span> <span class="pre">[4,NPPNbest</span> <span class="pre">NThreadsBest]</span></code>,
+…</p>
+</li>
+<li><p class="first">Run your production jobs using [NodesBest&nbsp; NPPNbest&nbsp; NThreadsBest]</p>
+</li>
+</ol>
+<p>You could tune <code class="docutils literal notranslate"><span class="pre">NPPN</span></code> first, then <code class="docutils literal notranslate"><span class="pre">NThreads</span></code>. This would be a better
+approach if you are memory bound. You can find the max <code class="docutils literal notranslate"><span class="pre">NPPN</span></code> that
+will fit, then keep increasing <code class="docutils literal notranslate"><span class="pre">NThreads</span></code> until you stop getting more
+performance.</p>
+<p>“Good” <code class="docutils literal notranslate"><span class="pre">NPPN</span></code> values for Xeon-P8: 1, 2, 4, 8, 16, 24, 32, 48</p>
+<p>“Good” <code class="docutils literal notranslate"><span class="pre">NPPN</span></code> values for Xeon-G6: 1, 2, 4, 8, 16, 20, 32, 40</p>
+<p>Triples mode tuning results in a ~2x increase efficiency for many users.</p>
+<p>Once the best settings have been found, they can be reused as long as
+the code remains roughly similar. Recording the rates from the above
+process can often result in a publishable <a class="reference external" href="http://www.ieee-hpec.org/" target="_blank">IEEE
+HPEC</a> paper. We are happy to work with you
+to guide you through this tuning process.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Submitting Jobs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../job_array_triples/index.html" class="btn btn-neutral float-right" title="Job Arrays with LLsub Triples in 3 Steps" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, MIT SuperCloud Team.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
