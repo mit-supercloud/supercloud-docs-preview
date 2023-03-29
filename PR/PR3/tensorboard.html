@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to SuperCloud’s documentation! &mdash; MIT SuperCloud Documentation  documentation</title>
+  <title>&lt;no title&gt; &mdash; MIT SuperCloud Documentation  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="canonical" href="https://supercloud.mit.edu/index.html"/>
+    <link rel="canonical" href="https://supercloud.mit.edu/tensorboard.html"/>
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -19,8 +19,7 @@
         <script src="_static/js/custom.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Requesting an Account" href="requesting_account/index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -31,7 +30,7 @@
 
           
           
-          <a href="#" class="icon icon-home">
+          <a href="index.html" class="icon icon-home">
             MIT SuperCloud Documentation
           </a>
 <div role="search">
@@ -205,17 +204,17 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">MIT SuperCloud Documentation</a>
+          <a href="index.html">MIT SuperCloud Documentation</a>
       </nav>
 
       <div class="wy-nav-content">
         <div class="rst-content style-external-links">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Welcome to SuperCloud’s documentation!</li>
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">&lt;no title&gt;</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/llsc-supercloud/supercloud-docs-edit/blob/main/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/llsc-supercloud/supercloud-docs-edit/blob/main/tensorboard.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -223,55 +222,59 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="welcome-to-supercloud-s-documentation">
-<span id="home"></span><h1>Welcome to SuperCloud’s documentation!<a class="headerlink" href="#welcome-to-supercloud-s-documentation" title="Permalink to this heading"></a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="requesting_account/index.html">Requesting an Account</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_started/index.html">Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="systems_and_software/index.html">Systems and Software</a></li>
-</ul>
+  <div class="line-block">
+<div class="line">.. _tensorboard:</div>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="using_the_system/index.html">Using the Systetm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="using_the_system/files_and_data/index.html">Files and Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using_the_system/software_packages/index.html">Software and Package Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using_the_system/monitoring_system_and_jobs/index.html">Monitoring System and Job Status</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using_the_system/submitting_jobs/index.html">Submitting Jobs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using_the_system/best_practices/index.html">Best Practices</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using_the_system/web_portal/index.html">Web Portal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using_the_system/databases/index.html">Databases</a></li>
-<li class="toctree-l2"><a class="reference internal" href="using_the_system/jupyter_notebooks/index.html">Jupyter Notebooks</a></li>
-</ul>
-</li>
-</ul>
+<dl class="docutils">
+<dt>You can run Tensorboard as a job, this is the preferred method of</dt><dd>doing this.</dd>
+</dl>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">First start an interactive session with a reserved port:</div>
+<div class="line"><br /></div>
 </div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="faqs/index.html">Frequently Asked Questions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="getting_help/index.html">Getting Help</a></li>
-<li class="toctree-l1"><a class="reference internal" href="online_courses/index.html">Online Courses</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary/index.html">Glossary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="acknowledging_us/index.html">Acknowledging Us</a></li>
-</ul>
+<blockquote>
+<div><a href="#id1"><span class="problematic" id="id2">``</span></a>[<a class="reference external" href="mailto:studentx&#37;&#52;&#48;login-1" target="_blank">studentx<span>&#64;</span>login-1</a> ~]$ LLsub -i –resv-ports 1     &nbsp;     salloc –immediate=60 -p normal –constraint=xeon-e5 –cpus-per-task=4 –qos=high&nbsp; srun –resv-ports=1 –pty bash -i     salloc: Granted job allocation 355286     salloc: Waiting for resource configuration     salloc: Nodes node-052 are ready for job     &nbsp;``</div></blockquote>
+<div class="line-block">
+<div class="line">Then create your logging directory in TMPDIR:</div>
+<div class="line"><br /></div>
 </div>
+<blockquote>
+<div><a href="#id3"><span class="problematic" id="id4">``</span></a>[<a class="reference external" href="mailto:studentx&#37;&#52;&#48;node-052" target="_blank">studentx<span>&#64;</span>node-052</a> ~]$ mkdir -p ${TMPDIR}/tensorboard     &nbsp;``</div></blockquote>
+<div class="line-block">
+<div class="line">Set up your forwading name and file:</div>
+<div class="line"><br /></div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading"></a></h1>
-<ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
-</ul>
+<blockquote>
+<div><code class="docutils literal notranslate"><span class="pre">[studentx&#64;node-052</span> <span class="pre">~]$</span> <span class="pre">PORTAL_FWNAME=&quot;$(id</span> <span class="pre">-un</span> <span class="pre">|</span> <span class="pre">tr</span> <span class="pre">'[A-Z]'</span> <span class="pre">'[a-z]')-tensorboard&quot;</span>&#160;&#160;&#160;&#160; <span class="pre">[studentx&#64;node-052</span> <span class="pre">~]$</span> <span class="pre">PORTAL_FWFILE=&quot;/home/gridsan/portal-url-fw/${PORTAL_FWNAME}&quot;</span>&#160;&#160;&#160;&#160; <span class="pre">[studentx&#64;node-052</span> <span class="pre">~]$</span> <span class="pre">echo</span> <span class="pre">$PORTAL_FWFILE</span>&#160;&#160;&#160;&#160; <span class="pre">/home/gridsan/portal-url-fw/studentx-tensorboard</span>&#160;&#160;&#160;&#160; <span class="pre">[studentx&#64;node-052</span> <span class="pre">~]$</span> <span class="pre">echo</span> <span class="pre">&quot;Portal</span> <span class="pre">URL</span> <span class="pre">is:</span> <span class="pre">https://${PORTAL_FWNAME}.fn.txe1-portal.mit.edu/&quot;</span>&#160;&#160;&#160;&#160; <span class="pre">Portal</span> <span class="pre">URL</span> <span class="pre">is:</span> <span class="pre">https://studentx-tensorboard.fn.txe1-portal.mit.edu/</span></code></div></blockquote>
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line">Put the forward URL in the forwarding file (when you run “cat
+$PORTAL_FWFILE” you should only see one line- if you see two or more,
+delete all but the last line):</div>
+<div class="line"><br /></div>
 </div>
+<blockquote>
+<div><a href="#id5"><span class="problematic" id="id6">``</span></a>[<a class="reference external" href="mailto:studentx&#37;&#52;&#48;node-052" target="_blank">studentx<span>&#64;</span>node-052</a> ~]$ echo “<a class="reference external" href="http://$(hostname" target="_blank">http://$(hostname</a> -s):${SLURM_STEP_RESV_PORTS}/” &gt;&gt; $PORTAL_FWFILE     [<a class="reference external" href="mailto:studentx&#37;&#52;&#48;node-052" target="_blank">studentx<span>&#64;</span>node-052</a> ~]$ cat $PORTAL_FWFILE     <a class="reference external" href="http://node-052:12637/" target="_blank">http://node-052:12637/</a>     &nbsp;``</div></blockquote>
+<div class="line-block">
+<div class="line">Set the permissions on the forward file properly:</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><a href="#id7"><span class="problematic" id="id8">``</span></a>[<a class="reference external" href="mailto:studentx&#37;&#52;&#48;node-052" target="_blank">studentx<span>&#64;</span>node-052</a> ~]$ chmod u+x ${PORTAL_FWFILE}     &nbsp;``</div></blockquote>
+<div class="line-block">
+<div class="line">Load an anaconda module and start tensorboard</div>
+<div class="line"><br /></div>
+</div>
+<blockquote>
+<div><a href="#id9"><span class="problematic" id="id10">``</span></a>[<a class="reference external" href="mailto:studentx&#37;&#52;&#48;node-052" target="_blank">studentx<span>&#64;</span>node-052</a> ~]$ module load anaconda/2020a     [<a class="reference external" href="mailto:studentx&#37;&#52;&#48;node-052" target="_blank">studentx<span>&#64;</span>node-052</a> ~]$ tensorboard –logdir ${TMPDIR}/tensorboard –host “$(hostname -s)” –port ${SLURM_STEP_RESV_PORTS}     &nbsp;``</div></blockquote>
+<p>In the browser, go to the URL listed above (for example, mine is
+<a class="reference external" href="https://studentx-tensorboard.fn.txe1-portal.mit.edu/" target="_blank">https://studentx-tensorboard.fn.txe1-portal.mit.edu/</a>)</p>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="requesting_account/index.html" class="btn btn-neutral float-right" title="Requesting an Account" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 
