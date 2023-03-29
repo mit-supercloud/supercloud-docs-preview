@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://supercloud.mit.edu/getting-started/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Getting Started - SuperCloud Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Getting Started";
+        var mkdocs_page_input_path = "getting-started.md";
+        var mkdocs_page_url = "/getting-started/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SuperCloud Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requesting-account/">Requesting an Account</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Getting Started</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#logging-in-via-ssh">Logging in Via ssh</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#shared-hpc-clusters">Shared HPC Clusters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software-and-packages">Software and Packages</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#linux-command-line">Linux Command Line</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#transferring-files-to-mit-supercloud">Transferring Files to MIT SuperCloud</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#testing-your-code">Testing your Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#supercloud-downtimes">SuperCloud Downtimes</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../systems-and-software/">Systems and Software</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../acknowledging-us/">Acknowledging Us</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Using the System</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Files and Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/files-and-data/transferring-files/">Transferring Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/files-and-data/shared-groups/">Shared Groups</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/software-packages/">Software and Package Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/monitoring-system-and-jobs/">Monintoring System and Job Status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Submitting Jobs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/submitting-jobs/submitting-jobs/">Submitting Jobs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/submitting-jobs/job-array-triples/">Job Array Triples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Best Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/best-practices/filesystem/">Best Practices for using the Filesystem</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/best-practices/gpu-jobs/">Optimizing your GPU Jobs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/web-portal/">Web Portal</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/databases/">Databases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/jupyter-notebooks/">Jupyter Notebooks</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../faqs/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-help/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SuperCloud Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Getting Started</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link"></a></h1>
+<p>This page contains the most common steps for setting up and getting
+started with your SuperCloud account. We provide this page as a
+convenient reference to get started. To learn how to use your SuperCloud
+account, complete the <a href="https://learn.llx.edly.io/course/practical-hpc/">Practical HPC
+course</a>, which contains
+the material below and more. The course will walk you through these
+steps in more detail and often with videos to see how it is done. The
+course is self paced, can be accessed anytime, and is kept up to date.
+More reference material is available throughout site (some of this
+material links to those pages).</p>
+<p>When your account is first created you will have a small startup
+allocation. Once you complete the <a href="https://learn.llx.edly.io/course/practical-hpc/">Practical HPC
+course</a> you can request
+your account be updated to the standard allocation by sending email to
+<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;">&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;</a>. Resource allocations are listed on the
+<a href="../systems-and-software/">Systems and Software</a> page.</p>
+<h2 id="logging-in-via-ssh">Logging in Via ssh<a class="headerlink" href="#logging-in-via-ssh" title="Permanent link"></a></h2>
+<p>The first thing you should do when you get a new account is verify that
+you can log in. The primary way to access the MIT SuperCloud system is
+through ssh. Instructions for different operating systems are below.
+Keep in mind that you will only be able to access the system from ssh
+from the machine where you generated your ssh key. You will not be able
+to log in until we have sent you an email stating that we have created
+your account, which will contain your username.</p>
+<p>First, add your ssh key to the web portal. Go
+to <a href="https://txe1-portal.mit.edu/">https://txe1-portal.mit.edu/</a>. If you affiliated with MIT or another
+institution/university select the middle option "MIT
+Touchstone/InCommon Federation" to log in. Select your institution from
+the dropdown (be aware they are spelled out, MIT is listed as
+Massachusetts Institute of Technology, for example), click "Remember my
+choice" box and then the "Select" button. Then log in with your
+institution credentials. Once you are logged in, click on the
+"sshkeys" link and paste your ssh key in the box at the bottom of the
+page and click "Update Keys".</p>
+<p>For instructions on how to generate ssh keys, retrieve your public key,
+and additional troubleshooting tips, watch the videos in the "Account
+Setup and SSH Keys" section in the "Getting Started" module of the
+<a href="https://learn.llx.edly.io/course/practical-hpc/">Practical HPC course</a>,
+or <a href="../requesting-account/#generating-ssh-keys">see this page</a>.</p>
+<p>First open a command line terminal window where you generated your ssh
+keys. Enter the following command, where <code>USERNAME</code> is your username on
+the MIT SuperCloud system:</p>
+<p><code>ssh USERNAME@txe1-login.mit.edu</code></p>
+<p>If you generated your keys using PuTTY, open a PuTTY window. In the box
+labeled "Host Name" enter<code>USERNAME@txe1-login.mit.edu</code>,
+where<code>USERNAME</code>is your username on the MIT SuperCloud system. Keep the
+ssh box checked (this should be default) and Port should be set to 22.
+Click "Open" to start the session. You may also need to indicate your
+private key on the Connection -> SSH -> Auth page.</p>
+<h2 id="shared-hpc-clusters">Shared HPC Clusters<a class="headerlink" href="#shared-hpc-clusters" title="Permanent link"></a></h2>
+<p>The MIT SuperCloud is an HPC-style shared cluster. You are sharing this
+resources with a number of other researchers, staff, and students so it
+is important that you read this page and use the system as intended.</p>
+<p>Being a cluster, there are several machines connected together with a
+network. We refer to these as <strong>nodes</strong>. Most nodes in the cluster are
+referred to as <strong>compute nodes</strong>, this is where the computation is done
+on the system (where you will run your code). When you ssh into the
+system you are on a special purpose node called the <strong>login node</strong>. The
+login node, as its name suggests, is where you log in and is for editing
+code and files, installing packages and software, downloading data, and
+starting jobs to run your code on one of the compute nodes.</p>
+<p>Each job is started using a piece of software called the <strong>scheduler</strong>,
+which you can think of as a resource manager. You let it know what
+resources you need and what you want to run, and the scheduler will find
+those resources and start your job on them. When your job completes
+those resources are relinquished. The scheduler is what ensures that no
+two jobs are using the same resources, so it is very important not to
+run anything unless it is submitted properly through the scheduler.</p>
+<h2 id="software-and-packages">Software and Packages<a class="headerlink" href="#software-and-packages" title="Permanent link"></a></h2>
+<p>The first thing you may want to do is make sure the system has the
+software and packages you need. We have installed a lot of software and
+packages on the system already, even though it may not be immediately
+obvious that it is there. Review our page on
+<a href="../using-the-system/software-packages/">Software and Package Management</a>, paying particular
+attention to the section on modules and installing packages for the
+language that you use. If you are ever unsure if we have a particular
+software, and you cannot find it, please send us an email and ask before
+you spend a lot of time trying to install it. If we have it, we can
+point you to it, provide advice on how to use it, and if we don't have
+it we can often give pointers on how to install it. Further, if a lot of
+people request the same software, we may consider adding it to the
+system image.</p>
+<h2 id="linux-command-line">Linux Command Line<a class="headerlink" href="#linux-command-line" title="Permanent link"></a></h2>
+<p>The MIT SuperCloud runs Linux, so much of what you do on the cluster
+involves the Linux command line. That doesn't mean you have to be a
+Linux expert to use the system! However the more you can get comfortable
+with the Linux command line and a handful of basic commands, the easier
+using the system will be. If you are already familiar with Linux, feel
+free to skip this section, or skim as a refresher.</p>
+<p>Most Linux commands deal with <strong>directories</strong> and <strong>files</strong>. A
+<strong>directory</strong>, synonymous to a folder, contains files and other
+directories. The list of directories that lead to a particular directory
+or file is called its <strong>path</strong>. In Linux, directories on a path are
+separated by forward slashes <code>/</code>. It is also important to note that
+everything in Linux is case sensitive, so a file <code>myScript.sh</code> is not
+the same as the file <code>myscript.sh</code>. When you first log in you are in you
+<strong>home directory</strong>. Your home directory is where you can put all the
+code and data you need to run your job. Your home directory is not
+accessible to other users, if you need a space to share files with other
+users, let us know and we can make a shared <strong>group directory</strong> for you.
+The path to your home directory on SuperCloud is
+<code>/home/gridsan/[USERNAME]</code>, where <code>[USERNAME]</code> is your username. The
+character <code>~</code> is also shorthand for your home directory in any Linux
+commands.</p>
+<p>Anytime after you start typing a Linux command you can press the "Tab"
+button your your keyboard. This called tab-complete, and will try to
+autocomplete what you are typing. This is particularly helpful when
+typing out long directory paths and file names. Pressing "Tab" once
+will complete if there is a single completion, pressing it twice will
+list all potential completions. It is a bit difficult to explain in
+text, but you can try it out yourself and watch the short demonstration
+<a href="https://en.wikipedia.org/wiki/Command-line_completion">here</a>.</p>
+<p>Finally, below is a list of Linux Commands. Try them out for yourself at
+the command line.</p>
+<ul>
+<li>Creating, navigating and viewing directories:<ul>
+<li><code>pwd</code>: tells you the full path of the directory you are
+    currently in</li>
+<li><code>mkdir dirname</code>: creates a directory with the name "dirname"</li>
+<li><code>cd dirname</code>: change directory to directory "dirname"<ul>
+<li><code>cd ../</code>: takes you up one level</li>
+</ul>
+</li>
+<li><code>ls</code>: lists the files in the directory<ul>
+<li><code>ls -a</code>: lists all files including hidden files</li>
+<li><code>ls -l</code>: lists files in "long format" including ownership
+    and date of last update</li>
+<li><code>ls -t</code>: lists files by date stamp, most recently updated
+    file first</li>
+<li><code>ls -tr</code>: lists files by dates stamp in reverse order, most
+    recently updated file is listed last (this is useful if you
+    have a lot of files, you want to know which file you changed
+    last and the list of files results in a scrolling window)</li>
+<li><code>ls dirname</code>: lists the files in the directory "dirname"</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Viewing files<ul>
+<li><code>more filename</code>: shows the first part of a file, hitting the
+    space bar allows you to scroll through the rest of the file, q
+    will cause you to exit out of the file.</li>
+<li><code>less filename</code>: allows you to scroll through the file, forward
+    and backward, using the arrow keys.</li>
+<li><code>tail filename</code>: shows the last 10 lines of a file (useful when
+    you are monitoring a logfile or output file to see that the
+    values are correct)<ul>
+<li>t<code>ail &lt;number&gt; filename</code>: show you the last &lt;number>
+    lines of a file.</li>
+<li><code>tail -f filename</code>: shows you new lines as they are written
+    to the end of the file. Press CMD+C or Control+C to exit.
+    This is helpful to monitor the log file of a batch job.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Copying, moving, renaming, and deleting files<ul>
+<li><code>mv filename dirname</code>: moves filename to directory dirname.<ul>
+<li><code>mv filename1 filename2</code>: moves filename1 to filename2, in
+    essence renames the file. The date and time are not changed
+    by the mv command.</li>
+</ul>
+</li>
+<li><code>cp filename dirname</code>: copies to directory dirname.<ul>
+<li><code>cp filename1 filename2</code>: copies filename1 to filename2. The
+    date stamp on filename2 will be the date/time that the file
+    was moved</li>
+<li><code>cp -r dirname1 dirname2</code>: copies directory dirname1 and its
+    contents to dirname2.</li>
+</ul>
+</li>
+<li><code>rm filename</code>: removes (deletes) the file</li>
+</ul>
+</li>
+</ul>
+<h2 id="transferring-files-to-mit-supercloud">Transferring Files to MIT SuperCloud<a class="headerlink" href="#transferring-files-to-mit-supercloud" title="Permanent link"></a></h2>
+<p>One of the first tasks is to get your code, data, and any other files
+you need into your home directory on the system. If your code is in
+github you can use git commands on the system to clone your repository
+to your home directory. You can also transfer your files to your home
+directory from your computer by using the commands scp or rsync. Read
+the page on <a href="../using-the-system/files-and-data/transferring-files/">Transferring Files</a> to learn
+how to use these commands and transfer what you need to your home
+directory.</p>
+<h2 id="testing-your-code">Testing your Code<a class="headerlink" href="#testing-your-code" title="Permanent link"></a></h2>
+<p>At this point you may want to do a test-run of your code. You always
+want to start small in your test runs, so you should choose a small
+example that tests the functionality of what you would ultimately like
+to run on the system. If your test code is serial and runs okay on a
+moderate personal laptop or desktop you can request an interactive
+session to run your code in by executing the command:</p>
+<p><code>LLsub -i</code></p>
+<p>After you run this command you will be on a compute node and you can do
+a test-run of your code. This command will allocate one core to your
+job. If your test code is multithreaded or parallel, or uses a lot of
+memory, you should request a full node to be sure you don't impact
+other jobs on the system:</p>
+<p><code>LLsub -i full</code></p>
+<p>These commands by no means represent the full use of the system, and
+most likely won't be the primary way you run your code. In our tutorial
+we go over much more on how to submit jobs and will make sure you have
+the tools you need to get the most out of the MIT SuperCloud.</p>
+<h2 id="supercloud-downtimes">SuperCloud Downtimes<a class="headerlink" href="#supercloud-downtimes" title="Permanent link"></a></h2>
+<p>Note that SuperCloud has <strong>Monthly Downtimes</strong> which are scheduled for
+the <strong>Third Thursday</strong> of each month. During downtimes the system is not
+available. Downtimes usually last about a day and emails are sent when
+they are complete. We also send out a reminder email a few days before
+each downtime.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../requesting-account/" class="btn btn-neutral float-left" title="Requesting an Account"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../systems-and-software/" class="btn btn-neutral float-right" title="Systems and Software">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../requesting-account/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../systems-and-software/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

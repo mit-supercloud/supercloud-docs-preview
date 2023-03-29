@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://supercloud.mit.edu/using-the-system/databases/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Databases - SuperCloud Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Databases";
+        var mkdocs_page_input_path = "using-the-system/databases.md";
+        var mkdocs_page_url = "/using-the-system/databases/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> SuperCloud Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../requesting-account/">Requesting an Account</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../systems-and-software/">Systems and Software</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../acknowledging-us/">Acknowledging Us</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Using the System</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Files and Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../files-and-data/transferring-files/">Transferring Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../files-and-data/shared-groups/">Shared Groups</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../software-packages/">Software and Package Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../monitoring-system-and-jobs/">Monintoring System and Job Status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Submitting Jobs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../submitting-jobs/submitting-jobs/">Submitting Jobs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../submitting-jobs/job-array-triples/">Job Array Triples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Best Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../best-practices/filesystem/">Best Practices for using the Filesystem</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../best-practices/gpu-jobs/">Optimizing your GPU Jobs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../web-portal/">Web Portal</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Databases</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jupyter-notebooks/">Jupyter Notebooks</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../faqs/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-help/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossary</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">SuperCloud Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Using the System &raquo;</li>
+      <li>Databases</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="databases">Databases<a class="headerlink" href="#databases" title="Permanent link"></a></h1>
+<p>The MIT Supercloud allows users to launch their own databases through
+the database portal. The portal is located at:</p>
+<p><a href="https://txe1-portal.mit.edu/db/dbstatus.php">https://txe1-portal.mit.edu/db/dbstatus.php</a></p>
+<p>This page requires you to <code>authenticate into the
+portal &lt;web_portal&gt;</code>{.interpreted-text role="ref"}. From here you will
+see all the databases you have access to. There are Accumulo and
+Postgress databases available.</p>
+<p>To start up a database instance, press \"Start\". You can stop it by
+clicking on the \"Stop\" button, and can checkpoint a stopped database
+as well. Clicking on \"View Info\" for Accumulo databases will take you
+to the Accumulo Monitoring page, where you can view ingest/query plots
+and current tables.</p>
+<p>If you need an instance created and cannot use one of those already
+available, <a href="https://supercloud.mit.edu/contact">contact us</a>. Let us know
+the type of database you need, what you are using it for, what it should
+be called, and who should have access to the database. Let us know if
+there are any special configurations you need.</p>
+<p>There are many ways to insert and query data. While this cannot be done
+from the portal page, you can query and insert data from any of the
+nodes on the MIT Supercloud system. We reccommed using D4M, which has
+been installed and pre-configured to work on our system with very little
+effort. For more information about databases and how to use them with
+D4M, take a look at the Advanced Database Technologies course on our
+<a href="https://supercloud.mit.edu/online-courses">online course</a> platform.
+This course contains a good introduction on how to set up a data
+pipeline, including parsing, ingesting, and querying data for Accumulo.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../web-portal/" class="btn btn-neutral float-left" title="Web Portal"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../jupyter-notebooks/" class="btn btn-neutral float-right" title="Jupyter Notebooks">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../web-portal/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../jupyter-notebooks/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

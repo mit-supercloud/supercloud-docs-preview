@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://supercloud.mit.edu/using-the-system/monitoring-system-and-jobs/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Monintoring System and Job Status - SuperCloud Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Monintoring System and Job Status";
+        var mkdocs_page_input_path = "using-the-system/monitoring-system-and-jobs.md";
+        var mkdocs_page_url = "/using-the-system/monitoring-system-and-jobs/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> SuperCloud Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../requesting-account/">Requesting an Account</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../systems-and-software/">Systems and Software</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../acknowledging-us/">Acknowledging Us</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Using the System</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Files and Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../files-and-data/transferring-files/">Transferring Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../files-and-data/shared-groups/">Shared Groups</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../software-packages/">Software and Package Management</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Monintoring System and Job Status</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#checking-system-status-system-status">Checking System Status {##system-status}</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#monitoring-jobs-monitoring-jobs">Monitoring Jobs {##monitoring-jobs}</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#stopping-jobs-stopping-jobs">Stopping Jobs {##stopping-jobs}</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Submitting Jobs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../submitting-jobs/submitting-jobs/">Submitting Jobs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../submitting-jobs/job-array-triples/">Job Array Triples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Best Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../best-practices/filesystem/">Best Practices for using the Filesystem</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../best-practices/gpu-jobs/">Optimizing your GPU Jobs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../web-portal/">Web Portal</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../databases/">Databases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../jupyter-notebooks/">Jupyter Notebooks</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../faqs/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../getting-help/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../glossary/">Glossary</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">SuperCloud Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Using the System &raquo;</li>
+      <li>Monintoring System and Job Status</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="monitoring-system-and-job-status-monitoring_system_and_jobs">Monitoring System and Job Status {#monitoring_system_and_jobs}<a class="headerlink" href="#monitoring-system-and-job-status-monitoring_system_and_jobs" title="Permanent link"></a></h1>
+<p>The four actions you may take the most are checking system status and
+starting, monitoring, and stopping jobs. Since scheduling jobs is a
+longer topic, see this <code>page &lt;submitting_jobs&gt;</code>{.interpreted-text
+role="ref"} for an in-depth description of how to start your job. Here
+we describe how to check the
+<code>status of the system &lt;#system-status&gt;</code>{.interpreted-text role="ref"}
+for available resources,
+<code>monitor a currently running job &lt;#monitoring-jobs&gt;</code>{.interpreted-text
+role="ref"}, and <code>stop a
+running job &lt;#stopping-jobs&gt;</code>{.interpreted-text role="ref"}.</p>
+<p>Each of these tasks is done through the scheduler, which is Slurm on the
+MIT Supercloud system. On this page and the <code>job submission
+page &lt;submitting_jobs&gt;</code>{.interpreted-text role="ref"} we describe some
+of the basic options for submitting, monitoring, and stopping jobs. More
+advanced options are described in Slurm\'s
+<a href="https://slurm.schedmd.com/man_index.html">documentation</a>, and this
+handy <a href="https://slurm.schedmd.com/pdfs/summary.pdf">two-page guide</a> gives
+a breif description of the commands and their options.</p>
+<h2 id="checking-system-status-system-status">Checking System Status {##system-status}<a class="headerlink" href="#checking-system-status-system-status" title="Permanent link"></a></h2>
+<p>Our wrapper command, <code>LLGrid_status</code>, has a nicely formatted and easy to
+read output for checking system status:</p>
+<blockquote>
+<p>| <code>[StudentX@login-0 ~]$ LLGrid_status</code>
+| <code>LLGrid: txe1 (running slurm 16.05.8)   ============================================   Online Intel xeon-e5 nodes: 36      Unclaimed nodes: 24      Claimed slots: 172      Claimed slots for exclusive jobs: 80   --------------------------------------------      Available slots: 404</code></p>
+</blockquote>
+<p>In the output, you can see the name of the system you are on (e1 here),
+the scheduler that\'s being used (Slurm), the number of unclaimed nodes,
+and the number of available slots.</p>
+<p>You can also get information about the system status using the scheduler
+command <code>sinfo</code>:</p>
+<blockquote>
+<p>[<code>StudentX@login-0 ~]$ sinfo   PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST   normal*      up   infinite     15  down* node-[039,049,051,058,063-072],raid-2   normal*      up   infinite      2    mix gpu-2,node-050   normal*      up   infinite     10  alloc gpu-1,node-[037-038,062,099,109-113]   normal*      up   infinite     24   idle node-[040-048,055-057,059-061,115-119,124,129-130],raid-1   normal*      up   infinite      1   down node-114   ...   gpu          up   infinite      1  alloc gpu-1   dgx          up 1-00:00:00      1   idle txdgx</code></p>
+</blockquote>
+<p>This command will list the nodes that are down (unavailable), fully
+allocated, partially allocated, and idle. Note that the same node can
+appear in multiple partitions.</p>
+<h2 id="monitoring-jobs-monitoring-jobs">Monitoring Jobs {##monitoring-jobs}<a class="headerlink" href="#monitoring-jobs-monitoring-jobs" title="Permanent link"></a></h2>
+<p>You can monitor your jobs using the <code>LLstat</code> command:</p>
+<blockquote>
+<p><code>[StudentX@login-0 ~]$ LLstat   LLGrid: txe1 (running slurm 16.05.8)   JOBID     ARRAY_J    NAME        USER     START_TIME          PARTITION  CPUS  FEATURES  MIN_MEMORY  ST  NODELIST(REASON)   40986     40986      myJob       Student  2017-10-19T15:35:46 normal     1     xeon-e5   5G          R   gpu-2   40980_100 40980      myArrayJob  Student  2017-10-19T15:35:37 normal     1     xeon-e5   5G          R   gpu-2   40980_101 40980      myArrayJob  Student  2017-10-19T15:35:37 normal     1     xeon-e5   5G          R   gpu-2   40980_102 40980      myArrayJob  Student  2017-10-19T15:35:37 normal     1     xeon-e5   5G          R   gpu-2</code></p>
+</blockquote>
+<p>The output of the LLstat command lists the job IDs of the jobs running,
+their names, the start time, the number of cpus per task, its status,
+and the node that it is running on. If it is in error state, it lists
+that as well.</p>
+<h2 id="stopping-jobs-stopping-jobs">Stopping Jobs {##stopping-jobs}<a class="headerlink" href="#stopping-jobs-stopping-jobs" title="Permanent link"></a></h2>
+<p>Jobs can be stopped using the <code>LLkill</code> command. You specify the list of
+job ID\'s, separated by commas that you would like to stop, for example:</p>
+<p><code>LLkill 40986,40980</code></p>
+<p>Stops the jobs with job IDs 40986 and 40980. You can also use the
+<code>LLkill</code> command to stop all of your currently running jobs:</p>
+<p><code>LLkill -u USERNAME</code></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../software-packages/" class="btn btn-neutral float-left" title="Software and Package Management"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../submitting-jobs/submitting-jobs/" class="btn btn-neutral float-right" title="Submitting Jobs">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../software-packages/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../submitting-jobs/submitting-jobs/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
