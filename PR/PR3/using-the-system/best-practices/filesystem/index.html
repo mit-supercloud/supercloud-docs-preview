@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://supercloud.mit.edu/using-the-system/best-practices/filesystem/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Best Practices for using the Filesystem - SuperCloud Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Best Practices for using the Filesystem";
+        var mkdocs_page_input_path = "using-the-system/best-practices/filesystem.md";
+        var mkdocs_page_url = "/using-the-system/best-practices/filesystem/";
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> SuperCloud Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../requesting-account/">Requesting an Account</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../systems-and-software/">Systems and Software</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../acknowledging-us/">Acknowledging Us</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Using the System</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="#">Files and Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../files-and-data/transferring-files/">Transferring Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../files-and-data/shared-groups/">Shared Groups</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../software-packages/">Software and Package Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../monitoring-system-and-jobs/">Monintoring System and Job Status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Submitting Jobs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../submitting-jobs/submitting-jobs/">Submitting Jobs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../submitting-jobs/job-array-triples/">Job Array Triples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Best Practices</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="./">Best Practices for using the Filesystem</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#installing-python-packages">Installing Python Packages</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#submitting-jobs">Submitting Jobs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-organization">File Organization</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../gpu-jobs/">Optimizing your GPU Jobs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../web-portal/">Web Portal</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../databases/">Databases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../jupyter-notebooks/">Jupyter Notebooks</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../faqs/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../getting-help/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../glossary/">Glossary</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">SuperCloud Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Using the System &raquo;</li>
+          <li>Best Practices &raquo;</li>
+      <li>Best Practices for using the Filesystem</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="best-practices-for-using-the-filesystem-filesystem_best_practices">Best Practices for Using the Filesystem {#filesystem_best_practices}<a class="headerlink" href="#best-practices-for-using-the-filesystem-filesystem_best_practices" title="Permanent link"></a></h1>
+<h2 id="installing-python-packages">Installing Python Packages<a class="headerlink" href="#installing-python-packages" title="Permanent link"></a></h2>
+<ul>
+<li>Use our anaconda modules whenever possible. The newest anaconda
+    module should have the most up to date versions. Our anaconda
+    modules are on the local disk of all the nodes and so does not
+    affect the shared filesystem.</li>
+<li>If you need to install additional Python packages, install with pip
+    using the --user flag as described in <code>our
+    documentation &lt;#home-install&gt;</code>{.interpreted-text role="ref"}. Python
+    will then only go to your home directory for these installed
+    packages, and so should be less load on the shared filesystem. Only
+    use conda environments as a last resort, as this puts ALL packages
+    you use in your home directory, and creates many small files.</li>
+<li>DO NOT install anaconda or miniconda in your home directory. There
+    is no reason to do this and will slow your Supercloud experience
+    down significantly, as these installations contain many, many small
+    files. If you absolutely need to use conda to install a package
+    create a conda environment using our anaconda modules. If you have
+    previously installed anaconda or miniconda in your home directory,
+    delete it now.</li>
+</ul>
+<h2 id="submitting-jobs">Submitting Jobs<a class="headerlink" href="#submitting-jobs" title="Permanent link"></a></h2>
+<ul>
+<li>Use <code>Triples Mode &lt;#triples&gt;</code>{.interpreted-text role="ref"} for
+    submitting <code>Job
+    Arrays &lt;job_array_triples&gt;</code>{.interpreted-text role="ref"} and
+    LLMapReduce jobs. These create fewer log files and group them by
+    node, reducing the number of files per directory. It is also lighter
+    weight on the scheduler, as it creates fewer tasks/jobs that the
+    scheduler has to keep track of.</li>
+<li>DO NOT create very large Job Arrays. Each task in a Job Array
+    creates a log file, the more tasks in your array, the more files.
+    The best practice is to use Triples to submit your job arrays (see
+    bullet above).</li>
+<li>DO NOT submit many small jobs, most likely a Job Array or
+    LLMapReduce with Triples would be appropriate.</li>
+<li>Avoid doing things that actively stress the filesystem, for example
+    checking whether a file exists repeatedly over a long period of time
+    or across many tasks.</li>
+</ul>
+<h2 id="file-organization">File Organization<a class="headerlink" href="#file-organization" title="Permanent link"></a></h2>
+<ul>
+<li>Aim for less than \~1000 files per directory.</li>
+<li>Fewer, larger files are better than many small files (file size
+    should be a minimum of 1MB, target \~100MB).</li>
+<li>Within a job, you can use \$TMPDIR for temporary or intermediate
+    files you don't need after the job. \$TMPDIR points to a temporary
+    directory on the local filesystem that is set up at the start of
+    your job and removed at the end of your job. If your job requires a
+    lot of I/O you may see significant performance improvement by
+    copying the files you need to \$TMPDIR at the start of your job and
+    copy any new files you need to your home directory at the end of
+    your job.</li>
+<li>Use <code>shared directories &lt;shared_groups&gt;</code>{.interpreted-text
+    role="ref"} to share data among team members rather than having a
+    separate copy in everyone's home directory.</li>
+<li>Check /home/gridsan/groups/datasets before downloading large public
+    datasets. If there is a public dataset that you are considering
+    downloading that you think others may also want to use, send us a
+    email to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;">&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;</a> to suggest that we add it.<ul>
+<li>If you are using ImageNet, we have a special setup that will
+    stress the filesystem signficantly less and should be much
+    faster. First load its modulefile:
+    <code>module load /home/gridsan/groups/datasets/ImageNet/modulefile</code>.
+    This will set up the <code>$IMAGENET_PATH</code> environment variable,
+    which you can use in your code to point to ImageNet.</li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../submitting-jobs/job-array-triples/" class="btn btn-neutral float-left" title="Job Array Triples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gpu-jobs/" class="btn btn-neutral float-right" title="Optimizing your GPU Jobs">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../submitting-jobs/job-array-triples/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../gpu-jobs/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+      <script src="../../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://supercloud.mit.edu/systems-and-software/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Systems and Software - SuperCloud Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Systems and Software";
+        var mkdocs_page_input_path = "systems-and-software.md";
+        var mkdocs_page_url = "/systems-and-software/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> SuperCloud Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requesting-account/">Requesting an Account</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Systems and Software</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#available-languages-languages">Available Languages {##languages}</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modules-avail-modules">Modules {##avail-modules}</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#software-software">Software {##software}</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#machine-learning-tools">Machine Learning Tools</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#big-data-software-stack">Big Data Software Stack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#middleware-software-stack">Middleware Software Stack</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#lincoln-laboratory-developed-software">Lincoln Laboratory Developed Software</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#compilers-compilers">Compilers {##compilers}</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../acknowledging-us/">Acknowledging Us</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Using the System</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Files and Data</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/files-and-data/transferring-files/">Transferring Files</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/files-and-data/shared-groups/">Shared Groups</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/software-packages/">Software and Package Management</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/monitoring-system-and-jobs/">Monintoring System and Job Status</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Submitting Jobs</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/submitting-jobs/submitting-jobs/">Submitting Jobs</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/submitting-jobs/job-array-triples/">Job Array Triples</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">Best Practices</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/best-practices/filesystem/">Best Practices for using the Filesystem</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../using-the-system/best-practices/gpu-jobs/">Optimizing your GPU Jobs</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/web-portal/">Web Portal</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/databases/">Databases</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using-the-system/jupyter-notebooks/">Jupyter Notebooks</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Additional Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../faqs/">Frequently Asked Questions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-help/">Getting Help</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../glossary/">Glossary</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">SuperCloud Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Systems and Software</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="systems-and-software-systems_and_software">Systems and Software {#systems_and_software}<a class="headerlink" href="#systems-and-software-systems_and_software" title="Permanent link"></a></h1>
+<p>This page lists information about the system and available
+<code>software &lt;#software&gt;</code>{.interpreted-text role="ref"},
+<code>languages &lt;#languages&gt;</code>{.interpreted-text role="ref"},
+<code>compilers &lt;#compilers&gt;</code>{.interpreted-text role="ref"},
+<code>modules &lt;#avail-modules&gt;</code>{.interpreted-text role="ref"}, etc. This is
+only a partial list, so if there is anything you are interested in that
+isn\'t listed here, please <a href="https://supercloud.mit.edu/contact">contact
+us</a>.</p>
+<h2 id="mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications<a class="headerlink" href="#mghpcc-tx-e1-specifications" title="Permanent link"></a></h2>
+<hr />
+<p>Summary               </p>
+<hr />
+<p>Number of Nodes       704</p>
+<p>Total CPU Cores       32000</p>
+<p>Total GPUs            448</p>
+<p>Distributed Storage   873 TB</p>
+<hr />
+<hr />
+<p>Individual   s                                                             <br />
+  Node                                                                         </p>
+<hr />
+<p>Processor    Nodes   CPU     Node    RAM/core   GPU Type  GPU    GPUs/node   Local
+                       Cores   RAM                          RAM                Disk</p>
+<p>Intel Xeon   480     48      192 GB  4 GB       NA        NA     NA          4.4 TB
+  Platinum                                                                   <br />
+  8260                                                                         </p>
+<p>Intel Xeon   224     40      384 GB  9 GB       NVidia    32 GB  2           3.8 TB
+  Gold 6248                                       Volta                      <br />
+                                                  V100                         </p>
+<hr />
+<hr />
+<p>Resource Alloca tions                        </p>
+<hr />
+<p>Processor       Partition       Starting     Standard</p>
+<p>Intel Xeon      xeon-p8         2 Nodes (96  16 Nodes (768
+  Platinum 8260                   Cores)       Cores)</p>
+<p>Intel Xeon Gold xeon-g6-volta   1 Node (40   6 Nodes (240
+  6248                            Cores 2      Cores 12
+                                  GPUs)        GPUs)</p>
+<hr />
+<h2 id="available-languages-languages">Available Languages {##languages}<a class="headerlink" href="#available-languages-languages" title="Permanent link"></a></h2>
+<ul>
+<li>Julia</li>
+<li>Python (Anaconda available through modules)</li>
+<li>Matlab(R)/Octave</li>
+<li>R</li>
+<li>C/C++</li>
+<li>Fortran</li>
+<li>Java</li>
+<li>Perl 5</li>
+<li>Ruby</li>
+</ul>
+<h2 id="modules-avail-modules">Modules {##avail-modules}<a class="headerlink" href="#modules-avail-modules" title="Permanent link"></a></h2>
+<p>To see the most up-to-date list of currently available modules, run the
+command <code>module avail</code>. For more information about modules, see the
+<code>module section &lt;#modules&gt;</code>{.interpreted-text role="ref"} on the
+Software and Package Management page.</p>
+<h2 id="software-software">Software {##software}<a class="headerlink" href="#software-software" title="Permanent link"></a></h2>
+<h3 id="machine-learning-tools">Machine Learning Tools<a class="headerlink" href="#machine-learning-tools" title="Permanent link"></a></h3>
+<ul>
+<li>Tensorflow</li>
+<li>Pytorch</li>
+</ul>
+<h3 id="big-data-software-stack">Big Data Software Stack<a class="headerlink" href="#big-data-software-stack" title="Permanent link"></a></h3>
+<ul>
+<li>Hadoop</li>
+<li>Zookeeper</li>
+<li>Accumulo</li>
+</ul>
+<h3 id="middleware-software-stack">Middleware Software Stack<a class="headerlink" href="#middleware-software-stack" title="Permanent link"></a></h3>
+<ul>
+<li>ARPACK</li>
+<li>ATLAS</li>
+<li>Boost</li>
+<li>BLAS</li>
+<li>FFTW</li>
+<li>LAPAC</li>
+<li>OpenMPI</li>
+<li>OpenBLAS</li>
+</ul>
+<h3 id="lincoln-laboratory-developed-software">Lincoln Laboratory Developed Software<a class="headerlink" href="#lincoln-laboratory-developed-software" title="Permanent link"></a></h3>
+<ul>
+<li><a href="https://www.ll.mit.edu/research-and-development/cyber-security-and-information-sciences/pmatlab">pMatlab</a></li>
+<li><a href="http://www.mit.edu/~kepner/D4M/">D4M</a></li>
+<li><a href="http://graphulo.mit.edu/">Graphulo</a></li>
+<li>LLMapReduce</li>
+</ul>
+<h3 id="compilers-compilers">Compilers {##compilers}<a class="headerlink" href="#compilers-compilers" title="Permanent link"></a></h3>
+<ul>
+<li>gcc</li>
+<li>g++</li>
+<li>gfortran</li>
+<li>icc</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../getting-started/" class="btn btn-neutral float-left" title="Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../acknowledging-us/" class="btn btn-neutral float-right" title="Acknowledging Us">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../getting-started/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../acknowledging-us/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
