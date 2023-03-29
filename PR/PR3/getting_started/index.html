@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started &mdash; MIT SuperCloud Documentation  documentation</title>
+  <title>Logging in Via ssh &mdash; MIT SuperCloud Documentation  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="canonical" href="https://supercloud.mit.edu/getting_started/index.html"/>
@@ -52,16 +52,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../requesting_account/index.html#current-approver-list">Current Approver List</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#logging-in-via-ssh">Logging in Via ssh</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#shared-hpc-clusters">Shared HPC Clusters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#software-and-packages">Software and Packages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#linux-command-line">Linux Command Line</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#transferring-files-to-mit-supercloud">Transferring Files to MIT SuperCloud</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing-your-code">Testing your Code</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#supercloud-downtimes">SuperCloud Downtimes</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Logging in Via ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#shared-hpc-clusters">Shared HPC Clusters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#software-and-packages">Software and Packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#linux-command-line">Linux Command Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#transferring-files-to-mit-supercloud">Transferring Files to MIT SuperCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#testing-your-code">Testing your Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#supercloud-downtimes">SuperCloud Downtimes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../systems_and_software/index.html">Systems and Software</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#mghpcc-tx-e1-specifications">MGHPCC TX-E1 Specifications</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../systems_and_software/index.html#available-languages">Available Languages</a></li>
@@ -214,9 +211,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Getting Started</li>
+      <li class="breadcrumb-item active">Logging in Via ssh</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/llsc-supercloud/supercloud-docs-edit/blob/main/getting_started/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/llsc-supercloud/supercloud-docs-edit/blob/main/getting_started/index.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -224,26 +221,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="getting-started">
-<span id="id1"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+  <p>::: {#getting_started}
+Getting Started ==============
+:::</p>
 <p>This page contains the most common steps for setting up and getting
 started with your SuperCloud account. We provide this page as a
 convenient reference to get started. To learn how to use your SuperCloud
 account, complete the <a class="reference external" href="https://learn.llx.edly.io/course/practical-hpc/" target="_blank">Practical HPC
-course</a>, which
-contains the material below and more. The course will walk you through
-these steps in more detail and often with videos to see how it is done.
-The course is self paced, can be accessed anytime, and is kept up to
-date. More reference material is available throughout site (some
-of this material links to those pages).</p>
+course</a>, which contains
+the material below and more. The course will walk you through these
+steps in more detail and often with videos to see how it is done. The
+course is self paced, can be accessed anytime, and is kept up to date.
+More reference material is available throughout site (some of this
+material links to those pages).</p>
 <p>When your account is first created you will have a small startup
 allocation. Once you complete the <a class="reference external" href="https://learn.llx.edly.io/course/practical-hpc/" target="_blank">Practical HPC
-course</a> you can
-request your account be updated to the standard allocation by sending
-email to <a class="reference external" href="mailto:supercloud&#37;&#52;&#48;mit&#46;edu" target="_blank">supercloud<span>&#64;</span>mit<span>&#46;</span>edu</a>. Resource allocations are listed on the
-<a class="reference internal" href="../systems_and_software/index.html#systems-and-software"><span class="std std-ref">Systems and Software</span></a> page.</p>
+course</a> you can request
+your account be updated to the standard allocation by sending email to
+<a class="reference external" href="mailto:supercloud&#37;&#52;&#48;mit&#46;edu" target="_blank">supercloud<span>&#64;</span>mit<span>&#46;</span>edu</a>. Resource allocations are listed on the
+<code class="docutils literal notranslate"><span class="pre">systems_and_software</span></code>{.interpreted-text role=”ref”} page.</p>
 <div class="section" id="logging-in-via-ssh">
-<h2>Logging in Via ssh<a class="headerlink" href="#logging-in-via-ssh" title="Permalink to this heading"></a></h2>
+<h1>Logging in Via ssh<a class="headerlink" href="#logging-in-via-ssh" title="Permalink to this heading"></a></h1>
 <p>The first thing you should do when you get a new account is verify that
 you can log in. The primary way to access the MIT SuperCloud system is
 through ssh. Instructions for different operating systems are below.
@@ -252,32 +250,33 @@ from the machine where you generated your ssh key. You will not be able
 to log in until we have sent you an email stating that we have created
 your account, which will contain your username.</p>
 <p>First, add your ssh key to the web portal. Go
-to&nbsp;<a class="reference external" href="https://txe1-portal.mit.edu/" target="_blank">https://txe1-portal.mit.edu/</a>. If you affiliated with MIT or another
-institution/university select the middle option “MIT Touchstone/InCommon
-Federation” to log in. Select your institution from the dropdown (be
-aware they are spelled out, MIT is listed as Massachusetts Institute of
-Technology, for example), click “Remember my choice” box and then the
-“Select” button. Then log in with your institution credentials. Once you
-are logged in, click on the “sshkeys” link and paste your ssh key in the
-box at the bottom of the page and click “Update Keys”.</p>
+to&nbsp;https://txe1-portal.mit.edu/. If you affiliated with MIT or another
+institution/university select the middle option “MIT
+Touchstone/InCommon Federation” to log in. Select your institution from
+the dropdown (be aware they are spelled out, MIT is listed as
+Massachusetts Institute of Technology, for example), click “Remember my
+choice” box and then the “Select” button. Then log in with your
+institution credentials. Once you are logged in, click on the
+“sshkeys” link and paste your ssh key in the box at the bottom of the
+page and click “Update Keys”.</p>
 <p>For instructions on how to generate ssh keys, retrieve your public key,
 and additional troubleshooting tips, watch the videos in the “Account
 Setup and SSH Keys” section in the “Getting Started” module of the
-<a class="reference external" href="https://learn.llx.edly.io/course/practical-hpc/" target="_blank">Practical HPC
-course</a>, or <a class="reference internal" href="../requesting_account/index.html#ssh-keys"><span class="std std-ref">see this page</span></a>.</p>
+<a class="reference external" href="https://learn.llx.edly.io/course/practical-hpc/" target="_blank">Practical HPC course</a>,
+or <code class="docutils literal notranslate"><span class="pre">see</span> <span class="pre">this</span> <span class="pre">page</span> <span class="pre">&lt;ssh_keys&gt;</span></code>{.interpreted-text role=”ref”}.</p>
 <p>First open a command line terminal window where you generated your ssh
-keys. Enter the following command, where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is your username
-on the MIT SuperCloud system:</p>
+keys. Enter the following command, where <code class="docutils literal notranslate"><span class="pre">USERNAME</span></code> is your username on
+the MIT SuperCloud system:</p>
 <p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">USERNAME&#64;txe1-login.mit.edu</span></code></p>
 <p>If you generated your keys using PuTTY, open a PuTTY window. In the box
 labeled “Host Name” enter<code class="docutils literal notranslate"><span class="pre">USERNAME&#64;txe1-login.mit.edu</span></code>,
-where<code class="docutils literal notranslate"><span class="pre">USERNAME</span></code>is your username on the MIT SuperCloud system. Keep
-the ssh box checked (this should be default) and Port should be set to
-22. Click “Open” to start the session. You may also need to indicate
-your private key on the Connection -&gt; SSH -&gt; Auth page.</p>
+where<code class="docutils literal notranslate"><span class="pre">USERNAME</span></code>is your username on the MIT SuperCloud system. Keep the
+ssh box checked (this should be default) and Port should be set to 22.
+Click “Open” to start the session. You may also need to indicate your
+private key on the Connection -&gt; SSH -&gt; Auth page.</p>
 </div>
 <div class="section" id="shared-hpc-clusters">
-<h2>Shared HPC Clusters<a class="headerlink" href="#shared-hpc-clusters" title="Permalink to this heading"></a></h2>
+<h1>Shared HPC Clusters<a class="headerlink" href="#shared-hpc-clusters" title="Permalink to this heading"></a></h1>
 <p>The MIT SuperCloud is an HPC-style shared cluster. You are sharing this
 resources with a number of other researchers, staff, and students so it
 is important that you read this page and use the system as intended.</p>
@@ -298,22 +297,23 @@ two jobs are using the same resources, so it is very important not to
 run anything unless it is submitted properly through the scheduler.</p>
 </div>
 <div class="section" id="software-and-packages">
-<h2>Software and Packages<a class="headerlink" href="#software-and-packages" title="Permalink to this heading"></a></h2>
+<h1>Software and Packages<a class="headerlink" href="#software-and-packages" title="Permalink to this heading"></a></h1>
 <p>The first thing you may want to do is make sure the system has the
 software and packages you need. We have installed a lot of software and
 packages on the system already, even though it may not be immediately
-obvious that it is there. Review our page on <a class="reference internal" href="../using_the_system/software_packages/index.html#software-and-packages"><span class="std std-ref">Software and Package Management</span></a>,
-paying particular attention to the section on modules and installing
-packages for the language that you use. If you are ever unsure if we
-have a particular software, and you cannot find it, please send us an
-email and ask before you spend a lot of time trying to install it. If we
-have it, we can point you to it, provide advice on how to use it, and if
-we don’t have it we can often give pointers on how to install it.
-Further, if a lot of people request the same software, we may consider
-adding it to the system image.</p>
+obvious that it is there. Review our page on
+<code class="docutils literal notranslate"><span class="pre">software_and_packages</span></code>{.interpreted-text role=”ref”}, paying particular
+attention to the section on modules and installing packages for the
+language that you use. If you are ever unsure if we have a particular
+software, and you cannot find it, please send us an email and ask before
+you spend a lot of time trying to install it. If we have it, we can
+point you to it, provide advice on how to use it, and if we don’t have
+it we can often give pointers on how to install it. Further, if a lot of
+people request the same software, we may consider adding it to the
+system image.</p>
 </div>
 <div class="section" id="linux-command-line">
-<h2>Linux Command Line<a class="headerlink" href="#linux-command-line" title="Permalink to this heading"></a></h2>
+<h1>Linux Command Line<a class="headerlink" href="#linux-command-line" title="Permalink to this heading"></a></h1>
 <p>The MIT SuperCloud runs Linux, so much of what you do on the cluster
 involves the Linux command line. That doesn’t mean you have to be a
 Linux expert to use the system! However the more you can get comfortable
@@ -326,8 +326,8 @@ directories. The list of directories that lead to a particular directory
 or file is called its <strong>path</strong>. In Linux, directories on a path are
 separated by forward slashes ‘/’. It is also important to note that
 everything in Linux is case sensitive, so a file <code class="docutils literal notranslate"><span class="pre">myScript.sh</span></code> is not
-the same as the file <code class="docutils literal notranslate"><span class="pre">myscript.sh</span></code>. When you first log in you are in
-you <strong>home directory</strong>. Your home directory is where you can put all the
+the same as the file <code class="docutils literal notranslate"><span class="pre">myscript.sh</span></code>. When you first log in you are in you
+<strong>home directory</strong>. Your home directory is where you can put all the
 code and data you need to run your job. Your home directory is not
 accessible to other users, if you need a space to share files with other
 users, let us know and we can make a shared <strong>group directory</strong> for you.
@@ -338,10 +338,10 @@ commands.</p>
 <p>Anytime after you start typing a Linux command you can press the “Tab”
 button your your keyboard. This called tab-complete, and will try to
 autocomplete what you are typing. This is particularly helpful when
-typing out long directory paths and file names. Pressing “Tab” once will
-complete if there is a single completion, pressing it twice will list
-all potential completions. It is a bit difficult to explain in text, but
-you can try it out yourself and watch the short demonstration
+typing out long directory paths and file names. Pressing “Tab” once
+will complete if there is a single completion, pressing it twice will
+list all potential completions. It is a bit difficult to explain in
+text, but you can try it out yourself and watch the short demonstration
 <a class="reference external" href="https://en.wikipedia.org/wiki/Command-line_completion" target="_blank">here</a>.</p>
 <p>Finally, below is a list of Linux Commands. Try them out for yourself at
 the command line.</p>
@@ -356,8 +356,8 @@ currently in</li>
 </li>
 <li><code class="docutils literal notranslate"><span class="pre">ls</span></code>: lists the files in the directory<ul>
 <li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-a</span></code>: lists all files including hidden files</li>
-<li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>: lists files in “long format” including ownership and
-date of last update</li>
+<li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>: lists files in “long format” including ownership
+and date of last update</li>
 <li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-t</span></code>: lists files by date stamp, most recently updated
 file first</li>
 <li><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-tr</span></code>: lists files by dates stamp in reverse order, most
@@ -376,13 +376,13 @@ will cause you to exit out of the file.</li>
 <li><code class="docutils literal notranslate"><span class="pre">less</span> <span class="pre">filename</span></code>: allows you to scroll through the file, forward
 and backward, using the arrow keys.</li>
 <li><code class="docutils literal notranslate"><span class="pre">tail</span> <span class="pre">filename</span></code>: shows the last 10 lines of a file (useful when
-you are monitoring a logfile or output file to see that the values
-are correct)<ul>
-<li>t<code class="docutils literal notranslate"><span class="pre">ail</span> <span class="pre">&lt;number&gt;</span> <span class="pre">filename</span></code>: show you the last &amp;lt;number&gt;
+you are monitoring a logfile or output file to see that the
+values are correct)<ul>
+<li>t<code class="docutils literal notranslate"><span class="pre">ail</span> <span class="pre">&lt;number&gt;</span> <span class="pre">filename</span></code>: show you the last &lt;number&gt;
 lines of a file.</li>
 <li><code class="docutils literal notranslate"><span class="pre">tail</span> <span class="pre">-f</span> <span class="pre">filename</span></code>: shows you new lines as they are written
-to the end of the file. Press CMD+C or Control+C to exit. This
-is helpful to monitor the log file of a batch job.</li>
+to the end of the file. Press CMD+C or Control+C to exit.
+This is helpful to monitor the log file of a batch job.</li>
 </ul>
 </li>
 </ul>
@@ -390,14 +390,14 @@ is helpful to monitor the log file of a batch job.</li>
 <li>Copying, moving, renaming, and deleting files<ul>
 <li><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">filename</span> <span class="pre">dirname</span></code>: moves filename to directory dirname.<ul>
 <li><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">filename1</span> <span class="pre">filename2</span></code>: moves filename1 to filename2, in
-essence renames the file. The date and time are not changed by
-the mv command.</li>
+essence renames the file. The date and time are not changed
+by the mv command.</li>
 </ul>
 </li>
 <li><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">filename</span> <span class="pre">dirname</span></code>: copies to directory dirname.<ul>
 <li><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">filename1</span> <span class="pre">filename2</span></code>: copies filename1 to filename2. The
-date stamp on filename2 will be the date/time that the file was
-moved</li>
+date stamp on filename2 will be the date/time that the file
+was moved</li>
 <li><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span> <span class="pre">dirname1</span> <span class="pre">dirname2</span></code>: copies directory dirname1 and its
 contents to dirname2.</li>
 </ul>
@@ -408,18 +408,18 @@ contents to dirname2.</li>
 </ul>
 </div>
 <div class="section" id="transferring-files-to-mit-supercloud">
-<h2>Transferring Files to MIT SuperCloud<a class="headerlink" href="#transferring-files-to-mit-supercloud" title="Permalink to this heading"></a></h2>
+<h1>Transferring Files to MIT SuperCloud<a class="headerlink" href="#transferring-files-to-mit-supercloud" title="Permalink to this heading"></a></h1>
 <p>One of the first tasks is to get your code, data, and any other files
 you need into your home directory on the system. If your code is in
 github you can use git commands on the system to clone your repository
 to your home directory. You can also transfer your files to your home
 directory from your computer by using the commands scp or rsync. Read
-the page on <a class="reference internal" href="../using_the_system/files_and_data/transferring_files/index.html#transferring-files"><span class="std std-ref">Transferring Files</span></a> to
-learn how to use these commands and transfer what you need to your home
+the page on <code class="docutils literal notranslate"><span class="pre">transferring_files</span></code>{.interpreted-text role=”ref”} to learn
+how to use these commands and transfer what you need to your home
 directory.</p>
 </div>
 <div class="section" id="testing-your-code">
-<h2>Testing your Code<a class="headerlink" href="#testing-your-code" title="Permalink to this heading"></a></h2>
+<h1>Testing your Code<a class="headerlink" href="#testing-your-code" title="Permalink to this heading"></a></h1>
 <p>At this point you may want to do a test-run of your code. You always
 want to start small in your test runs, so you should choose a small
 example that tests the functionality of what you would ultimately like
@@ -430,8 +430,8 @@ session to run your code in by executing the command:</p>
 <p>After you run this command you will be on a compute node and you can do
 a test-run of your code. This command will allocate one core to your
 job. If your test code is multithreaded or parallel, or uses a lot of
-memory, you should request a full node to be sure you don’t impact other
-jobs on the system:</p>
+memory, you should request a full node to be sure you don’t impact
+other jobs on the system:</p>
 <p><code class="docutils literal notranslate"><span class="pre">LLsub</span> <span class="pre">-i</span> <span class="pre">full</span></code></p>
 <p>These commands by no means represent the full use of the system, and
 most likely won’t be the primary way you run your code. In our tutorial
@@ -439,13 +439,12 @@ we go over much more on how to submit jobs and will make sure you have
 the tools you need to get the most out of the MIT SuperCloud.</p>
 </div>
 <div class="section" id="supercloud-downtimes">
-<h2>SuperCloud Downtimes<a class="headerlink" href="#supercloud-downtimes" title="Permalink to this heading"></a></h2>
+<h1>SuperCloud Downtimes<a class="headerlink" href="#supercloud-downtimes" title="Permalink to this heading"></a></h1>
 <p>Note that SuperCloud has <strong>Monthly Downtimes</strong> which are scheduled for
 the <strong>Third Thursday</strong> of each month. During downtimes the system is not
 available. Downtimes usually last about a day and emails are sent when
 they are complete. We also send out a reminder email a few days before
 each downtime.</p>
-</div>
 </div>
 
 

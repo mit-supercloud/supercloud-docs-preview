@@ -12,7 +12,7 @@ Welcome to SuperCloud's documentation!
    :maxdepth: 1
 
    requesting_account/index
-   getting_started/index.md
+   getting_started/index
    systems_and_software/index
 
 .. toctree::
