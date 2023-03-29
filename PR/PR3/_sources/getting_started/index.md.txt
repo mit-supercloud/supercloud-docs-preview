@@ -17,7 +17,7 @@ allocation. Once you complete the [Practical HPC
 course](https://learn.llx.edly.io/course/practical-hpc/) you can request
 your account be updated to the standard allocation by sending email to
 <supercloud@mit.edu>. Resource allocations are listed on the
-[Systems and Software](systems-and-software.md) page.
+[Systems and Software](project:../systems_and_software/index.rst) page.
 
 Logging in Via ssh
 ------------------
