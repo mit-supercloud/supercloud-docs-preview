@@ -87,8 +87,8 @@ here <http://kb.mit.edu/confluence/pages/viewpage.action?pageId=152598887>`__.
 
 .. _ssh_keys:
 
-Generating ssh Keys for Supercloud Authentication
--------------------------------------------------
+Generating ssh Keys
+-------------------
 
 If you have any issues or questions regarding the generation of ssh
 keys, please contact the team at supercloud@mit.edu. To access the

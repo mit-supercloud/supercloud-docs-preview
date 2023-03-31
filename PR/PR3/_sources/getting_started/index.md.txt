@@ -45,7 +45,7 @@ For instructions on how to generate ssh keys, retrieve your public key,
 and additional troubleshooting tips, watch the videos in the "Account
 Setup and SSH Keys" section in the "Getting Started" module of the
 [Practical HPC course](https://learn.llx.edly.io/course/practical-hpc/),
-or [see this page](requesting-account.md#generating-ssh-keys).
+or [see this page](project:../requesting_account/index.md#generating-ssh-keys).
 
 First open a command line terminal window where you generated your ssh
 keys. Enter the following command, where `USERNAME` is your username on
@@ -91,7 +91,7 @@ The first thing you may want to do is make sure the system has the
 software and packages you need. We have installed a lot of software and
 packages on the system already, even though it may not be immediately
 obvious that it is there. Review our page on
-[Software and Package Management](using-the-system/software-packages.md), paying particular
+[Software and Package Management](project:../using-the-system/software-packages.md), paying particular
 attention to the section on modules and installing packages for the
 language that you use. If you are ever unsure if we have a particular
 software, and you cannot find it, please send us an email and ask before
