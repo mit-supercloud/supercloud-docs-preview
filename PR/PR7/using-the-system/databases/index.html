@@ -17,7 +17,7 @@
         <link rel="next" href="../jupyter-notebooks/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.8">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.12">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.85bb2934.min.css">
       
       
 
@@ -717,6 +717,15 @@
                   
   
 
+  <nav class="md-tags" >
+    
+      
+      
+        <a href="../../tags/#databases" class="md-tag">Databases</a>
+      
+    
+  </nav>
+
 
 
 
@@ -726,13 +735,13 @@ the database portal. The portal is located at:</p>
 <p><a href="https://txe1-portal.mit.edu/db/dbstatus.php">https://txe1-portal.mit.edu/db/dbstatus.php</a></p>
 <p>This page requires you to <a href="../web-portal/#portal-authentication">authenticate into the
 portal</a>. From here you will
-see all the databases you have access to. There are Accumulo and
-Postgress databases available.</p>
+see all the databases you have access to. We currently support Accumulo (1.5.0, 1.6.0, 1.7.0, and 1.8.0) and PostgreSQL databases through our dynamic database capability.</p>
 <p>To start up a database instance, press "Start". You can stop it by
 clicking on the "Stop" button, and can checkpoint a stopped database
 as well. Clicking on "View Info" for Accumulo databases will take you
 to the Accumulo Monitoring page, where you can view ingest/query plots
 and current tables.</p>
+<p>For most of your database uses, you are unlikely to need more information than what the above web portal database interfaces provide. However, in some cases you may need to get more information. For each of your databases, much more instance information is available on the central storage at <code>/home/gridsan/groups/databases/&lt;database-name&gt;/</code>.</p>
 <p>If you need an instance created and cannot use one of those already
 available, <a href="https://supercloud.mit.edu/contact">contact us</a>. Let us know
 the type of database you need, what you are using it for, what it should
@@ -747,6 +756,16 @@ D4M, take a look at the Advanced Database Technologies course on our
 <a href="https://supercloud.mit.edu/online-courses">online course</a> platform.
 This course contains a good introduction on how to set up a data
 pipeline, including parsing, ingesting, and querying data for Accumulo.</p>
+<!---
+For Accumulo databases, please see the [Working with Accumulo Databases on SuperCloud](accumulo-databases.md) page for information on how to programmatically connect to an Accumulo instance.
+
+For the PostgreSQL databases, you will need more information to connect your application or database interface. Please follow this link to the [Working with PostgreSQL Databases on SuperCloud](postgresql-databases.md) page.
+
+Tags
+
+- Databases (databases-articles)
+- Getting Started (getting-started-articles)
+-->
 
 
 
@@ -787,7 +806,7 @@ pipeline, including parsing, ingesting, and querying data for Accumulo.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c2be25ad.min.js"></script>
       
     
   </body>
