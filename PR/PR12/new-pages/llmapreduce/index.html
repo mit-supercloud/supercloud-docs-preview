@@ -1340,7 +1340,7 @@ the job was submitted:</p>
 <p>To summarize:</p>
 <ol>
 <li>If you launched with triples mode, your log files will be in
-    <code>p&lt;start-pid&gt;-p&lt;end-pid&gt;_&lt;nodename&gt;</code>.</li>
+    <code>MAPRED.&lt;pid&gt;/logs/p&lt;start-pid&gt;-p&lt;end-pid&gt;_&lt;nodename&gt;</code>.</li>
 <li>If you launched in regular (non-triples) mode, your log files will
     be in <code>MAPRED.&lt;pid&gt;/logs</code>.</li>
 <li>If you specified the <code>-tempdir</code> option, replace <code>MAPRED</code> with the name of
@@ -1440,13 +1440,9 @@ filename pairs: an input data filename and its corresponding output
 filename. Each of the launched processes will be given, as an argument,
 the name of one of the <code>input_&lt;#&gt;</code> files. The number of these
 <code>input_&lt;#&gt;</code> is determined by the value of the <code>--np</code> or <code>--ndata</code>
-parameter that is used. See the <a href="TBD/resource-limit-enforcement-and-increases">Resource Limit
+parameter that is used. See the <a href="../resource-limit-enforcement-and-increases">Resource Limit
 Enforcement</a> page for
 the default values for <code>--np</code> based on the cpu type.</p>
-<!--
-TODO: Update link when we have the page
--->
-
 <p>The advantage of using the mimo model is that your application is called
 and loaded just once to process all of its assigned input files. For example, if you
 are running MATLAB® code, the overhead of starting and stopping MATLAB®
