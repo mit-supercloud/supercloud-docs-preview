@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.3">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.0e669242.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
       
 
@@ -851,11 +851,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#disable-file-locking" class="md-nav__link">
-    Disable file locking
+  <a href="#hdf5" class="md-nav__link">
+    HDF5
   </a>
   
-    <nav class="md-nav" aria-label="Disable file locking">
+    <nav class="md-nav" aria-label="HDF5">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -866,15 +866,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-jupyter-notebook-jobs" class="md-nav__link">
-    For Jupyter Notebook jobs
+  <a href="#jupyter-notebook-jobs" class="md-nav__link">
+    Jupyter Notebook Jobs
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#for-python-jobs" class="md-nav__link">
-    For Python jobs
+  <a href="#python-jobs" class="md-nav__link">
+    Python Jobs
   </a>
   
 </li>
@@ -886,10 +886,10 @@
       
         <li class="md-nav__item">
   <a href="#use-the-local-disk" class="md-nav__link">
-    Use the local disk
+    Use the Local Disk
   </a>
   
-    <nav class="md-nav" aria-label="Use the local disk">
+    <nav class="md-nav" aria-label="Use the Local Disk">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -908,6 +908,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hugging-face" class="md-nav__link">
+    Hugging Face
+  </a>
   
 </li>
       
@@ -952,18 +959,29 @@
 <h1 id="file-locking">File Locking</h1>
 <p>The SuperCloud Lustre network file system (home directories and shared
 directories reside on the network file system) do not support file
-locking. If your code is attempting to lock a file, you receive an error
-similar to this:</p>
+locking.</p>
+<p>In general, there are 2 ways to fix this problem:</p>
+<ul>
+<li>Disable file locking by setting an environment variable that the package uses</li>
+<li>Have your code or the package use the local disk on the compute node, where file locking is permitted</li>
+</ul>
+<p>On this page, we'll provide instructions on how to fix this problem for
+various applications. Please email us at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;">&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;</a> if you
+encounter a file locking issue with an application that isn't included
+here.</p>
+<h2 id="hdf5">HDF5</h2>
+<p>Here is an example error message that you might see from HDF5 when it
+can't lock a file:</p>
 <p><code>IOError: Unable to create file (file locking disabled on this file system (use HDF5_USE_FILE_LOCKING environment variable to override), errno = 38, error message = 'Function not implemented')</code></p>
-<p>In order to fix this error, you can either disable file locking or use
-the local disk on the compute node for the files that require locking.</p>
-<h2 id="disable-file-locking">Disable file locking</h2>
+<p>You can disable file locking in HDF5 by setting the
+<code>HDF5_USE_FILE_LOCKING</code> environment variable to false. This variable can
+be set in various places.</p>
 <h3 id="in-your-bashrc-or-bash_profile">In your .bashrc or .bash_profile</h3>
 <p>You can disable file locking by setting the <code>HDF5_USE_FILE_LOCKING</code>
 environment variable. To disable file locking, add this line to your
 <code>~/.bashrc</code> or <code>~/.bash_profile</code> file:</p>
 <p><code>export HDF5_USE_FILE_LOCKING='FALSE'</code></p>
-<h3 id="for-jupyter-notebook-jobs">For Jupyter Notebook jobs</h3>
+<h3 id="jupyter-notebook-jobs">Jupyter Notebook Jobs</h3>
 <p>If you are running a Jupyter Notebook, you can add the line below to the
 file <code>~/.jupyter/llsc_notebook_bashrc</code> (you'll have to create the file if
 it isn't there). This file is loaded at the start of Jupyter jobs, much
@@ -973,17 +991,23 @@ like a bashrc file when you log into the terminal.</p>
 Notebooks, see the note on our <a href="../../using-the-system/jupyter-notebooks#a-note-on-environment-variables-and-modules">Jupyter
 Notebooks</a>
 page.</p>
-<h3 id="for-python-jobs">For Python jobs</h3>
+<h3 id="python-jobs">Python Jobs</h3>
 <p>If you are running python code, you can set the environment variable at
 the beginning of your python code:</p>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span> <span class="nn">os</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;HDF5_USE_FILE_LOCKING&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;FALSE&quot;</span>
 </span></code></pre></div>
-<h2 id="use-the-local-disk">Use the local disk</h2>
+<h2 id="use-the-local-disk">Use the Local Disk</h2>
 <p>Each of the compute nodes contains a local disk where file locking is
 permitted. You can use the <code>$TMPDIR</code> area or
 <code>/state/partition1/user/&lt;username&gt;</code> area for files that need file locking
-capability.</p>
+capability. To read about the differences
+between these two areas, see the <a href="TBD/local-storage">Local
+Storage</a> page.</p>
+<!--
+TODO: Add link to the Local Storage page
+-->
+
 <h3 id="tmpdir">$TMPDIR</h3>
 <p>The <code>$TMPDIR</code> environment variable points to a temporary directory on the
 local disk of the compute node. Note that <code>$TMPDIR</code> is created by the
@@ -1002,6 +1026,47 @@ should create the directory <code>/state/partition1/user/$USER</code> and create
 any desired subdirectories within that directory. Please do not write
 your files in the <code>/state/partition1</code> directory itself - create a
 subdirectory with your username and save your files there.</p>
+<h2 id="hugging-face">Hugging Face</h2>
+<p>You can direct Hugging Face to use local storage for files that need file
+locking capability by setting the <code>HF_HOME</code> environment variable to point
+to the local disk. This variable can be set in various places:</p>
+<ul>
+<li>
+<p>In <code>~/.bashrc</code> or <code>~/.bash_profile</code> file - the variable will always be
+    set (this is a "set and forget" approach). You should also create
+    the directory:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HF_HOME</span><span class="o">=</span>/state/partition1/user/<span class="k">$(</span>whoami<span class="k">)</span>/hf
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="k">$(</span>HF_HOME<span class="k">)</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>In <code>~/.jupyter/llsc_notebook_bashrc</code> - the variable will always be
+    set when your run a Jupyter Notebook. You can add the <code>export</code> and <code>mkdir</code> statements from the previous bullet
+    to the file <code>~/.jupyter/llsc_notebook_bashrc</code> (you'll have to create
+    the file if it isn't there). This file is loaded at the start of
+    Jupyter jobs, much like a <code>.bashrc</code> file when you log into the
+    terminal. For more information about using environment variables in Jupyter
+    Notebooks, see the note on our <a href="../../using-the-system/jupyter-notebooks/#a-note-on-environment-variables-and-modules">Jupyter Notebooks</a>
+    page.</p>
+</li>
+<li>
+<p>At the beginning of your python code - the variable would be set
+    only when your python code is running:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span> <span class="nn">os</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="n">username</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;USER&quot;</span><span class="p">)</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;HF_HOME&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;/state/partition1/user/&quot;</span><span class="o">+</span> <span class="n">username</span> <span class="o">+</span> <span class="s2">&quot;/hf&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;HF_HOME&quot;</span><span class="p">))</span>
+</span></code></pre></div>
+</li>
+</ul>
+<p>We have an example for downloading the Hugging Face data to the local
+disk of the login node, where file locking is enabled, then copy it back
+to your home directory. At the start of each job, you'd then copy it to
+the local disk of the compute node you are on. You can the example by clicking <a href="https://github.com/llsc-supercloud/teaching-examples/tree/huggingface/Python/HF_Example">here</a>.</p>
+<p>The <a href="https://github.com/llsc-supercloud/teaching-examples/blob/huggingface/Python/HF_Example/run.sh"><code>run.sh</code></a>
+script loads the model/dataset, and then launches the
+job, <a href="https://github.com/llsc-supercloud/teaching-examples/blob/huggingface/Python/HF_Example/batch_bert_v0.sh"><code>batch_bert_v0.sh</code></a>. The relevant lines are 9-14, 24, 25 in <code>run.sh</code>, and 28-32 in
+<code>batch_bert_v0.sh</code>.</p>
 
 
 
@@ -1046,7 +1111,7 @@ subdirectory with your username and save your files there.</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.78eede0e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
         <script src="../../js/open_in_new_tab.js"></script>
       
