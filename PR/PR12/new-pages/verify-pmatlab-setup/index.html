@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/pmatlab-troubleshooting-checklist/">
+        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/verify-pmatlab-setup/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>pMatlab Troubleshooting Checklist - SuperCloud Docs</title>
+        <title>Verifying pMatlab Setup - SuperCloud Docs</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pmatlab-troubleshooting-checklist" class="md-skip">
+        <a href="#verifying-pmatlab-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              pMatlab Troubleshooting Checklist
+              Verifying pMatlab Setup
             
           </span>
         </div>
@@ -851,57 +851,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#job-launch-problems" class="md-nav__link">
-    Job Launch Problems
+  <a href="#verifying-your-supercloud-pmatlab-configuration" class="md-nav__link">
+    Verifying your SuperCloud pMatlab Configuration
   </a>
-  
-    <nav class="md-nav" aria-label="Job Launch Problems">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#is-your-path-set-up-to-include-the-gridmatlab-directories" class="md-nav__link">
-    Is your path set up to include the gridMatlab directories?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#did-you-check-whether-there-are-resources-available-for-running-your-job" class="md-nav__link">
-    Did you check whether there are resources available for running your job?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#does-the-code-that-youre-trying-to-run-reside-on-the-supercloud" class="md-nav__link">
-    Does the code that you're trying to run reside on the SuperCloud?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-did-you-try-running-the-param_sweep-example-in-your-supercloud-home-directory" class="md-nav__link">
-    - Did you try running the Param_Sweep example in your SuperCloud home directory?
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#youve-tried-and-confirmed-everything-here-and-you-still-cant-launch-a-pmatlab-job" class="md-nav__link">
-    You've tried and confirmed everything here and you still can't launch a pMatlab job
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -943,230 +895,88 @@
 
 
 
-<h1 id="pmatlab-troubleshooting-checklist">pMatlab Troubleshooting Checklist</h1>
-<p>On this page, you'll find a series of questions and answers that will
-help you resolve the more common problems with running pMatlab jobs on
-the SuperCloud system. On this page, we'll go over:</p>
+<h1 id="verifying-pmatlab-setup">Verifying pMatlab Setup</h1>
+<p>If you're planning to launch pMatlab jobs on SuperCloud (from
+a login node or an interactive session on a compute node), then you
+should run the <code>Param_Sweep</code> example to verify your SuperCloud account
+configuration.</p>
+<p>An easy way to check on potential SuperCloud account pMatlab
+configuration issues is to run the <code>Param_Sweep</code> example
+in the <code>examples</code> directory in your SuperCloud home directory.</p>
+<h2 id="verifying-your-supercloud-pmatlab-configuration">Verifying your SuperCloud pMatlab Configuration</h2>
+<p>If you have altered any of the <code>.m</code> files in the <code>Param_Sweep</code> directory,
+send an email to <a href="mailto:supercloud@mit.edu">supercloud.mit.edu</a> to get a new copy
+and then follow the directions below for running the application.</p>
+<p>If you have not altered the <code>Param_Sweep</code> files in your example directory,</p>
 <ul>
-<li><a href="#job-launch-problems">Problems launching a pMatlab job</a></li>
-<li><a href="#steps-to-sanity-check-and-debug">Steps to sanity check and debug</a></li>
-<li><a href="#handling-common-job-errors">Handling common job errors</a></li>
+<li>In the terminal that is connected to a login node or compute node,
+    go to the <code>Param_Sweep</code> directory: <code>cd ~/examples/Param_Sweep</code>.</li>
+<li>Start MATLAB® from the command line:
+    <code>matlab -nodisplay -singleCompThread</code></li>
+<li>At the MATLAB® prompt type: <code>RUNv2</code>.</li>
+<li>You can check the status of your job at the MATLAB® prompt by
+    typing: <code>LLstat</code>.</li>
+<li>Take note of the name of the compute node that your job is running
+    on by looking at the output of <code>LLstat</code>, in the
+    NODELIST(REASON) column. An example compute node name is <code>a-21-35</code>.</li>
+<li>When LLstat returns 0, your job is done.</li>
+<li>Check the output log files to verify the job completed successfully.<ul>
+<li>Exit MATLAB® or use another ssh session's terminal window.</li>
+<li>Go to the log directory <code>cd ~/examples/Param_Sweep/MatMPI</code></li>
+<li>The output log files will be in a directory called
+    <code>p0-p3_&lt;name-of-compute-node&gt;</code> where <code>&lt;name-of-compute-node&gt;</code> is
+    what you saw in the output of <code>LLstat</code>, in the
+    NODELIST(REASON) column. For example, <code>a-21-35</code>.</li>
+<li>Go into the log file directory and look at the
+    file <code>param_sweep_parallel_v2.0.out</code>. It should look similar to
+    this:</li>
 </ul>
-<h2 id="job-launch-problems">Job Launch Problems</h2>
-<p>In this section, you'll find a series of questions and answers that
-will help you resolve some of the more common pMatlab job launch
-problems.</p>
-<h3 id="is-your-path-set-up-to-include-the-gridmatlab-directories">Is your path set up to include the gridMatlab directories?</h3>
-<p>Launch MATLAB® and enter the <code>path</code> command in the MATLAB® command
-window. In the first few lines of the output, does the path include
-these directories from your SuperCloud home directory?</p>
-<ul>
-<li><code>tools/gridMatlab/src</code></li>
-<li><code>tools/pMatlab/src</code></li>
-<li><code>tools/pMatlab/MatlabMPI/src</code></li>
-<li><code>matlab</code></li>
+</li>
 </ul>
-<p><strong>If not</strong>, check your startup code (<code>startup.m</code>, <code>startup_local.m</code> and any other
-startup code that is called from those files) for calls to <code>clear all</code> and
-remove those calls. Make sure your pMatlab script and code does not use <code>clear all</code> either.</p>
-<h3 id="did-you-check-whether-there-are-resources-available-for-running-your-job">Did you check whether there are resources available for running your job?</h3>
-<p>From the MATLAB® command window, enter the
-<a href="../../using-the-system/monitoring-system-and-jobs">LLfree</a>
-command and verify there are enough nodes and cores available for
-the CPU type that you requested. You can also enter LLfree at the
-Linux prompt if you are connected to the login node. Remember that
-if you are using <a href="../launching-pmatlab-jobs/#triples-mode-launch">triples mode</a> to launch your
-job, you will be using whole nodes, so make sure there are enough
-nodes available.</p>
-<h3 id="does-the-code-that-youre-trying-to-run-reside-on-the-supercloud">Does the code that you're trying to run reside on the SuperCloud?</h3>
-<p>In order to run a job on the SuperCloud system, every processor must have access to all functions/methods in the code you are executing and any data the program accesses. Since every node can access your SuperCloud home directory or group shared directories, placing your code and data in your home directory or any group shared directory makes them accessible to the entire system.</p>
-<p><strong>If your code is not on SuperCloud</strong>, copy your code and any files that are needed in order to run your
-job to somewhere in your SuperCloud home directory. See <a href="../../using-the-system/files-and-data/transferring-files">Accessing and Transferring Data and
-Files</a> for instructions on how to copy your files to  SuperCloud.</p>
-<p><strong>If your code is on SuperCloud</strong>, confirm that your MATLAB® current working directory is somewhere in
-your SuperCloud home directory by running the <code>pwd</code> command.</p>
-<h3 id="-did-you-try-running-the-param_sweep-example-in-your-supercloud-home-directory">- Did you try running the Param_Sweep example in your SuperCloud home directory?</h3>
-<p>The <code>Param_Sweep</code> example is located in <code>$HOME/examples/Param_Sweep</code>.</p>
-<p><strong>No:</strong> For instructions on how to run the <code>Param_Sweep</code> example, see the
-<a href="verify-pMatlab-setup.md">Verifying Your pMatlab Setup</a> page.</p>
-<p><strong>Yes, it worked:</strong> the problem is probably in your code somewhere. Look in your job's
-log files for errors or other clues. See the page on <a href="../finding-pmatlab-output.md">Finding Your pMatlab Output</a>.</p>
-<h3 id="youve-tried-and-confirmed-everything-here-and-you-still-cant-launch-a-pmatlab-job">You've tried and confirmed everything here and you still can't launch a pMatlab job</h3>
-<p>If you've tried and confirmed all of the above items and still can't
-launch a pMatlab job, please let us know what you've tried, and also
-copy, paste and send any errors that you see to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;">&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;</a>.
-Please attach any files that might be helpful in diagnosing the
-problem.</p>
-<!--
-TODO: Merge/Link
-
-This section is word-for-word the same as the one in pMatlab Job Problems:
-
-## Steps to Sanity Check and Debug
-
-If you are able to submit a job but receive errors that do not seem
-related to your application, we recommend the following strategy:
-
-### 1st Step - Is my SuperCloud configuration correct?
-
-An easy way to check on potential configuration issues is to run the
-`Param_Sweep` example. `Param_Sweep` is the application that
-we recommend you use to test your account configuration at
-set-up time and as a "sanity check" to see that the configuration
-hasn't been corrupted. There are instructions for running Param_Sweep
-on the [Verifying your pMatlab setup](TBD/verify-pMatlab-setup) page.
-
-TODO: Add link when available.
-
-### 2nd Step - You can run Param_Sweep, but your code fails
-
-Your configuration is correct, so the next step is to look at the output
-from your job. In this case, we are not looking at files that are
-application specific but rather at the output that is normally sent to
-the command window. Just as the processor writes to the MATLAB command
-window of your desktop when you run your code on your local desktop system,
-the remote SuperCloud compute nodes also produce output which is
-then directed to a ".out" file in the MatMPI directory (or a
-subdirectory within MatMPI) of your working MATLAB® directory.
-
-The first task is to see that all of the remote processors started a
-valid MATLAB® session and created the .out file. To check this,
-
-- go to the MatMPI directory in your working directory
-- to find your output log files, look for subdirectories within the
-    MatMPI directory with names like this (If your job ran on multiple
-    compute nodes, there will be several of these subdirectories):\
-     \
-    p\<start-pid\>-p\<end-pid\>\_\<compute node name\>\
-     \
-    where:\
-         `p<start-pid>` is the id of the first process running on the
-    compute node whose name is `<compute node name>`\
-         `p<end-pid>` is the id of the last process running on the
-    compute node whose name is `<compute node name>`\
-     
-- look at the list of files in those subdirectories - there should be
-    a total of n-1 files with the .out extension
-- each of the .out files should include your filename, the processor
-    id and the .out extension - e.g. for `Param_Sweep` on 4 processors you
-    would see; Param_sweep.0.out, Param_sweep.1.out, Param_sweep.2.out and Param_sweep.3.out.
-
-If any " .out" file is missing, this is a problem and should be
-reported to the SuperCloud Team by sending email to <supercloud@mit.edu>
-(Often what the user sees is that their application hangs on an `agg`
-command and with a bit of inspection they discover that one remote
-processor didn't properly start its MATLAB® session.)
-
-### 3rd Step - Errors, Warnings and Messages from the remote MATLAB® sessions.
-
-If all of the remote MATLAB® sessions started properly, the next step is
-to check each of the .out files. Each .out file contains all of the
-diary or screen output from a remote node. In most cases these files
-should have the same information, with the exception of numerical data,
-and should provide
-some indication of a warning or error related to the failure of the
-compute job. If the error message is not clear to you, or you are unsure
-how to correct the error send email, with the error information, to
-<supercloud@mit.edu>.
-
-If error messages were sent to STDERR by any of the remote MATLAB®
-sessions, these error messages will appear in the .out files. These
-error messages will also be written to the .err file (located in the
-MatMPI directory). The process id (pid) of the process which generated
-the error will be pre-pended to the error message so you can look in
-that process's .out file for additional output that may help you debug
-the cause of the error.
--->
-
-<!--
-TODO: Link/Merge pages
-This section is almost exactly the same as "Common Problems Launching or Running Your pMatlab Job" on pMatlab Job Problems
-
-## Handling Common Job Errors
-
-In this section, you'll find some of the more common pMatlab job errors
-that you might see, along with recommendations for fixing them.
-
-You may need to look at your job's log files to see if your job
-reported any errors. See the page Finding Your pMatlab Output and
-Results page for directions on how to locate your pMatlab job log files.
-
-### fl:filesystem:NotDirectoryError
-
-MATLAB® often runs into errors with its cache directory when it is
-created (by default) in your home directory, as \~/.matlab. You may see
-an error from MATLAB® that includes the text
-`fl:filesystem:notdirectoryerror`.
-
-In order to avoid these potential issues, you can point MATLAB® to a
-different location for creating its cache directory. You can find
-directions on how to change the MATLAB® cache directory
-[here](TBD/changing-the-matlab-cache-dir).
-
-### ???Undefined function or variable 'MatMPIdefs1'
-
-The mostly likely reason for this error is that your path is not set
-properly and you are missing the ./MatMPI path. Send email to
-<supercloud@.mit.edu> and a member of the SuperCloud team will help you
-resolve the path issue.
-
-### "OUT OF MEMORY" errors when running pMatlab code
-
-In order to handle large compute jobs, you should divide and
-distribute the workload.
-
-If you don't need to aggregate a large data structure, you can create a
-distributed matrix using more processors so that each processor is
-working on a smaller portion of the data. The `Param_Sweep` example in
-your SuperCloud home directory \~/examples/Param_Sweep provides an example of
-how to do this.
-
-We recommend our online course, *Practical HPC.* The course can be found
-on our [LLX platform](https://learn.llx.edly.io/course/practical-hpc){target="_blank"}.
-The PGAS Example: pMatlab Implementation section, within the Distributed
-Applications module provides a detailed introduction, working
-step-by-step through the Parameter Sweep application that is in the
-examples directory in your home directory. It should take approximately
-30-45 minutes to work through the section.
-The presentation illustrates the pMatlab's simple method of converting
-application code from serial to parallel.
-
-### Your pMatlab program hangs
-
-If your pMatlab program seems to be hung (the output logs are empty or
-have not had additional data written to them, or the `LLstat`
-command shows the job is not in the RUNNING state), you
-should delete the job.
-
-The preferred method for deleting a job is to use
-`LLkill <jobID>`. You obtain the \<jobID\> by using the command
-`LLstat`. These commands are described on the [General Job
-Management
-Commands](TBD/general-job-management-commands)
-page.
-
-The `LLkill` method cleanly closes all of the remote processes
-as well as your local process.
--->
-
-<h3 id="references">References</h3>
-<p>Here is a list of webpages that were mentioned here, plus some others
-that might be helpful:</p>
-<!--
-TODO: Add link to verifying your pMatlab setup
--->
-
-<ul>
-<li><a href="TBD/verify-pMatlab-setup">Verifying Your pMatlab Setup</a></li>
-<li><a href="../pmatlab-job-problems">Troubleshooting pMatlab Job Problems</a></li>
-<li><a href="../finding-pmatlab-output">Finding Your Output</a></li>
-<li><a href="../launching-pmatlab-jobs#triples-mode-launch">Triples Mode</a></li>
-<li><a href="../../using-the-system/files-and-data/transferring-files">Accessing and Transferring Data and Files</a></li>
-<li><a href="https://learn.llx.edly.io/course/practical-hpc">LLx Online Courses</a>: Practical HPC course, "Distributed Applications" module</li>
-<li><a href="../pmatlab-getting-started">pMatlab: Getting Started</a></li>
-<li><a href="../launching-pmatlab-jobs">Launching pMatlab Jobs on the SuperCloud Systems</a></li>
-<li><a href="../pmatlab-job-errors">Troubleshooting SuperCloud pMatlab Job Errors</a></li>
-</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>                            &lt; M A T L A B (R) &gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                  Copyright 1984-2020 The MathWorks, Inc.
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>                  R2020a (9.8.0.1323502) 64-bit (glnxa64)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                            February 25, 2020
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>To get started, type doc.
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>For product information, visit www.mathworks.com.
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>LLSC: GRIDMATLAB_MANYCORE is defined. gridMatlab launch is optimized for
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>many core nodes
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>&gt;&gt; &gt;&gt; &gt;&gt; &gt;&gt; Time for the host-to-rank map with TMPDIR (sec):
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>1.4764
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>MANYCORE JOB BEGIN: on a-21-35
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>my_rank =
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>     0
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>SUCCESS
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    1.0000         0    2.5000
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    2.0000         0    5.0000
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    3.0000         0    7.5000
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    4.0000         0   10.0000
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    5.0000    1.0000   12.5000
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    6.0000    1.0000   15.0000
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    7.0000    1.0000   17.5000
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    8.0000    1.0000   20.0000
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    9.0000    2.0000   22.5000
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>   10.0000    2.0000   25.0000
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>   11.0000    2.0000   27.5000
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>   12.0000    2.0000   30.0000
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>   13.0000    3.0000   32.5000
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>   14.0000    3.0000   35.0000
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>   15.0000    3.0000   37.5000
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>   16.0000    3.0000   40.0000
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>MANYCORE JOB END: on a-21-35
+</span></code></pre></div>
+<p>If you are able to run <code>Param_Sweep</code> and your output looks similar to the
+above, your SuperCloud pMatlab configuration is correct.</p>
+<p>If you are unable to run <code>Param_Sweep</code> or you do not see the similar
+results, send email to <a href="mailto:supercloud@mit.edu">supercloud@mit.edu</a> and include the
+information that you cannot run the application - this indicates to us
+that something has happened with your pMatlab configuration.</p>
 
 
 

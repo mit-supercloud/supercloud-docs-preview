@@ -56,11 +56,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://supercloud.mit.edu/new-pages/Jupyter-Notebooks-Best-Practices/</loc>
-         <lastmod>2023-09-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://supercloud.mit.edu/new-pages/code-and-data-location/</loc>
          <lastmod>2023-09-18</lastmod>
          <changefreq>daily</changefreq>
@@ -102,6 +97,11 @@
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/jupyter-notebook-conversion/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/jupyter-notebooks-best-practices/</loc>
          <lastmod>2023-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -166,7 +166,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://supercloud.mit.edu/new-pages/verify-pMatlab-setup/</loc>
+         <loc>https://supercloud.mit.edu/new-pages/verify-pmatlab-setup/</loc>
          <lastmod>2023-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
