@@ -56,17 +56,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://supercloud.mit.edu/new-pages/Jupyter-Notebook-Conversion/</loc>
-         <lastmod>2023-09-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://supercloud.mit.edu/new-pages/Jupyter-Notebooks-Best-Practices/</loc>
-         <lastmod>2023-09-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://supercloud.mit.edu/new-pages/LLcopy2tmp/</loc>
          <lastmod>2023-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -111,7 +101,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://supercloud.mit.edu/new-pages/launching-pmatlab-Jobs/</loc>
+         <loc>https://supercloud.mit.edu/new-pages/jupyter-notebook-conversion/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/launching-pmatlab-jobs/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/llcopy2tmp/</loc>
          <lastmod>2023-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -121,17 +121,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://supercloud.mit.edu/new-pages/pMatlab-Job-Errors/</loc>
-         <lastmod>2023-09-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://supercloud.mit.edu/new-pages/pMatlab-Job-Problems/</loc>
-         <lastmod>2023-09-18</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://supercloud.mit.edu/new-pages/pmatlab-getting-started/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/pmatlab-job-errors/</loc>
+         <lastmod>2023-09-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/pmatlab-job-problems/</loc>
          <lastmod>2023-09-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
