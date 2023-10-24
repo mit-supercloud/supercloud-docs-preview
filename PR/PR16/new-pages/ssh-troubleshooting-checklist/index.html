@@ -1160,23 +1160,33 @@ directory to see if you have a file named config:</p>
     Supercloud username, you will need to add the
     <strong>User</strong> directive (line [2] below), replacing <em>your-SuperCloud-username</em>
     with your SuperCloud username</li>
-<li>
-<p>If you have multiple ssh keys for different systems, or you did not use the default path and/or name (id_rsa)
+<li>If you have multiple ssh keys for different systems, or you did not use the default path and/or name (id_rsa)
     for your ssh keys, then you will need to add the
     <strong>IdentityFile</strong> directive (line [3] below), replacing
     <em>path-and-name-of-private-key</em> with the location and name of
     your ssh <strong>private</strong> key file. E.g.
     C:\Users\your-local-username\.ssh\id_rsa. Be sure to use the ssh key
-    file without the ".pub" extension</p>
-<p><strong>Example ssh config file</strong><br />
-[1]      Host txe1-login.mit.edu<br />
-[2]      &nbsp; &nbsp; &nbsp;User <em>your-SuperCloud-username</em><br />
-[3]      &nbsp; &nbsp; &nbsp;IdentityFile <em>path-and-name-of-private-key</em></p>
-<p><strong>Note</strong>: the numbers in brackets are for reference only; do not include them in your config file.</p>
-</li>
+    file without the ".pub" extension</li>
 </ul>
 </li>
 </ul>
+<!--
+        **Example ssh config file**<br />
+        [1]      Host txe1-login.mit.edu<br />
+        [2]      &nbsp; &nbsp; &nbsp;User *your-SuperCloud-username*<br />
+        [3]      &nbsp; &nbsp; &nbsp;IdentityFile *path-and-name-of-private-key*
+-->
+<div class="language-text highlight"><pre><span></span><code>    **Example ssh config file**
+
+
+    ```bash linenums=&quot;1&quot;
+    Host txe1-login.mit.edu
+        User your-SuperCloud-username
+        IdentityFile path-and-name-of-private-key
+    ```
+
+    **Note**: the numbers in brackets are for reference only; do not include them in your config file.
+</code></pre></div>
 <h3 id="do-you-have-ssh-keys-for-multiple-systems">Do you have ssh keys for multiple systems?</h3>
 <p><strong>Yes</strong></p>
 <ul>
