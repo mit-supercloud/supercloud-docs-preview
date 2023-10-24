@@ -912,8 +912,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-do-you-have-ssh-keys-for-multiple-systems-eg-github-engaging-satori-openmind" class="md-nav__link">
-    4) Do you have ssh keys for multiple systems (e.g. GitHub, Engaging, Satori, OpenMind)?
+  <a href="#4-do-you-have-ssh-keys-for-multiple-systems-eg-github" class="md-nav__link">
+    4) Do you have ssh keys for multiple systems (e.g. GitHub)?
   </a>
   
 </li>
@@ -1109,7 +1109,7 @@ depending on which OS is running on your desktop computer:</p>
     page for instructions on creating the ssh config file on your local
     desktop system.</li>
 </ul>
-<h4 id="4-do-you-have-ssh-keys-for-multiple-systems-eg-github-engaging-satori-openmind">4) Do you have ssh keys for multiple systems (e.g. GitHub, Engaging, Satori, OpenMind)?</h4>
+<h4 id="4-do-you-have-ssh-keys-for-multiple-systems-eg-github">4) Do you have ssh keys for multiple systems (e.g. GitHub)?</h4>
 <p><strong>Yes</strong></p>
 <ul>
 <li>You will need a config file. You must include the <strong>IdentityFile</strong>
@@ -1160,32 +1160,34 @@ directory to see if you have a file named config:</p>
     Supercloud username, you will need to add the
     <strong>User</strong> directive (line [2] below), replacing <em>your-SuperCloud-username</em>
     with your SuperCloud username</li>
-<li>If you have multiple ssh keys for different systems, or you did not use the default path and/or name (id_rsa)
+<li>
+<p>If you have multiple ssh keys for different systems, or you did not use the default path and/or name (id_rsa)
     for your ssh keys, then you will need to add the
     <strong>IdentityFile</strong> directive (line [3] below), replacing
     <em>path-and-name-of-private-key</em> with the location and name of
     your ssh <strong>private</strong> key file. E.g.
     C:\Users\your-local-username\.ssh\id_rsa. Be sure to use the ssh key
-    file without the ".pub" extension</li>
+    file without the ".pub" extension</p>
+<p><strong>Example ssh config file</strong><br />
+[1]      Host txe1-login.mit.edu<br />
+[2]      &nbsp; &nbsp; &nbsp;User <em>your-SuperCloud-username</em><br />
+[3]      &nbsp; &nbsp; &nbsp;IdentityFile <em>path-and-name-of-private-key</em></p>
+</li>
 </ul>
 </li>
 </ul>
 <!--
-        **Example ssh config file**<br />
-        [1]      Host txe1-login.mit.edu<br />
-        [2]      &nbsp; &nbsp; &nbsp;User *your-SuperCloud-username*<br />
-        [3]      &nbsp; &nbsp; &nbsp;IdentityFile *path-and-name-of-private-key*
+           **Example ssh config file**
+
+       ```text linenums="1"
+        ```
+        Host txe1-login.mit.edu
+            User your-SuperCloud-username
+            IdentityFile path-and-name-of-private-key
+        ```
 -->
-<div class="language-text highlight"><pre><span></span><code>    **Example ssh config file**
 
-    &lt;!--```text linenums=&quot;1&quot; --&gt;
-    ```
-    Host txe1-login.mit.edu
-        User your-SuperCloud-username
-        IdentityFile path-and-name-of-private-key
-    ```
-
-    **Note**: the numbers in brackets are for reference only; do not include them in your config file.
+<div class="language-text highlight"><pre><span></span><code>    **Note**: the numbers in brackets are for reference only; do not include them in your config file.
 </code></pre></div>
 <h3 id="do-you-have-ssh-keys-for-multiple-systems">Do you have ssh keys for multiple systems?</h3>
 <p><strong>Yes</strong></p>
