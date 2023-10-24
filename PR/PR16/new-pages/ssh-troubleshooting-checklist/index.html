@@ -912,8 +912,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-do-you-have-ssh-keys-for-multiple-systems-eg-llcad-supercloudtx-e1" class="md-nav__link">
-    4) Do you have ssh keys for multiple systems (e.g. LLCAD, SuperCloud/TX-E1)?
+  <a href="#4-do-you-have-ssh-keys-for-multiple-systems-eg-github-engaging-satori-openmind" class="md-nav__link">
+    4) Do you have ssh keys for multiple systems (e.g. GitHub, Engaging, Satori, OpenMind)?
   </a>
   
 </li>
@@ -975,6 +975,23 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#troubleshooting" class="md-tag">Troubleshooting</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#getting-started" class="md-tag">Getting Started</a>
+    
+  
+</nav>
+
 
 
   <h1>Ssh troubleshooting checklist</h1>
@@ -1033,7 +1050,7 @@ this (you may have more than 1 entry in the table):</p>
 <ul>
 <li>See the <a href="../../requesting-account/#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a>
     section on the <a href="../../requesting-account/">Requesting an Account</a>
-    page for instructions on how to add your key using the <a href="https://txg-portal.llgrid.ll.mit.edu/sshkeys/">SSH Key
+    page for instructions on how to add your key using the <a href="https://txe1-portal.mit.edu/sshkeys/">SSH Key
     Portal</a>.</li>
 </ul>
 <h3 id="confirm-that-you-need-a-config-file-sshconfig-on-your-desktop-system">Confirm that you need a config file (.ssh/config) on your desktop system</h3>
@@ -1050,15 +1067,10 @@ username. </p>
 </ul>
 <p><strong>No</strong></p>
 <ul>
-<li>You will need a config file and you must include the <strong>User</strong>
-    directive in the config file and specify your SuperCloud username.
-    e.g.:  <code>User myUsername</code>
-     </li>
-<li>See the <a href="https://headsigned.com/posts/configuring-different-ssh-keys-per-host/">Configuring different SSH keys per host</a>
-    page for instructions on creating the ssh config file on your local
-    desktop system.
-     </li>
+<li>Make sure you include your SuperCloud username when you ssh to the SuperCloud system:</li>
 </ul>
+<p><code>ssh USERNAME@txe1-login.mit.edu</code>
+     </p>
 <h4 id="2-did-you-use-wslubuntu-shell-on-windows-to-generate-your-ssh-keys">2) Did you use WSL/Ubuntu shell on Windows to generate your ssh keys?</h4>
 <p><strong>Yes</strong></p>
 <ul>
@@ -1097,7 +1109,7 @@ depending on which OS is running on your desktop computer:</p>
     page for instructions on creating the ssh config file on your local
     desktop system.</li>
 </ul>
-<h4 id="4-do-you-have-ssh-keys-for-multiple-systems-eg-llcad-supercloudtx-e1">4) Do you have ssh keys for multiple systems (e.g. LLCAD, SuperCloud/TX-E1)?</h4>
+<h4 id="4-do-you-have-ssh-keys-for-multiple-systems-eg-github-engaging-satori-openmind">4) Do you have ssh keys for multiple systems (e.g. GitHub, Engaging, Satori, OpenMind)?</h4>
 <p><strong>Yes</strong></p>
 <ul>
 <li>You will need a config file. You must include the <strong>IdentityFile</strong>
@@ -1277,7 +1289,7 @@ that might be helpful:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
       
     
   </small>
