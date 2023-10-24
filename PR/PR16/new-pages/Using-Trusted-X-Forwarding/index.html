@@ -887,6 +887,23 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#how-to" class="md-tag">How To</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#using-the-system" class="md-tag">Using the System</a>
+    
+  
+</nav>
+
 
 
   <h1>Using Trusted X Forwarding</h1>
@@ -897,6 +914,13 @@ start up remote applications but forward the application display to your
 local desktop machine. When using trusted X forwarding, the remote
 machine is treated as a trusted client. A program with access to the
 display is trusted with access to the entire display.</p>
+<p>Note, using X11 forwarding over long-distance networks can be slow. This
+is because the computer rendering the X11 windows is sending rendering
+commands to your local desktop which then renders them. More details are
+available in this informative posting:
+<a href="https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient">https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient.</a></p>
+<p>For certain applications, <a href="../../using-the-system/jupyter-notebooks/">Jupyter Notebooks</a>
+may be a good alternative.</p>
 <h3 id="required-software">Required software</h3>
 <p>In order to use X forwarding, your desktop system needs to run an X
 server. If your desktop system is a Linux system, you're all set. 
@@ -935,20 +959,13 @@ tunnel between the login node and the compute nodes.</p>
 displayed on your local desktop.  For a quick test of X11 forwarding,
 try running <code>xeyes</code>, which puts a couple of eyes on your screen that
 follow your mouse.</p>
-<p>Note, using X11 forwarding over long-distance networks can be slow. This
-is because the computer rendering the X11 windows is sending rendering
-commands to your local desktop which then renders them. More details are
-available in this informative posting:
-<a href="https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient">https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient.</a></p>
-<p>For certain applications, <a href="../../using-the-system/jupyter-notebooks/">Jupyter Notebooks</a>
-may be a good alternative.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 19, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
       
     
   </small>
