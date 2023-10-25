@@ -1153,28 +1153,28 @@ directory to see if you have a file named config:</p>
 <li>
 <p>Make sure you have the statements you need in your ssh config file:</p>
 <ul>
-<li>You must include the <strong>Host</strong> directive (line [1] in the example config file below) followed by
+<li>You must include the <strong>Host</strong> directive (line 1 in the example config file below) followed by
     txe1-login.mit.edu
      </li>
 <li>If your user name on your desktop system is different from your
     Supercloud username, you will need to add the
-    <strong>User</strong> directive (line [2] below), replacing <em>your-SuperCloud-username</em>
+    <strong>User</strong> directive (see line 2 below), replacing your-SuperCloud-username
     with your SuperCloud username</li>
 <li>
 <p>If you have multiple ssh keys for different systems, or you did not use the default path and/or name (id_rsa)
     for your ssh keys, then you will need to add the
-    <strong>IdentityFile</strong> directive (line [3] below), replacing
-    <em>path-and-name-of-private-key</em> with the location and name of
+    <strong>IdentityFile</strong> directive (line 3 below), replacing
+    path-and-name-of-private-key with the location and name of
     your ssh <strong>private</strong> key file. E.g.
     C:\Users\your-local-username\.ssh\id_rsa. Be sure to use the ssh key
     file without the ".pub" extension</p>
-<p><strong>Example ssh config file</strong><br />
-[1]      Host txe1-login.mit.edu<br />
-[2]      &nbsp; &nbsp; &nbsp;User <em>your-SuperCloud-username</em><br />
-[3]      &nbsp; &nbsp; &nbsp;IdentityFile <em>path-and-name-of-private-key</em></p>
-<p><strong>Note</strong>: the numbers in brackets are for reference only; do not include them in your config file.</p>
+<p><strong>Example ssh config file</strong></p>
 </li>
 </ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>   Host txe1-login.mit.edu
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        User your-SuperCloud-username
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        IdentityFile path-and-name-of-private-key
+</span></code></pre></div>
 </li>
 </ul>
 <!--
@@ -1306,7 +1306,7 @@ that might be helpful:</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 25, 2023</span>
       
     
   </small>
