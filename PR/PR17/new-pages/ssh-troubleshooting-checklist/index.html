@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/Tips-for-Analyzing-Large-Datasets/">
+        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/ssh-troubleshooting-checklist/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Tips for Analyzing Large Datasets - SuperCloud Docs</title>
+        <title>Ssh troubleshooting checklist - SuperCloud Docs</title>
       
     
     
@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#construct-a-filename" class="md-skip">
+        <a href="#if-you-cant-log-into-supercloud-or-you-cant-login-without-entering-your-username-andor-password" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tips for Analyzing Large Datasets
+              Ssh troubleshooting checklist
             
           </span>
         </div>
@@ -887,56 +887,74 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#construct-a-filename" class="md-nav__link">
+  <a href="#if-you-cant-log-into-supercloud-or-you-cant-login-without-entering-your-username-andor-password" class="md-nav__link">
     <span class="md-ellipsis">
-      Construct a filename
+      If you can't log into SuperCloud or you can't login without entering your username and/or password
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-another-file-that-lists-the-full-file-paths-of-each-file-in-the-dataset" class="md-nav__link">
-    <span class="md-ellipsis">
-      Create another file that lists the full file paths of each file in the dataset
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Create another file that lists the full file paths of each file in the dataset">
+    <nav class="md-nav" aria-label="If you can't log into SuperCloud or you can't login without entering your username and/or password">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#siso-vs-mimo" class="md-nav__link">
+  <a href="#did-you-create-ssh-keys-for-your-desktop-system" class="md-nav__link">
     <span class="md-ellipsis">
-      \"siso\" vs \"mimo\"
+      Did you create ssh keys for your desktop system?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#generating-the-list-of-files" class="md-nav__link">
+  <a href="#if-your-account-is-not-a-new-supercloud-account-did-you-use-the-ssh-key-portal-to-add-your-new-key" class="md-nav__link">
     <span class="md-ellipsis">
-      Generating the list of files
+      If your account is not a new SuperCloud account: Did you use the ssh key portal to add your new key?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Generating the list of files">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirm-that-you-need-a-config-file-sshconfig-on-your-desktop-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confirm that you need a config file (.ssh/config) on your desktop system
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Confirm that you need a config file (.ssh/config) on your desktop system">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1" class="md-nav__link">
+  <a href="#1-is-your-local-username-on-your-desktop-system-the-same-as-your-supercloud-username" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 1
+      1) Is your local username on your desktop system the same as your SuperCloud username?
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-2" class="md-nav__link">
+  <a href="#2-did-you-use-wslubuntu-shell-on-windows-to-generate-your-ssh-keys" class="md-nav__link">
     <span class="md-ellipsis">
-      Example 2
+      2) Did you use WSL/Ubuntu shell on Windows to generate your ssh keys?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-did-you-select-a-different-non-default-path-andor-name-for-your-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Did you select a different (non-default) path and/or name for your ssh keys?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-do-you-have-ssh-keys-for-multiple-systems-eg-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Do you have ssh keys for multiple systems (e.g. GitHub)?
     </span>
   </a>
   
@@ -944,6 +962,48 @@
         
       </ul>
     </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#so-you-need-an-ssh-config-file-do-you-have-the-file-sshconfig-on-your-desktop-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      So you need an ssh config file. Do you have the file .ssh/config on your desktop system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#do-you-have-ssh-keys-for-multiple-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Do you have ssh keys for multiple systems?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#you-tried-everything-here-and-you-still-cant-connect" class="md-nav__link">
+    <span class="md-ellipsis">
+      You tried everything here and you still can't connect?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="You tried everything here and you still can't connect?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
   
 </li>
         
@@ -971,139 +1031,332 @@
     
     
     
-      <a href="../../tags/#file-system" class="md-tag">File System</a>
+      <a href="../../tags/#troubleshooting" class="md-tag">Troubleshooting</a>
     
   
     
     
     
-      <a href="../../tags/#tips-and-best-practices" class="md-tag">Tips and Best Practices</a>
+      <a href="../../tags/#getting-started" class="md-tag">Getting Started</a>
     
   
 </nav>
 
 
 
-  <h1>Tips for Analyzing Large Datasets</h1>
+  <h1>Ssh troubleshooting checklist</h1>
 
-<p>If you are analyzing a dataset with a large number of files, avoid using
-<code>dir</code>, <code>ls</code>, and any other commands that scan the file system. Running
-thousands of file system scans can overload the file system. Here are
-some tips for working with large datasets.</p>
-<h3 id="construct-a-filename">Construct a filename</h3>
-<p>Instead of getting a list of all the files, it is better to construct a
-filename and check to see if that filename exists before reading or
-creating the file.</p>
-<h3 id="create-another-file-that-lists-the-full-file-paths-of-each-file-in-the-dataset">Create another file that lists the full file paths of each file in the dataset</h3>
-<p>Before launching your job, create a text file that lists the full paths
-of each file in the dataset. Each processor that is processing the data
-can read in this one file and doesn\'t have to execute <code>ls</code> or other
-metadata intensive operations to get the filenames. This also makes it
-easy to divide up the files amongst processors in a nice \"mimo\" (multiple inputs, multiple outputs) manner
-that minimizes the number of starts and stops, compared to a \"siso\" (single input, single output)
-model.</p>
-<h4 id="siso-vs-mimo">\"siso\" vs \"mimo\"</h4>
-<p>\"siso\" is an acronym for single input, single output. In a siso model,
-a single process calls your application multiple times to process all of
-the input files that are assigned to it. Each time your application is
-called, it is loaded, it processes a single input file, then it is
-unloaded.</p>
-<p>\"mimo\" is an acronym for multiple input, multiple output. The
-advantage of using a mimo model is that your application is called and
-loaded just once to process all of its assigned input files. When your
-application starts, it should read the text file containing the list of
-the data files and process its subset of files before being unloaded.</p>
-<p>See the <a href="https://TBD/llmapreduce">LLMapReduce</a> page in the option
---apptype=APPLICATION-TYPE section for a more detailed explanation of
-the mimo model and the changes to your application that are required in
-order to operate in mimo mode.</p>
-<h4 id="generating-the-list-of-files">Generating the list of files</h4>
-<p>To generate the text file which will contain a list of files to process, log into the login node using and issue the following commands:</p>
-<p><code>$ cd</code><em><code>datasetPath</code></em>\
-<code>$ lfs find "$(pwd -P)" | grep "</code><em><code>fileSearchPattern</code></em><code>" | sort &gt; ./</code><em><code>inputFilename</code></em></p>
-<p>where:\
-  <em><code>datasetPath</code></em> is the path to your dataset\
-  <em><code>fileSearchPattern</code></em> is a Linux regular expression that the <code>grep</code>
-command uses to find filenames that you want to include\
-  <em><code>inputFilename</code></em> is the name of the text file that will contain a
-list of all your data filenames</p>
-<p>Note that the <code>lfs</code> command in the example above can only be used if
-your files reside on the Lustre filesystem (somewhere within
-/home/gridsan). If your data files are located on a node\'s local disk
-(in <code>$TMPDIR</code> or <code>/state/partition1</code>), drop <code>lfs</code> from the beginning of
-the command above.</p>
-<p>Unfortunately, you can\'t use regular wildcards (for example: *.txt) to
-identify the files that you want to match because the <code>grep</code> command
-expects a regular expression.  You can find information on how to use
-regular expressions in Linux from these external websites (link will
-open in a new tab):</p>
-<p><a href="https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux">Using Grep &amp; Regular Expressions to Search for Text Patterns in
-Linux</a>{target="_blank"}\
-<a href="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285">Regex tutorial - A quick cheatsheet by
-examples</a>{target="_blank"}\
-<a href="https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php">Linux Tutorial - Cheat
-Sheet</a>{target="_blank"}</p>
-<h5 id="example-1">Example 1</h5>
-<p>Generate a file containing a list of files within
-\~/examples/LLGrid_MapReduce/MultiLevelData/data that end in <code>.txt</code> and
-save the list to a file called txt-files</p>
-<p>\$ cd \~/examples/LLGrid_MapReduce/MultiLevelData/data\
-\$ lfs find \"\$(pwd -P)\" | grep \"\.txt\$\" | sort &gt; ./txt-files</p>
-<p>This contents of the file txt-files is below</p>
-<p>\$ cat ./txt-files\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a11.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a12.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a13.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a22.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a23.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a31.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a32.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a33.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b11.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b12.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b13.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b21.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b22.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b23.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b31.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b32.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b33.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c11.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c12.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c13.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c21.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c22.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c23.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c31.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c32.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c33.txt</p>
-<h5 id="example-2">Example 2</h5>
-<p>Generate a file containing a list of files within
-\~/examples/LLGrid_MapReduce/MultiLevelData/data that begin with a
-lowercase letter, followed by the number 2, and ends in <code>.txt</code> and save
-the list to a file called az-2-txt-files</p>
-<p>\$ cd \~/examples/LLGrid_MapReduce/MultiLevelData/data\
-\$ lfs find \"\$(pwd -P)\" | grep \"[a-z]2.*\.txt\$\" | sort &gt;
-./az-2-txt-files</p>
-<p>The contents of the file az-2-txt-files is below</p>
-<p>\$ cat ./az-2-txt-files\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a22.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a23.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b21.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b22.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b23.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c21.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c22.txt\
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c23.txt</p>
+<p>On this page, we'll address issues you might run into with logging into
+the SuperCloud systems.
+ </p>
+<h2 id="if-you-cant-log-into-supercloud-or-you-cant-login-without-entering-your-username-andor-password">If you can't log into SuperCloud or you can't login without entering your username and/or password</h2>
+<p>In this section you'll find a series of questions and answers that will
+help you resolve some of the more common passwordless ssh login
+problems.</p>
+<p>You should also take a look at the <a href="https://learn.llx.edly.io/">LLx Online
+Course</a> "Practical
+HPC". This course includes videos that demonstrate how to create an
+ssh key, how to create an ssh config file, and troubleshooting ssh
+problems in the "Getting Started with SuperCloud" module,
+"Accessing SuperCloud" section.</p>
+<h3 id="did-you-create-ssh-keys-for-your-desktop-system">Did you create ssh keys for your desktop system?</h3>
+<p><strong>No</strong>:</p>
+<ul>
+<li>See <a href="../../requesting-account/#generating-ssh-keys">Generating SSH
+    Keys</a>
+    for instructions on creating your ssh keys.
+     </li>
+</ul>
+<p><strong>Yes</strong></p>
+<ul>
+<li>
+<p>Open the public ssh key file (the file that has a .pub extension) in
+    an editor
+     </p>
+</li>
+<li>
+<p>The public key begins with "ssh-rsa". It will look similar to this
+    (there will be real data for all of the Xs):
+     </p>
+<p>ssh-rsa
+AAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxx</p>
+<p>This is the key to add to the <a href="https://txe1-portal.mit.edu/sshkeys/">SSH Key
+Portal</a>.</p>
+<p>Do <strong>not</strong> add a key that begins with "-----BEGIN OPENSSH
+PRIVATE KEY-----"</p>
+<p>After adding the key to the key portal, the entry will look like
+this (you may have more than 1 entry in the table):</p>
+<p><img alt="SSH Key Portal Entry" src="../images/ssh-key-portal-entry.png" /></p>
+</li>
+</ul>
+<h3 id="if-your-account-is-not-a-new-supercloud-account-did-you-use-the-ssh-key-portal-to-add-your-new-key">If your account is <strong>not</strong> a new SuperCloud account: Did you use the ssh key portal to add your new key?</h3>
+<p><strong>No</strong></p>
+<ul>
+<li>See the <a href="../../requesting-account/#adding-your-ssh-keys-to-your-account">Adding your SSH Keys to your Account</a>
+    section on the <a href="../../requesting-account/">Requesting an Account</a>
+    page for instructions on how to add your key using the <a href="https://txe1-portal.mit.edu/sshkeys/">SSH Key
+    Portal</a>.</li>
+</ul>
+<h3 id="confirm-that-you-need-a-config-file-sshconfig-on-your-desktop-system">Confirm that you need a config file (.ssh/config) on your desktop system</h3>
+<p>You might not need an ssh config file on your desktop system. Answer the
+next 4 questions to determine whether you'll need one.</p>
+<h4 id="1-is-your-local-username-on-your-desktop-system-the-same-as-your-supercloud-username">1) Is your local username on your desktop system the same as your SuperCloud username?</h4>
+<p>See if your local username on your desktop system is the same as your SuperCloud
+username. </p>
+<p>To find your local username on your desktop system:</p>
+<ul>
+<li>Windows: open Settings &gt; Accounts &gt; Your Info</li>
+<li>MacOS and Linux: open a terminal window and type: <code>whoami</code>
+     </li>
+</ul>
+<p><strong>No</strong></p>
+<ul>
+<li>Make sure you include your SuperCloud username when you ssh to the SuperCloud system:</li>
+</ul>
+<p><code>ssh USERNAME@txe1-login.mit.edu</code>
+     </p>
+<h4 id="2-did-you-use-wslubuntu-shell-on-windows-to-generate-your-ssh-keys">2) Did you use WSL/Ubuntu shell on Windows to generate your ssh keys?</h4>
+<p><strong>Yes</strong></p>
+<ul>
+<li>
+<p>Your WSL/Ubuntu username may be different than your SuperCloud username.
+    To find your WSL/Ubuntu username open a
+    WSL/Ubuntu terminal window and type: <code>whoami</code></p>
+<p>If your WSL/Ubuntu username is different than your SuperCloud username,
+you will need a config file and you must include the <strong>User</strong> directive 
+in the config file and specify your SuperCloud username. See the 
+<a href="https://headsigned.com/posts/configuring-different-ssh-keys-per-host/">Configuring different SSH keys per host</a> page for instructions on creating 
+the ssh config file on your local desktop system.
+     </p>
+</li>
+</ul>
+<h4 id="3-did-you-select-a-different-non-default-path-andor-name-for-your-ssh-keys">3) Did you select a different (non-default) path and/or name for your ssh keys?</h4>
+<p>A default path and name for your ssh keys was offered to you when you
+ran ssh-keygen. The default name is id_rsa. The default path varies,
+depending on which OS is running on your desktop computer:</p>
+<ul>
+<li>if you have a Linux desktop, the default location
+    is:  /home/your-local-username/.ssh</li>
+<li>if you have a MacOS desktop, the default location
+    is:  /Users/your-local-username/.ssh</li>
+<li>if you have a Windows desktop, the default location
+    is:  C:\Users\your-local-username.ssh  However, if you are using WSL, then
+    the default location is:  /home/your-local-username/.ssh</li>
+</ul>
+<p><strong>Yes</strong></p>
+<ul>
+<li>You will need a config file. You must include the <strong>IdentityFile</strong>
+    directive in the config file and provide the path to and the name of
+    your ssh key file.
+     </li>
+<li>See the <a href="https://headsigned.com/posts/configuring-different-ssh-keys-per-host/">Configuring different SSH keys per host</a>
+    page for instructions on creating the ssh config file on your local
+    desktop system.</li>
+</ul>
+<h4 id="4-do-you-have-ssh-keys-for-multiple-systems-eg-github">4) Do you have ssh keys for multiple systems (e.g. GitHub)?</h4>
+<p><strong>Yes</strong></p>
+<ul>
+<li>You will need a config file. You must include the <strong>IdentityFile</strong>
+    directive in the config file and provide the path to and the name of
+    your ssh key file.
+     </li>
+<li>See the <a href="https://headsigned.com/posts/configuring-different-ssh-keys-per-host/">Configuring different SSH keys per host</a>
+    page for instructions on creating the ssh config file on your local
+    desktop system.</li>
+</ul>
+<h3 id="so-you-need-an-ssh-config-file-do-you-have-the-file-sshconfig-on-your-desktop-system">So you need an ssh config file. Do you have the file .ssh/config on your desktop system?</h3>
+<p>Based on your desktop operating system, look in the associated .ssh
+directory to see if you have a file named config:</p>
+<ul>
+<li>Windows:  C:\Users\your-local-username.ssh  However, if you are using WSL,
+    then the default location is:  /home/your-local-username/.ssh</li>
+<li>MacOS:  /Users/your-local-username/.ssh</li>
+<li>Linux:  /home/your-local-username /.ssh
+     </li>
+</ul>
+<p><strong>No</strong></p>
+<ul>
+<li>Make sure the file name is <strong>config</strong> and not config.txt.
+     </li>
+<li>See the <a href="https://headsigned.com/posts/configuring-different-ssh-keys-per-host/">Configuring different SSH keys per host</a>
+    page for instructions on creating the ssh config file on your local
+    desktop system.</li>
+</ul>
+<p><strong>Yes</strong></p>
+<ul>
+<li>Make sure the config file resides in the same directory as your ssh
+    keys.
+     </li>
+<li>
+<p>Make sure the file name is <strong>config</strong> and not config.txt.</p>
+</li>
+<li>
+<p>Make sure the config file is owned by you, not the administrator. On
+    Windows systems, use this command to view the file owner: dir /Q</p>
+</li>
+<li>
+<p>Make sure you have the statements you need in your ssh config file:</p>
+<ul>
+<li>You must include the <strong>Host</strong> directive (line 1 in the example config file below) followed by
+    txe1-login.mit.edu
+     </li>
+<li>If your user name on your desktop system is different from your
+    Supercloud username, you will need to add the
+    <strong>User</strong> directive (see line 2 below), replacing your-SuperCloud-username
+    with your SuperCloud username</li>
+<li>
+<p>If you have multiple ssh keys for different systems, or you did not use the default path and/or name (id_rsa)
+    for your ssh keys, then you will need to add the
+    <strong>IdentityFile</strong> directive (line 3 below), replacing
+    path-and-name-of-private-key with the location and name of
+    your ssh <strong>private</strong> key file. E.g.
+    C:\Users\your-local-username\.ssh\id_rsa. Be sure to use the ssh key
+    file without the ".pub" extension</p>
+<p><strong>Example ssh config file</strong></p>
+</li>
+</ul>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>   Host txe1-login.mit.edu
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        User your-SuperCloud-username
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        IdentityFile path-and-name-of-private-key
+</span></code></pre></div>
+</li>
+</ul>
+<!--
+           **Example ssh config file**
+
+       ```text linenums="1"
+        ```
+        Host txe1-login.mit.edu
+            User your-SuperCloud-username
+            IdentityFile path-and-name-of-private-key
+        ```
+-->
+
+<h3 id="do-you-have-ssh-keys-for-multiple-systems">Do you have ssh keys for multiple systems?</h3>
+<p><strong>Yes</strong></p>
+<ul>
+<li>Make sure the keys for the different systems have different
+    filenames
+     </li>
+<li>
+<p>You'll need multiple entries in your ssh config file so that ssh
+    knows which set of keys goes with which system.</p>
+<p>You'll need one entry, similar to the one for accessing SuperCloud
+shown above, for each set of ssh keys. Each entry should include
+these directives:</p>
+<ul>
+<li>
+<p>Host - the system address</p>
+</li>
+<li>
+<p>IdentityFile - the full path and name of the private key file
+for the system specified in the Host directive</p>
+</li>
+<li>
+<p>User - the username that you use to log into the system, if
+it's different from your local username on your desktop system</p>
+</li>
+</ul>
+</li>
+</ul>
+<!-- 
+<a name="errors"></a>
+
+## Some error messages that you might encounter and what to do if you see them
+
+### You see: "Corrupted MAC (message authentication code)"
+
+If you receive the error "corrupted MAC (message authentication code)
+error", you will need to create or edit your ssh config file. See
+[Creating an ssh config
+file](https://TBD/passwordless-ssh-keys#config)
+on the [Generating Passwordless SSH
+Keys](https://TBD/passwordless-ssh-keys) page for
+instructions on how to create an ssh config file with the proper file
+permissions.
+
+### Windows users - you see: "Bad owner or permissions on C:Users<your-local-username>/.ssh/config"
+
+You created the file .ssh/config on your Windows desktop, but now
+you're seeing this error when you attempt to connect to txe1-login.
+
+If you attempted to get some debug information from ssh (by using the
+-vvv option) after getting this error, you might then see this error:
+
+debug3: Bad permissions. Try removing permissions for user: <userid>
+on file C:Users<your-local-username>/.ssh/config.
+
+A sample reported userid may look like this:
+S-1-5-21-79350587-896414559-2662020867-113792
+
+This is often seen when the computer's security policy is set up to
+automatically give other users (e.g. an administrator) permission to access
+the config file.
+
+To remove access permission to the config file by other users:
+
+1.  Right click on the config file you created
+2.  Select "Properties"
+3.  On the "Security" tab, click "Advanced"
+4.  On the "Permissions" tab, remove all other users from the
+    Permission entries list
+
+### You see: "Permission denied, please try again"
+
+When you attempt to ssh to the login node, if the system prompts you for
+a password, you enter your password, and then receive the error
+"Permission denied, please try again.", check the text that was
+displayed when it prompted you for your password. It should look like
+this:
+
+   `<your-SuperCloud-username>@txe1-login.mit.edu's password:`         
+
+If it shows a username that isn't your SuperCloud username, or it doesn't 
+show any username, you will need to create or edit your ssh config file.
+
+See [Creating an ssh config
+file](https://TBD/passwordless-ssh-keys#config)
+on the [Generating Passwordless SSH
+Keys](https://TBD/passwordless-ssh-keys) page for
+instructions on how to create an ssh config file with the proper file
+permissions.
+-->
+<h2 id="you-tried-everything-here-and-you-still-cant-connect">You tried everything here and you still can't connect?</h2>
+<p>If you've tried/confirmed all of the above items and still can't
+connect, type the following command, then copy,
+paste and send the text output of the command to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;">&#115;&#117;&#112;&#101;&#114;&#99;&#108;&#111;&#117;&#100;&#64;&#109;&#105;&#116;&#46;&#101;&#100;&#117;</a>.
+Please do not send a screenshot - there will be a lot of output and it
+will be difficult for us to read.</p>
+<p><code>ssh -vvv USERNAME@txe1-login.mit.edu</code></p>
+<h3 id="references">References</h3>
+<p>Here is a list of webpages that were mentioned here, plus some others
+that might be helpful:</p>
+<ul>
+<li><a href="https://learn.llx.edly.io/">LLx Online Courses</a> Practical
+    HPC course, "Getting Started with SuperCloud" module, "Accessing SuperCloud" section</li>
+<li><a href="../../requesting-account/#generating-ssh-keys">Generating SSH Keys</a></li>
+<li><a href="https://headsigned.com/posts/configuring-different-ssh-keys-per-host/">Configuring different SSH keys per host</a> <ul>
+<li>In the ssh config file, the Host should be txe1-login*.mit.edu. This will work for accessing all SuperCloud login nodes.</li>
+<li>The HostName tag isn't needed.</li>
+</ul>
+</li>
+<li><a href="https://txe1-portal.mit.edu/sshkeys/">SSH Key Portal</a> and
+    instructions for <a href="../../requesting-account/#adding-your-ssh-keys-to-your-account">installing your ssh
+    key</a></li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 25, 2023</span>
       
     
   </small>
