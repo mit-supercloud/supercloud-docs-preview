@@ -900,7 +900,7 @@
         <li class="md-nav__item">
   <a href="#if-your-job-is-terminating-prematurely" class="md-nav__link">
     <span class="md-ellipsis">
-      If your job is terminating prematurely...
+      If your job is terminating prematurely
     </span>
   </a>
   
@@ -909,11 +909,11 @@
         <li class="md-nav__item">
   <a href="#if-your-job-is-running-slowly" class="md-nav__link">
     <span class="md-ellipsis">
-      If your job is running slowly...
+      If your job is running slowly
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="If your job is running slowly...">
+    <nav class="md-nav" aria-label="If your job is running slowly">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -990,19 +990,23 @@
 <p>If your job is terminating prematurely or taking longer than expected to
 complete, there are a couple of Linux commands that you can use to help
 diagnose the problem. These suggestions will require that some portion
-of your job is currently running, You\'ll have to log onto one of the
+of your job is currently running, You'll have to log onto one of the
 compute nodes where your job is running and execute a Linux command to
 obtain information about your process(es) running on that node.</p>
 <h3 id="how-to-log-onto-the-compute-node">How to log onto the compute node</h3>
 <p>To find out which compute node(s) your job is running on, use the
 <code>LLstat</code> command on one of the login nodes. You can find the names of
 the compute nodes in the NODELIST(REASON) column.</p>
-<p>Then log onto one of the compute nodes by issuing the <code>ssh</code>command:</p>
+<p>Then log onto one of the compute nodes by issuing the <code>ssh</code> command:</p>
 <p><code>$ ssh &lt;compute-node-name&gt;.mit.edu</code></p>
-<p>Now you\'ll be logged onto a compute node where one or more of your
+<p>Now you'll be logged onto a compute node where one or more of your
 processes is running. The following sections will help you gather more
 information about your running job.</p>
-<h2 id="if-your-job-is-terminating-prematurely">If your job is terminating prematurely...</h2>
+<h2 id="if-your-job-is-terminating-prematurely">If your job is terminating prematurely</h2>
+<!--
+TODO: update the link for finding memory requirements once all of the pages have been re-organized
+-->
+
 <p>One common reason jobs terminate prematurely is because the node runs
 out of memory. We have instructions for checking the memory usage of a
 completed job on the page <a href="https://TBD/finding-memory-requirements">Finding the Memory Requirements of My
@@ -1012,19 +1016,19 @@ your process(es) is using on a particular node.</p>
 <p>Once you have logged onto the compute node, use the Linux <code>top</code> command
 to see information about your process(es) running on that node. Although
 there may be other processes belonging to other users also running on
-the compute node, you\'ll see only your processes.</p>
+the compute node, you'll see only your processes.</p>
 <p>Below is a snippet of sample output from the <code>top</code> command. The output
 is automatically refreshed every 3 seconds. You can click on the
-screenshot to view a larger version, then use the browser\'s back arrow
+screenshot to view a larger version, then use the browser's back arrow
 to return to this page.</p>
 <p>In the tasks section of the output (below the white line), you will see
 information about your individual processes. The RES column shows the
 physical memory used by each process, and the %MEM column shows the
 percentage of the total system RAM being used by each process. This will
 help you determine whether your process is using too much memory.</p>
-<p>Enter \'q\' (no quotes) to return to the Linux shell prompt.</p>
-<p>[<img alt="Top command memory 4 nodes using 3.4% of the memory of the total system RAM" src="../images/MatMulTest04-1-4-2-top-cropped_0.png" title="Using top to check memory usage." /> </p>
-<h2 id="if-your-job-is-running-slowly">If your job is running slowly...</h2>
+<p>Enter 'q' (for quit) to return to the Linux shell prompt.</p>
+<p><img alt="Top command memory 4 nodes using 3.4% of the memory of the total system RAM" src="../images/MatMulTest04-1-4-2-top-cropped_0.png" title="Using top to check memory usage." /> </p>
+<h2 id="if-your-job-is-running-slowly">If your job is running slowly</h2>
 <p>If your job is taking much longer to run than you expect, one possible
 explanation is that your processes may not be properly distributed
 across the processors on the node. You can log onto the compute node and
@@ -1034,11 +1038,11 @@ the processors on the node.</p>
 to see information about load distribution.</p>
 <p>Below are some sample output screens from the <code>htop</code> command. The output
 is automatically refreshed every 3 seconds. You can click on the
-screenshot to view a larger version, then use the browser\'s back arrow
+screenshot to view a larger version, then use the browser's back arrow
 to return to this page.</p>
 <p>The <code>htop</code> output displays instantaneous cpu usage (specified as a
 percentage) for each process. In the sample screenshots below, the
-compute node that we\'re looking at has 256 processors, which are
+compute node that we're looking at has 256 processors, which are
 numbered 1 - 256. The progress bar next to each process describes its
 usage.</p>
 <p>Beneath the cpu usage section, you'll see "Load average", a set of 3 values
@@ -1052,24 +1056,26 @@ example, we specified [1 4 2], which means:</p>
 <ul>
 <li>we want to use 1 compute node</li>
 <li>we want to launch 4 MATLAB® processes per node</li>
-<li>we want to limit the number of OpenMP threads to 2\</li>
+<li>we want to limit the number of OpenMP threads to 2</li>
 </ul>
-<p>Enter \'q\' (no quotes) to return to the Linux shell prompt.</p>
+<p>Enter 'q' (for quit) to return to the Linux shell prompt.</p>
 <h3 id="well-distributed-processes">Well distributed processes</h3>
 <p>In this first <code>htop</code> screenshot, we see that our 4 MATLAB® processes are
-running on different processors. You can click on the screenshot to view
-a larger version, then use the browser\'s back arrow to return to this
-page.</p>
-<p>[<img alt="MatMulTest htop 256 procs good distribution with 4 processes working concurrently" src="../images/MatMulTest04-1-4-2-htop-256-procs-good-distr.png" title="Using htop to view distribution for application that is well distributed." /></p>
+running on different processors. </p>
+<!-- TODO - check to see why this next line is not valid for this screenshot: You can click on the screenshot to view
+a larger version, then use the browser's back arrow to return to this
+page.
+-->
+
+<p><img alt="MatMulTest htop 256 procs good distribution with 4 processes working concurrently" src="../images/MatMulTest04-1-4-2-htop-256-procs-good-distr.png" title="Using htop to view distribution for application that is well distributed." /></p>
 <h3 id="improperly-distributed-processes">Improperly distributed processes</h3>
 <p>In this second <code>htop</code> screenshot, it looks like all of the work is being
 performed by a single processor. If you monitor <code>htop</code> for a while and
 see that only a single processor seems to be performing the work most of
 the time, contact <a href="mailto:supercloud@mit.edu">supercloud@mit.edu</a>; we can
 provide some recommendations on how to get the processes distributed
-properly. You can click on the screenshot to view a larger version, then
-use the browser\'s back arrow to return to this page.</p>
-<p>[<img alt="MatMulTest htop 256 procs poor distribution, submitted to work on 4 processors but all the work is being done by a single process." src="../images/MatMulTest04-1-4-2-htop-256-procs-bad-distr.png" title="MatMulTest htop 256 procs poor distribution, submitted to work on 4 processors but all the work is being done by a single process" /></p>
+properly. </p>
+<p><img alt="MatMulTest htop 256 procs poor distribution, submitted to work on 4 processors but all the work is being done by a single process." src="../images/MatMulTest04-1-4-2-htop-256-procs-bad-distr.png" title="MatMulTest htop 256 procs poor distribution, submitted to work on 4 processors but all the work is being done by a single process" /></p>
 <h3 id="_1"></h3>
 
   <hr>
@@ -1077,7 +1083,7 @@ use the browser\'s back arrow to return to this page.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2023</span>
       
     
   </small>
