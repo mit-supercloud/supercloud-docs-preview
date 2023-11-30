@@ -63,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#shell-scriptusing-environment-variables-in-a-linux-shell-script" class="md-skip">
+        <a href="#using-environment-variables-in-a-linux-shell-script" class="md-skip">
           Skip to content
         </a>
       
@@ -887,13 +887,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#shell-scriptusing-environment-variables-in-a-linux-shell-script" class="md-nav__link">
+  <a href="#using-environment-variables-in-a-linux-shell-script" class="md-nav__link">
     <span class="md-ellipsis">
-      []{#shell-script}Using environment variables in a Linux shell script
+      Using environment variables in a Linux shell script
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="[]{#shell-script}Using environment variables in a Linux shell script">
+    <nav class="md-nav" aria-label="Using environment variables in a Linux shell script">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -929,13 +929,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#slurmusing-slurm-environment-variables" class="md-nav__link">
+  <a href="#using-slurm-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      []{#slurm}Using Slurm environment variables
+      Using Slurm environment variables
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="[]{#slurm}Using Slurm environment variables">
+    <nav class="md-nav" aria-label="Using Slurm environment variables">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -962,13 +962,13 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pythonusing-environment-variables-in-python" class="md-nav__link">
+  <a href="#using-environment-variables-in-python" class="md-nav__link">
     <span class="md-ellipsis">
-      []{#python}Using environment variables in Python
+      Using environment variables in Python
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="[]{#python}Using environment variables in Python">
+    <nav class="md-nav" aria-label="Using environment variables in Python">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1061,6 +1061,12 @@
       <a href="../../tags/#tips-and-best-practices" class="md-tag">Tips and Best Practices</a>
     
   
+    
+    
+    
+      <a href="../../tags/#linux" class="md-tag">Linux</a>
+    
+  
 </nav>
 
 
@@ -1079,15 +1085,15 @@ Modules</a> page for directions on how to use
 modulefiles.</p>
 <p>On this page, we will go over how to use environment variables in:</p>
 <ul>
-<li><a href="#shell-scrpt">Linux shell script</a></li>
-<li><a href="#slurm">Slurm environment</a></li>
-<li><a href="#python">Python</a></li>
-<li><a href="#matlab">MATLAB®</a></li>
+<li>Linux shell script</li>
+<li>Slurm environment</li>
+<li>Python</li>
+<li>MATLAB®</li>
 </ul>
-<p>In the instructions below, <em>VARNAME</em> is the name of the environment
-variable, and <em>value</em> is the value assigned to the environment variable.
+<p>In the instructions below, <code>VARNAME</code> is the name of the environment
+variable, and <code>value</code> is the value assigned to the environment variable.
 By convention, environment variable names are all UPPERCASE.</p>
-<h2 id="shell-scriptusing-environment-variables-in-a-linux-shell-script">[]{#shell-script}Using environment variables in a Linux shell script</h2>
+<h2 id="using-environment-variables-in-a-linux-shell-script">Using environment variables in a Linux shell script</h2>
 <h3 id="bash-shell-variable-naming">bash shell variable naming</h3>
 <p>The Linux bash shell is pretty particular with its variable names. A
 name is a word consisting only of alphanumeric characters and
@@ -1101,8 +1107,8 @@ underscore. In addition, there are a few naming conventions:</p>
 </ul>
 <h3 id="to-get-the-value-of-an-environment-variable">To get the value of an environment variable</h3>
 <p>In a Linux shell script, you get the value of an environment variable by
-adding the dollar sign \$ in front of the environment variable name.</p>
-<p>\$<em>VARNAME</em></p>
+adding the dollar sign <code>$</code> in front of the environment variable name.</p>
+<p><code>$VARNAME</code></p>
 <p>Example of saving the value of an environment variable to a variable
 local to your script:</p>
 <p><code>path_to_data=$IMAGENET_PATH</code></p>
@@ -1115,19 +1121,19 @@ in effect while your script and any child processes that it creates
 are running. Environment variables are local to the process in which
 they were set. When a child process is created, it inherits all the
 environment variables and their values from the parent process.</p>
-<p><em>VARNAME</em>=<em>value</em></p>
+<p><code>VARNAME=value</code></p>
 <p>Example of setting the value of an environment variable:</p>
 <p><code>IMAGENET_PATH=/home/gridsan/groups/datasets/ImageNet</code></p>
 <p>Notice that there are no spaces on either side of the equals sign. In
 Linux, there must not be any spaces around the equals sign when
 assigning a value to an environment variable.</p>
-<h2 id="slurmusing-slurm-environment-variables">[]{#slurm}Using Slurm environment variables</h2>
+<h2 id="using-slurm-environment-variables">Using Slurm environment variables</h2>
 <p>Once a job is submitted to Slurm, Slurm provides information about its
 execution environment through environment variables. For example: the
 working directory, the job id, total number of tasks in a job array, job
 array id number. These Slurm environment variables may be useful in your
 code and for monitoring your jobs.</p>
-<p>You can find a full list of Slurm\'s environment variables on these
+<p>You can find a full list of Slurm's environment variables on these
 pages:</p>
 <ul>
 <li><a href="https://slurm.schedmd.com/sbatch.html#SECTION_INPUT-ENVIRONMENT-VARIABLES">Slurm input environment
@@ -1136,40 +1142,40 @@ pages:</p>
     variables</a></li>
 </ul>
 <h3 id="to-get-the-value-of-an-environment-variable_1">To get the value of an environment variable</h3>
-<p>To get the value of a Slurm environment variable, add a dollar sign \$
+<p>To get the value of a Slurm environment variable, add a dollar sign <code>$</code>
 in front of the environment variable name.</p>
-<p>\$<em>VARNAME</em></p>
+<p><code>$VARNAME</code></p>
 <p>Example of passing the array task id and count as parameters to your
 python code:</p>
 <p><code>python test.py $SLURM_ARRAY_TASK_ID $SLURM_ARRAY_TASK_COUNT</code></p>
 <h3 id="setting-the-value-of-an-environment-variable">Setting the value of an environment variable</h3>
 <p>The Slurm input environment variables are assigned values based on the
 flags that are passed to Slurm when the job is submitted.</p>
-<h2 id="pythonusing-environment-variables-in-python">[]{#python}Using environment variables in Python</h2>
+<h2 id="using-environment-variables-in-python">Using environment variables in Python</h2>
 <h3 id="to-get-the-value-of-an-environment-variable_2">To get the value of an environment variable</h3>
-<p><code>import os</code>\
-<code>os.environ.get('</code><em><code>VARNAME</code></em><code>')</code>\
-<code>os.getenv('</code><em><code>VARNAME</code></em><code>')</code></p>
+<p><code>import os</code>
+<code>os.environ.get('VARNAME')</code>
+<code>os.getenv('VARNAME')</code></p>
 <h3 id="to-set-the-value-of-an-environment-variable_1">To set the value of an environment variable</h3>
 <p>In Python, when you set an environment variable, it is set for the
 Python session.</p>
-<p><code>import os</code>\
-<code>os.environ['</code><em><code>VARNAME</code></em><code>'] = '</code><em><code>value</code></em><code>'</code></p>
+<p><code>import os</code>
+<code>os.environ['VARNAME'] = 'value'</code></p>
 <p>It's important to remember that the settings you apply in a
 Python script don't work outside that specific process; os.environ
 doesn't overwrite the environment variables system-wide.</p>
 <h2 id="using-environment-variables-in-matlab">Using environment variables in MATLAB®</h2>
 <h3 id="to-get-the-value-of-an-environment-variable_3">To get the value of an environment variable</h3>
-<p><code>getenv('</code><em><code>VARNAME</code></em><code>')</code></p>
+<p><code>getenv('VARNAME')</code></p>
 <h3 id="to-set-the-value-of-an-environment-variable_2">To set the value of an environment variable</h3>
-<p><code>setenv('</code><em><code>VARNAME</code></em><code>','</code><em><code>value</code></em><code>')</code></p>
+<p><code>setenv('VARNAME','value')</code></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2023</span>
       
     
   </small>
