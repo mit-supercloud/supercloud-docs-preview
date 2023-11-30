@@ -1025,12 +1025,14 @@ order to operate in mimo mode.</p>
 <p>To generate the text file which will contain a list of files to process, log into the login node via ssh or in a Jupyter Notebook Terminal window and issue the following commands at the Linux Command line:</p>
 <p><code>$ cd</code><em><code>datasetPath</code></em>\
 <code>$ lfs find "$(pwd -P)" | grep "</code><em><code>fileSearchPattern</code></em><code>" | sort &gt; ./</code><em><code>inputFilename</code></em></p>
-<p>where:
-  - <em><code>datasetPath</code></em> is the path to your dataset
-  - <em><code>fileSearchPattern</code></em> is a Linux regular expression that the <code>grep</code>
-command uses to find filenames that you want to include,
-  - <em><code>inputFilename</code></em> is the name of the text file that will contain a
-list of all your data filenames</p>
+<p>where:</p>
+<ul>
+<li><code>datasetPath</code> is the path to your dataset</li>
+<li><code>fileSearchPattern</code> is a Linux regular expression that the <code>grep</code>
+command uses to find filenames that you want to include,</li>
+<li><code>inputFilename</code> is the name of the text file that will contain a
+list of all your data filenames</li>
+</ul>
 <p>Note that the <code>lfs</code> command in the example above can only be used if
 your files reside on the Lustre filesystem (somewhere within
 /home/gridsan). If your data files are located on a node's local disk
@@ -1054,13 +1056,13 @@ Sheet</a></li>
  <em><code>~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em> that end in <code>.txt</code> and
 save the list to a file called txt-files</p>
 <p>From the Linux command line, execute the following commands
-Command 1:
-<em><code>$ cd ~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em>
-Command 2:
-<em><code>$ lfs find "$(pwd -P)" | grep "\.txt$" | sort &gt; ./txt-files</code></em></p>
+- Command 1:
+     - <em><code>$ cd ~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em>
+- Command 2:
+     - <em><code>$ lfs find "$(pwd -P)" | grep "\.txt$" | sort &gt; ./txt-files</code></em></p>
 <p>The contents of the file txt-files is below</p>
-<p>$ cat ./txt-files
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a11.txt
+<p>$ cat ./txt-files</p>
+<p>/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a11.txt
 /home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a12.txt
 /home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a13.txt
 /home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt
@@ -1092,14 +1094,20 @@ Command 2:
 <em><code>~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em> that begin with a
 lowercase letter, followed by the number 2, and end in <code>.txt</code> and save
 the list to a file called az-2-txt-files</p>
-<p>From the Linux command line, execute the following commands
-Command 1:
-<em><code>$ cd ~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em>
-Command 2:
-<em><code>$ lfs find "$(pwd -P)" | grep "[a-z]2.*\.txt$" | sort &gt; ./az-2-txt-files</code></em></p>
+<p>From the Linux command line, execute the following commands</p>
+<ul>
+<li>Command 1:<ul>
+<li><em><code>$ cd ~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em></li>
+</ul>
+</li>
+<li>Command 2:<ul>
+<li><em><code>$ lfs find "$(pwd -P)" | grep "[a-z]2.*\.txt$" | sort &gt; ./az-2-txt-files</code></em></li>
+</ul>
+</li>
+</ul>
 <p>The contents of the file az-2-txt-files is below</p>
-<p><em><code>$ cat ./az-2-txt-files</code></em>
-/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt
+<p><em><code>$ cat ./az-2-txt-files</code></em></p>
+<p>/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt
 /home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a22.txt
 /home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a23.txt
 /home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b21.txt
