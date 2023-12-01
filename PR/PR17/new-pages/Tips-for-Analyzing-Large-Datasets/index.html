@@ -1023,8 +1023,10 @@ the mimo model and the changes to your application that are required in
 order to operate in mimo mode.</p>
 <h4 id="generating-the-list-of-files">Generating the list of files</h4>
 <p>To generate the text file which will contain a list of files to process, log into the login node via ssh or in a Jupyter Notebook Terminal window and issue the following commands at the Linux Command line:</p>
-<p><code>$ cd</code><em><code>datasetPath</code></em>\
-<code>$ lfs find "$(pwd -P)" | grep "</code><em><code>fileSearchPattern</code></em><code>" | sort &gt; ./</code><em><code>inputFilename</code></em></p>
+<ul>
+<li><code>$ cd datasetPath</code></li>
+<li><code>$ lfs find "$(pwd -P)" | grep "fileSearchPattern" | sort &gt; ./inputFilename</code></li>
+</ul>
 <p>where:</p>
 <ul>
 <li><code>datasetPath</code> is the path to your dataset</li>
@@ -1122,7 +1124,7 @@ the list to a file called az-2-txt-files</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 30, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 1, 2023</span>
       
     
   </small>
