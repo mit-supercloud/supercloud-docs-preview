@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.14">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -57,9 +57,6 @@
   
     <body dir="ltr">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -109,6 +106,9 @@
         </div>
       </div>
     </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -1881,8 +1881,8 @@ help you resolve the more common problems with running pMatlab jobs on
 the SuperCloud system. On this page, we'll go over:</p>
 <ul>
 <li><a href="#job-launch-problems">Problems launching a pMatlab job</a></li>
-<li><a href="#steps-to-sanity-check-and-debug">Steps to sanity check and debug</a></li>
-<li><a href="#handling-common-job-errors">Handling common job errors</a></li>
+<li><a href="../pmatlab-job-problems/#steps-to-sanity-check-and-debug">Steps to sanity check and debug</a></li>
+<li><a href="../pmatlab-job-problems/#common-problems-launching-or-running-your-pmatlab-job">Handling common job errors</a></li>
 </ul>
 <h2 id="job-launch-problems">Job Launch Problems</h2>
 <p>In this section, you'll find a series of questions and answers that
@@ -1903,7 +1903,7 @@ startup code that is called from those files) for calls to <code>clear all</code
 remove those calls. Make sure your pMatlab script and code does not use <code>clear all</code> either.</p>
 <h3 id="did-you-check-whether-there-are-resources-available-for-running-your-job">Did you check whether there are resources available for running your job?</h3>
 <p>From the MATLAB® command window, enter the
-<a href="../../using-the-system/monitoring-system-and-jobs">LLfree</a>
+<a href="../../using-the-system/monitoring-system-and-jobs/">LLfree</a>
 command and verify there are enough nodes and cores available for
 the CPU type that you requested. You can also enter LLfree at the
 Linux prompt if you are connected to the login node. Remember that
@@ -1913,16 +1913,16 @@ nodes available.</p>
 <h3 id="does-the-code-that-youre-trying-to-run-reside-on-the-supercloud">Does the code that you're trying to run reside on the SuperCloud?</h3>
 <p>In order to run a job on the SuperCloud system, every processor must have access to all functions/methods in the code you are executing and any data the program accesses. Since every node can access your SuperCloud home directory or group shared directories, placing your code and data in your home directory or any group shared directory makes them accessible to the entire system.</p>
 <p><strong>If your code is not on SuperCloud</strong>, copy your code and any files that are needed in order to run your
-job to somewhere in your SuperCloud home directory. See <a href="../../using-the-system/files-and-data/transferring-files">Accessing and Transferring Data and
+job to somewhere in your SuperCloud home directory. See <a href="../../using-the-system/files-and-data/transferring-files/">Accessing and Transferring Data and
 Files</a> for instructions on how to copy your files to  SuperCloud.</p>
 <p><strong>If your code is on SuperCloud</strong>, confirm that your MATLAB® current working directory is somewhere in
 your SuperCloud home directory by running the <code>pwd</code> command.</p>
 <h3 id="-did-you-try-running-the-param_sweep-example-in-your-supercloud-home-directory">- Did you try running the Param_Sweep example in your SuperCloud home directory?</h3>
 <p>The <code>Param_Sweep</code> example is located in <code>$HOME/examples/Param_Sweep</code>.</p>
 <p><strong>No:</strong> For instructions on how to run the <code>Param_Sweep</code> example, see the
-<a href="verify-pMatlab-setup.md">Verifying Your pMatlab Setup</a> page.</p>
+<a href="../verify-pmatlab-setup/">Verifying Your pMatlab Setup</a> page.</p>
 <p><strong>Yes, it worked:</strong> the problem is probably in your code somewhere. Look in your job's
-log files for errors or other clues. See the page on <a href="../finding-pmatlab-output.md">Finding Your pMatlab Output</a>.</p>
+log files for errors or other clues. See the page on <a href="../finding-pmatlab-output/">Finding Your pMatlab Output</a>.</p>
 <h3 id="youve-tried-and-confirmed-everything-here-and-you-still-cant-launch-a-pmatlab-job">You've tried and confirmed everything here and you still can't launch a pMatlab job</h3>
 <p>If you've tried and confirmed all of the above items and still can't
 launch a pMatlab job, please let us know what you've tried, and also
@@ -2085,27 +2085,44 @@ as well as your local process.
 <p>Here is a list of webpages that were mentioned here, plus some others
 that might be helpful:</p>
 <ul>
-<li><a href="verify-pMatlab-setup.md">Verifying Your pMatlab Setup</a></li>
-<li><a href="../pmatlab-job-problems">Troubleshooting pMatlab Job Problems</a></li>
-<li><a href="../finding-pmatlab-output">Finding Your Output</a></li>
-<li><a href="../launching-pmatlab-jobs#triples-mode-launch">Triples Mode</a></li>
-<li><a href="../../using-the-system/files-and-data/transferring-files">Accessing and Transferring Data and Files</a></li>
+<li><a href="../verify-pmatlab-setup/">Verifying Your pMatlab Setup</a></li>
+<li><a href="../pmatlab-job-problems/">Troubleshooting pMatlab Job Problems</a></li>
+<li><a href="../finding-pmatlab-output/">Finding Your Output</a></li>
+<li><a href="../launching-pmatlab-jobs/#triples-mode-launch">Triples Mode</a></li>
+<li><a href="../../using-the-system/files-and-data/transferring-files/">Accessing and Transferring Data and Files</a></li>
 <li><a href="https://learn.llx.edly.io/course/practical-hpc">LLx Online Courses</a>: Practical HPC course, "Distributed Applications" module</li>
-<li><a href="../pmatlab-getting-started">pMatlab: Getting Started</a></li>
-<li><a href="../launching-pmatlab-jobs">Launching pMatlab Jobs on the SuperCloud Systems</a></li>
-<li><a href="../pmatlab-job-errors">Troubleshooting SuperCloud pMatlab Job Errors</a></li>
+<li><a href="../pmatlab-getting-started/">pMatlab: Getting Started</a></li>
+<li><a href="../launching-pmatlab-jobs/">Launching pMatlab Jobs on the SuperCloud Systems</a></li>
+<li><a href="../pmatlab-job-errors/">Troubleshooting SuperCloud pMatlab Job Errors</a></li>
 </ul>
 
-  <hr>
-<div class="md-source-file">
-  <small>
+
+
+
+
+
+
+  
     
-      Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 22, 2023</span>
+  
+  
+
+
+  <aside class="md-source-file">
+    
       
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2023</span>
+  </span>
+
     
-  </small>
-</div>
+    
+    
+    
+  </aside>
 
 
 
@@ -2116,6 +2133,7 @@ that might be helpful:</p>
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -2151,7 +2169,7 @@ that might be helpful:</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.cd18aaf1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
         <script src="../../js/open_in_new_tab.js"></script>
       

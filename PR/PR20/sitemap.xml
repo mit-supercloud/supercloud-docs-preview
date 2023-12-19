@@ -2,252 +2,282 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://supercloud.mit.edu/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/acknowledging-us/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/faqs/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/getting-help/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/getting-started/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/glossary/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/online-courses/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/requesting-account/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/systems-and-software/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/tags/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/tensorboard/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/Segmentation-Faults/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/Tips-for-Analyzing-Large-Datasets/</loc>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/code-and-data-location/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/datasets/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/disk-space/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/file-locking/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/finding-pmatlab-output/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/fixing-windows-scripts/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/glossary-of-unix-terms/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/gridmatlab-env-vars/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/installing-wsl/</loc>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/jupyter-notebook-conversion/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/jupyter-notebooks-best-practices/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/launching-pmatlab-jobs/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/llcopy2tmp/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/llmapreduce/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/pmatlab-getting-started/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/pmatlab-job-errors/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/pmatlab-job-problems/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/pmatlab-troubleshooting-checklist/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/practices/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/preferred-shells/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/python-troubleshooting-checklist/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/resource-limit-enforcement-and-increases/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/running-matlab/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/screen/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/ssh-troubleshooting-checklist/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/troubleshoot-jupyter-notebooks/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/using-environment-vars/</loc>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/using-top-and-htop/</loc>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/using-trusted-x-forwarding/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/verify-pmatlab-setup/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/where-to-find-examples/</loc>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/databases/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/jupyter-notebooks/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/monitoring-system-and-jobs/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/software-packages/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/web-portal/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/best-practices/filesystem/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/best-practices/gpu-jobs/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/files-and-data/shared-groups/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/files-and-data/transferring-files/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/submitting-jobs/job-array-triples/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/using-the-system/submitting-jobs/submitting-jobs/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://supercloud.mit.edu/tags/</loc>
-         <lastmod>2023-11-30</lastmod>
+         <lastmod>2023-12-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
