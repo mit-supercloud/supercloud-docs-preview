@@ -1550,6 +1550,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../segmentation-faults/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Segmentation Faults
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1606,6 +1627,27 @@
   
   <span class="md-ellipsis">
     Best Practices for using the Filesystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-for-analyzing-large-datasets/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tips for Analyzing Large Datasets
   </span>
   
 
@@ -1722,6 +1764,69 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../where-to-find-examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Where to Find Examples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing-wsl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing Windows Subsystem for Linux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-environment-vars/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Environment Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1799,6 +1904,27 @@
   
   <span class="md-ellipsis">
     X Forwarding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-top-and-htop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Profiling with top and htop
   </span>
   
 
@@ -2449,7 +2575,7 @@ lot of time here. You can find an example of code modified to use mimo
 mode in the description of the <code>--apptype</code> option below.</p>
 <h2 id="llmapreduce-examples">LLMapReduce Examples</h2>
 <p>We offer a few basic examples in the <a href="#examples">Examples</a> section on
-this page. You can also find more examples on the <a href="new-pages/where-to-find-examples.md">Where to Find
+this page. You can also find more examples on the <a href="../where-to-find-examples/">Where to Find
 Examples</a> page.</p>
 <!--
 TODO: Add link to examples page
@@ -2649,7 +2775,7 @@ the following environment variables are available for your use.</p>
 </ul>
 </li>
 </ul>
-<p>See our page, <a href="TBD/using-environment-vars.md">How to Use Environment Variables</a>,
+<p>See our page, <a href="../using-environment-vars/">How to Use Environment Variables</a>,
 for information on using environment variables.</p>
 <!--
 TODO: Update link when we move the page
@@ -2689,7 +2815,7 @@ filename pairs: an input data filename and its corresponding output
 filename. Each of the launched processes will be given, as an argument,
 the name of one of the <code>input_&lt;#&gt;</code> files. The number of these
 <code>input_&lt;#&gt;</code> is determined by the value of the <code>--np</code> or <code>--ndata</code>
-parameter that is used. See the <a href="../resource-limit-enforcement-and-increases">Resource Limit
+parameter that is used. See the <a href="../resource-limit-enforcement-and-increases/">Resource Limit
 Enforcement</a> page for
 the default values for <code>--np</code> based on the cpu type.</p>
 <p>The advantage of using the mimo model is that your application is called
@@ -2985,7 +3111,7 @@ would minimize the number of unprocessed files in your job submission.</p>
 <p>The <code>‑‑np</code> option allows you to specify the number of processes that
 will be launched to run your application. You can specify just the total
 number of processes you want to use and allow the scheduler to determine
-how to distribute the processes among the nodes, or you can use <a href="TBD/triples-mode">Triples
+how to distribute the processes among the nodes, or you can use <a href="../../using-the-system/submitting-jobs/submitting-jobs/#triples-mode">Triples
 Mode</a> to specify how you would like the processes to
 be distributed across the nodes.</p>
 <p>To specify the number of processes to launch, use one of the following
@@ -2993,7 +3119,7 @@ be distributed across the nodes.</p>
 <ul>
 <li>Let the scheduler distribute the processes: <code>‑‑np=N</code>, where <code>N</code> = total number of processes.</li>
 <li>
-<p>Use <a href="../../using-the-system/submitting-jobs/submitting-jobs#triples-mode">Triples Mode</a> to specify how the processes
+<p>Use <a href="../../using-the-system/submitting-jobs/submitting-jobs/#triples-mode">Triples Mode</a> to specify how the processes
     will be distributed: <code>‑‑np=[Nnode,Nppn,Ntpp]</code>, where:</p>
 <ul>
 <li><code>Nnode</code> = number of nodes</li>
@@ -3005,30 +3131,22 @@ and there should <em>not</em> be any spaces separating the
 entries.</p>
 <p>You can find additional information on triples mode job launches
 (including tips on how to tune your triples for best performance) on
-the <a href="../../using-the-system/submitting-jobs/submitting-jobs#triples-mode">Triples Mode</a> page.</p>
+the <a href="../../using-the-system/submitting-jobs/submitting-jobs/#triples-mode">Triples Mode</a> page.</p>
 </li>
 </ul>
 <p>Without also using the <code>--ndata</code> option, all data will be evenly
 distributed to the given number of processes.</p>
 <p>The input files will be evenly distributed to the processes. By default,
 the number of processes to launch is set to your default allotment (see
-the <a href="TBD/resource-limit-enforcement-and-increases">Resource
+the <a href="../resource-limit-enforcement-and-increases/">Resource
 Enforcement</a> page for
 the default allotments based on cpu type).</p>
-<!--
-TODO: Update link when we have the page
--->
-
 <p><code>--np</code> is not a required option. If you don't specify the number of
 processes, the number of processes that will be launched to run your
 application is equal to the default number of processes that you are
-allocated for the requested CPU type (see the <a href="TBD/resource-limit-enforcement-and-increases">Resource
+allocated for the requested CPU type (see the <a href="../resource-limit-enforcement-and-increases/">Resource
 Limits</a> page for the
 default allocations by CPU type).</p>
-<!--
-TODO: Update link when we have the page
--->
-
 <p>If you specify a number of processes that is greater than the number
 that you're allotted by default, the extra processes will be queued,
 waiting for your other processes to finish. After a process terminates,

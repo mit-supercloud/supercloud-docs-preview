@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/screen/">
+        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/tips-for-analyzing-large-datasets/">
       
       
-        <link rel="prev" href="../using-environment-vars/">
+        <link rel="prev" href="../../using-the-system/best-practices/filesystem/">
       
       
-        <link rel="next" href="../using-trusted-x-forwarding/">
+        <link rel="next" href="../../using-the-system/best-practices/gpu-jobs/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Screen - SuperCloud Docs</title>
+        <title>Tips for Analyzing Large Datasets - SuperCloud Docs</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#remember-your-login-node" class="md-skip">
+        <a href="#construct-a-filename" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Screen
+              Tips for Analyzing Large Datasets
             
           </span>
         </div>
@@ -1210,19 +1210,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -1236,7 +1238,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Best Practices
@@ -1268,10 +1270,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tips-for-analyzing-large-datasets/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tips for Analyzing Large Datasets
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1280,6 +1300,90 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#construct-a-filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construct a filename
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-another-file-that-lists-the-full-file-paths-of-each-file-in-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create another file that lists the full file paths of each file in the dataset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create another file that lists the full file paths of each file in the dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#siso-vs-mimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      "siso" vs "mimo"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-the-list-of-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating the list of files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating the list of files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1466,21 +1570,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
@@ -1494,7 +1596,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             How To
@@ -1505,28 +1607,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Screen
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../screen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1535,42 +1619,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#remember-your-login-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remember your login node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-screen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using screen
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1836,20 +1884,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#remember-your-login-node" class="md-nav__link">
+  <a href="#construct-a-filename" class="md-nav__link">
     <span class="md-ellipsis">
-      Remember your login node
+      Construct a filename
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-screen" class="md-nav__link">
+  <a href="#create-another-file-that-lists-the-full-file-paths-of-each-file-in-the-dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      Using screen
+      Create another file that lists the full file paths of each file in the dataset
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Create another file that lists the full file paths of each file in the dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#siso-vs-mimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      "siso" vs "mimo"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-the-list-of-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating the list of files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating the list of files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1872,80 +1968,153 @@
     
     
     
-      <a href="../../tags/#tips-and-best-practices" class="md-tag">Tips and Best Practices</a>
+      <a href="../../tags/#file-system" class="md-tag">File System</a>
     
   
     
     
     
-      <a href="../../tags/#how-to" class="md-tag">How To</a>
+      <a href="../../tags/#tips-and-best-practices" class="md-tag">Tips and Best Practices</a>
     
   
 </nav>
 
 
 
-  <h1>Screen</h1>
+  <h1>Tips for Analyzing Large Datasets</h1>
 
-<p>If you ssh to one of the SuperCloud login nodes and need to run a script or
-command(s) that you expect to take a while to complete, you should use
-the Linux <code>screen</code> command which will keep processes running even if you
-lose your connection. If your ssh connection drops for some reason,
-<code>screen</code> allows you to reattach to a previous session so you can finish
-your task.</p>
-<p>If you will be doing a lot of work in an interactive session on a
-compute node, you should also use the <code>screen</code> command so that your
-interactive session isn't killed if you lose your connection.</p>
-<h3 id="remember-your-login-node">Remember your login node</h3>
-<p>It is important to make a note of which login node you are logged into
-when you issue the <code>screen</code> command. If you lose your connection, you
-will have to log back into the same login node in order to find and
-restore your screen session.</p>
-<p>To see which login node you are currently logged into, from your ssh
-terminal, run:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$HOSTNAME</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>login-4
-</span></code></pre></div>
-<p>If you lose your ssh connection and need to restore your screen session,
-you'll have to log back in to the same login node you were on when you
-created your screen session:</p>
-<p><code>$ ssh USERNAME@txe1-login4.mit.edu</code></p>
-<h3 id="using-screen">Using screen</h3>
-<p>Here are the very basics that you need to know in order to use the
-<code>screen</code> command.  You can find a more detailed introduction to <code>screen</code>
-<a href="https://linuxize.com/post/how-to-use-linux-screen/">here</a> (ignore
-the sections on installing it; it is already installed on SuperCloud).</p>
-<p><strong>Create a screen session</strong></p>
-<p>With <code>screen</code> you can create one or more sessions in your current SSH
-terminal. To start it, just run:</p>
-<p><code>$ screen</code></p>
-<p>This creates a screen session in your current ssh terminal.</p>
-<p>Here are the most important <code>screen</code> commands that you need to control
-<code>screen</code>. These commands begin with <code>CTRL-a</code> to distinguish them from
-normal shell commands.</p>
-<p><code>Ctrl-a c</code>    Create a new screen session so that you can use more than
-one screen session at once.
-<code>Ctrl-a n</code>    Switch to the next screen session (if you use more than
-one).
-<code>Ctrl-a p</code>    Switch to the previous screen session (if you use more
-than one).
-<code>Ctrl-a d</code>    Detach a screen session (without killing the processes in
-it - they continue).</p>
-<p>To close a screen session where all tasks are finished, type:</p>
-<p><code>exit</code></p>
-<p><strong>Get a list of your screen sessions</strong></p>
-<p>Back in a regular ssh terminal on the login node where you created your
-screen session, you can get a list of your current screen sessions by
-typing:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ screen -ls
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>There is a screen on:
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        76645.pts-46.login-4 (Detached)
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>1 Socket in /run/screen/S-AN23082.
-</span></code></pre></div>
-<p><strong>Reconnect to a screen session</strong></p>
-<p>To reconnect to the session, make sure you are logged in to the proper
-login node, then run:</p>
-<p><code>$ screen -r 76645</code></p>
+<p>If you are analyzing a dataset with a large number of files, avoid using
+<code>dir</code>, <code>ls</code>, and any other commands that scan the file system. Running
+thousands of file system scans can overload the file system. Here are
+some tips for working with large datasets.</p>
+<h3 id="construct-a-filename">Construct a filename</h3>
+<p>Instead of getting a list of all the files, it is better to construct a
+filename and check to see if that filename exists before reading or
+creating the file.</p>
+<h3 id="create-another-file-that-lists-the-full-file-paths-of-each-file-in-the-dataset">Create another file that lists the full file paths of each file in the dataset</h3>
+<p>Before launching your job, create a text file that lists the full paths
+of each file in the dataset. Each processor that is processing the data
+can read in this single file and won't need to execute <code>ls</code> or any other
+metadata intensive operations to get the filenames. This also makes it
+easy to divide up the files amongst processors in a nice "mimo" (multiple inputs, multiple outputs) manner
+that minimizes the number of starts and stops, compared to a "siso" (single input, single output)
+model.</p>
+<h4 id="siso-vs-mimo">"siso" vs "mimo"</h4>
+<p>"siso" is an acronym for single input, single output. In a siso model,
+a single process calls your application multiple times to process all of
+the input files that are assigned to it. Each time your application is
+called, the software or program is loaded, it processes a single input file, then the software is unloaded. 
+unloaded.</p>
+<p>"mimo" is an acronym for multiple input, multiple output. The
+advantage of using a mimo model is that your application is called and
+loaded just once to process all of its assigned input files. When your
+application starts, it should read the text file containing the list of
+the data files and process the appropriate subset of files before being unloaded.</p>
+<!--
+TODO: Add link to the LLMapReduce page when available
+-->
+
+<p>See the <a href="https://TBD/llmapreduce">LLMapReduce</a> page, particularly the section discussion the
+<em><code>--apptype=APPLICATION-TYPE</code></em> option for a more detailed explanation of
+the mimo model and the changes to your application that are required in
+order to operate in mimo mode.</p>
+<h4 id="generating-the-list-of-files">Generating the list of files</h4>
+<p>To generate the text file which will contain a list of files to process, log into the login node via ssh or in a Jupyter Notebook Terminal window and issue the following commands at the Linux Command line:</p>
+<ul>
+<li><code>$ cd datasetPath</code></li>
+<li><code>$ lfs find "$(pwd -P)" | grep "fileSearchPattern" | sort &gt; ./inputFilename</code></li>
+</ul>
+<p>where:</p>
+<ul>
+<li><code>datasetPath</code> is the path to your dataset</li>
+<li><code>fileSearchPattern</code> is a Linux regular expression that the <code>grep</code>
+command uses to find filenames that you want to include,</li>
+<li><code>inputFilename</code> is the name of the text file that will contain a
+list of all your data filenames</li>
+</ul>
+<p>Note that the <code>lfs</code> command in the example above can only be used if
+your files reside on the Lustre filesystem (somewhere within
+/home/gridsan). If your data files are located on a node's local disk
+(in <code>$TMPDIR</code> or <code>/state/partition1</code>), drop <code>lfs</code> from the beginning of
+the command above.</p>
+<p>Unfortunately, you can't use regular wildcards (for example: *.txt) to
+identify the files that you want to match because the <code>grep</code> command
+expects a regular expression.  You can find information on how to use
+regular expressions in Linux from these external websites (link will
+open in a new tab):</p>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux">Using Grep &amp; Regular Expressions to Search for Text Patterns in
+Linux</a></li>
+<li><a href="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285">Regex tutorial - A quick cheatsheet by
+examples</a></li>
+<li><a href="https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php">Linux Tutorial - Cheat
+Sheet</a></li>
+</ul>
+<h5 id="example-1">Example 1</h5>
+<p>Generate a file containing a list of files within
+ <em><code>~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em> that end in <code>.txt</code> and
+save the list to a file called txt-files</p>
+<p>From the Linux command line, execute the following commands
+- Command 1:
+     - <em><code>$ cd ~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em>
+- Command 2:
+     - <em><code>$ lfs find "$(pwd -P)" | grep "\.txt$" | sort &gt; ./txt-files</code></em></p>
+<p>The contents of the file txt-files is below</p>
+<p>$ cat ./txt-files</p>
+<p>/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a11.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a12.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a13.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a31.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a32.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a33.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b11.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b12.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b13.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b31.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b32.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b33.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c11.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c12.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c13.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c31.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c32.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c33.txt</p>
+<h5 id="example-2">Example 2</h5>
+<p>Generate a file containing a list of files within
+<em><code>~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em> that begin with a
+lowercase letter, followed by the number 2, and end in <code>.txt</code> and save
+the list to a file called az-2-txt-files</p>
+<p>From the Linux command line, execute the following commands</p>
+<ul>
+<li>Command 1:<ul>
+<li><em><code>$ cd ~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em></li>
+</ul>
+</li>
+<li>Command 2:<ul>
+<li><em><code>$ lfs find "$(pwd -P)" | grep "[a-z]2.*\.txt$" | sort &gt; ./az-2-txt-files</code></em></li>
+</ul>
+</li>
+</ul>
+<p>The contents of the file az-2-txt-files is below</p>
+<p><em><code>$ cat ./az-2-txt-files</code></em></p>
+<p>/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c23.txt</p>
 
 
 
@@ -1966,7 +2135,7 @@ login node, then run:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2023</span>
   </span>
 
     

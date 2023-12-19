@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/screen/">
+        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/segmentation-faults/">
       
       
-        <link rel="prev" href="../using-environment-vars/">
+        <link rel="prev" href="../ssh-troubleshooting-checklist/">
       
       
-        <link rel="next" href="../using-trusted-x-forwarding/">
+        <link rel="next" href="../../using-the-system/best-practices/filesystem/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Screen - SuperCloud Docs</title>
+        <title>Segmentation Faults - SuperCloud Docs</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#remember-your-login-node" class="md-skip">
+        <a href="#what-is-a-segmentation-fault" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Screen
+              Segmentation Faults
             
           </span>
         </div>
@@ -1061,19 +1061,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -1087,7 +1089,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Troubleshooting
@@ -1182,10 +1184,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../segmentation-faults/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Segmentation Faults
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1194,6 +1214,84 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-segmentation-fault" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is a segmentation fault?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-segfault-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common segfault scenarios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common segfault scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attempting-to-read-or-write-past-the-end-of-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attempting to read or write past the end of an array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attempting-to-operate-on-a-memory-location-in-a-way-that-is-not-allowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attempting to operate on a memory location in a way that is not allowed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-a-null-or-uninitialized-pointer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing a NULL or uninitialized pointer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-out-of-stack-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running out of stack space
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1466,21 +1564,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
@@ -1494,7 +1590,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_12">
             <span class="md-nav__icon md-icon"></span>
             How To
@@ -1505,28 +1601,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Screen
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../screen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1535,42 +1613,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#remember-your-login-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Remember your login node
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-screen" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using screen
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1836,20 +1878,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#remember-your-login-node" class="md-nav__link">
+  <a href="#what-is-a-segmentation-fault" class="md-nav__link">
     <span class="md-ellipsis">
-      Remember your login node
+      What is a segmentation fault?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#using-screen" class="md-nav__link">
+  <a href="#common-segfault-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
-      Using screen
+      Common segfault scenarios
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Common segfault scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attempting-to-read-or-write-past-the-end-of-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attempting to read or write past the end of an array
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attempting-to-operate-on-a-memory-location-in-a-way-that-is-not-allowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attempting to operate on a memory location in a way that is not allowed
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accessing-a-null-or-uninitialized-pointer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accessing a NULL or uninitialized pointer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-out-of-stack-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running out of stack space
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1878,74 +1962,52 @@
     
     
     
-      <a href="../../tags/#how-to" class="md-tag">How To</a>
+      <a href="../../tags/#troubleshooting" class="md-tag">Troubleshooting</a>
     
   
 </nav>
 
 
 
-  <h1>Screen</h1>
+  <h1>Segmentation Faults</h1>
 
-<p>If you ssh to one of the SuperCloud login nodes and need to run a script or
-command(s) that you expect to take a while to complete, you should use
-the Linux <code>screen</code> command which will keep processes running even if you
-lose your connection. If your ssh connection drops for some reason,
-<code>screen</code> allows you to reattach to a previous session so you can finish
-your task.</p>
-<p>If you will be doing a lot of work in an interactive session on a
-compute node, you should also use the <code>screen</code> command so that your
-interactive session isn't killed if you lose your connection.</p>
-<h3 id="remember-your-login-node">Remember your login node</h3>
-<p>It is important to make a note of which login node you are logged into
-when you issue the <code>screen</code> command. If you lose your connection, you
-will have to log back into the same login node in order to find and
-restore your screen session.</p>
-<p>To see which login node you are currently logged into, from your ssh
-terminal, run:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$HOSTNAME</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>login-4
-</span></code></pre></div>
-<p>If you lose your ssh connection and need to restore your screen session,
-you'll have to log back in to the same login node you were on when you
-created your screen session:</p>
-<p><code>$ ssh USERNAME@txe1-login4.mit.edu</code></p>
-<h3 id="using-screen">Using screen</h3>
-<p>Here are the very basics that you need to know in order to use the
-<code>screen</code> command.  You can find a more detailed introduction to <code>screen</code>
-<a href="https://linuxize.com/post/how-to-use-linux-screen/">here</a> (ignore
-the sections on installing it; it is already installed on SuperCloud).</p>
-<p><strong>Create a screen session</strong></p>
-<p>With <code>screen</code> you can create one or more sessions in your current SSH
-terminal. To start it, just run:</p>
-<p><code>$ screen</code></p>
-<p>This creates a screen session in your current ssh terminal.</p>
-<p>Here are the most important <code>screen</code> commands that you need to control
-<code>screen</code>. These commands begin with <code>CTRL-a</code> to distinguish them from
-normal shell commands.</p>
-<p><code>Ctrl-a c</code>    Create a new screen session so that you can use more than
-one screen session at once.
-<code>Ctrl-a n</code>    Switch to the next screen session (if you use more than
-one).
-<code>Ctrl-a p</code>    Switch to the previous screen session (if you use more
-than one).
-<code>Ctrl-a d</code>    Detach a screen session (without killing the processes in
-it - they continue).</p>
-<p>To close a screen session where all tasks are finished, type:</p>
-<p><code>exit</code></p>
-<p><strong>Get a list of your screen sessions</strong></p>
-<p>Back in a regular ssh terminal on the login node where you created your
-screen session, you can get a list of your current screen sessions by
-typing:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>$ screen -ls
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>There is a screen on:
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        76645.pts-46.login-4 (Detached)
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>1 Socket in /run/screen/S-AN23082.
-</span></code></pre></div>
-<p><strong>Reconnect to a screen session</strong></p>
-<p>To reconnect to the session, make sure you are logged in to the proper
-login node, then run:</p>
-<p><code>$ screen -r 76645</code></p>
+<h2 id="what-is-a-segmentation-fault">What is a segmentation fault?</h2>
+<p>A segmentation fault (also known as a segfault) is caused when code
+attempts to access memory that it doesn't have permission to access.
+Every program is given a piece of memory (RAM) to work with and it is
+only allowed to access memory in that chunk.</p>
+<p>If your process crashed and you see an error reporting that a
+segmentation fault has occurred, the problem is most likely in your code
+or a 3rd party code that you are using. One exception is when the
+segfault occurs because your program ran out of stack space. See the
+section <a href="#running-out-of-stack-space">Running out of stack space</a> below on how to correct this
+problem.</p>
+<h2 id="common-segfault-scenarios">Common segfault scenarios</h2>
+<p>In practice, segfaults are often due to trying to read or write a
+non-existent array element, not properly defining a pointer before using
+it, or accidentally using a variable's value as an address. Below, you
+will find several common scenarios that result in segfaults.</p>
+<h3 id="attempting-to-read-or-write-past-the-end-of-an-array">Attempting to read or write past the end of an array</h3>
+<p>An array is a contiguous region of memory, where each successive element
+is located at the next address in memory. Most arrays don't have a
+sense of how large they are, or what the last element is, making it easy
+to blow past the end of the array without knowing it. If you read or
+write past the end of the array, you may wind up going into memory that
+is uninitialized or belongs to something else.</p>
+<h3 id="attempting-to-operate-on-a-memory-location-in-a-way-that-is-not-allowed">Attempting to operate on a memory location in a way that is not allowed</h3>
+<p>An example of this would be attempting to write to a read-only location.</p>
+<h3 id="accessing-a-null-or-uninitialized-pointer">Accessing a NULL or uninitialized pointer</h3>
+<p>If you have a pointer that is NULL (ptr=0) or that is completely
+uninitialized (it isn't set to anything at all yet), attempting to
+access memory or modify memory using that pointer will have undefined
+behavior.</p>
+<h3 id="running-out-of-stack-space">Running out of stack space</h3>
+<p>Segfaults can also occur when your program runs out of stack space. This
+may not be a bug in your program, but may be due to your shell setting
+the stack size limit to a value that is too small. The usual remedy is to increase the
+stack size and re-run your program. For example, to set the stack size
+to unlimited, add this line to your job submission script:</p>
+<p><code>ulimit -s unlimited</code></p>
 
 
 
@@ -1966,7 +2028,7 @@ login node, then run:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2023</span>
   </span>
 
     
