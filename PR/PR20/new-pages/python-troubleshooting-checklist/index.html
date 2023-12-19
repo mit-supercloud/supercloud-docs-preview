@@ -2192,7 +2192,7 @@ TODO: This page will need some additional work.
 <p><strong>Yes:</strong> Install the package in your home directory:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip<span class="w"> </span>install<span class="w"> </span>--user<span class="w"> </span>&lt;package_name&gt;
 </span></code></pre></div>
-<p>By default Python might try to install your package system-wide or in our anaconda module. Take a look at our <a href="../../using-the-system/software-packages/#python-packages">page on installing Python packages</a> for further instructions.</p>
+<p>By default Python might try to install your package system-wide or in our anaconda module. Take a look at our <a href="../../using-the-system/software-packages#python-packages">page on installing Python packages</a> for further instructions.</p>
 <h3 id="are-you-seeing-a-network-is-unreachable-error-during-the-pip-install">Are you seeing a "Network is unreachable" error during the pip install?</h3>
 <p><strong>Yes:</strong> Install the package from the SuperCloud login node.</p>
 <p>Compute nodes on SuperCloud aren't connected to the internet. You will need to be
@@ -2233,17 +2233,17 @@ Yes:
 
 <h2 id="conda-environments">Conda Environments</h2>
 <h3 id="do-you-need-to-have-your-own-conda-environment">Do you need to have your own conda environment?</h3>
-<p><strong><em>Have you tried using our conda environment?</em></strong></p>
+<p><strong>Have you tried using our conda environment?</strong></p>
 <p>To see if the package you need is already installed in one of our anaconda
 modules:</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>module<span class="w"> </span>load<span class="w"> </span>anaconda/version
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>conda<span class="w"> </span>list<span class="w"> </span>packageName
 </span></code></pre></div>
-<p><strong>Yes:</strong> See the section <a href="../../using-the-system/software-packages/#installing-packages-with-conda">Installing Your Package in Your Own Conda
+<p><strong>Yes:</strong> See the section <a href="../../using-the-system/software-packages#installing-packages-with-conda">Installing Your Package in Your Own Conda
     Environment</a>.</p>
 <h3 id="you-cant-see-your-environment-in-a-jupyter-notebook">You can't see your environment in a Jupyter Notebook?</h3>
 <h4 id="did-you-add-the-jupyter-package-to-your-environment">Did you add the jupyter package to your environment?</h4>
-<p><strong>No:</strong> Add the jupyter package to your environment. See the section<a href="../../using-the-system/software-packages/#installing-packages-with-conda">Installing Your Package in Your Own Conda Environment</a>.</p>
+<p><strong>No:</strong> Add the jupyter package to your environment. See the section <a href="../../using-the-system/software-packages#installing-packages-with-conda">Installing Your Package in Your Own Conda Environment</a>.</p>
 <h4 id="did-you-install-ipykernel-in-your-conda-environment">Did you install ipykernel in your conda environment?</h4>
 <p><strong>No:</strong> Install the ipykernel package to your conda environement, then run <code>ipykernel</code> to "register" your conda environment.</p>
 <h3 id="did-you-call-conda-init-bash">Did you call <code>conda init bash</code>?</h3>
@@ -2293,14 +2293,10 @@ you've tried, and also copy, paste and send any errors that you see to
 <p>Here is a list of webpages that were mentioned here, plus some others
 that might be helpful:</p>
 <ul>
-<li><a href="https://TBD/anaconda-modules">Anaconda
-    Modules</a></li>
-<li><a href="https://TBD/installing-python-packages">Installing Python
-    Packages</a></li>
-<li><a href="https://TBD/installing-python-packages#install-in-conda-env">Installing Your Package in Your Own Conda
-    Environment</a></li>
-<li><a href="https://TBD/no-print-output-from-python">Not Seeing Your Python
-    Output?</a></li>
+<li><a href="../../using-the-system/software-packages/#modules">Modules</a></li>
+<li><a href="../../using-the-system/software-packages/#python-packages">Installing Python Packages</a></li>
+<li><a href="../../using-the-system/software-packages/#installing-packages-with-conda">Installing Your Package in Your Own Conda Environment</a></li>
+<li><a href="../../faqs/#my-pythonjulia-job-is-running-but-i-dont-see-any-output-in-the-log-files-what-is-going-on">Not Seeing Your Python Output?</a></li>
 </ul>
 
 
