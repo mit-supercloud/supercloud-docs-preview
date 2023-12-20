@@ -2027,11 +2027,15 @@ this command lists all of the nodes that you have jobs running on, how many of t
 </span></code></pre></div>
 this command lists all of the nodes that you have jobs running on, how many of the cores on those nodes you have allocated, and some statistics about how the resources on those nodes are being used:</p>
 <ul>
-<li>CPU Load: how much of the CPUs are used (5 minute average)</li>
+<li>CPU Load: how much of the CPUs are used (5 minute average)<ul>
 <li>Target: 50-150% of the number of CPUs (24.0-72.0 for the Xeon-P8 CPU nodes and 20.0-60.0 for the Xeon-G6 GPU nodes)</li>
+</ul>
+</li>
 <li>Memory Utilization: how much memory you are using, plus memory used for caching</li>
-<li>GPU Utilization: how much of both GPUs are being used, 2.0 is 100% of both GPUs (snapshot)</li>
+<li>GPU Utilization: how much of both GPUs are being used, 2.0 is 100% of both GPUs (snapshot)<ul>
 <li>Target: 50-100% of the GPUs allocated (0.5 or higher for 1 GPU, 1.0 or higher for 2 GPUs)</li>
+</ul>
+</li>
 <li>GPU Memory: how much of the GPU memory is being used</li>
 </ul>
 <p>A good target for CPU Load is 50-150% of the number of CPUs. For example, that is 24-48 for the Xeon-P8 CPU nodes and 20-40 for the Xeon-G6 GPU nodes, see the <a href="../../systems-and-software/">Systems and Software</a> page for current core counts. If this number is lower, it's likely you could take advantage of more resources on the node. If you find the load numbers are very high, you risk the chance of speeddown or even overwhelming the node. You have a few knobs to turn to adjust your cpu utilization, often this is by either by changing the number of threads used by your application or by running more jobs or processes per node. Adjusting these is very easy if you are submitting your job with <a href="../submitting-jobs/submitting-jobs/">Triples Mode</a>, which we highly encourage for those jobs that support it.</p>
