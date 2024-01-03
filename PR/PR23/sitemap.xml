@@ -56,16 +56,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://supercloud.mit.edu/new-pages/Segmentation-Faults/</loc>
-         <lastmod>2024-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://supercloud.mit.edu/new-pages/Tips-for-Analyzing-Large-Datasets/</loc>
-         <lastmod>2024-01-03</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://supercloud.mit.edu/new-pages/code-and-data-location/</loc>
          <lastmod>2024-01-03</lastmod>
          <changefreq>daily</changefreq>
@@ -186,7 +176,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://supercloud.mit.edu/new-pages/segmentation-faults/</loc>
+         <lastmod>2024-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://supercloud.mit.edu/new-pages/ssh-troubleshooting-checklist/</loc>
+         <lastmod>2024-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/tips-for-analyzing-large-datasets/</loc>
          <lastmod>2024-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -197,6 +197,11 @@
     </url>
     <url>
          <loc>https://supercloud.mit.edu/new-pages/using-environment-vars/</loc>
+         <lastmod>2024-01-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://supercloud.mit.edu/new-pages/using-the-download-partition/</loc>
          <lastmod>2024-01-03</lastmod>
          <changefreq>daily</changefreq>
     </url>

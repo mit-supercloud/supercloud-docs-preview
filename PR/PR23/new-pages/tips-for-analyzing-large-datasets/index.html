@@ -8,25 +8,25 @@
       
       
       
-        <link rel="canonical" href="https://supercloud.mit.edu/using-the-system/submitting-jobs/job-array-triples/">
+        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/tips-for-analyzing-large-datasets/">
       
       
-        <link rel="prev" href="../../../new-pages/using-the-download-partition/">
+        <link rel="prev" href="../../using-the-system/best-practices/filesystem/">
       
       
-        <link rel="next" href="../../../new-pages/llmapreduce/">
+        <link rel="next" href="../../using-the-system/best-practices/gpu-jobs/">
       
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
     
     
       
-        <title>Job Array Triples - SuperCloud Docs</title>
+        <title>Tips for Analyzing Large Datasets - SuperCloud Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
       
       
 
@@ -45,7 +45,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#job-arrays-with-llsub-triples-in-3-steps" class="md-skip">
+        <a href="#construct-a-filename" class="md-skip">
           Skip to content
         </a>
       
@@ -80,7 +80,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="SuperCloud Docs" class="md-header__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+    <a href="../.." title="SuperCloud Docs" class="md-header__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Job Array Triples
+              Tips for Analyzing Large Datasets
             
           </span>
         </div>
@@ -175,7 +175,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="SuperCloud Docs" class="md-nav__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+    <a href="../.." title="SuperCloud Docs" class="md-nav__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -193,7 +193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -213,7 +213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../requesting-account/" class="md-nav__link">
+      <a href="../../requesting-account/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -233,7 +233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/practices/" class="md-nav__link">
+      <a href="../practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -253,7 +253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/" class="md-nav__link">
+      <a href="../../getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -310,7 +310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../systems-and-software/" class="md-nav__link">
+      <a href="../../systems-and-software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -331,7 +331,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../systems-and-software/" class="md-nav__link">
+      <a href="../../systems-and-software/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -352,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/resource-limit-enforcement-and-increases/" class="md-nav__link">
+      <a href="../resource-limit-enforcement-and-increases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -417,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files-and-data/transferring-files/" class="md-nav__link">
+      <a href="../../using-the-system/files-and-data/transferring-files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../files-and-data/shared-groups/" class="md-nav__link">
+      <a href="../../using-the-system/files-and-data/shared-groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -459,7 +459,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/datasets/" class="md-nav__link">
+      <a href="../datasets/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -480,7 +480,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/disk-space/" class="md-nav__link">
+      <a href="../disk-space/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -501,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/llcopy2tmp/" class="md-nav__link">
+      <a href="../llcopy2tmp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../software-packages/" class="md-nav__link">
+      <a href="../../using-the-system/software-packages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -591,21 +591,19 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -619,7 +617,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Running Jobs
@@ -633,7 +631,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../monitoring-system-and-jobs/" class="md-nav__link">
+      <a href="../../using-the-system/monitoring-system-and-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -654,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../submitting-jobs/" class="md-nav__link">
+      <a href="../../using-the-system/submitting-jobs/submitting-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/using-the-download-partition/" class="md-nav__link">
+      <a href="../using-the-download-partition/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -693,30 +691,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Job Array Triples
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../using-the-system/submitting-jobs/job-array-triples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,53 +703,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-batch-up-your-array" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Batch Up your Array
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-changing-your-submission-script" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Changing Your Submission Script
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-submit-your-job-with-llsub-triples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: Submit your Job with LLsub Triples
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -784,7 +715,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/llmapreduce/" class="md-nav__link">
+      <a href="../llmapreduce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -842,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jupyter-notebooks/" class="md-nav__link">
+      <a href="../../using-the-system/jupyter-notebooks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/jupyter-notebook-conversion/" class="md-nav__link">
+      <a href="../jupyter-notebook-conversion/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -884,7 +815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/jupyter-notebooks-best-practices/" class="md-nav__link">
+      <a href="../jupyter-notebooks-best-practices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -905,7 +836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/troubleshoot-jupyter-notebooks/" class="md-nav__link">
+      <a href="../troubleshoot-jupyter-notebooks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -971,7 +902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/pmatlab-getting-started/" class="md-nav__link">
+      <a href="../pmatlab-getting-started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -992,7 +923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/verify-pmatlab-setup/" class="md-nav__link">
+      <a href="../verify-pmatlab-setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1013,7 +944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/finding-pmatlab-output/" class="md-nav__link">
+      <a href="../finding-pmatlab-output/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1034,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/gridmatlab-env-vars/" class="md-nav__link">
+      <a href="../gridmatlab-env-vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1055,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/launching-pmatlab-jobs/" class="md-nav__link">
+      <a href="../launching-pmatlab-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1076,7 +1007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/pmatlab-job-errors/" class="md-nav__link">
+      <a href="../pmatlab-job-errors/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/pmatlab-job-problems/" class="md-nav__link">
+      <a href="../pmatlab-job-problems/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1118,7 +1049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/pmatlab-troubleshooting-checklist/" class="md-nav__link">
+      <a href="../pmatlab-troubleshooting-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1191,7 +1122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/file-locking/" class="md-nav__link">
+      <a href="../file-locking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1212,7 +1143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/fixing-windows-scripts/" class="md-nav__link">
+      <a href="../fixing-windows-scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1233,7 +1164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/segmentation-faults/" class="md-nav__link">
+      <a href="../segmentation-faults/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1254,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/ssh-troubleshooting-checklist/" class="md-nav__link">
+      <a href="../ssh-troubleshooting-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1275,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/python-troubleshooting-checklist/" class="md-nav__link">
+      <a href="../python-troubleshooting-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1296,7 +1227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/pmatlab-troubleshooting-checklist/" class="md-nav__link">
+      <a href="../pmatlab-troubleshooting-checklist/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1321,19 +1252,21 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -1347,7 +1280,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Best Practices
@@ -1361,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../best-practices/filesystem/" class="md-nav__link">
+      <a href="../../using-the-system/best-practices/filesystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1379,10 +1312,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../new-pages/tips-for-analyzing-large-datasets/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tips for Analyzing Large Datasets
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1391,6 +1342,90 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#construct-a-filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construct a filename
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-another-file-that-lists-the-full-file-paths-of-each-file-in-the-dataset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create another file that lists the full file paths of each file in the dataset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create another file that lists the full file paths of each file in the dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#siso-vs-mimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      "siso" vs "mimo"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-the-list-of-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generating the list of files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating the list of files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1403,7 +1438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../best-practices/gpu-jobs/" class="md-nav__link">
+      <a href="../../using-the-system/best-practices/gpu-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1468,7 +1503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/preferred-shells/" class="md-nav__link">
+      <a href="../preferred-shells/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1489,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/glossary-of-unix-terms/" class="md-nav__link">
+      <a href="../glossary-of-unix-terms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1510,7 +1545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/where-to-find-examples/" class="md-nav__link">
+      <a href="../where-to-find-examples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1531,7 +1566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/installing-wsl/" class="md-nav__link">
+      <a href="../installing-wsl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1552,7 +1587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/using-environment-vars/" class="md-nav__link">
+      <a href="../using-environment-vars/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1617,7 +1652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/screen/" class="md-nav__link">
+      <a href="../screen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1638,7 +1673,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/using-trusted-x-forwarding/" class="md-nav__link">
+      <a href="../using-trusted-x-forwarding/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1659,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../new-pages/using-top-and-htop/" class="md-nav__link">
+      <a href="../using-top-and-htop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1724,7 +1759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../web-portal/" class="md-nav__link">
+      <a href="../../using-the-system/web-portal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1745,7 +1780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../databases/" class="md-nav__link">
+      <a href="../../using-the-system/databases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1773,7 +1808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../faqs/" class="md-nav__link">
+      <a href="../../faqs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1793,7 +1828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../acknowledging-us/" class="md-nav__link">
+      <a href="../../acknowledging-us/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1813,7 +1848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-help/" class="md-nav__link">
+      <a href="../../getting-help/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1833,7 +1868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../glossary/" class="md-nav__link">
+      <a href="../../glossary/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1853,7 +1888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tags/" class="md-nav__link">
+      <a href="../../tags/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1883,8 +1918,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1893,29 +1926,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-batch-up-your-array" class="md-nav__link">
+  <a href="#construct-a-filename" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Batch Up your Array
+      Construct a filename
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-changing-your-submission-script" class="md-nav__link">
+  <a href="#create-another-file-that-lists-the-full-file-paths-of-each-file-in-the-dataset" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Changing Your Submission Script
+      Create another file that lists the full file paths of each file in the dataset
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create another file that lists the full file paths of each file in the dataset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#siso-vs-mimo" class="md-nav__link">
+    <span class="md-ellipsis">
+      "siso" vs "mimo"
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-submit-your-job-with-llsub-triples" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#generating-the-list-of-files" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Submit your Job with LLsub Triples
+      Generating the list of files
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Generating the list of files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 1
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example 2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1932,186 +2004,159 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#file-system" class="md-tag">File System</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#tips-and-best-practices" class="md-tag">Tips and Best Practices</a>
+    
+  
+</nav>
 
 
-<h1 id="job-arrays-with-llsub-triples-in-3-steps">Job Arrays with LLsub Triples in 3 Steps</h1>
-<p>If you are currently running a Job Array, you can take advantage of
-SuperCloud's triples mode submission by submitting your job array with
-LLsub. In most cases, this can be done in a few easy steps.</p>
-<p>What is triples mode? It's a different way to submit your job by
-specifying three numbers:</p>
+
+  <h1>Tips for Analyzing Large Datasets</h1>
+
+<p>If you are analyzing a dataset with a large number of files, avoid using
+<code>dir</code>, <code>ls</code>, and any other commands that scan the file system. Running
+thousands of file system scans can overload the file system. Here are
+some tips for working with large datasets.</p>
+<h3 id="construct-a-filename">Construct a filename</h3>
+<p>Instead of getting a list of all the files, it is better to construct a
+filename and check to see if that filename exists before reading or
+creating the file.</p>
+<h3 id="create-another-file-that-lists-the-full-file-paths-of-each-file-in-the-dataset">Create another file that lists the full file paths of each file in the dataset</h3>
+<p>Before launching your job, create a text file that lists the full paths
+of each file in the dataset. Each processor that is processing the data
+can read in this single file and won't need to execute <code>ls</code> or any other
+metadata intensive operations to get the filenames. This also makes it
+easy to divide up the files amongst processors in a nice "mimo" (multiple inputs, multiple outputs) manner
+that minimizes the number of starts and stops, compared to a "siso" (single input, single output)
+model.</p>
+<h4 id="siso-vs-mimo">"siso" vs "mimo"</h4>
+<p>"siso" is an acronym for single input, single output. In a siso model,
+a single process calls your application multiple times to process all of
+the input files that are assigned to it. Each time your application is
+called, the software or program is loaded, it processes a single input file, then the software is unloaded. 
+unloaded.</p>
+<p>"mimo" is an acronym for multiple input, multiple output. The
+advantage of using a mimo model is that your application is called and
+loaded just once to process all of its assigned input files. When your
+application starts, it should read the text file containing the list of
+the data files and process the appropriate subset of files before being unloaded.</p>
+<!--
+TODO: Add link to the LLMapReduce page when available
+-->
+
+<p>See the <a href="https://TBD/llmapreduce">LLMapReduce</a> page, particularly the section discussion the
+<em><code>--apptype=APPLICATION-TYPE</code></em> option for a more detailed explanation of
+the mimo model and the changes to your application that are required in
+order to operate in mimo mode.</p>
+<h4 id="generating-the-list-of-files">Generating the list of files</h4>
+<p>To generate the text file which will contain a list of files to process, log into the login node via ssh or in a Jupyter Notebook Terminal window and issue the following commands at the Linux Command line:</p>
 <ul>
-<li>Nodes: The number of nodes you want to use up</li>
-<li>NPPN: The number of processes that should run per node</li>
-<li>NTPP: The number of threads per process</li>
+<li><code>$ cd datasetPath</code></li>
+<li><code>$ lfs find "$(pwd -P)" | grep "fileSearchPattern" | sort &gt; ./inputFilename</code></li>
 </ul>
-<p>Why would you want to use triples mode to submit your job? Triples mode
-provides a few advantages. Since it does whole-node scheduling you
-don't have to worry about other jobs impacting yours (or your job
-impacting someone else's). We also do task-pinning when you request
-resources with a triple, so your processes are arranged in the best way
-possible for the layout of the hardware architecture. Finally,
-submitting a Job Array with LLsub triples mode the way we describe here
-will greatly reduce the startup time for your jobs, over a job array
-with many pending tasks.</p>
-<h2 id="step-1-batch-up-your-array">Step 1: Batch Up your Array</h2>
-<p>The first thing you want to do is set up your job so that your script
-splits up your inputs among each process/task and each process/task
-iterates a subset of your inputs. This way you can change your input set
-without changing the number of tasks or processes that you schedule.
-This step alone will save you on startup time. Anytime you submit more
-jobs than your allocation allows, those additional jobs will remaining
-pending until some of your first running jobs complete. Then, when one
-of your first jobs complete, the scheduler now has to find the pending
-job some resources and start it running. If you batch up your job array,
-you only have to go through the scheduling process once. If you've set
-up a job array following our instructions in the past you may already be
-doing this, and you can skip to the next section.</p>
-<p>First you want to take a look at your code. Code that can be submitted
-as a Job Array usually has one big for loop. If you are iterating over
-multiple parameters or files, and have nested for loops, you'll first
-want to enumerate all the combinations of what you are iterating over so
-you have one big loop.</p>
-<p>If your code is written so it uses the <code>$SLURM_ARRAY_TASK_ID</code> and uses
-that to run a single thing, first add a for loop that iterates over the
-full set of things you want to run your code on. If you can't rewrite
-your code in such a way that it iterates over multiple inputs, you can
-use LLMapReduce to submit your job with triples mode, see <a href="https://github.com/llsc-supercloud/teaching-examples/tree/master/C-Cpp/Fibonacci/LLMapReduce">this
-example</a>.</p>
-<p>Then you add a few lines to your code to take in two arguments, a
-process/task ID and the number of processes/tasks, and use those numbers
-to split up the thing you are iterating over. For example, I might have
-a list of filenames, <code>fnames</code>. In python I would add:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label><label for="__tabbed_1_2">Julia</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Grab the arguments that are passed in</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">my_task_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">num_tasks</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># Assign indices to this process/task</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="n">my_fnames</span> <span class="o">=</span> <span class="n">fnames</span><span class="p">[</span><span class="n">my_task_id</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">fnames</span><span class="p">):</span><span class="n">num_tasks</span><span class="p">]</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">my_fnames</span><span class="p">:</span> <span class="o">...</span>
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-julia highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Grab the arguments that are passed in</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">task_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span><span class="nb">ARGS</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">num_tasks</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parse</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span><span class="nb">ARGS</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c"># Assign indices to this process/task</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="n">my_fnames</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fnames</span><span class="p">[</span><span class="n">task_id</span><span class="o">+</span><span class="mi">1</span><span class="o">:</span><span class="n">num_tasks</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">fnames</span><span class="p">)]</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="k">for</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">my_fnames</span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="o">...</span>
-</span></code></pre></div>
-</div>
-</div>
-</div>
-<p>Notice that I am iterating over <code>my_fnames</code>, which is a subset of the
-full list of filenames determined by the task ID and number of tasks.
-This subset will be different for each task in the array. Note that the
-third line of code will be different for languages with arrays that
-start at index 1 (see the <a href="https://github.com/llsc-supercloud/teaching-examples/tree/master/Julia/word_count/JobArray">Julia Job
-Array</a>
-code for an example of this).</p>
-<h2 id="step-2-changing-your-submission-script">Step 2: Changing Your Submission Script</h2>
-<p>If you have been running your Job Arrays with sbatch, you most likely
-have a few environment variables in your submission script. To submit
-with LLsub triples, you can just replace these:</p>
+<p>where:</p>
 <ul>
-<li><code>$SLURM_ARRAY_TASK_ID</code> -&gt; <code>$LLSUB_RANK</code></li>
-<li><code>$SLURM_ARRAY_TASK_COUNT</code> -&gt; <code>$LLSUB_SIZE</code></li>
+<li><code>datasetPath</code> is the path to your dataset</li>
+<li><code>fileSearchPattern</code> is a Linux regular expression that the <code>grep</code>
+command uses to find filenames that you want to include,</li>
+<li><code>inputFilename</code> is the name of the text file that will contain a
+list of all your data filenames</li>
 </ul>
-<p><strong>If you have any SBATCH flags in your submission script, remove those
-as well</strong> (LLsub will see these and submit with sbatch, ignoring any
-command line arguments you give it). For example, if you are running a
-python script, your final submission script will look something like
-this:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/bin/bash</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="c1"># Load Module(s)</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>module<span class="w"> </span>load<span class="w"> </span>anaconda/2023a
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;My task ID: &quot;</span><span class="w"> </span><span class="nv">$LLSUB_RANK</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Number of Tasks: &quot;</span><span class="w"> </span><span class="nv">$LLSUB_SIZE</span>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>python<span class="w"> </span>top5each.py<span class="w"> </span><span class="nv">$LLSUB_RANK</span><span class="w"> </span><span class="nv">$LLSUB_SIZE</span>
-</span></code></pre></div>
-<p>You will also need to make your script executable. You can do that with
-this simple command line command:</p>
-<blockquote>
-<p><code>chmod u+x submit_LLsub.sh</code></p>
-</blockquote>
-<h2 id="step-3-submit-your-job-with-llsub-triples">Step 3: Submit your Job with LLsub Triples</h2>
-<p>Now when you submit your job, you can run:</p>
-<blockquote>
-<p><code>LLsub ./submit.sh [NODES,NPPN,NTPP]</code></p>
-</blockquote>
-<p>where</p>
+<p>Note that the <code>lfs</code> command in the example above can only be used if
+your files reside on the Lustre filesystem (somewhere within
+/home/gridsan). If your data files are located on a node's local disk
+(in <code>$TMPDIR</code> or <code>/state/partition1</code>), drop <code>lfs</code> from the beginning of
+the command above.</p>
+<p>Unfortunately, you can't use regular wildcards (for example: *.txt) to
+identify the files that you want to match because the <code>grep</code> command
+expects a regular expression.  You can find information on how to use
+regular expressions in Linux from these external websites (link will
+open in a new tab):</p>
 <ul>
-<li><code>NODES</code> is the number of nodes you want to use up</li>
-<li><code>NPPN</code> is the number of processes that should run per node</li>
-<li><code>NTPP</code> is the number of threads per process</li>
+<li><a href="https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux">Using Grep &amp; Regular Expressions to Search for Text Patterns in
+Linux</a></li>
+<li><a href="https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285">Regex tutorial - A quick cheatsheet by
+examples</a></li>
+<li><a href="https://ryanstutorials.net/linuxtutorial/cheatsheetgrep.php">Linux Tutorial - Cheat
+Sheet</a></li>
 </ul>
-<p>The total number of threads per node, or <code>NTPP*NPPN</code>, should not be more
-than the number of cores on the node, otherwise you may overwhelm the
-node with too many running processes and/or threads. For example, if you
-are running on the 48-core Xeon-P8 nodes, if you are running with
-<code>NTPP</code>=1, you should not set <code>NPPN</code> more than 48. If <code>NTPP</code>=2, <code>NPPN</code> should
-be at most 24, etc. The numbers you choose depend on your application,
-if it is multithreaded it may be worth increasing <code>NTPP</code> and decreasing
-<code>NPPN</code>. If your application consumes a lot of memory, you may need to
-decrease <code>NPPN</code> so each process has the memory it needs to proceed. The
-best way to determine what numbers to choose is to
-<a href="../submitting-jobs/#triples-mode-tuning">tune your triples</a>, which is a
-relatively quick exercise and can improve your speedup in the long run
-by helping you select the ideal numbers for your triple.</p>
-<p>So if you want to run on 2 nodes, 10 processes per node, and 4 threads
-per process, you would run:</p>
-<blockquote>
-<p><code>LLsub ./submit.sh [2,10,4]</code></p>
-</blockquote>
-<p>If you were to run LLstat after running this command, you would see what
-looks like a 2 task job array, for example:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>$<span class="w"> </span>LLstat
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>LLGrid:<span class="w"> </span>txe1<span class="w"> </span><span class="o">(</span>running<span class="w"> </span>slurm-wlm<span class="w"> </span><span class="m">20</span>.11.3<span class="o">)</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>JOBID<span class="w"> </span>ARRAY_JOB_<span class="w"> </span>NAME<span class="w"> </span>USER<span class="w"> </span>START_TIME<span class="w"> </span>PARTITION<span class="w"> </span>CPUS<span class="w"> </span>FEATURES<span class="w"> </span>MIN_MEMORY<span class="w"> </span>ST<span class="w"> </span>NODELIST<span class="o">(</span>REASON<span class="o">)</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>9651412_1<span class="w"> </span><span class="m">9651412</span><span class="w"> </span>submit_LLsub.sh<span class="w"> </span>studentx<span class="w"> </span><span class="m">2021</span>-03-19T10:32:26<span class="w"> </span>normal<span class="w"> </span><span class="m">40</span><span class="w"> </span>xeon-g6<span class="w"> </span>8500M<span class="w"> </span>R<span class="w"> </span>d-13-8-2
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>9651412_2<span class="w"> </span><span class="m">9651412</span><span class="w"> </span>submit_LLsub.sh<span class="w"> </span>studentx<span class="w"> </span><span class="m">2021</span>-03-19T10:32:26<span class="w"> </span>normal<span class="w"> </span><span class="m">40</span><span class="w"> </span>xeon-g6<span class="w"> </span>8500M<span class="w"> </span>R<span class="w"> </span>d-13-8-1
-</span></code></pre></div>
-<p>However, you are still running 2*10 = 20 total processes. Triples mode
-uses slurm to request full nodes, then takes care of launching the
-processes on each node. This is why you'll always see one task for each
-node in the <code>LLstat</code> output, rather than each process. One advantage of
-this is it makes for a more compact <code>LLstat</code> output that is easier to
-read, instead of having to scroll through tons of tasks.</p>
-<p>You can check on your individual processes by looking at the log files.
-LLsub with Triples mode will create a directory with the prefix
-"LLSUB" followed by a unique number to hold all the log files. Within
-this directory will be one launch log file, which will capture any
-errors that occur during launch ,and one directory per node and put the
-log files for each process in its node's directory. These
-subdirectories are labeled with the process ID range and the node name.</p>
-<p>For example, here are the log files from a triples run using [2,4,10]:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>$<span class="w"> </span>ls<span class="w"> </span>LLSUB.23004
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>README.md<span class="w"> </span>helpers.py<span class="w"> </span>submit_LLsub.sh<span class="w"> </span>submit_sbatch.sh<span class="w"> </span>top5each.py
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>$<span class="w"> </span>ls<span class="w"> </span>LLSUB.23004/
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>llsub-triple-mode-launch.log-10006591<span class="w"> </span>p0-p3_d-19-4-1<span class="w"> </span>p4-p7_d-19-3-4
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>$<span class="w"> </span>ls<span class="w"> </span>LLSUB.23004/p0-p3_d-19-4-1/
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>submit_LLsub.sh.log.4<span class="w"> </span>submit_LLsub.sh.log.5<span class="w"> </span>submit_LLsub.sh.log.6<span class="w"> </span>submit_LLsub.sh.log.7
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>$<span class="w"> </span>ls<span class="w"> </span>LLSUB.23004/p4-p7_d-19-3-4/
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>submit_LLsub.sh.log.4<span class="w"> </span>submit_LLsub.sh.log.5<span class="w"> </span>submit_LLsub.sh.log.6<span class="w"> </span>submit_LLsub.sh.log.7
-</span></code></pre></div>
-<p>In this example, <code>LLSUB.23004</code> is the directory containing the log
-files, <code>llsub-triple-mode-launch.log-10006591</code> is the log file for the
-job launch. <code>p0-p3_d-19-4-1</code> and <code>p4-p7_d-19-3-4</code> are the directories
-for each node, and <code>submit_LLsub.sh.log.0</code>, <code>submit_LLsub.sh.log.1</code>,
-..., <code>submit_LLsub.sh.log.7</code> are the log files for each process.</p>
+<h5 id="example-1">Example 1</h5>
+<p>Generate a file containing a list of files within
+ <em><code>~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em> that end in <code>.txt</code> and
+save the list to a file called txt-files</p>
+<p>From the Linux command line, execute the following commands
+- Command 1:
+     - <em><code>$ cd ~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em>
+- Command 2:
+     - <em><code>$ lfs find "$(pwd -P)" | grep "\.txt$" | sort &gt; ./txt-files</code></em></p>
+<p>The contents of the file txt-files is below</p>
+<p>$ cat ./txt-files</p>
+<p>/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a11.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a12.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a1/a13.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a31.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a32.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a3/a33.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b11.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b12.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b1/b13.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b31.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b32.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b3/b33.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c11.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c12.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c1/c13.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c31.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c32.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c3/c33.txt</p>
+<h5 id="example-2">Example 2</h5>
+<p>Generate a file containing a list of files within
+<em><code>~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em> that begin with a
+lowercase letter, followed by the number 2, and end in <code>.txt</code> and save
+the list to a file called az-2-txt-files</p>
+<p>From the Linux command line, execute the following commands</p>
+<ul>
+<li>Command 1:<ul>
+<li><em><code>$ cd ~/examples/LLGrid_MapReduce/MultiLevelData/data</code></em></li>
+</ul>
+</li>
+<li>Command 2:<ul>
+<li><em><code>$ lfs find "$(pwd -P)" | grep "[a-z]2.*\.txt$" | sort &gt; ./az-2-txt-files</code></em></li>
+</ul>
+</li>
+</ul>
+<p>The contents of the file az-2-txt-files is below</p>
+<p><em><code>$ cat ./az-2-txt-files</code></em></p>
+<p>/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/a/a2/a23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/b/b2/b23.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c21.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c22.txt
+/home/gridsan/AN23082/examples/LLGrid_MapReduce/MultiLevelData/data/c/c2/c23.txt</p>
 
 
 
@@ -2132,7 +2177,7 @@ for each node, and <code>submit_LLsub.sh.log.0</code>, <code>submit_LLsub.sh.log
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 6, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 19, 2023</span>
   </span>
 
     
@@ -2183,12 +2228,12 @@ for each node, and <code>submit_LLsub.sh.log.0</code>, <code>submit_LLsub.sh.log
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
-        <script src="../../../js/open_in_new_tab.js"></script>
+        <script src="../../js/open_in_new_tab.js"></script>
       
     
   </body>
