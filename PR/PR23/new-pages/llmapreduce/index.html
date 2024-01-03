@@ -1,0 +1,2199 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://supercloud.mit.edu/new-pages/llmapreduce/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>LLMapReduce - SuperCloud Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#llmapreduce" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SuperCloud Docs" class="md-header__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SuperCloud Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              LLMapReduce
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SuperCloud Docs" class="md-nav__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    SuperCloud Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requesting-account/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requesting an Account
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../systems-and-software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Systems and Software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../acknowledging-us/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acknowledging Us
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Using the System
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Using the System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Files and Data
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            Files and Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/files-and-data/transferring-files/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transferring Files
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/files-and-data/shared-groups/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shared Groups
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installing Software
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installing Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/software-packages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software and Package Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            Submitting Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/monitoring-system-and-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring System and Job Status
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/submitting-jobs/submitting-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/submitting-jobs/job-array-triples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Job Array Triples
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Best Practices
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            Best Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/best-practices/filesystem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Best Practices for using the Filesystem
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/best-practices/gpu-jobs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Optimizing your GPU Jobs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_5" id="__nav_6_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Web Portal
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            Web Portal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/web-portal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web Portal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/databases/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Databases
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using-the-system/jupyter-notebooks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jupyter Notebooks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faqs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-help/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Help
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-mapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is MapReduce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-llmapreduce-command" class="md-nav__link">
+    <span class="md-ellipsis">
+      The LLMapReduce Command
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-llmapreduce" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of LLMapReduce
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llmapreduce-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      LLMapReduce Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output logs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment Variables
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-apptypeapplication-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      --apptype=[APPLICATION-TYPE]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-changedepmodechange-dependency-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      --changeDepMode=[CHANGE-DEPENDENCY-MODE]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-cputypecpu-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      --cpuType=[CPU-TYPE]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-delimeteroutput-file-extension-delimiter" class="md-nav__link">
+    <span class="md-ellipsis">
+      --delimeter=[OUTPUT-FILE-EXTENSION-DELIMITER]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-distributiondistribution-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      --distribution=[DISTRIBUTION-TYPE]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-exclusiveexclusive-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      --exclusive=[EXCLUSIVE-MODE]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-extfile_extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      --ext=[FILE_EXTENSION]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-extsearchsearch_extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      --extSearch=SEARCH_EXTENSION
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-gpunamecountgpu-namecount" class="md-nav__link">
+    <span class="md-ellipsis">
+      --gpuNameCount=[GPU-NAME:COUNT]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-h-help" class="md-nav__link">
+    <span class="md-ellipsis">
+      -h, --help
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-inputinput-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      --input=[INPUT-PATH]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-keepkeep-temp-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      --keep=[KEEP-TEMP-FILES]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-mappermapper-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      --mapper=[MAPPER-PROGRAM]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-ndatanum-input-files-per-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      --ndata=[NUM-INPUT-FILES-PER-PROCESS]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-npnum-processes" class="md-nav__link">
+    <span class="md-ellipsis">
+      --np=[NUM-PROCESSES]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-optionsscheduler-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      --options=[SCHEDULER-OPTIONS]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-outputoutput-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      --output=[OUTPUT-PATH]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-partitionpartition-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      --partition=[PARTITION-NAME]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-prefixprefix-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      --prefix=[PREFIX-TEXT]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-redargsreducer-args" class="md-nav__link">
+    <span class="md-ellipsis">
+      --redargs=[REDUCER-ARGS]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-redoutreducer-output-file-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      --redout=[REDUCER-OUTPUT-FILE-NAME]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-reducerreducer-program" class="md-nav__link">
+    <span class="md-ellipsis">
+      --reducer=[REDUCER-PROGRAM]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-reservationadvanced_reservation_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      --reservation=[ADVANCED_RESERVATION_NAME]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-slotspertasknum-slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      --slotsPerTask=[NUM-SLOTS]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-slotspertasktypeslots-per-task-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      --slotsPerTaskType=[SLOTS-PER-TASK-TYPE]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-subdirsearch-subdirs" class="md-nav__link">
+    <span class="md-ellipsis">
+      --subdir=[SEARCH-SUBDIRS]
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-tempdirtempdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      --tempdir=[TEMPDIR]
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#submitting-jobs" class="md-tag">Submitting Jobs</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#llmapreduce" class="md-tag">LLMapReduce</a>
+    
+  
+</nav>
+
+
+
+<h1 id="llmapreduce">LLMapReduce</h1>
+<h2 id="what-is-mapreduce">What is MapReduce</h2>
+<p>MapReduce is a programming model for processing large data sets with a
+parallel, distributed algorithm on a set of distributed networked
+computers. It became popular with the Java community when Hadoop
+implemented the map-reduce parallel program model for Java.</p>
+<p>There are many workflows where multiple independent files are processed
+in one stage, followed by gathering the results and post-processing them
+in a second stage. This workflow is representative of "loosely coupled"
+processing, where the coupling comes from gathering the result files and
+is often handled using the MapReduce paradigm.</p>
+<p>To ease the burden on researchers and to provide good performance for
+the MapReduce Use Case on a community shared production machine, the
+SuperCloud Team created LLMapReduce.</p>
+<h2 id="the-llmapreduce-command">The LLMapReduce Command</h2>
+<p>The options included in the LLMapReduce API provide extensive
+flexibility. At its most basic, LLMapReduce executes a user script on
+all the files in a user supplied input directory. The results are saved
+to unique files in the output directory. If the user requires a 2nd
+phase to post-process the data, the user provided reducer script
+performs the gather task followed by the post-processing.</p>
+<p>LLMapReduce is language agnostic, and we provide examples for MATLAB®,
+Java and Python. LLMapReduce supports nested LLMapReduce calls and we
+provide an example of this along with the other examples.</p>
+<p>The LLMapReduce command scans the user-specified input directory and
+translates each individual file into a computing task for the
+user-specified application (noted as Mapper in the image below). Then,
+all of the computing tasks will be submitted to the SuperCloud systems for
+processing. If needed, the results can be post-processed by setting up a
+user-specified reduce task, which is dependent on the mapping task
+results. The reduce task will wait until all the results become
+available.
+<img alt="LLMapReduce" src="../images/llmapreduce.png" /></p>
+<!--
+TODO: Add Alt Text
+-->
+
+<h2 id="benefits-of-llmapreduce">Benefits of LLMapReduce</h2>
+<p>LLMapReduce can reduce startup cost (loading packages, setting up data
+if it's the same dataset, etc.) in two ways. First, say you need to
+train 160 models. You would normally have to wait for the first 16 GPUs
+to be available, and then as those complete, you'd have to wait for the
+next 16 to be available, etc., 10 times until you've trained all your
+models. LLMapReduce will allocate the 16 GPUs to you, train your first
+16, and then train your next 16 within that same allocation. You've
+reduced the time your jobs are waiting to run by quite a bit, especially
+when the system is quite busy. This you get for free with LLMapReduce,
+you usually don't have to make any changes to your code at all, or some
+very minor changes.</p>
+<p>Another way that LLMapReduce can reduce startup cost is by using mimo
+(multiple input multiple output) mode, which we highly recommend. You
+make a few changes to your code so that instead of training a single
+model during each run, it will iterate through and train several (it
+would train 10 models in sequence from the example above) models during
+each run. In this case you only have to pay the startup cost of your
+code once. Depending on how much time this takes, you can really save a
+lot of time here. You can find an example of code modified to use mimo
+mode in the description of the <code>--apptype</code> option below.</p>
+<h2 id="llmapreduce-examples">LLMapReduce Examples</h2>
+<p>We offer a few basic examples in the <a href="#examples">Examples</a> section on
+this page. You can also find more examples on the <a href="TBD/where-to-find-examples">Where to Find
+Examples</a> page.</p>
+<!--
+TODO: Add link to examples page
+-->
+
+<h2 id="usage">Usage</h2>
+<p>The most basic LLMapReduce requires 3 inputs:</p>
+<ul>
+<li>The name of the script to be run, specified using the <code>--mapper</code>
+    option</li>
+<li>The input file directory, specified using the <code>--input</code> option</li>
+<li>The output file directory, specified using the <code>--output</code> option</li>
+</ul>
+<p>You can display the full set of options by running <code>LLMapReduce -h</code>.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>$<span class="w"> </span>LLMapReduce
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>Usage:<span class="w"> </span>LLMapReduce<span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>Options:
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>--version<span class="w">             </span>show<span class="w"> </span>program<span class="err">&#39;</span>s<span class="w"> </span>version<span class="w"> </span>number<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span>-h,<span class="w"> </span>--help<span class="w">            </span>show<span class="w"> </span>this<span class="w"> </span><span class="nb">help</span><span class="w"> </span>message<span class="w"> </span>and<span class="w"> </span><span class="nb">exit</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span>--np<span class="o">=</span>NPROCS<span class="w">           </span>Number<span class="w"> </span>of<span class="w"> </span>processes<span class="w"> </span>to<span class="w"> </span>run<span class="w"> </span>concurrently.<span class="w"> </span>Either<span class="w"> </span>N<span class="w"> </span>or
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">                          </span><span class="o">[</span>Nnode,Nppn,Ntpp<span class="o">]</span>,<span class="w"> </span>where<span class="w"> </span>N<span class="w"> </span><span class="o">(</span>total<span class="w"> </span>number<span class="w"> </span>of
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">                          </span>processes<span class="o">)</span>,<span class="w"> </span>Nnode<span class="w"> </span><span class="o">(</span>number<span class="w"> </span>of<span class="w"> </span>nodes<span class="o">)</span>,<span class="w"> </span>Nppn<span class="w"> </span><span class="o">(</span>number<span class="w"> </span>of
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">                          </span>processes<span class="w"> </span>per<span class="w"> </span>node<span class="o">)</span>,<span class="w"> </span>Ntpp<span class="w"> </span><span class="o">(</span>number<span class="w"> </span>of<span class="w"> </span>threads<span class="w"> </span>per<span class="w"> </span>process,
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">                        </span><span class="m">1</span><span class="w"> </span>is<span class="w"> </span>default<span class="o">)</span>.<span class="w"> </span>Without<span class="w"> </span>--ndata,<span class="w"> </span>all<span class="w"> </span>data<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>evenly
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">                          </span>distributed<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>given<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>processes.
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span>--ndata<span class="o">=</span>NDATAPERTASK<span class="w">  </span>Number<span class="w"> </span>of<span class="w"> </span>input<span class="w"> </span>data<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>processed<span class="w"> </span>per<span class="w"> </span>task<span class="w"> </span><span class="k">for</span><span class="w"> </span>fine
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                          </span>control,<span class="w"> </span>The<span class="w"> </span>default<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span>one.<span class="w"> </span>You<span class="w"> </span>may<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>use
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                          </span>the<span class="w"> </span>--np<span class="w"> </span>option<span class="w"> </span>instead<span class="w"> </span><span class="k">if</span><span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>distribute<span class="w"> </span>the
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                          </span>entire<span class="w"> </span>work<span class="w"> </span>load<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>given<span class="w"> </span>nProcs<span class="w"> </span>processes<span class="w"> </span>by<span class="w"> </span>the
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">                          </span>--np<span class="w"> </span>option.
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span>--distribution<span class="o">=</span>DATADIST
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">                          </span>Distribution<span class="w"> </span>rule<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>data,<span class="w"> </span>block<span class="w"> </span>or<span class="w"> </span>cyclic.
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">                          </span>Default<span class="w"> </span>is<span class="w"> </span>block.
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span>--mapper<span class="o">=</span>MYMAPPER<span class="w">     </span>Specify<span class="w"> </span>the<span class="w"> </span>mapper<span class="w"> </span>program<span class="w"> </span>to<span class="w"> </span>execute.
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span>--input<span class="o">=</span>INPATH<span class="w">        </span>Specify<span class="w"> </span>a<span class="w"> </span>path<span class="w"> </span>where<span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>files<span class="w"> </span>are<span class="w"> </span>or<span class="w"> </span>a<span class="w"> </span>file
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">                          </span>containing<span class="w"> </span>the<span class="w"> </span>list<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>files.
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span>--output<span class="o">=</span>OUTDIRPATH<span class="w">   </span>Specify<span class="w"> </span>a<span class="w"> </span>directory<span class="w"> </span>path<span class="w"> </span>where<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>files<span class="w"> </span>to<span class="w"> </span>be
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">                          </span>saved.
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span>--prefix<span class="o">=</span>PREFIXFILENAME
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">                          </span>Specify<span class="w"> </span>a<span class="w"> </span>string<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>prefixed<span class="w"> </span>to<span class="w"> </span>output<span class="w"> </span>file<span class="w"> </span>name.
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span>--subdir<span class="o">=</span>USESUBDIR<span class="w">    </span>Specify<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="k">if</span><span class="w"> </span>data<span class="w"> </span>is<span class="w"> </span>located<span class="w"> </span>at<span class="w"> </span>sub-directories.
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">                          </span>All<span class="w"> </span>the<span class="w"> </span>data<span class="w"> </span>under<span class="w"> </span>the<span class="w"> </span>input<span class="w"> </span>directory<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>scanned
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">                          </span>recursively.<span class="w"> </span>The<span class="w"> </span>same<span class="w"> </span>sub-directory<span class="w"> </span>structure<span class="w"> </span>will<span class="w"> </span>be
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">                          </span>maintained<span class="w"> </span>under<span class="w"> </span>the<span class="w"> </span>output<span class="w"> </span>directory.<span class="w"> </span>Default<span class="w"> </span>is
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">                          </span>false.
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">  </span>--ext<span class="o">=</span>OUTEXTENSION<span class="w">    </span>Specify<span class="w"> </span>a<span class="w"> </span>file<span class="w"> </span>extension<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>output.<span class="w"> </span>Default<span class="w"> </span>is
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">                          </span>out.<span class="w"> </span>Use<span class="w"> </span>noext<span class="w"> </span><span class="k">if</span><span class="w"> </span>no<span class="w"> </span>extension<span class="w"> </span>is<span class="w"> </span>preferred.
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">  </span>--extSearch<span class="o">=</span>SEARCHEXTENSION
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">                        </span>Specify<span class="w"> </span>a<span class="w"> </span>file<span class="w"> </span>extension<span class="w"> </span>when<span class="w"> </span>searching<span class="w"> </span>input<span class="w"> </span>files
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">                        </span>with<span class="w"> </span>the<span class="w"> </span>--subdir<span class="w"> </span>option.
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">  </span>--delimeter<span class="o">=</span>OUTDELIMETER
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">                          </span>Specify<span class="w"> </span>a<span class="w"> </span>file<span class="w"> </span>extension<span class="w"> </span>delimeter<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>output.
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">                          </span>Default<span class="w"> </span>is<span class="w"> </span>the<span class="w"> </span>dot<span class="o">(</span>.<span class="o">)</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">  </span>--exclusive<span class="o">=</span>EXCLUSIVEMODE
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">                          </span>Turn<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>exclusive<span class="w"> </span>mode<span class="w"> </span><span class="o">(</span>true/false<span class="o">)</span>.<span class="w"> </span>The<span class="w"> </span>default
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">                          </span>is<span class="w"> </span>false.
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">  </span>--reducer<span class="o">=</span>MYREDUCER<span class="w">   </span>Specify<span class="w"> </span>the<span class="w"> </span>reducer<span class="w"> </span>program<span class="w"> </span>to<span class="w"> </span>execute.
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">  </span>--redargs<span class="o">=</span>REDARGUMENTS
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">                          </span>List<span class="w"> </span>of<span class="w"> </span>arguments<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>passed<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>reducer
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">                          </span><span class="o">[</span>optional<span class="o">]</span>.
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">  </span>--redout<span class="o">=</span>REDOUTFILENAME
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">                          </span>Output<span class="w"> </span>filename<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>reducer<span class="w"> </span><span class="o">[</span>optional<span class="o">]</span>.
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">  </span>--changeDepMode<span class="o">=</span>DEPENDENCYMODE
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">                          </span>Change<span class="w"> </span>the<span class="w"> </span>dependency<span class="w"> </span>mode.<span class="w"> </span>By<span class="w"> </span>default,<span class="w"> </span>the<span class="w"> </span>reduce<span class="w"> </span>job
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">                          </span>starts<span class="w"> </span>only<span class="w"> </span>when<span class="w"> </span>all<span class="w"> </span>mapper<span class="w"> </span>tasks<span class="w"> </span>are<span class="w"> </span>completed
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">                          </span>successfully.<span class="w"> </span>The<span class="w"> </span>alternative<span class="w"> </span>behavior
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">                          </span><span class="o">(</span>--changeDepMode<span class="o">=</span><span class="nb">true</span><span class="o">)</span><span class="w"> </span>lets<span class="w"> </span>the<span class="w"> </span>reduce<span class="w"> </span>job<span class="w"> </span>start<span class="w"> </span>when
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">                          </span>the<span class="w"> </span>mapper<span class="w"> </span>job<span class="w"> </span>terminates<span class="w"> </span>regardless<span class="w"> </span>of<span class="w"> </span>its<span class="w"> </span><span class="nb">exit</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">                          </span>status.
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">  </span>--keep<span class="o">=</span>KEEPTEMPDIR<span class="w">    </span>Decide<span class="w"> </span>whether<span class="w"> </span>or<span class="w"> </span>not<span class="w"> </span>to<span class="w"> </span>keep<span class="w"> </span>the<span class="w"> </span>temporary
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">                          </span>.MAPRED.PID<span class="w"> </span>dirctory<span class="w"> </span><span class="o">(</span>true/false<span class="o">)</span>.<span class="w"> </span>The<span class="w"> </span>default<span class="w"> </span>is
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">                          </span>false.
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">  </span>--apptype<span class="o">=</span>APPLICATIONTYPE
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">                          </span>If<span class="w"> </span>your<span class="w"> </span>application<span class="w"> </span>can<span class="w"> </span>take<span class="w"> </span>multiple<span class="w"> </span>lines<span class="w"> </span>of<span class="w"> </span>input
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">                          </span>and<span class="w"> </span>output<span class="w"> </span>format,<span class="w"> </span><span class="nb">set</span><span class="w"> </span><span class="nv">apptype</span><span class="o">=</span>mimo.<span class="w"> </span>By<span class="w"> </span>default,<span class="w"> </span>your
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">                          </span>application<span class="w"> </span>takes<span class="w"> </span>one<span class="w"> </span>line<span class="w"> </span>of<span class="w"> </span>input<span class="w"> </span>and<span class="w"> </span>output<span class="w"> </span><span class="o">(</span>siso<span class="o">)</span>.
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">  </span>--cpuType<span class="o">=</span>CPUTYPE<span class="w">     </span>Request<span class="w"> </span>compute<span class="w"> </span>nodes<span class="w"> </span>with<span class="w"> </span>a<span class="w"> </span>specific<span class="w"> </span>CPU<span class="w"> </span><span class="nb">type</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">                          </span><span class="o">[</span>optional<span class="o">]</span>.
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">  </span>--gpuNameCount<span class="o">=</span>GPUNAMECOUNT
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">                          </span>Specify<span class="w"> </span>the<span class="w"> </span>GPU<span class="w"> </span>name<span class="w"> </span>and<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>counts<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>used
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">                          </span><span class="k">for</span><span class="w"> </span>each<span class="w"> </span>task<span class="w"> </span>as<span class="w"> </span>GPU_NAME:COUNT.<span class="w"> </span>Currently<span class="w"> </span>each<span class="w"> </span>node
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="w">                          </span>has<span class="w"> </span><span class="m">2</span><span class="w"> </span>Volta<span class="w"> </span><span class="o">(</span>V100<span class="o">)</span><span class="w"> </span>units.
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">  </span>--slotsPerTask<span class="o">=</span>SLOTSPERTASK
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">                          </span>Specify<span class="w"> </span>the<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>slots<span class="o">(</span>cores<span class="o">)</span><span class="w"> </span>per<span class="w"> </span>task.<span class="w"> </span>Default
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">                          </span>value<span class="w"> </span>is<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">[</span>optional<span class="o">]</span>.
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="w">  </span>--slotsPerTaskType<span class="o">=</span>SLOTSPERTASKTYPE
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="w">                          </span>Specify<span class="w"> </span>how<span class="w"> </span>the<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>slots<span class="o">(</span>cores<span class="o">)</span><span class="w"> </span>per<span class="w"> </span>task<span class="w"> </span>be
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">                          </span>applied.<span class="w"> </span>Default<span class="w"> </span>value<span class="w"> </span>is<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="o">[</span>Map<span class="w"> </span>only<span class="o">]</span>,<span class="w"> </span>Other<span class="w"> </span>options
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="w">                          </span>are<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">[</span>Both<span class="w"> </span>Map<span class="w"> </span>and<span class="w"> </span>Reduce<span class="o">]</span><span class="w"> </span>and<span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="o">[</span>Reduce<span class="w"> </span>only<span class="o">]</span>.
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="w">  </span>--reservation<span class="o">=</span>ADV_RES_NAME
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="w">                          </span>Specify<span class="w"> </span>an<span class="w"> </span>advanced<span class="w"> </span>reservation<span class="w"> </span>name<span class="w"> </span>to<span class="w"> </span>which<span class="w"> </span>a<span class="w"> </span>job<span class="w"> </span>is
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="w">                          </span>submitted<span class="w"> </span><span class="o">(</span>requires<span class="w"> </span>LLSC<span class="w"> </span>coordination<span class="o">)</span>.
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="w">  </span>--tempdir<span class="o">=</span>TEMPDIR<span class="w">     </span>Specify<span class="w"> </span>a<span class="w"> </span>temporary<span class="w"> </span>directory<span class="w"> </span>which<span class="w"> </span>replaces<span class="w"> </span>the
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="w">                          </span>default<span class="w"> </span>MAPRED.PID<span class="w"> </span>directory.
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a><span class="w">  </span>--partition<span class="o">=</span>PARTNAME<span class="w">  </span>Specify<span class="w"> </span>a<span class="w"> </span>partition<span class="w"> </span>name<span class="w"> </span>where<span class="w"> </span>the<span class="w"> </span>job<span class="w"> </span>is<span class="w"> </span>submitted
+</span><span id="__span-0-83"><a id="__codelineno-0-83" name="__codelineno-0-83" href="#__codelineno-0-83"></a><span class="w">                        </span>to.
+</span><span id="__span-0-84"><a id="__codelineno-0-84" name="__codelineno-0-84" href="#__codelineno-0-84"></a><span class="w">  </span>--options<span class="o">=</span>SCHEDOPTIONS
+</span><span id="__span-0-85"><a id="__codelineno-0-85" name="__codelineno-0-85" href="#__codelineno-0-85"></a><span class="w">                        </span>If<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>add<span class="w"> </span>additional<span class="w"> </span>scheduler<span class="w"> </span>options,
+</span><span id="__span-0-86"><a id="__codelineno-0-86" name="__codelineno-0-86" href="#__codelineno-0-86"></a><span class="w">                        </span>define<span class="w"> </span>them<span class="w"> </span>with<span class="w"> </span>--options<span class="w"> </span>as<span class="w"> </span>a<span class="w"> </span>single<span class="w"> </span>string.<span class="sb">`</span>
+</span><span id="__span-0-87"><a id="__codelineno-0-87" name="__codelineno-0-87" href="#__codelineno-0-87"></a>
+</span><span id="__span-0-88"><a id="__codelineno-0-88" name="__codelineno-0-88" href="#__codelineno-0-88"></a><span class="w">  </span>If<span class="w"> </span>you<span class="w"> </span>need<span class="w"> </span>any<span class="w"> </span>other<span class="w"> </span>options:
+</span><span id="__span-0-89"><a id="__codelineno-0-89" name="__codelineno-0-89" href="#__codelineno-0-89"></a><span class="w">    </span>please<span class="w"> </span>send<span class="w"> </span>your<span class="w"> </span>requirements<span class="w"> </span>to<span class="w"> </span>supercloud@mit.edu
+</span></code></pre></div>
+<h2 id="output-logs">Output logs</h2>
+<p>The location of the output logs from your LLMapReduce job depends on how
+the job was submitted:</p>
+<ul>
+<li>Triples mode: if you launched your LLMapReduce job using triples
+    mode (<code>--np=[Nnode,Nppn,Ntpp</code>), the output logs will reside in the
+    directory <code>MAPRED.&lt;pid&gt;/logs</code> where <code>pid</code> is the process id number of
+    the <code>LLMapReduce</code> process. The log files from the individual
+    processes will reside in subdirectories in the <code>MAPRED.&lt;pid&gt;/logs</code>
+    directory. These subdirectories will be called
+   <code>p&lt;start-pid&gt;-p&lt;end-pid&gt;_&lt;nodename&gt;</code> where <code>p&lt;start-pid&gt;-p&lt;end-pid&gt;</code> is the
+    range of process ids whose log files are contained in the
+    subdirectory, and <code>&lt;nodename&gt;</code> is the name of the compute node that
+    those processes ran on.</li>
+<li>Regular (non-triples) mode: if you launched your LLMapReduce job
+    without using triples mode (<code>--np=N</code>), the output logs will reside
+    in the directory <code>MAPRED.&lt;pid&gt;/logs</code> where <code>&lt;pid&gt;</code> is the process id
+    number of the <code>LLMapReduce</code> process.</li>
+<li>With <code>--tempdir</code> option: if you launched your LLMapReduce job with
+    <code>--tempdir=&lt;your-dir&gt;</code> where <code>&lt;your-dir&gt;</code> is a directory that you
+    choose, the output logs will reside in the directory
+    <code>&lt;your-dir&gt;/logs</code>.<ul>
+<li>If you launched without triples mode (<code>--np=N</code>), the output logs
+    will reside in <code>&lt;your-dir&gt;/logs</code>.</li>
+<li>If you launched with triples mode (<code>--np=[Nnode,Nppn,Ntpp</code>),
+    the output logs will reside in subdirectories in
+    <code>&lt;your-dir&gt;/logs</code> These subdirectories will be called
+    <code>p&lt;start-pid&gt;-p&lt;end-pid&gt;_&lt;nodename&gt;</code> (see the Triples mode bullet
+    above for an explanation of the name of the subdirectories)</li>
+</ul>
+</li>
+</ul>
+<p>To summarize:</p>
+<ol>
+<li>If you launched with triples mode, your log files will be in
+    <code>MAPRED.&lt;pid&gt;/logs/p&lt;start-pid&gt;-p&lt;end-pid&gt;_&lt;nodename&gt;</code>.</li>
+<li>If you launched in regular (non-triples) mode, your log files will
+    be in <code>MAPRED.&lt;pid&gt;/logs</code>.</li>
+<li>If you specified the <code>-tempdir</code> option, replace <code>MAPRED</code> with the name of
+the directory you specified.</li>
+</ol>
+<h2 id="environment-variables">Environment Variables</h2>
+<p>If you use Triples Mode with the <code>--np</code> option
+(<code>--np=[Nnode,Nppn,Ntpp]</code>) to specify the number of processes to run,
+the following environment variables are available for your use.</p>
+<ul>
+<li><code>LLMR_NODE_ID</code> - the node number the process is running on: 0 &lt;=
+    <code>LLMR_NODE_ID</code> &lt; <code>Nnode</code></li>
+<li><code>LLMR_TASKS_PER_NODE</code> - the number of tasks/processes per node,
+    <code>Nppn</code></li>
+<li><code>LLMR_RANK</code> - the process number: 0 &lt;= <code>LLMR_RANK</code> &lt; <code>Nnode</code> *
+    <code>Nppn</code></li>
+<li><code>LLMR_RANK_MIN</code> - the job's lowest process number running on a
+    particular node; <code>LLMR_NODE_ID</code> * <code>Nppn</code></li>
+<li><code>LLMR_RANK_MAX</code> - the job's highest process number running on a
+    particular node; ((<code>LLMR_NODE_ID</code> + 1) * <code>Nppn</code>) - 1</li>
+<li><code>LLMRID</code> - a unique identifier for each process running on a
+    particular node; 0 &lt;= <code>LLMRID</code> &lt; <code>Nppn</code> - 1</li>
+<li><code>LLMR_LOG_SUBDIR</code> - the name of the subdirectory containing the
+    output log files; this directory name includes the range of process
+    ids and the name of the compute node on which the processes ran</li>
+<li><code>LLMR_LOG_DIR</code> - pathname to the subdirectory containing the output
+    log files</li>
+</ul>
+<p>In the example below, the triple [2,48,1] was used:</p>
+<ul>
+<li><code>LLMR_NODE_ID</code>: 0 or 1</li>
+<li><code>LLMR_TASKS_PER_NODE</code>: 48</li>
+<li><code>LLMR_RANK</code><ul>
+<li>0 - 47 for <code>LLMR_NODE_ID</code>=0</li>
+<li>48 - 95 for <code>LLMR_NODE_ID</code>=1</li>
+</ul>
+</li>
+<li><code>LLMR_RANK_MIN</code><ul>
+<li>0 for <code>LLMR_NODE_ID</code>=0</li>
+<li>48 for <code>LLMR_NODE_ID</code>=1</li>
+</ul>
+</li>
+<li><code>LLMR_RANK_MAX</code><ul>
+<li>47 for <code>LLMR_NODE_ID</code>=0</li>
+<li>95 for <code>LLMR_NODE_ID</code>=1</li>
+</ul>
+</li>
+<li><code>LLMRID</code>: 0 - 47</li>
+<li><code>LLMR_LOG_SUBDIR</code><ul>
+<li><code>p0-p47_c-15-4-1</code> for <code>LLMR_NODE_ID</code>=0</li>
+<li><code>p48-p95_c-15-3-4</code> for <code>LLMR_NODE_ID</code>=1</li>
+</ul>
+</li>
+<li><code>LLMR_LOG_DIR</code><ul>
+<li><code>./MAPRED.20418/logs/p0-p47_c-15-4-1</code> for <code>LLMR_NODE_ID</code>=0</li>
+<li><code>./MAPRED.20418/logs/p48-p95_c-15-3-4</code> for <code>LLMR_NODE_ID</code>=1</li>
+</ul>
+</li>
+</ul>
+<p>See our page, <a href="TBD/using-environment-vars.md">How to Use Environment Variables</a>,
+for information on using environment variables.</p>
+<!--
+TODO: Update link when we move the page
+-->
+
+<h2 id="options">Options</h2>
+<h3 id="-apptypeapplication-type">--apptype=[APPLICATION-TYPE]</h3>
+<p>Specify the application type.</p>
+<p>APPLICATION-TYPE is one of the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>APPLICATION-TYPE</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>siso</strong></td>
+<td>single input, single output (default)</td>
+</tr>
+<tr>
+<td><strong>mimo</strong></td>
+<td>multiple input, multiple output</td>
+</tr>
+</tbody>
+</table>
+<p>By default, the <code>LLMapReduce</code> command invokes your application with just
+one input filename and one output filename at a time. A single process
+calls your application multiple times to process all of the input files
+that are assigned to it. This is referred to as the single input, single
+output (siso) model.</p>
+<p>In the multiple input, multiple output (mimo) model, multiple temporary
+files named <code>input_&lt;#&gt;</code> are automatically generated and written into
+your temporary MAPRED directory. Each of these files contains a list of
+filename pairs: an input data filename and its corresponding output
+filename. Each of the launched processes will be given, as an argument,
+the name of one of the <code>input_&lt;#&gt;</code> files. The number of these
+<code>input_&lt;#&gt;</code> is determined by the value of the <code>--np</code> or <code>--ndata</code>
+parameter that is used. See the <a href="../resource-limit-enforcement-and-increases">Resource Limit
+Enforcement</a> page for
+the default values for <code>--np</code> based on the cpu type.</p>
+<p>The advantage of using the mimo model is that your application is called
+and loaded just once to process all of its assigned input files. For example, if you
+are running MATLAB® code, the overhead of starting and stopping MATLAB®
+for each input file can become significant if you are processing a lot
+of data files.</p>
+<p>The <code>--apptype=mimo</code> option allows you to run your application in mimo
+mode, to eliminate the unnecessary overhead of repeated starts and stops
+of the application. The only caveat is that your application has to be
+modified slightly to be able to read a file and process the multiple
+lines of input output filename pairs in that file.</p>
+<p>This change is easy to implement in high level programming languages
+such as MATLAB® and Python.</p>
+<!--
+TOOD: update below to use a different example
+-->
+
+<p>In your <code>~/examples/LLGrid_MapReduce/Java</code> directory, there is an example
+of an <code>LLMapReduce</code> job which uses the <code>--apptype=mimo</code> option. The Java
+code for this example is in the src subdirectory, in
+WordFrequenceCmdMulti.java. The code below shows the basic structure of
+an application that uses the <code>--apptype=mimo</code> option. The details of
+what the application does to count the words in the input file are left
+out here, but it would be the same code that is used in the single
+input, single output example.</p>
+<p>Instead of receiving a single input filename and a single output
+filename as arguments and processing just the single input file,
+<code>WordFrequencyCmdMulti.java</code> reads input and output filename pairs from a
+file and processes each input/output filename pair before exiting. To do
+this, we need a while loop to read the file containing the input output
+filename pairs, one line at a time, and then we process the input file
+the same way as we did in the single input, single output version.</p>
+<p><img alt="apptype
+mimo" src="../images/apptype-mimo-sm.jpg" /></p>
+<!--
+TODO: Add Alt Text
+-->
+
+<ol>
+<li>The input parameter to the main function of the Word Frequency
+    Command Multi class is a string containing the name of a file which
+    contains a list of input and output filename pairs, and the name of
+    the reference words file. Without the <code>--apptype=mimo</code> option, the
+    input string would contain an input filename, an output filename,
+    and the reference word filename.</li>
+<li>We open the file that contains the input output filename
+    pairs.</li>
+<li>The while loop will read one line at a time from the
+    file.</li>
+<li>We parse the line that was just read from the file to get the input
+    and output filenames.</li>
+<li>We open the input, output, and reference word
+    files.</li>
+<li>Processing is done on the input file the same way it is done in the
+    single input, single output model.</li>
+<li>When the word counting on the input file is done, we need to reset
+    any counters or other temporary variables that were used in counting
+    the words for a single input file.</li>
+<li>This is the end of the processing loop. Go back and get another
+    input output filename pair from the
+    file.</li>
+<li>The application can exit when all of the input output filename
+    pairs have been processed.</li>
+</ol>
+<h3 id="-changedepmodechange-dependency-mode">--changeDepMode=[CHANGE-DEPENDENCY-MODE]</h3>
+<p>This option enables/disables the dependency mode, which controls whether
+the reduce job will start upon completion of the map job. By default,
+the launch of the reduce job is dependent upon successful exit status
+from the map job. Changing the dependency mode allows the reduce job to
+start regardless of the mapper exit status.</p>
+<p>CHANGE-DEPENDENCY-MODE is one of the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>CHANGE-DEPENDENCY-MODE</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>false</strong></td>
+<td>don't change the dependency mode for starting the reduce job (default)</td>
+</tr>
+<tr>
+<td><strong>true</strong></td>
+<td>change the dependency mode to allow the reduce job to start regardless of mapper exit status</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-cputypecpu-type">--cpuType=[CPU-TYPE]</h3>
+<p>Select the cpu type of the nodes that your application will run on. By
+default, the <code>LLMapReduce</code> command launches your application to run on
+the Xeon-P8 nodes.</p>
+<p>CPU-TYPE is one of the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>CPU-TYPE</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>xeon-p8</strong></td>
+<td>Intel Xeon Platinum (default)</td>
+</tr>
+<tr>
+<td><strong>xeon-g6</strong></td>
+<td>Intel Xeon Gold 6248</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-delimeteroutput-file-extension-delimiter">--delimeter=[OUTPUT-FILE-EXTENSION-DELIMITER]</h3>
+<p>Specify the file extension delimiter for the output files.</p>
+<p>The <code>--delimeter</code> option allows you to specify the output file extension
+delimiter. By default, the delimiter is the dot character <code>.</code>.</p>
+<h3 id="-distributiondistribution-type">--distribution=[DISTRIBUTION-TYPE]</h3>
+<p>Specify how data is distributed to the processes.</p>
+<p>DISTRIBUTION-TYPE is one of the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>DISTRIBUTION-TYPE</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>block</strong></td>
+<td>block distribution (default)</td>
+</tr>
+<tr>
+<td><strong>cyclic</strong></td>
+<td>cyclic distribution</td>
+</tr>
+</tbody>
+</table>
+<p>This example illustrates how 16 input files are allocated to processes
+when the distribution rule is block, and when the distribution rule is
+cyclic.</p>
+<p><img alt="distribution" src="../images/distribution-sm.png" /></p>
+<!--
+TODO: Add Alt Text
+-->
+
+<p>Block distribution divides the input files into contiguous blocks of
+files. If an <code>ndata</code> value is specified, each block will contain <code>ndata</code>
+number of files. If an <code>np</code> value is specified, the size of the block
+will be the total number of input files divided by the number processes.
+In this example, with 16 input files and <code>--np=4</code>, each process gets 4
+input files. Process P1 gets files f1, f2, f3, and f4. Process P2 gets
+files f5, f6, f7, and f8, and so on.</p>
+<p>Cyclic distribution distributes the input files in a round robin
+fashion, similar to dealing a hand of cards. In this example with 16
+input files and <code>--np=4</code>, each process gets 4 input files. Process P1
+gets files f1, f5, f9 and f13. Process P2 gets files f2, f6, f10 and
+f14, and so on.</p>
+<p>When using the <code>--distribution</code> option, you must also provide either the
+<code>--np</code> option or the <code>--ndata</code> option. Without the <code>--np</code> or <code>--ndata</code>
+option, each process receives just 1 input file and the distribution
+option would be meaningless.</p>
+<h3 id="-exclusiveexclusive-mode">--exclusive=[EXCLUSIVE-MODE]</h3>
+<p>Enable or disable exclusive use of a node.</p>
+<p>This option is used to enable exclusive use of a node to avoid
+interference with other jobs. By default, exclusive mode is disabled.
+When you enable exclusive mode, your job might not be dispatched right
+away if there aren't enough empty nodes.</p>
+<p>EXCLUSIVE-MODE is one of the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>EXCLUSIVE-MODE</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>false</strong></td>
+<td>disable exclusive use of the node (default)</td>
+</tr>
+<tr>
+<td><strong>true</strong></td>
+<td>enable exclusive use of the node</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-extfile_extension">--ext=[FILE_EXTENSION]</h3>
+<p>Specify a file extension for the output files, or request no file
+extension on the output files</p>
+<p>This option allows you to specify a file extension for the job's output
+files. The default is <code>out</code>.</p>
+<p>To specify that no file extension be used on the output files, use
+<code>--ext=noext</code>.</p>
+<h3 id="-extsearchsearch_extension">--extSearch=SEARCH_EXTENSION</h3>
+<p>Specify a file extension for input file search by extension.</p>
+<p>This option allows you to specify a file extension when searching
+through subdirectories for input files. In order to use this option, you
+must also set <code>--subdir=true</code>.</p>
+<h3 id="-gpunamecountgpu-namecount">--gpuNameCount=[GPU-NAME:COUNT]</h3>
+<p>Specify the GPU name and number of GPUs units to be used for each task.</p>
+<p>The COUNT value allows you to specify how many GPU units to use.</p>
+<p>GPU-NAME is the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>GPU-NAME</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Valid COUNT values</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>volta</strong></td>
+<td>NVIDIA Volta V100</td>
+<td>1 or 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-h-help">-h, --help</h3>
+<p>Display a list of the <code>LLMapReduce</code> command options and a brief
+description of each, and then exit.</p>
+<h3 id="-inputinput-path">--input=[INPUT-PATH]</h3>
+<p>Specify the path to the input files.</p>
+<p>The <code>--input</code> option is a required option and specifies the path where
+the input files are located. The specified path may point to a directory
+that contains all of the input files, or the path may point to the name
+of a file that contains a list of input files.</p>
+<h3 id="-keepkeep-temp-files">--keep=[KEEP-TEMP-FILES]</h3>
+<p>Keep or remove temporary files upon job completion.</p>
+<p>KEEP-TEMP-FILES is one of the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>KEEP-TEMP-FILES</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>false</strong></td>
+<td>delete temporary files upon job completion (default)</td>
+</tr>
+<tr>
+<td><strong>true</strong></td>
+<td>keep temporary files upon job completion</td>
+</tr>
+</tbody>
+</table>
+<p>When you call the <code>LLMapReduce</code> command, many temporary files are
+created in a temporary subdirectory, located in the directory where you
+launched the <code>LLMapReduce</code> command. The name of this temporary
+subdirectory is <code>MAPRED.&lt;number&gt;</code>, where <code>&lt;number&gt;</code> is the id of the
+<code>LLMapReduce</code> process (which should not be confused with the job id that
+is assigned by the scheduler).</p>
+<p>The MAPRED directory contains scripts used to launch each process and
+output log files generated by your application. Whatever log output you
+would have seen when running your application in serial can be found in
+log files in the MAPRED directory. There will be one log file for each
+process.</p>
+<p>When your job completes, the default action is for <code>LLMapReduce</code> to
+delete the MAPRED directory and its contents. If you'd like to override
+this action for debugging purposes, you can use the <code>--keep=true</code>
+option. Once your code has been debugged and is in production mode, you
+should avoid keeping these temporary files around because they use a lot
+of disk space.</p>
+<h3 id="-mappermapper-program">--mapper=[MAPPER-PROGRAM]</h3>
+<p>Specify the name of the mapper program.</p>
+<p>This required option specifies the name of the mapper program that will
+be launched.The mapper program file must have execute permission. Use
+the following command to add execute permission to a file in your home
+directory:</p>
+<p><code>$ chmod u+x &lt;file&gt;</code></p>
+<p>If the mapper file resides in a group shared directory and other members
+of the group will launch LLMapReduce jobs using the mapper program, the
+file will also need group execute permission. Use the following command
+to add execute permission to a file in a group shared directory:</p>
+<p><code>$ chmod ug+x &lt;file&gt;</code></p>
+<h3 id="-ndatanum-input-files-per-process">--ndata=[NUM-INPUT-FILES-PER-PROCESS]</h3>
+<p>Specify the number of input files handled per process.</p>
+<p>The <code>--ndata</code> option allows you to specify the maximum number of input
+files to be handled by each process. The default value is 1, resulting
+in 1 input file per process. However, if the <code>--np</code> option is used
+without the <code>‑‑ndata</code> option, the input files will be evenly distributed
+to the processes.</p>
+<p>The <code>--ndata</code> option is useful in cases where an application might crash
+due to bugs or bad data. In this case, you might want to have fewer data
+files assigned to each process, in case the process terminates early and
+can't process all of the input files that were assigned to it. This
+would minimize the number of unprocessed files in your job submission.</p>
+<h3 id="-npnum-processes">--np=[NUM-PROCESSES]</h3>
+<p>Specify the number of processes to launch.</p>
+<p>The <code>‑‑np</code> option allows you to specify the number of processes that
+will be launched to run your application. You can specify just the total
+number of processes you want to use and allow the scheduler to determine
+how to distribute the processes among the nodes, or you can use <a href="TBD/triples-mode">Triples
+Mode</a> to specify how you would like the processes to
+be distributed across the nodes.</p>
+<p>To specify the number of processes to launch, use one of the following
+<code>‑‑np</code> option formats:</p>
+<ul>
+<li>Let the scheduler distribute the processes: <code>‑‑np=N</code>, where <code>N</code> = total number of processes.</li>
+<li>
+<p>Use <a href="../../using-the-system/submitting-jobs/submitting-jobs#triples-mode">Triples Mode</a> to specify how the processes
+    will be distributed: <code>‑‑np=[Nnode,Nppn,Ntpp]</code>, where:</p>
+<ul>
+<li><code>Nnode</code> = number of nodes</li>
+<li><code>Nppn</code> = number of processes per node</li>
+<li><code>Ntpp</code> = number of threads per process (default is 1)</li>
+</ul>
+<p>Entries are comma-separated, should be enclosed in brackets <code>[]</code>,
+and there should <em>not</em> be any spaces separating the
+entries.</p>
+<p>You can find additional information on triples mode job launches
+(including tips on how to tune your triples for best performance) on
+the <a href="../../using-the-system/submitting-jobs/submitting-jobs#triples-mode">Triples Mode</a> page.</p>
+</li>
+</ul>
+<p>Without also using the <code>--ndata</code> option, all data will be evenly
+distributed to the given number of processes.</p>
+<p>The input files will be evenly distributed to the processes. By default,
+the number of processes to launch is set to your default allotment (see
+the <a href="TBD/resource-limit-enforcement-and-increases">Resource
+Enforcement</a> page for
+the default allotments based on cpu type).</p>
+<!--
+TODO: Update link when we have the page
+-->
+
+<p><code>--np</code> is not a required option. If you don't specify the number of
+processes, the number of processes that will be launched to run your
+application is equal to the default number of processes that you are
+allocated for the requested CPU type (see the <a href="TBD/resource-limit-enforcement-and-increases">Resource
+Limits</a> page for the
+default allocations by CPU type).</p>
+<!--
+TODO: Update link when we have the page
+-->
+
+<p>If you specify a number of processes that is greater than the number
+that you're allotted by default, the extra processes will be queued,
+waiting for your other processes to finish. After a process terminates,
+one of the queued processes will be launched.</p>
+<p>We strongly recommend using the default setting or a value that is less
+than the default setting. Setting the number of processes to a value
+higher than your default allotment results in a great deal of overhead
+for the scheduler.</p>
+<p>The <code>‑‑np</code> and <code>‑‑ndata</code> options are mutually exclusive. If both options
+are used together, the <code>np</code> value will be ignored and the number of
+processes launched will be the number of input files divided by the
+<code>--ndata</code> value.</p>
+<p>This example illustrates how 16 input files are allocated to processes
+in 3 different scenarios: when not using the <code>--np</code> and <code>--ndata</code>
+options; when using <code>--np=3</code>; and when using <code>--ndata=3</code>.</p>
+<p><img alt="np vs ndata" src="../images/np-ndata-sm_0.png" /></p>
+<!--
+TODO: Add Alt Text
+-->
+
+<p>When neither option is specified, the number of processes launched is
+the same as the number of input files, resulting in one input file per
+process.</p>
+<p>With <code>--np=3</code>, the scheduler launches 3 processes and distributes the 16
+input files evenly among the 3 processes. When the number of input files
+is not evenly divisible by the number of processes, the lower numbered
+processes handle the leftover input files. In this example, the single
+leftover input file is handled by process 1.</p>
+<p>With <code>--ndata=3</code>, 6 processes will be launched. The number of processes
+is the smallest integer value greater than, or equal to the number of
+input files divided by the <code>ndata</code> value. If the number of input files
+is not evenly divisible by the <code>ndata</code> value, the highest numbered
+process handles the leftover input files.</p>
+<h3 id="-optionsscheduler-options">--options=[SCHEDULER-OPTIONS]</h3>
+<p>Specify additional scheduler options.</p>
+<p>This option is used to pass additional option(s) to the Slurm scheduler.
+The additional scheduler option(s) string should be enclosed within
+single or double quotes. Please refer to the <a href="https://slurm.schedmd.com/pdfs/summary.pdf">Scheduler
+Commands</a>
+page and the specific <a href="https://slurm.schedmd.com/sbatch.html">Slurm
+Documentation</a>
+pages for information on additional scheduler options.</p>
+<h3 id="-outputoutput-path">--output=[OUTPUT-PATH]</h3>
+<p>Specify the path to the output files.</p>
+<p>The <code>--output</code> option is a required option and specifies the path where
+the output files should be written.</p>
+<h3 id="-partitionpartition-name">--partition=[PARTITION-NAME]</h3>
+<p>Specify the name of the partition to submit the job to. The default
+partition name is determined by the cpu type that is selected.</p>
+<table>
+<thead>
+<tr>
+<th><strong>CPU-TYPE</strong></th>
+<th><strong>PARTITION-NAME</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>xeon-p8</strong></td>
+<td>xeon-p8 (default)</td>
+</tr>
+<tr>
+<td><strong>xeon-g6</strong></td>
+<td>xeon-g6-volta</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-prefixprefix-text">--prefix=[PREFIX-TEXT]</h3>
+<p>Specify a text string to pre-pend to the output file names.</p>
+<p>This option specifies the name of the reducer program that will be
+launched when all of the mapper jobs have completed.</p>
+<h3 id="-redargsreducer-args">--redargs=[REDUCER-ARGS]</h3>
+<p>Specify a list of arguments for the reducer.</p>
+<p>This option allows you to pass arguments to your reducer script. The
+parameters list is a single string and should be enclosed within a set
+of double quotes.</p>
+<h3 id="-redoutreducer-output-file-name">--redout=[REDUCER-OUTPUT-FILE-NAME]</h3>
+<p>Specify the name of the reducer output file.</p>
+<p>This option specifies the reducer output filename. The default output
+filename is <code>llmapreduce.out</code>. If a path is not specified in
+<code>REDUCER-OUTPUT-FILE-NAME</code>, the reducer output file will be written to the
+current working directory.</p>
+<h3 id="-reducerreducer-program">--reducer=[REDUCER-PROGRAM]</h3>
+<p>Specify the name of the reducer program.</p>
+<p>This option specifies the name of the reducer program that will be
+launched when all of the mapper jobs have completed. The reducer program
+file must have execute permission. Use the following command to add
+execute permission to a file in your home directory:</p>
+<p><code>$ chmod u+x &lt;file&gt;</code></p>
+<p>If the reducer file resides in a group shared directory and other
+members of the group will launch LLMapReduce jobs using the reducer
+program, the file will also need group execute permission. Use the
+following command to add execute permission to a file in a group shared
+directory:</p>
+<p><code>$ chmod ug+x &lt;file&gt;</code></p>
+<h3 id="-reservationadvanced_reservation_name">--reservation=[ADVANCED_RESERVATION_NAME]</h3>
+<p>Specify the name of the advanced reservation for the job.</p>
+<p>An advanced reservation is useful if you have a demo scheduled and would
+like to ensure that there will be resources available for your job at
+the time of your demo.</p>
+<p>This option requires that an advanced reservation be created by the SuperCloud team
+before the job is submitted.</p>
+<h3 id="-slotspertasknum-slots">--slotsPerTask=[NUM-SLOTS]</h3>
+<p>Specify the number of slots used by each task.</p>
+<p>This option specifies the number of slots (cores) used by each task. The
+default value is 1. If your jobs require more than the per-slot memory
+limit (see table below) you may need to request additional slots for
+your jobs so that they can run to completion. Please note that
+requesting additional slots for your job will reduce the number of tasks
+that you can run simultaneously. For example, if you require 2 slots per
+task and your allotment of cores is 256, you will be able to run only
+128 tasks simultaneously.</p>
+<table>
+<thead>
+<tr>
+<th><strong>NodeNode</strong></th>
+<th><strong>Per-Slot memory Limit (GB)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Intel Xeon P8</strong></td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Intel Xeon G6</strong></td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-slotspertasktypeslots-per-task-type">--slotsPerTaskType=[SLOTS-PER-TASK-TYPE]</h3>
+<p>Specify which stage (map or reduce) of the LLMapReduce job the number of
+slots assigned per task should be applied.</p>
+<table>
+<thead>
+<tr>
+<th><strong>SLOTS-PER-TASK-TYPE Value</strong></th>
+<th><strong>When slotsPerTask value is applied</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1</strong></td>
+<td>During Mapper stage only</td>
+</tr>
+<tr>
+<td><strong>2</strong></td>
+<td>During Mapper and Reducer stages</td>
+</tr>
+<tr>
+<td><strong>3</strong></td>
+<td>During Reducer stage only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-subdirsearch-subdirs">--subdir=[SEARCH-SUBDIRS]</h3>
+<p>Enable or disable recursive search of the input directory.</p>
+<p>If your input files reside in a multi-level directory structure, the
+<code>--subdir=true</code> option will enable recursive searching of the specified
+input directory. All files in the subdirectories will be treated as
+input files. By default, this capability is disabled.</p>
+<p><code>SEARCH-SUBDIRS</code> is one of the following:</p>
+<table>
+<thead>
+<tr>
+<th><strong>SEARCH-SUBDIRS</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>false</strong></td>
+<td>disable recursive searching of the input directory (default)</td>
+</tr>
+<tr>
+<td><strong>true</strong></td>
+<td>enable recursive searching of the input directory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="-tempdirtempdir">--tempdir=[TEMPDIR]</h3>
+<p>Specify the name of the temporary directory to generate (instead of
+<code>MAPRED.PID</code>).</p>
+<h2 id="examples">Examples</h2>
+<p>To use LLMapReduce to launch a parameter sweep, follow these steps:</p>
+<ol>
+<li>Modify your code to accept input parameters</li>
+<li>Create a mapper script to launch your code</li>
+<li>Create a text file with the desired sets of parameters</li>
+<li>Submit to the scheduler using the LLMapReduce command</li>
+</ol>
+<p>In this example, we will run python code in the file <code>mnist_cnn.py</code>,
+which expects 3 input parameters: batch, epochs and rate.</p>
+<p>The following is an example of how we would run the python code with 1
+set of input parameters:</p>
+<p><code>$ python mnist_cnn.py --batch=64 --epochs=1 --rate=0.001</code></p>
+<p>Here is the mapper script, <code>drv_keras.sh</code>, that will be used to launch
+the python code. Note that <code>$1 $2 $3</code> is used to represent the 3 input
+parameters being passed to the python code.</p>
+<div class="language-bash highlight"><span class="filename">drv_keras.sh</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="ch">#!/bin/bash</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">source</span><span class="w"> </span>/etc/profile
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>module<span class="w"> </span>load<span class="w"> </span>anaconda/2020b
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>python<span class="w"> </span>mnist_cnn.py<span class="w"> </span><span class="nv">$1</span><span class="w"> </span><span class="nv">$2</span><span class="w"> </span><span class="nv">$3</span>
+</span></code></pre></div>
+<p>Here are the contents of an example parameters file, <code>param_sweep.txt</code>,
+which is passed in as the LLMapReduce input file:</p>
+<div class="language-text highlight"><span class="filename">param_sweep.txt</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>--batch=64  --epochs=1000 --rate=0.001
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>--batch=128 --epochs=500  --rate=0.002
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>--batch=256 --epochs=200  --rate=0.003
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>--batch=512 --epochs=1100 --rate=0.004
+</span></code></pre></div>
+<p>Here is the LLMapReduce command to submit the job to the scheduler, for
+running on a single Volta GPU:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>LLMapReduce<span class="w"> </span>--mapper<span class="o">=</span>./drv_keras.sh<span class="w"> </span>--gpuNameCount<span class="o">=</span>volta:1<span class="w"> </span>--input<span class="o">=</span>param_sweep.txt<span class="w"> </span>--output<span class="o">=</span>results<span class="w"> </span>--keep<span class="o">=</span><span class="nb">true</span>
+</span></code></pre></div>
+<p>Additional LLMapReduce examples can be found in these locations:</p>
+<ul>
+<li>In the user's SuperCloud home directory: <code>~/examples/LLGrid_MapReduce</code></li>
+<li>In the <code>/usr/local/examples</code> directory on SuperCloud system nodes. This
+    directory contains the latest version of the examples.</li>
+<li>The <code>/home/gridsan/groups/bwedx/teaching-examples</code> directory contains a number of examples, including a few for LLMapReduce.</li>
+<li>The <code>/home/gridsan/groups/bwedx/Practical_HPC_2022/LLMapReduce</code> directory contains a number of examples you try out for yourself, solutions are in the <code>solutions</code> subdirectory.<ul>
+<li>There is a walkthrough of some of these examples in the <a href="https://learn.llx.edly.io/course/practical-hpc/">Practical HPC Course</a>.</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 12, 2023</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://accessibility.mit.edu/">Accessibility</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
