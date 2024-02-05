@@ -216,6 +216,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://supercloud.mit.edu/supercloud-software/</loc>
+         <lastmod>2024-02-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://supercloud.mit.edu/systems-and-software/</loc>
          <lastmod>2024-02-05</lastmod>
          <changefreq>daily</changefreq>
