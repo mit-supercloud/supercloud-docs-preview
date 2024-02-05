@@ -11,14 +11,14 @@
         <link rel="canonical" href="https://supercloud.mit.edu/llmapreduce/">
       
       
-        <link rel="prev" href="../using-the-system/submitting-jobs/job-array-triples/">
+        <link rel="prev" href="../job-array-triples/">
       
       
-        <link rel="next" href="../using-the-system/jupyter-notebooks/">
+        <link rel="next" href="../jupyter-notebooks/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.6">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.7">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.f2e4d321.min.css">
       
       
 
@@ -417,7 +417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/files-and-data/transferring-files/" class="md-nav__link">
+      <a href="../transferring-files/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -438,7 +438,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/files-and-data/shared-groups/" class="md-nav__link">
+      <a href="../shared-groups/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/software-packages/" class="md-nav__link">
+      <a href="../software-packages/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/monitoring-system-and-jobs/" class="md-nav__link">
+      <a href="../monitoring-system-and-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -654,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/submitting-jobs/submitting-jobs/" class="md-nav__link">
+      <a href="../submitting-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -696,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/submitting-jobs/job-array-triples/" class="md-nav__link">
+      <a href="../job-array-triples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1145,7 +1145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/jupyter-notebooks/" class="md-nav__link">
+      <a href="../jupyter-notebooks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1664,7 +1664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/best-practices/filesystem/" class="md-nav__link">
+      <a href="../filesystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1706,7 +1706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/best-practices/gpu-jobs/" class="md-nav__link">
+      <a href="../gpu-jobs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2027,7 +2027,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/web-portal/" class="md-nav__link">
+      <a href="../web-portal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2048,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../using-the-system/databases/" class="md-nav__link">
+      <a href="../databases/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3132,7 +3132,7 @@ would minimize the number of unprocessed files in your job submission.</p>
 <p>The <code>‑‑np</code> option allows you to specify the number of processes that
 will be launched to run your application. You can specify just the total
 number of processes you want to use and allow the scheduler to determine
-how to distribute the processes among the nodes, or you can use <a href="../using-the-system/submitting-jobs/submitting-jobs/#triples-mode">Triples
+how to distribute the processes among the nodes, or you can use <a href="../submitting-jobs/#triples-mode">Triples
 Mode</a> to specify how you would like the processes to
 be distributed across the nodes.</p>
 <p>To specify the number of processes to launch, use one of the following
@@ -3140,7 +3140,7 @@ be distributed across the nodes.</p>
 <ul>
 <li>Let the scheduler distribute the processes: <code>‑‑np=N</code>, where <code>N</code> = total number of processes.</li>
 <li>
-<p>Use <a href="../using-the-system/submitting-jobs/submitting-jobs/#triples-mode">Triples Mode</a> to specify how the processes
+<p>Use <a href="../submitting-jobs/#triples-mode">Triples Mode</a> to specify how the processes
     will be distributed: <code>‑‑np=[Nnode,Nppn,Ntpp]</code>, where:</p>
 <ul>
 <li><code>Nnode</code> = number of nodes</li>
@@ -3152,7 +3152,7 @@ and there should <em>not</em> be any spaces separating the
 entries.</p>
 <p>You can find additional information on triples mode job launches
 (including tips on how to tune your triples for best performance) on
-the <a href="../using-the-system/submitting-jobs/submitting-jobs/#triples-mode">Triples Mode</a> page.</p>
+the <a href="../submitting-jobs/#triples-mode">Triples Mode</a> page.</p>
 </li>
 </ul>
 <p>Without also using the <code>--ndata</code> option, all data will be evenly
@@ -3410,7 +3410,7 @@ running on a single Volta GPU:</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 30, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2024</span>
   </span>
 
     
@@ -3464,7 +3464,7 @@ running on a single Volta GPU:</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.e1c3ead8.min.js"></script>
+      <script src="../assets/javascripts/bundle.caa56a14.min.js"></script>
       
         <script src="../js/open_in_new_tab.js"></script>
       
