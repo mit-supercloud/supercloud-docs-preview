@@ -2050,7 +2050,7 @@
 
 <h1 id="transferring-files">Transferring Files</h1>
 <p>There are number of ways to access and transfer data and files between
-your computer and the MIT Supercloud System depending on your OS
+your computer and the MIT SuperCloud System depending on your OS
 (<a href="./#maclinux-and-most-windows">Mac/Linux</a> or
 <a href="./#windows">Windows</a>) and your comfort
 with Linux/Unix commands. Regardless of OS, files can be downloaded, but
@@ -2064,14 +2064,14 @@ using PuTTY on Windows, there is a way to transfer through that program
 as well. All of these are described below.</p>
 <h2 id="maclinux-and-most-windows">Mac/Linux and Most Windows</h2>
 <h3 id="via-scp">Via scp</h3>
-<p>You can use <code>scp</code> (secure copy) to copy files to the MIT Supercloud. The
+<p>You can use <code>scp</code> (secure copy) to copy files to the MIT SuperCloud. The
 <code>scp</code> command expects a path to the file or directory name that you
 would like to transfer followed by a space and then the destination.
 Note, it is best to copy to or from your local machine. In addition, the
 location on the system is the login node followed by a <code>:</code> (colon)
 followed by the path to the directory where you want to put the file. If
 you do not specify the directory location <code>scp</code> will place it in your
-top level directory, which on the Supercloud system is your home
+top level directory, which on the SuperCloud system is your home
 directory. An example of copying a directory to TX-E1 is shown below.
 Note that the <code>scp</code> command is followed by <code>-r</code>, to recursively copy all
 the files in the directory, and the directory name is followed by a
@@ -2153,11 +2153,11 @@ drive (say C:myFolder), the translations for each are:</p>
 transfer and issue the <code>pwd</code> command, which should give you the full
 path to your current location.</p>
 <h3 id="putty">PuTTY</h3>
-<p>When transferring files from a Windows machine to the Supercloud system,
+<p>When transferring files from a Windows machine to the SuperCloud system,
 which are linux machines, you need to use a version of <code>scp</code>, or secure
 copy. The software package, PuTTY, which you installed to provide <code>ssh</code>,
 includes <code>scp</code>. To transfer a file between your Windows desktop and the
-Supercloud linux system:</p>
+SuperCloud linux system:</p>
 <ul>
 <li>Open a command window by typing <code>run</code> in the search box. The <code>scp</code>
     command must be run from a command window.</li>
@@ -2179,11 +2179,11 @@ Supercloud linux system:</p>
 <li>The <code>pscp</code> command has the format
     <code>pscp &lt;Path_to_FileToBeTransfered&gt; &lt;Path_To_NewLocation&gt;</code></li>
 <li>For example to use <code>pscp</code> to copy the file <code>myMatlabScript.m</code> from
-    my current directory (folder) to my home directory on the Supercloud
+    my current directory (folder) to my home directory on the SuperCloud
     system I would type</li>
 </ul>
 <p>If I wanted to copy <code>myResults.dat</code> from my home directory on the
-Supercloud system to a folder called <code>goodData</code> on my local machine I
+SuperCloud system to a folder called <code>goodData</code> on my local machine I
 would first change directories so that I was in goodDate, using:
 <code>cd goodData</code>. Then, secure copy the file from SuperCloud to my
 local system using:</p>
@@ -2199,16 +2199,16 @@ scp in a Linux/Mac. When using Cygwin, you will be able to run <code>scp</code>,
 however it can be tricky to determine to the path to your files. This is
 of the form <code>/cygdrive/C/&lt;your_File_Path&gt;</code>.</p>
 <p>Say you are using scp to copy the file myScript.sh from your current
-directory (folder) to your home directory on the Supercloud system.
+directory (folder) to your home directory on the SuperCloud system.
 Type:</p>
 <blockquote>
 <p><code>scp /cygdrive/C/&lt;path_to_Folder&gt;/mScript.sh &lt;myUserID&gt;@txe1-login.mit.edu:/home/gridsan/&lt;myUserID&gt;</code></p>
 </blockquote>
 <p>If you wanted to copy <code>myResults.txt</code> from your home directory on the
-Supercloud system to a folder called <code>goodData</code> on your local machine,
+SuperCloud system to a folder called <code>goodData</code> on your local machine,
 first change directories so that you are in <code>goodData</code>, using:
 <code>cd goodData.</code></p>
-<p>Secure copy the file from the Supercloud system to the local system
+<p>Secure copy the file from the SuperCloud system to the local system
 using:</p>
 <blockquote>
 <p><code>scp &lt;myUserID&gt;@txe1-login.mit.edu:/home/gridsan/&lt;myUserID&gt;/myResults.txt  /cyqdrive/c/&lt;path_to_goodData&gt;/</code></p>
@@ -2259,7 +2259,7 @@ multiple files to upload at a time.</p>
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 26, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 5, 2024</span>
   </span>
 
     
