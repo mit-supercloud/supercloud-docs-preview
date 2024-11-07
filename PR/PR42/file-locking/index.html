@@ -2130,7 +2130,7 @@ to the local disk. This variable can be set in various places:</p>
 <p>In <code>~/.bashrc</code> or <code>~/.bash_profile</code> file - the variable will always be
     set (this is a "set and forget" approach). You should also create
     the directory:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HF_HOME</span><span class="o">=</span>/state/partition1/user/<span class="si">${</span><span class="nv">whoami</span><span class="si">}</span>/hf
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">HF_HOME</span><span class="o">=</span>/state/partition1/user/<span class="k">$(</span>whoami<span class="k">)</span>/hf
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="si">${</span><span class="nv">HF_HOME</span><span class="si">}</span>
 </span></code></pre></div>
 </li>
