@@ -1,0 +1,2586 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://supercloud.mit.edu/preferred-shells/">
+      
+      
+        <link rel="prev" href="../gpu-jobs/">
+      
+      
+        <link rel="next" href="../glossary-of-unix-terms/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.19">
+    
+    
+      
+        <title>Preferred Shells for Windows - SuperCloud Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e37652d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#preferred-shells" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SuperCloud Docs" class="md-header__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SuperCloud Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Preferred Shells for Windows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SuperCloud Docs" class="md-nav__button md-logo" aria-label="SuperCloud Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SuperCloud Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requesting-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Requesting an Account
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SuperCloud Policies and Practices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started Tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Systems and Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Systems and Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../systems-and-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SuperCloud System
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../supercloud-software/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Available Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resource-limit-enforcement-and-increases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resource Limits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Files and Data
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Files and Data
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../transferring-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Transferring Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shared-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Shared Groups
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disk-space/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Disk Space Limits
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llcopy2tmp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Scratch Space with LLcopy2tmp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Installing Software
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Installing Software
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../software-packages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Software and Package Management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Running Jobs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Running Jobs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monitoring-system-and-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monitoring System and Job Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../submitting-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Submitting Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-the-download-partition/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using the Download Partition
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../job-array-triples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job Array Triples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llmapreduce/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LLMapReduce
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_6" id="__nav_8_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Jupyter Notebooks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_6">
+            <span class="md-nav__icon md-icon"></span>
+            Jupyter Notebooks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jupyter-notebooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Jupyter Notebooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jupyter-notebook-conversion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Converting Jupyter Notebooks to Scripts
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jupyter-notebooks-best-practices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices for Jupyter Notebooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot-jupyter-notebooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting Jupyter Notebooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_7" id="__nav_8_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    pMatlab
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_7">
+            <span class="md-nav__icon md-icon"></span>
+            pMatlab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pmatlab-getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started with pMatlab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify-pmatlab-setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Verifying pMatlab Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../finding-pmatlab-output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Finding pMatlab Output
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gridmatlab-env-vars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GridMatlab Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../launching-pmatlab-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Launching pMatlab Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pmatlab-job-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pMatlab Job Errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pmatlab-job-problems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pMatlab Job Problems
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pmatlab-troubleshooting-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pMatlab Troubleshooting Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Troubleshooting
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Troubleshooting
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../file-locking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    File Locking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fixing-windows-scripts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fixing Scripts Written in Windows
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../segmentation-faults/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Segmentation Faults
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ssh-troubleshooting-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ssh Troubleshooting Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-troubleshooting-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python Troubleshooting Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pmatlab-troubleshooting-checklist/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    pMatlab Troubleshooting Checklist
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Best Practices
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Best Practices
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../filesystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices for using the Filesystem
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-for-analyzing-large-datasets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tips for Analyzing Large Datasets
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gpu-jobs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Optimizing your GPU Jobs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tips for New Users
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Tips for New Users
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Preferred Shells for Windows
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Preferred Shells for Windows
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-i-need-a-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I need a shell?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-shells-for-windows-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended shells for Windows users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-subsystem-for-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Subsystem for Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Subsystem for Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching WSL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-copy-and-paste-tofrom-the-wsl-shell-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling copy and paste to/from the WSL shell (Ubuntu)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-and-pasting-text-tofrom-the-wsl-shell-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying and Pasting text to/from the WSL shell (Ubuntu)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-command-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Command Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Command Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-windows-command-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching the Windows Command Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-and-pasting-tofrom-the-windows-command-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying and pasting to/from the Windows Command Prompt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows PowerShell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows PowerShell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching the Windows PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-and-pasting-tofrom-the-windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying and pasting to/from the Windows Powershell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebook Terminal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jupyter Notebook Terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-jupyter-notebook-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching the Jupyter Notebook Terminal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-copypaste-from-the-jupyter-notebook-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to copy/paste from the Jupyter Notebook Terminal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shells-that-we-do-not-recommend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shells that we do not recommend
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary-of-unix-terms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary of Unix Terms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../where-to-find-examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Where to Find Examples
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installing-wsl/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Installing Windows Subsystem for Linux
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-environment-vars/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Using Environment Variables
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    How To
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            How To
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Screen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-trusted-x-forwarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    X Forwarding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using-top-and-htop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Job Profiling with top and htop
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Web Portal
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Web Portal
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../web-portal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Web Portal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Databases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Frequently Asked Questions
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../acknowledging-us/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Acknowledging Us
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-help/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Help
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-do-i-need-a-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why do I need a shell?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-shells-for-windows-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recommended shells for Windows users
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-subsystem-for-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Subsystem for Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Subsystem for Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-wsl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching WSL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-copy-and-paste-tofrom-the-wsl-shell-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enabling copy and paste to/from the WSL shell (Ubuntu)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-and-pasting-text-tofrom-the-wsl-shell-ubuntu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying and Pasting text to/from the WSL shell (Ubuntu)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-command-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows Command Prompt
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows Command Prompt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-windows-command-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching the Windows Command Prompt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-and-pasting-tofrom-the-windows-command-prompt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying and pasting to/from the Windows Command Prompt
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows PowerShell
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Windows PowerShell">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching the Windows PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-and-pasting-tofrom-the-windows-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying and pasting to/from the Windows Powershell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebook-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebook Terminal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jupyter Notebook Terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launching-the-jupyter-notebook-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launching the Jupyter Notebook Terminal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-copypaste-from-the-jupyter-notebook-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to copy/paste from the Jupyter Notebook Terminal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shells-that-we-do-not-recommend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shells that we do not recommend
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <nav class="md-tags" >
+    
+      
+      
+      
+        <a href="../tags/#tag:getting-started" class="md-tag">Getting Started</a>
+      
+    
+      
+      
+      
+        <a href="../tags/#tag:windows" class="md-tag">Windows</a>
+      
+    
+  </nav>
+
+
+
+<h1 id="preferred-shells">Preferred Shells</h1>
+<h2 id="why-do-i-need-a-shell">Why do I need a shell?</h2>
+<p>If you use a Jupyter Notebook or the MATLAB® GUI, for the majority of
+your work you probably won't need to log into the login node of the SuperCloud
+system. However, at some point, there may be tasks that you will need to
+perform that will require you to log into a login node. Here are some
+examples of things that you may have to do from a login node:</p>
+<ul>
+<li>Downloading data or packages, or anything else that requires an internet connection</li>
+<li>Check what resources are currently available</li>
+<li>Launch your job using a batch script</li>
+<li>Check the status of your job</li>
+<li>Kill a job</li>
+<li>Set up your environment (e.g., use module files, create your own
+conda environment, download and build a 3rd party software package)</li>
+<li>Compile your code</li>
+<li>Copy or search through files</li>
+</ul>
+<p>In order to log into SuperCloud, you will need to run a shell on
+your desktop. Linux and Mac OS desktops come with a Linux shell already
+installed, the Terminal.</p>
+<p>For users with a Windows 10 desktop, there are many options for shells
+that you can use to access SuperCloud. Here we will provide a list of
+shells that we recommend for accessing SuperCloud, and some that we don't
+recommend.</p>
+<p>Once you are logged into a login node, you will be at the Linux shell
+command line, where you'll have to issue Linux commands. If you
+haven't used Linux before or need a brief refresher, see our <a href="../getting-started/#linux-command-line">Basic
+Unix Commands</a> page for a list of commands
+that should cover most, if not all, of what you'll need to do, along
+with links to additional resources if you'd like to learn more.</p>
+<p>In addition to the standard Linux commands, we provide some <a href="../monitoring-system-and-jobs/">job
+management commands</a> and <a href="../submitting-jobs/">job
+submission commands</a> (<a href="../submitting-jobs/#requesting-additional-resources-with-llsub"><code>LLsub</code></a>,
+<a href="../llmapreduce/"><code>LLMapReduce</code></a>) that can also be issued from the
+Linux shell command line or a shell script.</p>
+<h2 id="recommended-shells-for-windows-users">Recommended shells for Windows users</h2>
+<p>In the sections that follow, we provide instructions for installing the shells that we recommend, and how to copy and paste in these shells.</p>
+<p>Please note that most of these shells have their own location where they store ssh keys, so if you generate keys in one of these you may have to do some additional configuration to use another shell.</p>
+<h2 id="windows-subsystem-for-linux">Windows Subsystem for Linux</h2>
+<h3 id="launching-wsl">Launching WSL</h3>
+<p>If you haven't already set up the Windows Subsystem for Linux and
+installed the Ubuntu terminal, you can find directions on how to do that
+<a href="../installing-wsl/">here</a>. Once they are set up, launch Ubuntu from
+your start menu</p>
+<p><img alt="Screenshot of windows start menu with Ubuntu application highlighted" src="../images/ubuntu-launch_0.png" /></p>
+<h3 id="enabling-copy-and-paste-tofrom-the-wsl-shell-ubuntu">Enabling copy and paste to/from the WSL shell (Ubuntu)</h3>
+<ol>
+<li><strong>Right click on the icon in the top left corner</strong> of the window and <strong>select Properties</strong>
+<img alt="Screenshot of Ubuntu terminal after right clicking the banner with &quot;Properties&quot; highlighted" src="../images/ubuntu-properties.png" /></li>
+<li>In the Properties window, <strong>select the Options tab</strong>. In the Edit
+Options section, <strong>enable QuickEdit Mode</strong>, then OK.</li>
+</ol>
+<p><img alt="Ubuntu properties window &quot;QuickEdit Mode&quot; is highlighted and selected under &quot;Edit Options&quot;" src="../images/ubuntu-quick-edit.png" /></p>
+<h3 id="copying-and-pasting-text-tofrom-the-wsl-shell-ubuntu">Copying and Pasting text to/from the WSL shell (Ubuntu)</h3>
+<p>In the following example we will copy a job number from the output of
+<code>LLstat</code>, then paste the number to the end of the <code>LLkill</code> command, to
+kill the job.</p>
+<ol>
+<li><strong>Highlight the text that you want to copy</strong>
+<img alt="Ubuntu terminal window with some text (a Job ID from an LLstat output) highlighted" src="../images/ubuntu-copy_0.png" /></li>
+<li><strong>Press the enter key</strong> to copy the highlighted text. The text will no longer be highlighted, but it has been copied to your clipboard.</li>
+<li><strong>Position your cursor to the place where you want to paste the text.</strong> This can be in the same Ubuntu shell window, in an email
+message, in a new window, etc. To continue with this example, we
+type <code>LLkill</code> at the Linux prompt of our Ubuntu window, then we are
+ready to paste the copied job number to the end of the command.
+Notice the cursor is located after <code>LLkill</code>.
+<img alt="Screenshot of Ubuntu terminal window. The prompt has the command &quot;LLkill&quot; with a space, followed by the cursor" src="../images/ubuntu-ready-to-paste_0.png" /></li>
+<li><strong>Press the right mouse button</strong> to paste the text to your current
+cursor position
+<img alt="Screenshot of Ubuntu terminal window. The prompt has the command &quot;LLkill&quot; with a space, followed by the job ID that has been pasted." src="../images/ubuntu-paste_0.png" /></li>
+</ol>
+<h2 id="windows-command-prompt">Windows Command Prompt</h2>
+<h3 id="launching-the-windows-command-prompt">Launching the Windows Command Prompt</h3>
+<p>To launch the Windows Command Prompt on your Windows 10 desktop, type
+"command" into the search box on the taskbar and select Command Prompt
+from the Best match list.</p>
+<p><img alt="Screenshot of Windows search box. &quot;command&quot; is entered in the box and Windows Command Prompt is listed as &quot;Best Match&quot; for the search." src="../images/CommandPrompt.png" /></p>
+<h3 id="copying-and-pasting-tofrom-the-windows-command-prompt">Copying and pasting to/from the Windows Command Prompt</h3>
+<p>Follow the instructions in the sections "Enabling copy and paste
+to/from the WSL shell (Ubuntu)" and "Copying and Pasting Text to/from
+the WSL shell (Ubuntu)". Once Quick Edit Mode is enabled, you can also
+use the standard Windows copy and paste shortcut keys Ctrl-C and Ctrl-V.</p>
+<h2 id="windows-powershell">Windows PowerShell</h2>
+<h3 id="launching-the-windows-powershell">Launching the Windows PowerShell</h3>
+<p>To launch the PowerShell on your Windows 10 desktop, type "powershell"
+into the search box on the taskbar and select Windows PowerShell from
+the Best match list. Make sure you do <strong>not</strong> select the ISE
+or x86 versions.</p>
+<p><img alt="Screenshot of Windows search box. &quot;powershell&quot; is entered in the box and Windows PowerShell is listed as &quot;Best Match&quot; for the search." src="../images/PowerShell.png" /></p>
+<h3 id="copying-and-pasting-tofrom-the-windows-powershell">Copying and pasting to/from the Windows Powershell</h3>
+<p>Follow the instructions in the sections "Enabling copy and paste
+to/from the WSL shell (Ubuntu)" and "Copying and Pasting Text to/from
+the WSL shell (Ubuntu)". Once Quick Edit mode is enabled, you can also
+use the standard Windows copy and paste shortcut keys <code>Ctrl-C</code> and <code>Ctrl-V</code>.</p>
+<h2 id="jupyter-notebook-terminal">Jupyter Notebook Terminal</h2>
+<h3 id="launching-the-jupyter-notebook-terminal">Launching the Jupyter Notebook Terminal</h3>
+<p>If you have a Jupyter Notebook session running in your browser, you can
+open a terminal window from your notebook dashboard by clicking on the
+New button, then select Terminal from the pull down menu to launch a
+terminal session on the SuperCloud system.</p>
+<p><img alt="Screenshot of Jupyter Notebook interface. The &quot;New&quot; dropdown is selected and &quot;Terminal&quot; is highlighted at the bottom of the list." src="../images/JNBTerminal.png" /></p>
+<h3 id="how-to-copypaste-from-the-jupyter-notebook-terminal">How to copy/paste from the Jupyter Notebook Terminal</h3>
+<p>In the following example we will copy a job number from the output of
+<code>LLstat</code>, then paste the number to the end of the <code>LLkill</code> command, to
+kill the job.</p>
+<ol>
+<li>
+<p><strong>Highlight the text that you want to copy</strong>
+<img alt="Screenshot of Jupyter terminal with highlighted text (a job ID)" src="../images/jupyter%20highlight.png" /></p>
+</li>
+<li>
+<p><strong>Right click and select Copy</strong>. You cannot use Ctrl-C because it
+will be interpreted by the Linux shell.
+<img alt="Screenshot of Jupyter terminal, right click menu is shown on a highlighted Job ID with &quot;Copy&quot; highlighted&quot;" src="../images/jupyter%20copy_0.png" /></p>
+</li>
+<li>
+<p><strong>Position your cursor to the place where you want to paste the
+text.</strong> This can be in the same Jupyter Notebook terminal window, in
+an email message, in a new window, etc. To continue with this
+example, we type <code>LLkill</code> at the Linux prompt of our Jupyter
+Notebook terminal window, then we are ready to paste the copied job
+number to the end of the command. Notice the cursor is located after
+<code>LLkill</code>.
+<img alt="Screenshot of Jupyter terminal. The prompt has the command &quot;LLkill&quot; with a space, followed by the cursor." src="../images/jupyter%20ready%20to%20paste.png" /></p>
+</li>
+<li>
+<p><strong>Press the right mouse button and click on Paste</strong> to paste the
+text to your current cursor position. You cannot use <code>Ctrl-V</code> because
+it will be interpreted by the Linux shell.</p>
+</li>
+</ol>
+<p><img alt="Screenshot of Jupyter terminal. The prompt has the command &quot;LLkill&quot; with a space, followed by the cursor. The right click menu is shown on the cursor with &quot;Paste&quot; highlighted." src="../images/jupyter%20paste_0.png" /></p>
+<p><img alt="Screenshot of Jupyter terminal. The prompt has the command &quot;LLkill&quot; with a space, followed by the job ID that has been pasted." src="../images/jupyter%20pasted.png" /></p>
+<h2 id="shells-that-we-do-not-recommend">Shells that we do not recommend</h2>
+<p>We do not recommend the following shells on Windows because they do not
+use OpenSSH. Access to the SuperCloud works best with ssh keys that are
+generated by OpenSSH.</p>
+<ul>
+<li>cygwin</li>
+<li>puTTY</li>
+<li>SecureCRT</li>
+<li>X-Win32</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 5, 2024 19:13:19 UTC">February 5, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      <a href="https://accessibility.mit.edu/">Accessibility</a>
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
